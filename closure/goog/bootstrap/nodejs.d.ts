@@ -1,19 +1,3 @@
-declare module global {
-
-    /**
-     * The goog namespace in the global scope.
-     */
-    export var goog: any;
-
-    /**
-     * Imports a script using Node's require() API.
-     *
-     * @param {string} src The script source.
-     * @return {boolean} True if the script was imported, false otherwise.
-     */
-    export function CLOSURE_IMPORT_SCRIPT(src: string): boolean;
-}
-
 declare module goog {
 
     /**
