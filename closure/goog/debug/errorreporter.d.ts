@@ -75,7 +75,7 @@ declare module goog.debug {
          *     HTTP method request content, and (optionally) request headers to be
          *     added.
          */
-        setXhrSender(xhrSender: (arg0: string, arg1: string, arg2: string, arg3: Object) => any): void;
+        setXhrSender(xhrSender: (arg0: string, arg1: string, arg2: string, arg3?: Object) => any): void;
         
         /**
          * Handler for caught exceptions. Sends report to the LoggingServlet and
