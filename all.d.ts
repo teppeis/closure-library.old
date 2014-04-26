@@ -1,4 +1,3 @@
-/// <reference path="all.d.ts" />
 /// <reference path="closure/goog/a11y/aria/announcer.d.ts" />
 /// <reference path="closure/goog/a11y/aria/aria.d.ts" />
 /// <reference path="closure/goog/a11y/aria/attributes.d.ts" />
