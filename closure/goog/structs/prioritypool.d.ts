@@ -1,0 +1,56 @@
+declare module goog.structs {
+
+    /**
+     * A generic pool class. If max is greater than min, an error is thrown.
+     * @param {number=} opt_minCount Min. number of objects (Default: 1).
+     * @param {number=} opt_maxCount Max. number of objects (Default: 10).
+     * @constructor
+     * @extends {goog.structs.Pool.<VALUE>}
+     * @template VALUE
+     */
+    export class PriorityPool extends goog.structs.Pool<VALUE> {
+        constructor(opt_minCount?: number, opt_maxCount?: number);
+        
+        /** @override */
+        setDelay(): void;
+        
+        /**
+         * Get a new object from the the pool, if there is one available, otherwise
+         * return undefined.
+         * @param {Function=} opt_callback The function to callback when an object is
+         *     available. This could be immediately. If this is not present, then an
+         *     object is immediately returned if available, or undefined if not.
+         * @param {number=} opt_priority The priority of the request. A smaller value
+         *     means a higher priority.
+         * @return {VALUE|undefined} The new object from the pool if there is one
+         *     available and a callback is not given. Otherwise, undefined.
+         * @override
+         */
+        getObject(opt_callback?: Function, opt_priority?: number): VALUE;
+        
+        /**
+         * Adds an object to the collection of objects that are free. If the object can
+         * not be added, then it is disposed.
+         *
+         * NOTE: This method does not remove the object from the in use collection.
+         *
+         * @param {VALUE} obj The object to add to the collection of free objects.
+         * @override
+         */
+        addFreeObject(obj: VALUE): void;
+        
+        /**
+         * Adjusts the objects held in the pool to be within the min/max constraints.
+         *
+         * NOTE: It is possible that the number of objects in the pool will still be
+         * greater than the maximum count of objects allowed. This will be the case
+         * if no more free objects can be disposed of to get below the minimum count
+         * (i.e., all objects are in use).
+         * @override
+         */
+        adjustForMinMax(): void;
+        
+        /** @override */
+        disposeInternal(): void;
+    }
+}
