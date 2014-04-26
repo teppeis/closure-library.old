@@ -27,9 +27,6 @@ declare module goog.ui {
     export class IdleTimer extends goog.events.EventTarget {
         constructor(idleThreshold: number, opt_activityMonitor?: goog.ui.ActivityMonitor);
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * @return {number} the amount of time at which we consider the user has gone
          *     idle in ms.

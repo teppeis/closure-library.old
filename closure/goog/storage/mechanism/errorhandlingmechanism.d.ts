@@ -44,14 +44,5 @@ declare module goog.storage.mechanism {
      */
     export class ErrorHandlingMechanism extends goog.storage.mechanism.Mechanism {
         constructor(mechanism: goog.storage.mechanism.Mechanism, errorHandler: goog.storage.mechanism.ErrorHandlingMechanism.ErrorHandler);
-        
-        /** @override */
-        set(): void;
-        
-        /** @override */
-        get(): void;
-        
-        /** @override */
-        remove(): void;
     }
 }

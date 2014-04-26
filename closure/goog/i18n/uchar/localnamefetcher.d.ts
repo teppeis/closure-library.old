@@ -11,14 +11,5 @@ declare module goog.i18n.uChar {
      */
     export class LocalNameFetcher {
         constructor();
-        
-        /** @override */
-        prefetch(): void;
-        
-        /** @override */
-        getName(): void;
-        
-        /** @override */
-        isNameAvailable(): void;
     }
 }

@@ -181,9 +181,6 @@ declare module goog.ui.media {
          */
         getFlashElement(): HTMLObjectElement;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * @return {boolean} whether the SWF has finished loading or not.
          */

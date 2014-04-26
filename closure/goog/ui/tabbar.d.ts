@@ -40,14 +40,6 @@ declare module goog.ui {
         constructor(opt_location?: goog.ui.TabBar.Location, opt_renderer?: goog.ui.TabBarRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**
-         * @override
-         */
-        enterDocument(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
-        /**
          * Removes the tab from the tab bar.  Overrides the superclass implementation
          * by deselecting the tab being removed.  Since {@link #removeChildAt} uses
          * {@link #removeChild} internally, we only need to override this method.

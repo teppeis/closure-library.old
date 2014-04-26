@@ -54,8 +54,5 @@ declare module goog.net.xpc {
          * @override
          */
         send(service: string, payload: string): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

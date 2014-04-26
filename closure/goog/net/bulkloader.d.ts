@@ -26,8 +26,5 @@ declare module goog.net {
          * Starts the process of loading the URIs.
          */
         load(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

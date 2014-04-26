@@ -19,15 +19,6 @@ declare module goog.testing {
          */
         static MAX_TIMEOUT: number;
         
-        /** @override */
-        runTests(): void;
-        
-        /** @override */
-        finalize(): void;
-        
-        /** @override */
-        cycleTests(): void;
-        
         /**
          * Creates a new test step that will run after a user-specified
          * timeout.  No guarantee is made on the execution order of the

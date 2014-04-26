@@ -51,39 +51,6 @@ declare module goog.dom.browserrange {
          */
         clone(): goog.dom.browserrange.W3cRange;
         
-        /** @override */
-        getBrowserRange(): void;
-        
-        /** @override */
-        getContainer(): void;
-        
-        /** @override */
-        getStartNode(): void;
-        
-        /** @override */
-        getStartOffset(): void;
-        
-        /** @override */
-        getEndNode(): void;
-        
-        /** @override */
-        getEndOffset(): void;
-        
-        /** @override */
-        compareBrowserRangeEndpoints(): void;
-        
-        /** @override */
-        isCollapsed(): void;
-        
-        /** @override */
-        getText(): void;
-        
-        /** @override */
-        getValidHtml(): void;
-        
-        /** @override */
-        select(): void;
-        
         /**
          * Select this range.
          * @param {Selection} selection Browser selection object.
@@ -91,20 +58,5 @@ declare module goog.dom.browserrange {
          * @protected
          */
         selectInternal(selection: Selection, reverse: any): void;
-        
-        /** @override */
-        removeContents(): void;
-        
-        /** @override */
-        surroundContents(): void;
-        
-        /** @override */
-        insertNode(): void;
-        
-        /** @override */
-        surroundWithNodes(): void;
-        
-        /** @override */
-        collapse(): void;
     }
 }

@@ -96,8 +96,5 @@ declare module goog.ui {
          * @param {boolean} activate Whether to activate or deactivate the behavior.
          */
         setActive(activate: boolean): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

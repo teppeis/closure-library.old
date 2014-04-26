@@ -8,13 +8,5 @@ declare module goog.editor.plugins {
      */
     export class LinkShortcutPlugin extends goog.editor.Plugin {
         constructor();
-        
-        /** @override */
-        getTrogClassId(): void;
-        
-        /**
-         * @override
-         */
-        handleKeyboardShortcut(): void;
     }
 }

@@ -49,9 +49,6 @@ declare module goog.testing {
          */
         install(): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Uninstalls the PseudoRandom.
          */

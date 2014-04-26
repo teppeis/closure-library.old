@@ -22,9 +22,6 @@ declare module goog.dom {
     export class BufferedViewportSizeMonitor extends goog.events.EventTarget {
         constructor(viewportSizeMonitor: goog.dom.ViewportSizeMonitor, opt_bufferMs?: number);
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Returns the current size of the viewport.
          * @return {goog.math.Size?} The current viewport size.

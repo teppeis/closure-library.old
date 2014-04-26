@@ -128,8 +128,5 @@ declare module goog.ui {
          * Clears the selection model by removing all items from the selection.
          */
         clear(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

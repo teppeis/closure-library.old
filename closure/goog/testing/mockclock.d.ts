@@ -47,9 +47,6 @@ declare module goog.testing {
          */
         uninstall(): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Resets the MockClock, removing all timeouts that are scheduled and resets
          * the fake timer count.

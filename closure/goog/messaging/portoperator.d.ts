@@ -12,9 +12,6 @@ declare module goog.messaging {
     export class PortOperator extends goog.Disposable {
         constructor(name: string);
         
-        /** @override */
-        dial(): void;
-        
         /**
          * Adds a caller to the network with the given name. This port should have no
          * services registered on it. It will be disposed along with the PortOperator.
@@ -26,8 +23,5 @@ declare module goog.messaging {
          *     {@link MessagePort}s.
          */
         addPort(name: string, port: goog.messaging.MessageChannel): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

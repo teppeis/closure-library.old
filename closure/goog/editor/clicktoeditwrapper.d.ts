@@ -15,9 +15,6 @@ declare module goog.editor {
         /** @return {goog.dom.DomHelper} The dom helper of the uneditable element. */
         getOriginalDomHelper(): goog.dom.DomHelper;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Initialize listeners when the uneditable field is added to the document.
          * Also sets up lorem ipsum text.

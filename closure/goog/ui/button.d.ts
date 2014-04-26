@@ -75,12 +75,6 @@ declare module goog.ui {
          */
         setCollapsed(sides: number): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
-        /** @override */
-        enterDocument(): void;
-        
         /**
          * Attempts to handle a keyboard event; returns true if the event was handled,
          * false otherwise.  If the button is enabled and the Enter/Space key was

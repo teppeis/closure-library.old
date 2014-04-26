@@ -16,8 +16,5 @@ declare module goog.ui {
          * @type {string}
          */
         static CSS_CLASS: string;
-        
-        /** @override */
-        getCssClass(): void;
     }
 }

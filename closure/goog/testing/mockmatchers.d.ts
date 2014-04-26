@@ -80,9 +80,6 @@ declare module goog.testing.mockmatchers {
      */
     export class ObjectEquals extends goog.testing.mockmatchers.ArgumentMatcher {
         constructor(expectedObject: Object);
-        
-        /** @override */
-        matches(): void;
     }
 
     /**
@@ -107,9 +104,6 @@ declare module goog.testing.mockmatchers {
          * @type {*}
          */
         arg: any;
-        
-        /** @override */
-        matches(): void;
     }
 
     /**

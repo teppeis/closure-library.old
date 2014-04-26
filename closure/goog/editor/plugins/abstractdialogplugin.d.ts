@@ -22,9 +22,6 @@ declare module goog.editor.plugins {
     export class AbstractDialogPlugin extends goog.editor.Plugin {
         constructor(command: string);
         
-        /** @override */
-        isSupportedCommand(): void;
-        
         /**
          * Handles execCommand. Dialog plugins don't make any changes when they open a
          * dialog, just when the dialog closes (because only modal dialogs are
@@ -108,8 +105,5 @@ declare module goog.editor.plugins {
          * @protected
          */
         disposeOriginalSelection(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

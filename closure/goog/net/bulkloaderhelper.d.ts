@@ -41,8 +41,5 @@ declare module goog.net {
          * @return {boolean} TRUE iff the load is complete.
          */
         isLoadComplete(): boolean;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

@@ -21,17 +21,11 @@ declare module goog.ui.equation {
     export class EquationEditor extends goog.ui.Component {
         constructor(context: Object, opt_domHelper?: goog.dom.DomHelper, opt_helpUrl?: string);
         
-        /** @override */
-        createDom(): void;
-        
         /**
          * Sets the visibility of the editor.
          * @param {boolean} visible Whether the editor should be visible.
          */
         setVisible(visible: boolean): void;
-        
-        /** @override */
-        decorateInternal(): void;
         
         /**
          * Returns the encoded equation.
@@ -56,8 +50,5 @@ declare module goog.ui.equation {
          * @param {string} equation The equation text to parse.
          */
         setEquation(equation: string): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

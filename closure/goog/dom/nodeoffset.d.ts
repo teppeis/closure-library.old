@@ -27,8 +27,5 @@ declare module goog.dom {
          * @return {Node} The node relative to baseNode, or null on failure.
          */
         findTargetNode(baseNode: Node): Node;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

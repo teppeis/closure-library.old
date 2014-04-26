@@ -87,12 +87,6 @@ declare module goog.html {
         constructor();
         
         /**
-         * @override
-         * @const
-         */
-        implementsGoogStringTypedString: any;
-        
-        /**
          * A SafeStyle instance corresponding to the empty string.
          * @const {!goog.html.SafeStyle}
          */

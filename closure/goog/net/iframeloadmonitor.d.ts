@@ -38,8 +38,5 @@ declare module goog.net {
          *     monitors.
          */
         getIframe(): HTMLIFrameElement;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

@@ -11,9 +11,6 @@ declare module goog.testing.fs {
     export class FileSystem {
         constructor(opt_name?: string);
         
-        /** @override */
-        getName(): void;
-        
         /**
          * @override
          * @return {!goog.testing.fs.DirectoryEntry}

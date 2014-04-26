@@ -25,9 +25,6 @@ declare module goog.editor.plugins {
          */
         static DASH_NBSP_STRING: string;
         
-        /** @override */
-        getTrogClassId: any;
-        
         /**
          * Called after the bubble is shown. The default implementation does nothing.
          * Override it to provide your own one.
@@ -93,9 +90,6 @@ declare module goog.editor.plugins {
          */
         getTargetElement(): Element;
         
-        /** @override */
-        handleKeyUp(): void;
-        
         /**
          * Pops up a property bubble for the given selection if appropriate and closes
          * open property bubbles if no longer needed.  This should not be overridden.
@@ -122,9 +116,6 @@ declare module goog.editor.plugins {
          *     the required type is not found.
          */
         getBubbleTargetFromSelection(selectedElement: Element): Element;
-        
-        /** @override */
-        disable(): void;
         
         /**
          * Creates and shows the property bubble.

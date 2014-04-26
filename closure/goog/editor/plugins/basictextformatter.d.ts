@@ -44,9 +44,6 @@ declare module goog.editor.plugins {
          */
         logger: goog.log.Logger;
         
-        /** @override */
-        getTrogClassId(): void;
-        
         /**
          * Whether the string corresponds to a command this plugin handles.
          * @param {string} command Command string to check.
@@ -78,25 +75,5 @@ declare module goog.editor.plugins {
          * @override
          */
         queryCommandValue(command: string): string;
-        
-        /**
-         * @override
-         */
-        prepareContentsHtml(): void;
-        
-        /**
-         * @override
-         */
-        cleanContentsDom(): void;
-        
-        /**
-         * @override
-         */
-        cleanContentsHtml(): void;
-        
-        /**
-         * @override
-         */
-        handleKeyboardShortcut(): void;
     }
 }

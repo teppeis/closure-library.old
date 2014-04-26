@@ -53,17 +53,11 @@ declare module goog.ui {
          */
         decorateInternal(element: Element): void;
         
-        /** @override */
-        enterDocument(): void;
-        
         /**
          * Checks spelling for all text and displays correction UI.
          * @override
          */
         check(): void;
-        
-        /** @override */
-        setExcludeMarker(): void;
         
         /**
          * Processes word.
@@ -85,9 +79,6 @@ declare module goog.ui {
          * @override
          */
         processRange(node: Node, text: string): void;
-        
-        /** @override */
-        createWordElement(): void;
         
         /**
          * Updates or replaces element based on word status.
@@ -119,8 +110,5 @@ declare module goog.ui {
          * @override
          */
         getElementProperties(status: goog.spell.SpellCheck.WordStatus): Object;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

@@ -70,9 +70,6 @@ declare module goog {
          */
         stop(): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Calls the given function once, after the optional pause.
          *

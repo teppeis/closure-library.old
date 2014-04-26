@@ -131,9 +131,6 @@ declare module goog.ui.equation {
     export class PaletteRenderer extends goog.ui.PaletteRenderer {
         constructor();
         
-        /** @override */
-        getCssClass(): void;
-        
         /**
          * Returns the CSS class name for the palette item.
          * @return {string} The CSS class name of the palette item.

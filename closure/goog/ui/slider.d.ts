@@ -39,8 +39,5 @@ declare module goog.ui {
          * @override
          */
         getCssClass(orient: goog.ui.SliderBase.Orientation): string;
-        
-        /** @override */
-        createThumbs(): void;
     }
 }

@@ -272,8 +272,5 @@ declare module goog.ui {
          * @suppress {underscore|visibility}
          */
         onHide_(opt_target?: Object): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

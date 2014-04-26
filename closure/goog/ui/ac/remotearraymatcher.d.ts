@@ -97,8 +97,5 @@ declare module goog.ui.ac {
          * @param {string=} opt_fullString The full string from the input box.
          */
         requestMatchingRows(token: string, maxMatches: number, matchHandler: Function, opt_fullString?: string): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

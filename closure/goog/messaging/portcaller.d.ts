@@ -15,11 +15,5 @@ declare module goog.messaging {
      */
     export class PortCaller extends goog.Disposable {
         constructor(operatorPort: goog.messaging.MessageChannel);
-        
-        /** @override */
-        dial(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

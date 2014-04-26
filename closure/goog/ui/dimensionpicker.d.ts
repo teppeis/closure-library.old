@@ -44,15 +44,6 @@ declare module goog.ui {
          */
         maxRows: number;
         
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Handles mousemove events.  Determines which palette size was moused over and
          * highlights it.

@@ -12,12 +12,6 @@ declare module goog.testing.net {
         constructor(opt_xhr?: goog.testing.net.XhrIo);
         
         /**
-         * @override
-         * @suppress {invalidCasts}
-         */
-        createObject(): void;
-        
-        /**
          * Get the mock XhrIo used by this pool.
          *
          * @return {!goog.testing.net.XhrIo} The mock XhrIo.

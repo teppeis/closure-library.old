@@ -55,8 +55,5 @@ declare module goog.dom {
          * @return {goog.math.Size} The viewport dimensions, in pixels.
          */
         getSize(): goog.math.Size;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

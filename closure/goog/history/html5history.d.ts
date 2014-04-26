@@ -53,9 +53,6 @@ declare module goog.history {
          */
         replaceToken(token: string, opt_title?: string): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Sets whether to use the fragment to store tokens.
          * @param {boolean} useFragment Whether to use the fragment.

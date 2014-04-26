@@ -25,11 +25,5 @@ declare module goog.ui.style.app {
          * @type {Array.<Array.<string>>}
          */
         static IE6_CLASS_COMBINATIONS: Array<Array<string>>;
-        
-        /** @override */
-        getCssClass(): void;
-        
-        /** @override */
-        getIe6ClassCombinations(): void;
     }
 }

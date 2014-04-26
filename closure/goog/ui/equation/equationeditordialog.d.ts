@@ -11,9 +11,6 @@ declare module goog.ui.equation {
     export class EquationEditorDialog extends goog.ui.Dialog {
         constructor(opt_equation?: string);
         
-        /** @override */
-        setVisible(): void;
-        
         /**
          * Returns the encoded equation.
          * @return {string} The encoded equation.

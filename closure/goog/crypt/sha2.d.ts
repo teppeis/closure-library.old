@@ -10,14 +10,5 @@ declare module goog.crypt {
      */
     export class Sha2 extends goog.crypt.Hash {
         constructor();
-        
-        /** @override */
-        reset: any;
-        
-        /** @override */
-        update(): void;
-        
-        /** @override */
-        digest(): void;
     }
 }

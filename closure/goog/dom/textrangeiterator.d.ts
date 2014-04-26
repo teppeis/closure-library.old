@@ -20,32 +20,17 @@ declare module goog.dom {
     export class TextRangeIterator extends goog.dom.RangeIterator {
         constructor(startNode: Node, startOffset: number, endNode: Node, endOffset: number, opt_reverse?: boolean);
         
-        /** @override */
-        getStartTextOffset(): void;
-        
-        /** @override */
-        getEndTextOffset(): void;
-        
-        /** @override */
-        getStartNode(): void;
-        
         /**
          * Change the start node of the iterator.
          * @param {Node} node The new start node.
          */
         setStartNode(node: Node): void;
         
-        /** @override */
-        getEndNode(): void;
-        
         /**
          * Change the end node of the iterator.
          * @param {Node} node The new end node.
          */
         setEndNode(node: Node): void;
-        
-        /** @override */
-        isLast(): void;
         
         /**
          * Move to the next position in the selection.
@@ -54,12 +39,6 @@ declare module goog.dom {
          * @override
          */
         next(): Node;
-        
-        /** @override */
-        skipTag(): void;
-        
-        /** @override */
-        copyFrom(): void;
         
         /**
          * @return {!goog.dom.TextRangeIterator} An identical iterator.

@@ -19,12 +19,6 @@ declare module goog.ui.tree {
          */
         static defaultConfig: any;
         
-        /** @override */
-        getTree(): void;
-        
-        /** @override */
-        getDepth(): void;
-        
         /**
          * Expands the parent chain of this node so that it is visible.
          * @override
@@ -35,27 +29,6 @@ declare module goog.ui.tree {
          * @return {boolean} Whether the tree has keyboard focus.
          */
         hasFocus(): boolean;
-        
-        /** @override */
-        getExpanded(): void;
-        
-        /** @override */
-        setExpanded(): void;
-        
-        /** @override */
-        getExpandIconSafeHtml(): void;
-        
-        /** @override */
-        getIconElement(): void;
-        
-        /** @override */
-        getExpandIconElement(): void;
-        
-        /** @override */
-        updateExpandIcon(): void;
-        
-        /** @override */
-        getRowClassName(): void;
         
         /**
          * Returns the source for the icon.
@@ -126,12 +99,6 @@ declare module goog.ui.tree {
          * @override
          */
         initAccessibility(): void;
-        
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
         
         /**
          * Handles key down on the tree.

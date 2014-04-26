@@ -74,18 +74,6 @@ declare module goog.ui {
          */
         setPopupParentElement(el: Element): void;
         
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
-        /** @override */
-        decorateInternal(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * See goog.ui.PopupDatePicker.showPopup().
          * @param {Element} element Reference element for displaying the popup -- popup

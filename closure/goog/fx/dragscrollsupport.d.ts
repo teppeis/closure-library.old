@@ -60,8 +60,5 @@ declare module goog.fx {
          * @protected
          */
         calculateScrollDelta(coordinate: number, min: number, rangeLength: number): number;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

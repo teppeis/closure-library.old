@@ -19,15 +19,6 @@ declare module goog.ui {
     export class FilteredMenu extends goog.ui.Menu {
         constructor(opt_renderer?: goog.ui.MenuRenderer, opt_domHelper?: goog.dom.DomHelper);
         
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        setVisible(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Sets the filter label (the label displayed in the filter input element if no
          * text has been entered).
@@ -121,16 +112,10 @@ declare module goog.ui {
          */
         setHighlightedIndex(index: number): void;
         
-        /** @override */
-        getContentElement(): void;
-        
         /**
          * Returns the filter input element.
          * @return {Element} Input element.
          */
         getFilterInputElement(): Element;
-        
-        /** @override */
-        decorateInternal(): void;
     }
 }

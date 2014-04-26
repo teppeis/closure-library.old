@@ -33,12 +33,6 @@ declare module goog.ui {
          */
         setSortableHeaderRowIndex(index: number): void;
         
-        /** @override */
-        canDecorate(): void;
-        
-        /** @override */
-        enterDocument(): void;
-        
         /**
          * @return {number} The current sort column of the table, or -1 if none.
          */

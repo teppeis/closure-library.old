@@ -41,8 +41,5 @@ declare module goog.ui {
          * @param {goog.ui.TriStateMenuItem.State} state The checked state.
          */
         setCheckedState(state: goog.ui.TriStateMenuItem.State): void;
-        
-        /** @override */
-        performActionInternal(): void;
     }
 }

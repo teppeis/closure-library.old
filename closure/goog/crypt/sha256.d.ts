@@ -10,8 +10,5 @@ declare module goog.crypt {
      */
     export class Sha256 extends goog.crypt.Sha2 {
         constructor();
-        
-        /** @override */
-        reset(): void;
     }
 }

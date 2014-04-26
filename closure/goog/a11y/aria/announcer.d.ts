@@ -12,9 +12,6 @@ declare module goog.a11y.aria {
     export class Announcer extends goog.Disposable {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Announce a message to be read by any assistive technologies the user may
          * have active.

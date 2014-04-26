@@ -28,23 +28,5 @@ declare module goog.storage.mechanism {
          * @return {boolean} True if the mechanism is available.
          */
         isAvailable(): boolean;
-        
-        /** @override */
-        set(): void;
-        
-        /** @override */
-        get(): void;
-        
-        /** @override */
-        remove(): void;
-        
-        /** @override */
-        getCount(): void;
-        
-        /** @override */
-        __iterator__(): void;
-        
-        /** @override */
-        clear(): void;
     }
 }

@@ -61,8 +61,5 @@ declare module goog.async {
          * @return {boolean} True if the delay is currently active, false otherwise.
          */
         isActive(): boolean;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

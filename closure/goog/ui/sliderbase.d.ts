@@ -92,21 +92,12 @@ declare module goog.ui {
          */
         getCssClass(orient: goog.ui.SliderBase.Orientation): string;
         
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        decorateInternal(): void;
-        
         /**
          * Called when the DOM for the component is for sure in the document.
          * Subclasses should override this method to set this element's role.
          * @override
          */
         enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
         
         /**
          * Returns the value to use for the current mouse position
@@ -230,9 +221,6 @@ declare module goog.ui {
          * @return {goog.ui.SliderBase.Orientation} the orientation of the slider.
          */
         getOrientation(): goog.ui.SliderBase.Orientation;
-        
-        /** @override */
-        disposeInternal(): void;
         
         /**
          * @return {number} The amount to increment/decrement for page up/down as well

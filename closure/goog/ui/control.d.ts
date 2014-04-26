@@ -224,9 +224,6 @@ declare module goog.ui {
          */
         exitDocument(): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Returns the text caption or DOM structure displayed in the component.
          * @return {goog.ui.ControlContent} Text caption or DOM structure
@@ -265,9 +262,6 @@ declare module goog.ui {
          * @param {string} caption Text caption of the component.
          */
         setCaption(caption: string): void;
-        
-        /** @override */
-        setRightToLeft(): void;
         
         /**
          * Returns true if the control allows text selection within its DOM, false

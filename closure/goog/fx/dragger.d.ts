@@ -182,9 +182,6 @@ declare module goog.fx {
          */
         setEnabled(enabled: boolean): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Event handler that is used to start the drag
          * @param {goog.events.BrowserEvent} e Event object.

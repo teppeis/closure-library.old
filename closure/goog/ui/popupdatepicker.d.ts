@@ -13,19 +13,10 @@ declare module goog.ui {
     export class PopupDatePicker extends goog.ui.Component {
         constructor(opt_datePicker?: goog.ui.DatePicker, opt_domHelper?: goog.dom.DomHelper);
         
-        /** @override */
-        createDom(): void;
-        
         /**
          * @return {boolean} Whether the date picker is visible.
          */
         isVisible(): boolean;
-        
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        disposeInternal(): void;
         
         /**
          * DatePicker cannot be used to decorate pre-existing html, since they're

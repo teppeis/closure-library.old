@@ -62,8 +62,5 @@ declare module goog.ui {
          * if the maximum lengths is exceeded.
          */
         checkLength(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

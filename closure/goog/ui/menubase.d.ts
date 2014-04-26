@@ -17,9 +17,6 @@ declare module goog.ui {
          */
         static Events: any;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Called after the menu is shown. Derived classes can override to hook this
          * event but should make sure to call the parent class method.

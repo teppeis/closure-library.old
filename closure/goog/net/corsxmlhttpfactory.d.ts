@@ -11,12 +11,6 @@ declare module goog.net {
      */
     export class CorsXmlHttpFactory extends goog.net.XmlHttpFactory {
         constructor();
-        
-        /** @override */
-        createInstance(): void;
-        
-        /** @override */
-        internalGetOptions(): void;
     }
 
     /**
@@ -54,11 +48,6 @@ declare module goog.net {
          * @override
          */
         send(opt_content?: ArrayBuffer): void;
-        
-        /**
-         * @override
-         */
-        abort(): void;
         
         /**
          * Sets a request header to send to the remote server. Because this

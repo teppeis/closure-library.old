@@ -250,21 +250,6 @@ declare module goog.ui {
          * @param {goog.date.Date|Date} date Date to select or null to select nothing.
          */
         setDate(date: goog.date.Date): void;
-        
-        /** @override */
-        decorateInternal(): void;
-        
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

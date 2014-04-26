@@ -51,9 +51,6 @@ declare module goog.ui {
          */
         setCheckboxEnabled(enable: boolean): void;
         
-        /** @override */
-        handleMouseDown(): void;
-        
         /**
          * Gets the checkbox element. Needed because if decorating html, getContent()
          * may include and comment/text elements in addition to the input element.
@@ -88,12 +85,6 @@ declare module goog.ui {
          * @protected
          */
         createCheckbox(): void;
-        
-        /** @override */
-        decorateInternal(): void;
-        
-        /** @override */
-        setMenu(): void;
         
         /**
          * Set selection state and update checkbox.

@@ -49,8 +49,5 @@ declare module goog.ui {
          * @return {string} Value of the underlying input field.
          */
         getValue(): string;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

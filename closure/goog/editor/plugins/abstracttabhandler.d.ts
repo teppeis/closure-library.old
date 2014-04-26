@@ -9,12 +9,6 @@ declare module goog.editor.plugins {
     export class AbstractTabHandler extends goog.editor.Plugin {
         constructor();
         
-        /** @override */
-        getTrogClassId: any;
-        
-        /** @override */
-        handleKeyboardShortcut(): void;
-        
         /**
          * Handle a tab key press.
          * @param {goog.events.Event} e The key event.

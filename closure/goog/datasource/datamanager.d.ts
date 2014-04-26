@@ -58,12 +58,6 @@ declare module goog.ds {
          */
         get(): Object;
         
-        /** @override */
-        set(): void;
-        
-        /** @override */
-        getChildNodes(): void;
-        
         /**
          * Gets a named child node of the current node
          * @param {string} name The node name.
@@ -72,9 +66,6 @@ declare module goog.ds {
          * @override
          */
         getChildNode(name: string): goog.ds.DataNode;
-        
-        /** @override */
-        getChildNodeValue(): void;
         
         /**
          * Get the name of the node relative to the parent node

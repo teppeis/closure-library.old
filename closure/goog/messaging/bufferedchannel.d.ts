@@ -18,22 +18,10 @@ declare module goog.messaging {
     export class BufferedChannel extends goog.Disposable {
         constructor(messageChannel: goog.messaging.MessageChannel, opt_interval?: number);
         
-        /** @override */
-        connect(): void;
-        
-        /** @override */
-        isConnected(): void;
-        
         /**
          * @return {boolean} Whether the channel's peer is ready.
          */
         isPeerReady(): boolean;
-        
-        /** @override */
-        registerService(): void;
-        
-        /** @override */
-        registerDefaultService(): void;
         
         /**
          * Send a message over the channel.  If the peer is not ready, the message will
@@ -48,8 +36,5 @@ declare module goog.messaging {
          * @override
          */
         send(serviceName: string, payload: string): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

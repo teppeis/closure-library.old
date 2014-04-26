@@ -88,9 +88,6 @@ declare module goog.graphics {
          */
         setSize(pixelWidth: number, pixelHeight: number): void;
         
-        /** @override */
-        getPixelSize(): void;
-        
         /**
          * Remove all drawing elements from the graphics.
          * @override
@@ -245,12 +242,6 @@ declare module goog.graphics {
          */
         removeDef(defKey: string): void;
         
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
         /**
          * Disposes of the component by removing event handlers, detacing DOM nodes from
          * the document body, and removing references to them.
@@ -258,8 +249,5 @@ declare module goog.graphics {
          * @protected
          */
         disposeInternal(): void;
-        
-        /** @override */
-        isDomClonable(): void;
     }
 }

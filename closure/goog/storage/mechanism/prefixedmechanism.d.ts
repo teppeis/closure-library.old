@@ -12,17 +12,5 @@ declare module goog.storage.mechanism {
      */
     export class PrefixedMechanism extends goog.storage.mechanism.IterableMechanism {
         constructor(mechanism: goog.storage.mechanism.IterableMechanism, prefix: string);
-        
-        /** @override */
-        set(): void;
-        
-        /** @override */
-        get(): void;
-        
-        /** @override */
-        remove(): void;
-        
-        /** @override */
-        __iterator__(): void;
     }
 }

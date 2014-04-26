@@ -11,9 +11,6 @@ declare module goog.structs {
     export class PriorityPool extends goog.structs.Pool<VALUE> {
         constructor(opt_minCount?: number, opt_maxCount?: number);
         
-        /** @override */
-        setDelay(): void;
-        
         /**
          * Get a new object from the the pool, if there is one available, otherwise
          * return undefined.
@@ -49,8 +46,5 @@ declare module goog.structs {
          * @override
          */
         adjustForMinMax(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

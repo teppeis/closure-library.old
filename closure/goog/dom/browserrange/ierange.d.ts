@@ -34,27 +34,6 @@ declare module goog.dom.browserrange {
          */
         clone(): goog.dom.browserrange.IeRange;
         
-        /** @override */
-        getBrowserRange(): void;
-        
-        /** @override */
-        getContainer(): void;
-        
-        /** @override */
-        getStartNode(): void;
-        
-        /** @override */
-        getStartOffset(): void;
-        
-        /** @override */
-        getEndNode(): void;
-        
-        /** @override */
-        getEndOffset(): void;
-        
-        /** @override */
-        compareBrowserRangeEndpoints(): void;
-        
         /**
          * Tests whether this range is valid (i.e. whether its endpoints are still in
          * the document).  A range becomes invalid when, after this object was created,
@@ -63,32 +42,5 @@ declare module goog.dom.browserrange {
          * @return {boolean} Whether the range is valid.
          */
         isRangeInDocument(): boolean;
-        
-        /** @override */
-        isCollapsed(): void;
-        
-        /** @override */
-        getText(): void;
-        
-        /** @override */
-        getValidHtml(): void;
-        
-        /** @override */
-        select(): void;
-        
-        /** @override */
-        removeContents(): void;
-        
-        /** @override */
-        surroundContents(): void;
-        
-        /** @override */
-        insertNode(): void;
-        
-        /** @override */
-        surroundWithNodes(): void;
-        
-        /** @override */
-        collapse(): void;
     }
 }

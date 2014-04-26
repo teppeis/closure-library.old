@@ -36,18 +36,6 @@ declare module goog.ui {
          */
         getRecentChars(): Array<string>;
         
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
-        /** @override */
-        decorateInternal(): void;
-        
-        /** @override */
-        enterDocument(): void;
-        
         /**
          * Gets the user inputed unicode character.
          * @return {string} Unicode character inputed by user.

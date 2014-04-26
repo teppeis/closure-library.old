@@ -128,8 +128,5 @@ declare module goog.ui {
           * @param {goog.math.Size} size The size to set the splitpane.
           */
         setSize(size: goog.math.Size): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

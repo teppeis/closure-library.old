@@ -26,20 +26,11 @@ declare module goog.fx {
     export class CssSpriteAnimation extends goog.fx.Animation {
         constructor(element: Element, size: goog.math.Size, box: goog.math.Box, time: number, opt_acc?: (arg0: number) => number);
         
-        /** @override */
-        onAnimate(): void;
-        
-        /** @override */
-        onFinish(): void;
-        
         /**
          * Clears the background position style set directly on the element
          * by the animation. Allows to apply CSS styling for background position on the
          * same element when the sprite animation is not runniing.
          */
         clearSpritePosition(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

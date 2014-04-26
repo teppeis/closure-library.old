@@ -18,9 +18,6 @@ declare module goog.events {
      */
     export class ActionHandler extends goog.events.EventTarget {
         constructor(element: Element);
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

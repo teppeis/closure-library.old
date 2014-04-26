@@ -20,9 +20,6 @@ declare module goog.ui {
     export class AttachableMenu extends goog.ui.MenuBase {
         constructor(opt_element?: Element);
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Sets the class name to use for menu items
          *
@@ -60,12 +57,6 @@ declare module goog.ui {
          * @override
          */
         getSelectedItem(): Element;
-        
-        /** @override */
-        setSelectedItem(): void;
-        
-        /** @override */
-        showPopupElement(): void;
         
         /**
          * Called after the menu is shown.

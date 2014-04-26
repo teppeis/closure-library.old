@@ -32,8 +32,5 @@ declare module goog.pubsub {
      */
     export class TopicId {
         constructor(topicId: string);
-        
-        /** @override */
-        toString(): void;
     }
 }

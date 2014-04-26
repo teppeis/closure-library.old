@@ -80,9 +80,6 @@ declare module goog.ui.style.app {
          */
         createButton(content: goog.ui.ControlContent, dom: goog.dom.DomHelper): Element;
         
-        /** @override */
-        setContent(): void;
-        
         /**
          * Inserts dropdown element as last child of existing content.
          * @param {goog.ui.ControlContent} content Text caption or DOM structure.
@@ -107,8 +104,5 @@ declare module goog.ui.style.app {
          * @override
          */
         getCssClass(): string;
-        
-        /** @override */
-        getIe6ClassCombinations(): void;
     }
 }

@@ -38,15 +38,6 @@ declare module goog.ui {
          */
         decorateInternal(element: Element): void;
         
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * @return {boolean} Whether the control is currently focused on.
          */

@@ -28,9 +28,6 @@ declare module goog.ui.emoji {
          */
         getImageLoader(): goog.net.ImageLoader;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * @return {goog.ui.emoji.Emoji} The currently selected emoji from this palette.
          */

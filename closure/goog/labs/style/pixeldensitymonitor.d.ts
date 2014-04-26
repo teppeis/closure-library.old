@@ -50,8 +50,5 @@ declare module goog.labs.style {
          *     window.
          */
         getDensity(): goog.labs.style.PixelDensityMonitor.Density;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

@@ -23,14 +23,5 @@ declare module goog.storage {
          * @protected
          */
         static SALT_KEY: string;
-        
-        /** @override */
-        set(): void;
-        
-        /** @override */
-        getWrapper(): void;
-        
-        /** @override */
-        remove(): void;
     }
 }

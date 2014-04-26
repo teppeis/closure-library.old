@@ -8,12 +8,6 @@ declare module goog.math.interpolator {
     export class Spline1 {
         constructor();
         
-        /** @override */
-        setData(): void;
-        
-        /** @override */
-        interpolate(): void;
-        
         /**
          * Computes the derivative at each point of the spline such that
          * the curve is C2. It uses not-a-knot boundary conditions.

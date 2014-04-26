@@ -17,10 +17,5 @@ declare module goog.ui {
          *     not idle. If not specified, defaults to MOUSEMOVE.
          */
         simulateEvent(opt_type?: goog.events.EventType): void;
-        
-        /**
-         * @override
-         */
-        dispatchEvent(): void;
     }
 }

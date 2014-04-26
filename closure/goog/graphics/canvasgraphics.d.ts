@@ -98,9 +98,6 @@ declare module goog.graphics {
          */
         setSize(pixelWidth: number, pixelHeight: number): void;
         
-        /** @override */
-        getPixelSize(): void;
-        
         /**
          * Update the size of the canvas.
          */
@@ -267,9 +264,6 @@ declare module goog.graphics {
          * @protected
          */
         disposeInternal(): void;
-        
-        /** @override */
-        enterDocument(): void;
         
         /**
          * Start preventing redraws - useful for chaining large numbers of changes

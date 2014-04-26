@@ -8,12 +8,6 @@ declare module goog.net {
      */
     export class DefaultXmlHttpFactory extends goog.net.XmlHttpFactory {
         constructor();
-        
-        /** @override */
-        createInstance(): void;
-        
-        /** @override */
-        internalGetOptions(): void;
     }
 
     /** @const */

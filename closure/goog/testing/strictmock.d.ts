@@ -18,17 +18,5 @@ declare module goog.testing {
      */
     export class StrictMock extends goog.testing.Mock {
         constructor(objectToMock: Object, opt_mockStaticMethods?: boolean, opt_createProxy?: boolean);
-        
-        /** @override */
-        $recordExpectation(): void;
-        
-        /** @override */
-        $recordCall(): void;
-        
-        /** @override */
-        $reset(): void;
-        
-        /** @override */
-        $verify(): void;
     }
 }

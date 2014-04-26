@@ -24,9 +24,6 @@ declare module goog.testing.events {
          */
         propagationStopped_: boolean;
         
-        /** @override */
-        defaultPrevented: any;
-        
         /**
          * Return value for in internal capture/bubble processing for IE.
          * @type {boolean}
@@ -35,12 +32,6 @@ declare module goog.testing.events {
          *     outside this package is strongly discouraged.
          */
         returnValue_: boolean;
-        
-        /** @override */
-        stopPropagation(): void;
-        
-        /** @override */
-        preventDefault(): void;
     }
 
     /**

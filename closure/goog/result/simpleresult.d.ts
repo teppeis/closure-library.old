@@ -14,15 +14,6 @@ declare module goog.result {
     export class SimpleResult {
         constructor();
         
-        /** @override */
-        getState(): void;
-        
-        /** @override */
-        getValue(): void;
-        
-        /** @override */
-        getError(): void;
-        
         /**
          * Attaches handlers to be called when the value of this Result is available.
          *
@@ -57,12 +48,6 @@ declare module goog.result {
          * @override
          */
         cancel(): boolean;
-        
-        /** @override */
-        isCanceled(): void;
-        
-        /** @override */
-        then(): void;
         
         /**
          * Creates a SimpleResult that fires when the given promise resolves.

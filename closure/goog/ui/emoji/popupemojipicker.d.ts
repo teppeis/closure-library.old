@@ -102,12 +102,6 @@ declare module goog.ui.emoji {
          */
         loadImages(): void;
         
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Attaches the popup emoji picker to an element.
          *

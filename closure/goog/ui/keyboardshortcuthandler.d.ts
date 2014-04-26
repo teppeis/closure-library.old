@@ -232,9 +232,6 @@ declare module goog.ui {
          */
         getGlobalKeys(): Array<string>;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Returns event type for a specific shortcut.
          * @param {string} identifier Identifier for the shortcut task.

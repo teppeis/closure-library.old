@@ -18,23 +18,5 @@ declare module goog.messaging {
          * Cancels the wrapped Deferred.
          */
         cancel(): void;
-        
-        /** @override */
-        connect(): void;
-        
-        /** @override */
-        isConnected(): void;
-        
-        /** @override */
-        registerService(): void;
-        
-        /** @override */
-        registerDefaultService(): void;
-        
-        /** @override */
-        send(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

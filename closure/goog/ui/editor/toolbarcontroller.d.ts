@@ -98,9 +98,6 @@ declare module goog.ui.editor {
          */
         blur(): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Updates the toolbar in response to editor events.  Specifically, updates
          * button states based on {@code COMMAND_VALUE_CHANGE} events, reflecting the

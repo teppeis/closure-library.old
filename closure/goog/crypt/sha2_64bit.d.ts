@@ -18,11 +18,5 @@ declare module goog.crypt {
          * Resets this hash function.
          */
         reset(): void;
-        
-        /** @override */
-        update(): void;
-        
-        /** @override */
-        digest(): void;
     }
 }

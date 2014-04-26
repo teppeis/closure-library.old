@@ -17,11 +17,5 @@ declare module goog.ui {
          * @type {string}
          */
         static CSS_CLASS: string;
-        
-        /** @override */
-        createCaption(): void;
-        
-        /** @override */
-        initializeDom(): void;
     }
 }

@@ -50,12 +50,6 @@ declare module goog.ui {
          */
         getCaption(): void;
         
-        /** @override */
-        handleMouseUp(): void;
-        
-        /** @override */
-        handleKeyEventInternal(): void;
-        
         /**
          * Sets the mnemonic key code. The mnemonic is the key associated with this
          * action.
@@ -69,15 +63,5 @@ declare module goog.ui {
          * @return {goog.events.KeyCodes} The key code of the mnemonic key.
          */
         getMnemonic(): goog.events.KeyCodes;
-        
-        /**
-         * @override
-         */
-        createDom(): void;
-        
-        /**
-         * @override
-         */
-        getPreferredAriaRole(): void;
     }
 }

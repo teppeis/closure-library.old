@@ -30,25 +30,10 @@ declare module goog.html {
         constructor();
         
         /**
-         * @override
-         * @const
-         */
-        implementsGoogI18nBidiDirectionalString: any;
-        
-        /**
-         * @override
-         * @const
-         */
-        implementsGoogStringTypedString: any;
-        
-        /**
          * A SafeHtml instance corresponding to the empty string.
          * @const {!goog.html.SafeHtml}
          */
         static EMPTY: any;
-        
-        /** @override */
-        getDirection(): void;
         
         /**
          * Returns this SafeHtml's value a string.

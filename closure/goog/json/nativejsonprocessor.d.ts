@@ -21,11 +21,5 @@ declare module goog.json {
      */
     export class NativeJsonProcessor {
         constructor(opt_replacer?: goog.json.Replacer, opt_reviver?: goog.json.Reviver);
-        
-        /** @override */
-        stringify(): void;
-        
-        /** @override */
-        parse(): void;
     }
 }

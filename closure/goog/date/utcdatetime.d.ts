@@ -20,51 +20,6 @@ declare module goog.date {
     export class UtcDateTime extends goog.date.DateTime {
         constructor(opt_year?: number, opt_month?: number, opt_date?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number, opt_milliseconds?: number);
         
-        /** @override */
-        getFullYear: any;
-        
-        /** @override */
-        getMonth: any;
-        
-        /** @override */
-        getDate: any;
-        
-        /** @override */
-        getHours: any;
-        
-        /** @override */
-        getMinutes: any;
-        
-        /** @override */
-        getSeconds: any;
-        
-        /** @override */
-        getMilliseconds: any;
-        
-        /** @override */
-        getDay: any;
-        
-        /** @override */
-        setFullYear: any;
-        
-        /** @override */
-        setMonth: any;
-        
-        /** @override */
-        setDate: any;
-        
-        /** @override */
-        setHours: any;
-        
-        /** @override */
-        setMinutes: any;
-        
-        /** @override */
-        setSeconds: any;
-        
-        /** @override */
-        setMilliseconds: any;
-        
         /**
          * Creates a DateTime from a UTC datetime string expressed in ISO 8601 format.
          *
@@ -80,11 +35,5 @@ declare module goog.date {
          * @override
          */
         clone(): goog.date.UtcDateTime;
-        
-        /** @override */
-        add(): void;
-        
-        /** @override */
-        getTimezoneOffset(): void;
     }
 }

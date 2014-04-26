@@ -147,9 +147,6 @@ declare module goog.fx {
          */
         addItemToDragList(list: Element, item: Element, opt_index?: number): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Listens for drag events on the given drag item. This method is currently used
          * to initialize drag items.

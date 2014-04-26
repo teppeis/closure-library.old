@@ -43,16 +43,6 @@ declare module goog.graphics {
         getY2(): number;
         
         /**
-         * @override
-         */
-        getColor1(): void;
-        
-        /**
-         * @override
-         */
-        getColor2(): void;
-        
-        /**
          * @return {?number} The start opacity of the gradient.
          */
         getOpacity1(): number;

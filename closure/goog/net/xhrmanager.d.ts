@@ -70,9 +70,6 @@ declare module goog.net {
          *     No events are fired and the callback is not called when forced.
          */
         abort(id: string, opt_force?: boolean): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

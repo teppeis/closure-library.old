@@ -45,14 +45,5 @@ declare module goog.graphics {
          *     this element.
          */
         getTransform(): goog.graphics.AffineTransform;
-        
-        /** @override */
-        addEventListener(): void;
-        
-        /** @override */
-        removeEventListener(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

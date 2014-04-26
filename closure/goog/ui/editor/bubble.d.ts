@@ -33,9 +33,6 @@ declare module goog.ui.editor {
          */
         createBubbleDom(dom: goog.dom.DomHelper, container: Element): Element;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * @return {Element} The element that where the bubble's contents go.
          */

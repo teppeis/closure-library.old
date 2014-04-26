@@ -353,9 +353,6 @@ declare module goog.ui {
          * @protected
          */
         clearHideTimer(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

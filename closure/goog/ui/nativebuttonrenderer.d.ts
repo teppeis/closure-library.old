@@ -36,9 +36,6 @@ declare module goog.ui {
          */
         updateAriaState: any;
         
-        /** @override */
-        getAriaRole(): void;
-        
         /**
          * Returns the button's contents wrapped in a native HTML button element.  Sets
          * the button's disabled attribute as needed.
@@ -56,9 +53,6 @@ declare module goog.ui {
          * @override
          */
         canDecorate(element: Element): boolean;
-        
-        /** @override */
-        decorate(): void;
         
         /**
          * Native buttons natively support BiDi and keyboard focus.

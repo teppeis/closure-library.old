@@ -18,11 +18,6 @@ declare module goog.ui {
         static CSS_CLASS: string;
         
         /**
-         * @override
-         */
-        getCssClass(): void;
-        
-        /**
          * Returns the default orientation of containers rendered or decorated by this
          * renderer.  This implementation returns {@code HORIZONTAL}.
          * @return {goog.ui.Container.Orientation} Default orientation for containers

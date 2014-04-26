@@ -21,9 +21,6 @@ declare module goog.async {
     export class ConditionalDelay extends goog.Disposable {
         constructor(listener: () => boolean, opt_handler?: Object);
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Starts the delay timer. The provided listener function will be called
          * repeatedly after the specified interval until the function returns

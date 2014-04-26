@@ -38,12 +38,6 @@ declare module goog.ui {
          */
         createDom(): void;
         
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
         /**
          * Initializes suggestions menu. Populates menu with separator and ignore option
          * that are always valid. Suggestions are later added above the separator.
@@ -90,9 +84,6 @@ declare module goog.ui {
          * @override
          */
         getElementProperties(status: goog.spell.SpellCheck.WordStatus): Object;
-        
-        /** @override */
-        disposeInternal(): void;
         
         /**
          * Handles key down for overlay.

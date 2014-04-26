@@ -63,18 +63,6 @@ declare module goog.html {
         static INNOCUOUS_STRING: any;
         
         /**
-         * @override
-         * @const
-         */
-        implementsGoogStringTypedString: any;
-        
-        /**
-         * @override
-         * @const
-         */
-        implementsGoogI18nBidiDirectionalString: any;
-        
-        /**
          * Returns this SafeUrl's value a string.
          *
          * IMPORTANT: In code where it is security relevant that an object's type is

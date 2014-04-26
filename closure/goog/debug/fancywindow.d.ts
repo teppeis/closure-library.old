@@ -23,14 +23,5 @@ declare module goog.debug {
          * @type {string}
          */
         static LOCAL_STORE_PREFIX: string;
-        
-        /** @override */
-        writeBufferToLog(): void;
-        
-        /** @override */
-        writeInitialDocument(): void;
-        
-        /** @override */
-        getStyleRules(): void;
     }
 }

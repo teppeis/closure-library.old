@@ -10,9 +10,6 @@ declare module goog.asserts {
      */
     export class AssertionError extends goog.debug.Error {
         constructor(messagePattern: string, messageArgs: Array<any>);
-        
-        /** @override */
-        name: any;
     }
 
     /**

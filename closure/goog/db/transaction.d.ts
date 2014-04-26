@@ -74,8 +74,5 @@ declare module goog.db {
          * database. Dispatches an ABORT event.
          */
         abort(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

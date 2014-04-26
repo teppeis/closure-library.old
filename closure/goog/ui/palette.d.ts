@@ -30,9 +30,6 @@ declare module goog.ui {
     export class Palette extends goog.ui.Control {
         constructor(items: Array<Node>, opt_renderer?: goog.ui.PaletteRenderer, opt_domHelper?: goog.dom.DomHelper);
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Overrides {@link goog.ui.Control#setContentInternal} by also updating the
          * grid size and the selection model.  Considered protected.
@@ -181,8 +178,5 @@ declare module goog.ui {
          * @param {Node} item Item to select.
          */
         setSelectedItem(item: Node): void;
-        
-        /** @override */
-        setHighlighted(): void;
     }
 }

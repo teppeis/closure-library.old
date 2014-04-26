@@ -119,9 +119,6 @@ declare module goog.net {
          */
         abort(opt_failureCode?: goog.net.ErrorCode): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * @return {boolean} True if transfer is complete.
          */

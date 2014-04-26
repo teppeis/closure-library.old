@@ -8,11 +8,5 @@ declare module goog.editor.plugins {
      */
     export class ListTabHandler extends goog.editor.plugins.AbstractTabHandler {
         constructor();
-        
-        /** @override */
-        getTrogClassId(): void;
-        
-        /** @override */
-        handleTabKey(): void;
     }
 }

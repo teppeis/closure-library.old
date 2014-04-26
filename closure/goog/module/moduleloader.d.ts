@@ -71,15 +71,6 @@ declare module goog.module {
          * @param {boolean} enabled Whether source url injection is enabled.
          */
         setSourceUrlInjection(enabled: boolean): void;
-        
-        /** @override */
-        loadModules(): void;
-        
-        /** @override */
-        prefetchModule(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

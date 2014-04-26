@@ -9,14 +9,5 @@ declare module goog.crypt {
      */
     export class Md5 extends goog.crypt.Hash {
         constructor();
-        
-        /** @override */
-        reset(): void;
-        
-        /** @override */
-        update(): void;
-        
-        /** @override */
-        digest(): void;
     }
 }

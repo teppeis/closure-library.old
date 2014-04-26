@@ -10,12 +10,6 @@ declare module goog.editor.plugins {
     export class LoremIpsum extends goog.editor.Plugin {
         constructor(message: string);
         
-        /** @override */
-        getTrogClassId: any;
-        
-        /** @override */
-        activeOnUneditableFields: any;
-        
         /**
          * Handles queryCommandValue.
          * @param {string} command The command to query.
@@ -33,8 +27,5 @@ declare module goog.editor.plugins {
          * @override
          */
         execCommand(command: string, opt_placeCursor?: any): void;
-        
-        /** @override */
-        isSupportedCommand(): void;
     }
 }

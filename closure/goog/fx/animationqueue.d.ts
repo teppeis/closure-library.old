@@ -42,18 +42,6 @@ declare module goog.fx {
      */
     export class AnimationParallelQueue extends goog.fx.AnimationQueue {
         constructor();
-        
-        /** @override */
-        play(): void;
-        
-        /** @override */
-        pause(): void;
-        
-        /** @override */
-        stop(): void;
-        
-        /** @override */
-        onAnimationFinish(): void;
     }
 
     /**
@@ -63,17 +51,5 @@ declare module goog.fx {
      */
     export class AnimationSerialQueue extends goog.fx.AnimationQueue {
         constructor();
-        
-        /** @override */
-        play(): void;
-        
-        /** @override */
-        pause(): void;
-        
-        /** @override */
-        stop(): void;
-        
-        /** @override */
-        onAnimationFinish(): void;
     }
 }

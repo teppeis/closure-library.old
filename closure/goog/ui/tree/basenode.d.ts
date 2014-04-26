@@ -56,23 +56,11 @@ declare module goog.ui.tree {
          */
         getCalculatedIconClass: any;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Adds roles and states.
          * @protected
          */
         initAccessibility(): void;
-        
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
         
         /**
          * The method assumes that the child doesn't have parent node yet.

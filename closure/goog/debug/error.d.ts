@@ -8,8 +8,5 @@ declare module goog.debug {
      */
     export class Error extends Error {
         constructor(opt_msg?: any);
-        
-        /** @override */
-        name: any;
     }
 }

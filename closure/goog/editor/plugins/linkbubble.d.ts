@@ -41,18 +41,6 @@ declare module goog.editor.plugins {
          */
         setSafeToOpenSchemes(schemes: Array<string>): void;
         
-        /** @override */
-        getTrogClassId(): void;
-        
-        /** @override */
-        isSupportedCommand(): void;
-        
-        /** @override */
-        execCommandInternal(): void;
-        
-        /** @override */
-        getBubbleTargetFromSelection(): void;
-        
         /**
          * Set the optional function for getting the "test" link of a url.
          * @param {function(string) : string} func The function to use.
@@ -66,21 +54,12 @@ declare module goog.editor.plugins {
          */
         getTargetUrl(): string;
         
-        /** @override */
-        getBubbleType(): void;
-        
-        /** @override */
-        getBubbleTitle(): void;
-        
         /**
          * Returns the message to display for testing a link.
          * @return {string} The message for testing a link.
          * @protected
          */
         getTestLinkMessage(): string;
-        
-        /** @override */
-        createBubbleContents(): void;
         
         /**
          * Tests the link by opening it in a new tab/window. Should be used as the

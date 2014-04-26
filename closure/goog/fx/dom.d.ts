@@ -27,15 +27,6 @@ declare module goog.fx.dom {
          *     otherwise.
          */
         isRightToLeft(): boolean;
-        
-        /** @override */
-        onAnimate(): void;
-        
-        /** @override */
-        onEnd(): void;
-        
-        /** @override */
-        onBegin(): void;
     }
 
     /**
@@ -54,9 +45,6 @@ declare module goog.fx.dom {
      */
     export class Slide extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
-        
-        /** @override */
-        updateStyle(): void;
     }
 
     /**
@@ -71,9 +59,6 @@ declare module goog.fx.dom {
      */
     export class SlideFrom extends goog.fx.dom.Slide {
         constructor(element: Element, end: Array<number>, time: number, opt_acc?: Function);
-        
-        /** @override */
-        onBegin(): void;
     }
 
     /**
@@ -271,12 +256,6 @@ declare module goog.fx.dom {
      */
     export class FadeOutAndHide extends goog.fx.dom.Fade {
         constructor(element: Element, time: number, opt_acc?: Function);
-        
-        /** @override */
-        onBegin(): void;
-        
-        /** @override */
-        onEnd(): void;
     }
 
     /**
@@ -291,9 +270,6 @@ declare module goog.fx.dom {
      */
     export class FadeInAndShow extends goog.fx.dom.Fade {
         constructor(element: Element, time: number, opt_acc?: Function);
-        
-        /** @override */
-        onBegin(): void;
     }
 
     /**
@@ -316,9 +292,6 @@ declare module goog.fx.dom {
          * Animation event handler that will set the background-color of an element
          */
         setColor(): void;
-        
-        /** @override */
-        updateStyle(): void;
     }
 
     /**

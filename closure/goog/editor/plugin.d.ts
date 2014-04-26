@@ -135,9 +135,6 @@ declare module goog.editor {
          */
         isSilentCommand(command: string): boolean;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * @return {string} The ID unique to this plugin class. Note that different
          *     instances off the plugin share the same classId.

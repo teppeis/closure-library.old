@@ -15,17 +15,5 @@ declare module goog.ui {
          * @param {string} cookieKey Cookie key.
          */
         selectCookie(cookieKey: string): void;
-        
-        /** @override */
-        canDecorate(): void;
-        
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

@@ -66,21 +66,8 @@ declare module goog.events {
         isMouseActionButton(): boolean;
         
         /**
-         * @override
-         */
-        stopPropagation(): void;
-        
-        /**
-         * @override
-         */
-        preventDefault(): void;
-        
-        /**
          * @return {Event} The underlying browser event object.
          */
         getBrowserEvent(): Event;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

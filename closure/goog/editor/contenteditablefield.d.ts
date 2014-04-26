@@ -18,27 +18,10 @@ declare module goog.editor {
         
         /**
          * @override
-         */
-        logger: any;
-        
-        /** @override */
-        turnOnDesignModeGecko: any;
-        
-        /**
-         * @override
          *
          * ContentEditableField does not make any changes to the DOM when it is made
          * editable other than setting contentEditable to true.
          */
         restoreDom: any;
-        
-        /** @override */
-        usesIframe(): void;
-        
-        /** @override */
-        installStyles(): void;
-        
-        /** @override */
-        makeEditableInternal(): void;
     }
 }

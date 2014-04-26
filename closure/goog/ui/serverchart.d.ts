@@ -829,9 +829,6 @@ declare module goog.ui {
          *     if the set number is not given.
          */
         getData(opt_setNumber?: number): Array<any>;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

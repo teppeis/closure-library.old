@@ -46,12 +46,6 @@ declare module goog.ui {
          */
         updateAriaState(element: Element, state: goog.ui.Component.State, enable: boolean): void;
         
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        decorate(): void;
-        
         /**
          * Takes a button's root element, and returns the value associated with it.
          * No-op in the base class.
@@ -94,8 +88,5 @@ declare module goog.ui {
          * @protected
          */
         setCollapsed(button: goog.ui.Button, sides: number): void;
-        
-        /** @override */
-        getCssClass(): void;
     }
 }

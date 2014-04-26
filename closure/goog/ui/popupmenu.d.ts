@@ -20,9 +20,6 @@ declare module goog.ui {
          */
         decorateInternal(element: Element): void;
         
-        /** @override */
-        enterDocument(): void;
-        
         /**
          * Attaches the menu to a new popup position and anchor element.  A menu can
          * only be attached to an element once, since attaching the same menu for
@@ -195,8 +192,5 @@ declare module goog.ui {
          * @override
          */
         handleBlur(e: goog.events.BrowserEvent): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

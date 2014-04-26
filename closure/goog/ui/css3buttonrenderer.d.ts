@@ -19,9 +19,6 @@ declare module goog.ui {
          */
         static CSS_CLASS: string;
         
-        /** @override */
-        getContentElement(): void;
-        
         /**
          * Returns the button's contents wrapped in the following DOM structure:
          *    <div class="goog-inline-block goog-css3-button">
@@ -43,9 +40,6 @@ declare module goog.ui {
          * @override
          */
         canDecorate(element: Element): boolean;
-        
-        /** @override */
-        decorate(): void;
         
         /**
          * Returns the CSS class to be applied to the root element of components

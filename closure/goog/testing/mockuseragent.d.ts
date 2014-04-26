@@ -39,8 +39,5 @@ declare module goog.testing {
          * Uninstalls the MockUserAgent.
          */
         uninstall(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

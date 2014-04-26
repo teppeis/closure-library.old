@@ -29,9 +29,6 @@ declare module goog.ui {
          */
         static Events: Object;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * @return {goog.a11y.aria.Role} The ARIA role to be applied to Zippy element.
          */

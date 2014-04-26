@@ -22,15 +22,6 @@ declare module goog.debug {
          */
         static SAMPLES: any;
         
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
         /**
          * @return {number} The average frames per second.
          */

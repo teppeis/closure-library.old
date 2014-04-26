@@ -26,9 +26,6 @@ declare module goog.editor.plugins {
     export class TableEditor extends goog.editor.Plugin {
         constructor();
         
-        /** @override */
-        getTrogClassId(): void;
-        
         /**
          * Whether the string corresponds to a command this plugin handles.
          * @param {string} command Command string to check.
@@ -38,18 +35,12 @@ declare module goog.editor.plugins {
          */
         isSupportedCommand(command: string): boolean;
         
-        /** @override */
-        enable(): void;
-        
         /**
          * Returns the current value of a given command. Currently this plugin
          * only returns a value for goog.editor.plugins.TableEditor.COMMAND.TABLE.
          * @override
          */
         queryCommandValue(): void;
-        
-        /** @override */
-        execCommandInternal(): void;
         
         /**
          * Adds a function to filter out non-user-editable tables.

@@ -83,9 +83,6 @@ declare module goog.ui {
          */
         toggle(): void;
         
-        /** @override */
-        enterDocument(): void;
-        
         /**
          * Fix for tabindex not being updated so that disabled checkbox is not
          * focusable. In particular this fails in Chrome.
@@ -94,8 +91,5 @@ declare module goog.ui {
          * @override
          */
         setEnabled(): void;
-        
-        /** @override */
-        handleKeyEventInternal(): void;
     }
 }

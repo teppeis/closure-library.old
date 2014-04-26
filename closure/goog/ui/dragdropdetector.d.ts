@@ -26,9 +26,6 @@ declare module goog.ui {
          * never been updated.
          */
         static INIT_POSITION: any;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

@@ -61,8 +61,5 @@ declare module goog.ui.equation {
          * @return {!goog.dom.DomHelper} This object's DOM helper.
          */
         getDomHelper(): goog.dom.DomHelper;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

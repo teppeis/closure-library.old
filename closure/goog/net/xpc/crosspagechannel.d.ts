@@ -132,9 +132,6 @@ declare module goog.net.xpc {
          */
         notifyTransportError(): void;
         
-        /** @override */
-        send(): void;
-        
         /**
          * Delivers messages to the appropriate service-handler. Named xpcDeliver to
          * avoid name conflict with {@code deliver} function in superclass
@@ -163,8 +160,5 @@ declare module goog.net.xpc {
          * @param {string} name The new channel name.
          */
         updateChannelNameAndCatalog(name: string): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

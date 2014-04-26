@@ -27,9 +27,6 @@ declare module goog.ds {
          */
         set(value: any): void;
         
-        /** @override */
-        getChildNodes(): void;
-        
         /**
          * Gets a named child node of the current node
          * @param {string} name The node name.

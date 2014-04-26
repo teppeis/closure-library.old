@@ -78,9 +78,6 @@ declare module goog.ui {
          */
         static SELECT_EVENT: string;
         
-        /** @override */
-        getCssClass(): void;
-        
         /**
          * Sets the title.
          * @param {string} title The title text.
@@ -246,18 +243,6 @@ declare module goog.ui {
          */
         getDraggable(): boolean;
         
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        decorateInternal(): void;
-        
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
         /**
          * Sets the visibility of the dialog box and moves focus to the
          * default button. Lazily renders the component if needed. After this
@@ -267,12 +252,6 @@ declare module goog.ui {
          * @override
          */
         setVisible(visible: boolean): void;
-        
-        /** @override */
-        onShow(): void;
-        
-        /** @override */
-        onHide(): void;
         
         /**
          * @return {boolean} Whether this dialog has a title close button.
@@ -309,9 +288,6 @@ declare module goog.ui {
          * @return {boolean} Whether the dialog should be disposed when it is hidden.
          */
         getDisposeOnHide(): boolean;
-        
-        /** @override */
-        disposeInternal(): void;
         
         /**
          * Sets the button set to use.

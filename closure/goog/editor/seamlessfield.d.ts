@@ -16,11 +16,6 @@ declare module goog.editor {
         constructor(id: string, opt_doc?: Document);
         
         /**
-         * @override
-         */
-        logger: any;
-        
-        /**
          * Sets the min height of this editable field's iframe. Only used in growing
          * mode when an iframe is used. This will cause an immediate field sizing to
          * update the field if necessary based on the new min height.
@@ -70,47 +65,5 @@ declare module goog.editor {
          * Applies CSS from the wrapper-div to the field iframe.
          */
         inheritBlendedCSS(): void;
-        
-        /** @override */
-        usesIframe(): void;
-        
-        /** @override */
-        setupMutationEventHandlersGecko(): void;
-        
-        /** @override */
-        handleChange(): void;
-        
-        /** @override */
-        dispatchBlur(): void;
-        
-        /** @override */
-        turnOnDesignModeGecko(): void;
-        
-        /** @override */
-        installStyles(): void;
-        
-        /** @override */
-        makeEditableInternal(): void;
-        
-        /** @override */
-        handleFieldLoad(): void;
-        
-        /** @override */
-        getIframeAttributes(): void;
-        
-        /** @override */
-        attachIframe(): void;
-        
-        /** @override */
-        getFieldFormatInfo(): void;
-        
-        /** @override */
-        writeIframeContent(): void;
-        
-        /** @override */
-        restoreDom(): void;
-        
-        /** @override */
-        clearListeners(): void;
     }
 }

@@ -50,9 +50,6 @@ declare module goog.soy.data {
          */
         content: string;
         
-        /** @override */
-        toString(): void;
-        
         /**
          * Converts sanitized content of kind TEXT or HTML into SafeHtml. HTML content
          * is converted without modification, while text content is HTML-escaped.

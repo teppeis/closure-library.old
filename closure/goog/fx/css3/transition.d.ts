@@ -41,15 +41,6 @@ declare module goog.fx.css3 {
     export class Transition extends goog.fx.TransitionBase {
         constructor(element: Element, duration: number, initialStyle: Object, finalStyle: Object, transitions: goog.style.transition.Css3Property);
         
-        /** @override */
-        play(): void;
-        
-        /** @override */
-        stop(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Pausing CSS3 Transitions in not supported.
          * @override

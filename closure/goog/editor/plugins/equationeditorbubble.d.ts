@@ -9,20 +9,5 @@ declare module goog.editor.plugins.equation {
      */
     export class EquationBubble extends goog.editor.plugins.AbstractBubblePlugin {
         constructor();
-        
-        /** @override */
-        getTrogClassId(): void;
-        
-        /** @override */
-        getBubbleTargetFromSelection(): void;
-        
-        /** @override */
-        createBubbleContents(): void;
-        
-        /** @override */
-        getBubbleType(): void;
-        
-        /** @override */
-        getBubbleTitle(): void;
     }
 }

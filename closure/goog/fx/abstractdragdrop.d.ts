@@ -287,9 +287,6 @@ declare module goog.fx {
          * @protected
          */
         getEventPosition(event: goog.fx.DragEvent): goog.math.Coordinate;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**
@@ -311,9 +308,6 @@ declare module goog.fx {
      */
     export class DragDropEvent extends goog.events.Event {
         constructor(type: string, source: goog.fx.AbstractDragDrop, sourceItem: goog.fx.DragDropItem, opt_target?: goog.fx.AbstractDragDrop, opt_targetItem?: goog.fx.DragDropItem, opt_targetElement?: Element, opt_clientX?: number, opt_clientY?: number, opt_x?: number, opt_y?: number, opt_subtarget?: Object);
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

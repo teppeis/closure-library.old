@@ -162,12 +162,6 @@ declare module goog.ui.emoji {
         loadImages(): void;
         
         /**
-         * @override
-         * @suppress {deprecated} Using deprecated goog.ui.TabPane.
-         */
-        createDom(): void;
-        
-        /**
          * Used by unittests to manually load the animated emoji for this picker.
          */
         manuallyLoadAnimatedEmoji(): void;
@@ -180,18 +174,6 @@ declare module goog.ui.emoji {
          * @override
          */
         canDecorate(element: Element): boolean;
-        
-        /**
-         * @override
-         * @suppress {deprecated} Using deprecated goog.ui.TabPane.
-         */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
-        /** @override */
-        disposeInternal(): void;
         
         /**
          * @return {string} CSS class for the root element of EmojiPicker.

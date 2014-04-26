@@ -124,9 +124,6 @@ declare module goog.ui {
          */
         exitDocument(): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Handles ENTER events raised by child controls when they are navigated to.
          * @param {goog.events.Event} e ENTER event to handle.

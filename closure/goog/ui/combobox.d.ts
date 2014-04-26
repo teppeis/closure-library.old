@@ -32,21 +32,12 @@ declare module goog.ui {
          */
         setEnabled(enabled: boolean): void;
         
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
         /**
          * Combo box currently can't decorate elements.
          * @return {boolean} The value false.
          * @override
          */
         canDecorate(): boolean;
-        
-        /** @override */
-        disposeInternal(): void;
         
         /**
          * Dismisses the menu and resets the value of the edit field.

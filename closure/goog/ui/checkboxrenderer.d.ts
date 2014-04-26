@@ -16,12 +16,6 @@ declare module goog.ui {
          */
         static CSS_CLASS: string;
         
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        decorate(): void;
-        
         /**
          * Returns the ARIA role to be applied to checkboxes.
          * @return {goog.a11y.aria.Role} ARIA role.
@@ -36,9 +30,6 @@ declare module goog.ui {
          * @param {goog.ui.Checkbox.State} state Updated checkbox state.
          */
         setCheckboxState(element: Element, state: goog.ui.Checkbox.State): void;
-        
-        /** @override */
-        getCssClass(): void;
         
         /**
          * Takes a single {@link goog.ui.Checkbox.State}, and returns the

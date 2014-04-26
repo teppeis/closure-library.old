@@ -12,9 +12,6 @@ declare module goog.dom.iter {
      */
     export class SiblingIterator extends goog.iter.Iterator {
         constructor(node: Node, opt_includeNode?: boolean, opt_reverse?: boolean);
-        
-        /** @override */
-        next(): void;
     }
 
     /**
@@ -42,8 +39,5 @@ declare module goog.dom.iter {
      */
     export class AncestorIterator extends goog.iter.Iterator {
         constructor(node: Node, opt_includeNode?: boolean);
-        
-        /** @override */
-        next(): void;
     }
 }

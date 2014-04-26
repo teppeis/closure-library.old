@@ -193,11 +193,6 @@ declare module goog.tweak {
          * @param {*} value The new value.
          */
         setDefaultValue(value: any): void;
-        
-        /**
-         * @override
-         */
-        getNewValueEncoded(): void;
     }
 
     /**
@@ -250,11 +245,6 @@ declare module goog.tweak {
         getDefaultValue(): string;
         
         /**
-         * @override
-         */
-        encodeNewValue(): void;
-        
-        /**
          * Sets the valid values for the setting.
          * @param {Array.<string>|undefined} values Valid values.
          */
@@ -265,11 +255,6 @@ declare module goog.tweak {
          * @return {Array.<string>|undefined} Valid values.
          */
         getValidValues(): Array<string>;
-        
-        /**
-         * @override
-         */
-        initialize(): void;
     }
 
     /**
@@ -322,11 +307,6 @@ declare module goog.tweak {
         getDefaultValue(): number;
         
         /**
-         * @override
-         */
-        encodeNewValue(): void;
-        
-        /**
          * Sets the valid values for the setting.
          * @param {Array.<number>|undefined} values Valid values.
          */
@@ -337,11 +317,6 @@ declare module goog.tweak {
          * @return {Array.<number>|undefined} Valid values.
          */
         getValidValues(): Array<number>;
-        
-        /**
-         * @override
-         */
-        initialize(): void;
     }
 
     /**
@@ -391,16 +366,6 @@ declare module goog.tweak {
          * @return {boolean} The default value.
          */
         getDefaultValue(): boolean;
-        
-        /**
-         * @override
-         */
-        encodeNewValue(): void;
-        
-        /**
-         * @override
-         */
-        initialize(): void;
     }
 
     /**
@@ -423,11 +388,6 @@ declare module goog.tweak {
          * @override
          */
         logger: goog.log.Logger;
-        
-        /**
-         * @override
-         */
-        setParamName(): void;
         
         /**
          * Sets the token to use in the query parameter.
@@ -481,16 +441,6 @@ declare module goog.tweak {
          * @param {goog.tweak.BooleanInGroupSetting} boolEntry The entry.
          */
         addChild(boolEntry: goog.tweak.BooleanInGroupSetting): void;
-        
-        /**
-         * @override
-         */
-        initialize(): void;
-        
-        /**
-         * @override
-         */
-        getNewValueEncoded(): void;
     }
 
     /**

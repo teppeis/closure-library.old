@@ -12,17 +12,5 @@ declare module goog.i18n.uChar {
      */
     export class RemoteNameFetcher extends goog.Disposable {
         constructor(dataSourceUri: string);
-        
-        /** @override */
-        disposeInternal(): void;
-        
-        /** @override */
-        prefetch(): void;
-        
-        /** @override */
-        getName(): void;
-        
-        /** @override */
-        isNameAvailable(): void;
     }
 }

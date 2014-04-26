@@ -92,9 +92,6 @@ declare module goog.events {
          */
         removeEventListener(type: string, handler: (arg0: any) => any, opt_capture?: boolean, opt_handlerScope?: Object): void;
         
-        /** @override */
-        dispatchEvent(): void;
-        
         /**
          * Removes listeners from this object.  Classes that extend EventTarget may
          * need to override this method in order to remove references to DOM Elements
@@ -102,33 +99,6 @@ declare module goog.events {
          * @override
          */
         disposeInternal(): void;
-        
-        /** @override */
-        listen(): void;
-        
-        /** @override */
-        listenOnce(): void;
-        
-        /** @override */
-        unlisten(): void;
-        
-        /** @override */
-        unlistenByKey(): void;
-        
-        /** @override */
-        removeAllListeners(): void;
-        
-        /** @override */
-        fireListeners(): void;
-        
-        /** @override */
-        getListeners(): void;
-        
-        /** @override */
-        getListener(): void;
-        
-        /** @override */
-        hasListener(): void;
         
         /**
          * Sets the target to be used for {@code event.target} when firing

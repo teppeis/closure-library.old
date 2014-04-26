@@ -16,9 +16,6 @@ declare module goog.ui {
     export class FilterObservingMenuItem extends goog.ui.MenuItem {
         constructor(content: goog.ui.ControlContent, opt_model?: any, opt_domHelper?: goog.dom.DomHelper, opt_renderer?: goog.ui.MenuItemRenderer);
         
-        /** @override */
-        enterDocument(): void;
-        
         /**
          * Sets the observer functions.
          * @param {Function} f function(goog.ui.FilterObservingMenuItem, string).

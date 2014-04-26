@@ -112,9 +112,6 @@ declare module goog.db {
          * @throws {goog.db.Error} If there's a problem creating the transaction.
          */
         createTransaction(storeNames: Array<string>, opt_mode?: goog.db.Transaction.TransactionMode): goog.db.Transaction;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

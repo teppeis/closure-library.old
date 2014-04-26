@@ -19,55 +19,16 @@ declare module goog.testing.fs {
          */
         deleted: boolean;
         
-        /** @override */
-        isFile: any;
-        
-        /** @override */
-        isDirectory: any;
-        
-        /** @override */
-        getLastModified: any;
-        
-        /** @override */
-        getMetadata: any;
-        
-        /** @override */
-        toUri: any;
-        
-        /** @override */
-        wrapEntry: any;
-        
-        /** @override */
-        getName(): void;
-        
-        /** @override */
-        getFullPath(): void;
-        
         /**
          * @return {!goog.testing.fs.FileSystem}
          * @override
          */
         getFileSystem(): goog.testing.fs.FileSystem;
         
-        /** @override */
-        moveTo(): void;
-        
-        /** @override */
-        copyTo(): void;
-        
         /**
          * @return {!goog.testing.fs.Entry} A shallow copy of this entry object.
          */
         clone(): goog.testing.fs.Entry;
-        
-        /** @override */
-        toUrl(): void;
-        
-        /** @override */
-        remove(): void;
-        
-        /** @override */
-        getParent(): void;
         
         /**
          * Return a deferred that will call its errback if this entry has been deleted.
@@ -100,33 +61,6 @@ declare module goog.testing.fs {
      */
     export class DirectoryEntry extends goog.testing.fs.Entry {
         constructor(fs: goog.testing.fs.FileSystem, parent: goog.testing.fs.DirectoryEntry, name: string, children: Object);
-        
-        /** @override */
-        createPath: any;
-        
-        /** @override */
-        isFile(): void;
-        
-        /** @override */
-        isDirectory(): void;
-        
-        /** @override */
-        getLastModified(): void;
-        
-        /** @override */
-        getMetadata(): void;
-        
-        /** @override */
-        clone(): void;
-        
-        /** @override */
-        remove(): void;
-        
-        /** @override */
-        getFile(): void;
-        
-        /** @override */
-        getDirectory(): void;
         
         /**
          * Get a file entry synchronously, without waiting for a Deferred to resolve.
@@ -175,12 +109,6 @@ declare module goog.testing.fs {
          * @return {boolean} Whether or not this has a child with the given name.
          */
         hasChild(name: string): boolean;
-        
-        /** @override */
-        removeRecursively(): void;
-        
-        /** @override */
-        listDirectory(): void;
     }
 
     /**
@@ -199,27 +127,6 @@ declare module goog.testing.fs {
      */
     export class FileEntry extends goog.testing.fs.Entry {
         constructor(fs: goog.testing.fs.FileSystem, parent: goog.testing.fs.DirectoryEntry, name: string, data: string, opt_type?: string);
-        
-        /** @override */
-        isFile(): void;
-        
-        /** @override */
-        isDirectory(): void;
-        
-        /** @override */
-        clone(): void;
-        
-        /** @override */
-        getLastModified(): void;
-        
-        /** @override */
-        getMetadata(): void;
-        
-        /** @override */
-        createWriter(): void;
-        
-        /** @override */
-        file(): void;
         
         /**
          * Get the internal file representation synchronously, without waiting for a

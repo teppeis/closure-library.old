@@ -33,8 +33,5 @@ declare module goog.ui.editor {
          *     selected.
          */
         addTab(id: string, caption: string, tooltip: string, groupName: string, content: Element): void;
-        
-        /** @override */
-        enterDocument(): void;
     }
 }

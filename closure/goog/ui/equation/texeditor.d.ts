@@ -12,12 +12,6 @@ declare module goog.ui.equation {
     export class TexEditor extends goog.ui.Component {
         constructor(context: Object, helpUrl: string, opt_domHelper?: goog.dom.DomHelper);
         
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        decorateInternal(): void;
-        
         /**
          * Returns the encoded equation.
          * @return {string} The encoded equation.
@@ -47,8 +41,5 @@ declare module goog.ui.equation {
          * @param {boolean} visible Whether the editor should be visible.
          */
         setVisible(visible: boolean): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

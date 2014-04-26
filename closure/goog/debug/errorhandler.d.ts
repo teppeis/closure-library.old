@@ -26,12 +26,6 @@ declare module goog.debug {
          */
         setAddTracersToProtectedFunctions(newVal: boolean): void;
         
-        /** @override */
-        wrap(): void;
-        
-        /** @override */
-        unwrap(): void;
-        
         /**
          * Installs exception protection for an entry point function. When an exception
          * is thrown from a protected function, a handler will be invoked to handle it.
@@ -84,9 +78,6 @@ declare module goog.debug {
          *     messages.
          */
         setPrefixErrorMessages(prefixErrorMessages: boolean): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

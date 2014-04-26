@@ -64,8 +64,5 @@ declare module goog.testing.editor {
          *     selection at.
          */
         select(from: Node, fromOffset: number, opt_to?: Node, opt_toOffset?: number): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

@@ -29,17 +29,5 @@ declare module goog.proto2 {
          * @override
          */
         serialize(message: goog.proto2.Message): Array<any>;
-        
-        /** @override */
-        deserializeField(): void;
-        
-        /** @override */
-        getSerializedValue(): void;
-        
-        /** @override */
-        getDeserializedValue(): void;
-        
-        /** @override */
-        deserialize(): void;
     }
 }

@@ -15,11 +15,5 @@ declare module goog.events {
      */
     export class OnlineHandler extends goog.events.EventTarget {
         constructor();
-        
-        /** @override */
-        isOnline(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

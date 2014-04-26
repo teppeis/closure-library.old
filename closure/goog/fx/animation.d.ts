@@ -132,9 +132,6 @@ declare module goog.fx {
          */
         destroy(): void;
         
-        /** @override */
-        onAnimationFrame(): void;
-        
         /**
          * Handles the actual iteration of the animation in a timeout
          * @param {number} now The current time.
@@ -154,9 +151,6 @@ declare module goog.fx {
          * @protected
          */
         onDestroy(): void;
-        
-        /** @override */
-        dispatchAnimationEvent(): void;
     }
 
     /**

@@ -322,9 +322,6 @@ declare module goog.graphics {
          */
         getTextWidth(text: string, font: goog.graphics.Font): number;
         
-        /** @override */
-        enterDocument(): void;
-        
         /**
          * Disposes of the component by removing event handlers, detacing DOM nodes from
          * the document body, and removing references to them.

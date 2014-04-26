@@ -62,9 +62,6 @@ declare module goog.ui {
          */
         exitDocument(): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Returns the base CSS class used by subcomponents of this component.
          * @return {string} Component-specific CSS class.

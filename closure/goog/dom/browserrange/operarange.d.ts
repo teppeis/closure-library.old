@@ -26,8 +26,5 @@ declare module goog.dom.browserrange {
          * @return {!goog.dom.browserrange.OperaRange} A wrapper object.
          */
         static createFromNodes(startNode: Node, startOffset: number, endNode: Node, endOffset: number): goog.dom.browserrange.OperaRange;
-        
-        /** @override */
-        selectInternal(): void;
     }
 }

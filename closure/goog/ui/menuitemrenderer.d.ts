@@ -22,9 +22,6 @@ declare module goog.ui {
          */
         static CSS_CLASS: string;
         
-        /** @override */
-        getAriaRole(): void;
-        
         /**
          * Overrides {@link goog.ui.ControlRenderer#createDom} by adding extra markup
          * and stying to the menu item's element if it is selectable or checkable.
@@ -33,9 +30,6 @@ declare module goog.ui {
          * @override
          */
         createDom(item: goog.ui.Control): Element;
-        
-        /** @override */
-        getContentElement(): void;
         
         /**
          * Overrides {@link goog.ui.ControlRenderer#decorate} by initializing the
@@ -140,9 +134,6 @@ declare module goog.ui {
          * @override
          */
         getStateFromClass(className: string): goog.ui.Component.State;
-        
-        /** @override */
-        getCssClass(): void;
         
         /**
          * Corrects the ARIA role based on checkable and selectable.

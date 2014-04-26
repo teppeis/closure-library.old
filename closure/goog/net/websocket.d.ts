@@ -72,9 +72,6 @@ declare module goog.net {
          * @return {boolean} True if the web socket is open, false otherwise.
          */
         isOpen(): boolean;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

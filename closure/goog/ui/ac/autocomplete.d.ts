@@ -290,9 +290,6 @@ declare module goog.ui.ac {
          */
         cancelDelayedDismiss(): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Renders the rows and adds highlighting.
          * @param {!Array} rows Set of data that match the given token.

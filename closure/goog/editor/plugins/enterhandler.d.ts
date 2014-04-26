@@ -23,12 +23,6 @@ declare module goog.editor.plugins {
          */
         tag: goog.dom.TagName;
         
-        /** @override */
-        getTrogClassId(): void;
-        
-        /** @override */
-        enable(): void;
-        
         /**
          * If the contents are empty, return the 'default' html for the field.
          * The 'default' contents depend on the enter handling mode, so it
@@ -91,12 +85,6 @@ declare module goog.editor.plugins {
          * @protected
          */
         deleteBrGecko(e: goog.events.Event): void;
-        
-        /** @override */
-        handleKeyPress(): void;
-        
-        /** @override */
-        handleKeyUp(): void;
         
         /**
          * Internal handler for keyup events.

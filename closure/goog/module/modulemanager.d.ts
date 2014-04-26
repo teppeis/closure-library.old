@@ -271,8 +271,5 @@ declare module goog.module {
          * @param {Function} fn The function to register as a callback.
          */
         registerCallback(types: goog.module.ModuleManager.CallbackType, fn: Function): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

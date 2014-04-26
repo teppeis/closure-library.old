@@ -30,8 +30,5 @@ declare module goog.ui {
          * @override
          */
         decorate(item: goog.ui.Control, element: Element): Element;
-        
-        /** @override */
-        getCssClass(): void;
     }
 }

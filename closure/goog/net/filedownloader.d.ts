@@ -136,9 +136,6 @@ declare module goog.net {
          *     {@link goog.net.FileDownloader.Error}s.
          */
         setBlob(url: string, blob: Blob, opt_name?: string): goog.async.Deferred;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

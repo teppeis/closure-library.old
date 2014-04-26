@@ -17,9 +17,6 @@ declare module goog.messaging {
          */
         logger: goog.log.Logger;
         
-        /** @override */
-        send: any;
-        
         /**
          * Immediately calls opt_connectCb if given, and is otherwise a no-op. If
          * subclasses have configuration that needs to happen before the channel is
@@ -35,12 +32,6 @@ declare module goog.messaging {
          * @override
          */
         isConnected(): void;
-        
-        /** @override */
-        registerService(): void;
-        
-        /** @override */
-        registerDefaultService(): void;
         
         /**
          * Delivers a message to the appropriate service. This is meant to be called by
@@ -84,8 +75,5 @@ declare module goog.messaging {
          * @protected
          */
         decodePayload(serviceName: string, payload: string, objectPayload: boolean): string;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

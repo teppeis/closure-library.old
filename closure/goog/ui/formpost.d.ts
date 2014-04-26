@@ -10,9 +10,6 @@ declare module goog.ui {
     export class FormPost extends goog.ui.Component {
         constructor(opt_dom?: goog.dom.DomHelper);
         
-        /** @override */
-        createDom(): void;
-        
         /**
          * Constructs a POST request and directs the browser as if a form were
          * submitted.

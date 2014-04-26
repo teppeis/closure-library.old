@@ -48,42 +48,6 @@ declare module goog.dom {
          */
         clone(): goog.dom.TextRange;
         
-        /** @override */
-        getType(): void;
-        
-        /** @override */
-        getBrowserRangeObject(): void;
-        
-        /** @override */
-        setBrowserRangeObject(): void;
-        
-        /** @override */
-        getTextRangeCount(): void;
-        
-        /** @override */
-        getTextRange(): void;
-        
-        /** @override */
-        getContainer(): void;
-        
-        /** @override */
-        getStartNode(): void;
-        
-        /** @override */
-        getStartOffset(): void;
-        
-        /** @override */
-        getStartPosition(): void;
-        
-        /** @override */
-        getEndNode(): void;
-        
-        /** @override */
-        getEndOffset(): void;
-        
-        /** @override */
-        getEndPosition(): void;
-        
         /**
          * Moves a TextRange to the provided nodes and offsets.
          * @param {Node} startNode The node to start with.
@@ -94,36 +58,12 @@ declare module goog.dom {
          */
         moveToNodes(startNode: Node, startOffset: number, endNode: Node, endOffset: number, isReversed: boolean): void;
         
-        /** @override */
-        isReversed(): void;
-        
-        /** @override */
-        containsRange(): void;
-        
         /**
          * Tests if the given node is in a document.
          * @param {Node} node The node to check.
          * @return {boolean} Whether the given node is in the given document.
          */
         static isAttachedNode(node: Node): boolean;
-        
-        /** @override */
-        isRangeInDocument(): void;
-        
-        /** @override */
-        isCollapsed(): void;
-        
-        /** @override */
-        getText(): void;
-        
-        /** @override */
-        getHtmlFragment(): void;
-        
-        /** @override */
-        getValidHtml(): void;
-        
-        /** @override */
-        getPastableHtml(): void;
         
         /**
          * Returns a TextRangeIterator over the contents of the range.  Regardless of
@@ -133,12 +73,6 @@ declare module goog.dom {
          * @override
          */
         __iterator__(opt_keys?: boolean): goog.dom.TextRangeIterator;
-        
-        /** @override */
-        select(): void;
-        
-        /** @override */
-        removeContents(): void;
         
         /**
          * Surrounds the text range with the specified element (on Mozilla) or with a
@@ -151,17 +85,5 @@ declare module goog.dom {
          *    but not on IE), or null if unsuccessful.
          */
         surroundContents(element: Element): Element;
-        
-        /** @override */
-        insertNode(): void;
-        
-        /** @override */
-        surroundWithNodes(): void;
-        
-        /** @override */
-        saveUsingDom(): void;
-        
-        /** @override */
-        collapse(): void;
     }
 }

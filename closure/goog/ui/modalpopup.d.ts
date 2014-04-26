@@ -60,18 +60,6 @@ declare module goog.ui {
          */
         setupBackwardTabWrap(): void;
         
-        /** @override */
-        canDecorate(): void;
-        
-        /** @override */
-        decorateInternal(): void;
-        
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
         /**
          * Sets the visibility of the modal popup box and focus to the popup.
          * Lazily renders the component if needed.
@@ -147,8 +135,5 @@ declare module goog.ui {
          * @protected
          */
         getTabCatcherElement(): Element;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

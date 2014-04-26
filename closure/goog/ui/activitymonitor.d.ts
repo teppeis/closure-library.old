@@ -33,9 +33,6 @@ declare module goog.ui {
          */
         static MIN_EVENT_SPACING: number;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Adds a document to those being monitored by this class.
          *

@@ -19,11 +19,6 @@ declare module goog.labs.testing {
          * @override
          */
         matches(): void;
-        
-        /**
-         * @override
-         */
-        describe(): void;
     }
 
     /**
@@ -45,11 +40,6 @@ declare module goog.labs.testing {
          * @override
          */
         matches(): void;
-        
-        /**
-         * @override
-         */
-        describe(): void;
     }
 
     /**
@@ -71,11 +61,6 @@ declare module goog.labs.testing {
          * @override
          */
         matches(): void;
-        
-        /**
-         * @override
-         */
-        describe(): void;
     }
 
     /**
@@ -97,11 +82,6 @@ declare module goog.labs.testing {
          * @override
          */
         matches(): void;
-        
-        /**
-         * @override
-         */
-        describe(): void;
     }
 
     /**
@@ -123,11 +103,6 @@ declare module goog.labs.testing {
          * @override
          */
         matches(): void;
-        
-        /**
-         * @override
-         */
-        describe(): void;
     }
 
     /**
@@ -150,10 +125,5 @@ declare module goog.labs.testing {
          * @override
          */
         matches(): void;
-        
-        /**
-         * @override
-         */
-        describe(): void;
     }
 }

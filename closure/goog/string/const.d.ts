@@ -29,12 +29,6 @@ declare module goog.string {
         constructor();
         
         /**
-         * @override
-         * @const
-         */
-        implementsGoogStringTypedString: any;
-        
-        /**
          * Returns this Const's value a string.
          *
          * IMPORTANT: In code where it is security-relevant that an object's type is

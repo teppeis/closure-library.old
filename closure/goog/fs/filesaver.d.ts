@@ -62,8 +62,5 @@ declare module goog.fs {
          * @return {goog.fs.Error} The error encountered while writing, if any.
          */
         getError(): goog.fs.Error;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

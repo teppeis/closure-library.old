@@ -53,9 +53,6 @@ declare module goog.events {
          * Removes the listeners that may exist.
          */
         detach(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

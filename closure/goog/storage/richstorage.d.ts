@@ -19,9 +19,6 @@ declare module goog.storage {
          */
         static DATA_KEY: string;
         
-        /** @override */
-        set(): void;
-        
         /**
          * Get an item wrapper (the item and its metadata) from the storage.
          *
@@ -35,9 +32,6 @@ declare module goog.storage {
          * @return {(!Object|undefined)} The wrapper, or undefined if not found.
          */
         getWrapper(key: string): Object;
-        
-        /** @override */
-        get(): void;
     }
 
     /**

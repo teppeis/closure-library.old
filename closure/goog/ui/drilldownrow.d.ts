@@ -36,9 +36,6 @@ declare module goog.ui {
          */
         enterDocument(): void;
         
-        /** @override */
-        createDom(): void;
-        
         /**
          * A top-level DrilldownRow decorates a TR element.
          *
@@ -57,9 +54,6 @@ declare module goog.ui {
          * @override
          */
         addChildAt(child: goog.ui.Component, index: number, opt_render?: boolean): void;
-        
-        /** @override */
-        removeChild(): void;
         
         /**
          * Rendering of DrilldownRow's is on need, do not call this directly

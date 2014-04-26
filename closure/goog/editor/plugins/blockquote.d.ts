@@ -41,9 +41,6 @@ declare module goog.editor.plugins {
          */
         isSilentCommand: any;
         
-        /** @override */
-        getTrogClassId(): void;
-        
         /**
          * Checks if a node is a blockquote node.  If isAlreadySetup is set, it also
          * makes sure the node has the blockquote classname applied.  Otherwise, it
@@ -99,9 +96,6 @@ declare module goog.editor.plugins {
          * @return {string} The blockquote class name.
          */
         getBlockquoteClassName(): string;
-        
-        /** @override */
-        isSupportedCommand(): void;
         
         /**
          * Splits a quoted region if any.  To be called on a key press event.  When this

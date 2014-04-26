@@ -88,9 +88,6 @@ declare module goog {
          */
         static isOnHashChangeSupported(): boolean;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Starts or stops the History polling loop. When enabled, the History object
          * will immediately fire an event for the current location. The caller can set

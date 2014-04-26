@@ -16,9 +16,6 @@ declare module goog.ui {
     export class HsvaPalette extends goog.ui.HsvPalette {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_color?: string, opt_alpha?: number, opt_class?: string);
         
-        /** @override */
-        getAlpha(): void;
-        
         /**
          * Sets which color is selected and update the UI. The passed color should be
          * in #rrggbb format. The alpha value will be set to 1.
@@ -47,23 +44,5 @@ declare module goog.ui {
          * @param {string} color The selected color with alpha.
          */
         setColorRgbaHex(color: string): void;
-        
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
-        /** @override */
-        updateUi(): void;
-        
-        /** @override */
-        updateInput(): void;
-        
-        /** @override */
-        handleMouseDown(): void;
-        
-        /** @override */
-        handleInput(): void;
     }
 }

@@ -164,9 +164,6 @@ declare module goog.ui {
          */
         setVisible(opt_e?: goog.events.Event): void;
         
-        /** @override */
-        handleEnterItem(): void;
-        
         /**
          * Highlights the next item that begins with the specified string.  If no
          * (other) item begins with the given string, the selection is unchanged.
@@ -174,18 +171,6 @@ declare module goog.ui {
          * @return {boolean} Whether a matching prefix was found.
          */
         highlightNextPrefix(charStr: string): boolean;
-        
-        /** @override */
-        canHighlightItem(): void;
-        
-        /** @override */
-        decorateInternal(): void;
-        
-        /** @override */
-        handleKeyEventInternal(): void;
-        
-        /** @override */
-        setHighlightedIndex(): void;
         
         /**
          * Decorate menu items located in any descendent node which as been explicitly

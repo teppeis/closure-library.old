@@ -40,71 +40,11 @@ declare module goog.dom {
          */
         clone(): goog.dom.MultiRange;
         
-        /** @override */
-        getType(): void;
-        
-        /** @override */
-        getBrowserRangeObject(): void;
-        
-        /** @override */
-        setBrowserRangeObject(): void;
-        
-        /** @override */
-        getTextRangeCount(): void;
-        
-        /** @override */
-        getTextRange(): void;
-        
-        /** @override */
-        getContainer(): void;
-        
         /**
          * @return {!Array.<goog.dom.TextRange>} An array of sub-ranges, sorted by start
          *     point.
          */
         getSortedRanges(): Array<goog.dom.TextRange>;
-        
-        /** @override */
-        getStartNode(): void;
-        
-        /** @override */
-        getStartOffset(): void;
-        
-        /** @override */
-        getEndNode(): void;
-        
-        /** @override */
-        getEndOffset(): void;
-        
-        /** @override */
-        isRangeInDocument(): void;
-        
-        /** @override */
-        isCollapsed(): void;
-        
-        /** @override */
-        getText(): void;
-        
-        /** @override */
-        getHtmlFragment(): void;
-        
-        /** @override */
-        getValidHtml(): void;
-        
-        /** @override */
-        getPastableHtml(): void;
-        
-        /** @override */
-        __iterator__(): void;
-        
-        /** @override */
-        select(): void;
-        
-        /** @override */
-        removeContents(): void;
-        
-        /** @override */
-        saveUsingDom(): void;
         
         /**
          * Collapses this range to a single point, either the first or last point
@@ -127,27 +67,6 @@ declare module goog.dom {
      */
     export class MultiRangeIterator extends goog.dom.RangeIterator {
         constructor(range: goog.dom.MultiRange);
-        
-        /** @override */
-        getStartTextOffset(): void;
-        
-        /** @override */
-        getEndTextOffset(): void;
-        
-        /** @override */
-        getStartNode(): void;
-        
-        /** @override */
-        getEndNode(): void;
-        
-        /** @override */
-        isLast(): void;
-        
-        /** @override */
-        next(): void;
-        
-        /** @override */
-        copyFrom(): void;
         
         /**
          * @return {!goog.dom.MultiRangeIterator} An identical iterator.

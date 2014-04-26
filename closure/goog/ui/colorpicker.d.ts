@@ -134,9 +134,6 @@ declare module goog.ui {
          */
         enterDocument(): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Sets the focus to the color picker's palette.
          */

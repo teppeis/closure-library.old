@@ -47,9 +47,6 @@ declare module goog.ui.emoji {
          */
         buildElementFromSpriteMetadata(dom: goog.dom.DomHelper, spriteInfo: goog.ui.emoji.SpriteInfo, displayUrl: string): HTMLDivElement;
         
-        /** @override */
-        createCell(): void;
-        
         /**
          * Returns the item corresponding to the given node, or null if the node is
          * neither a palette cell nor part of a palette item.

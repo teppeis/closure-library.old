@@ -21,8 +21,5 @@ declare module goog.ui {
      */
     export class ContainerScroller extends goog.Disposable {
         constructor(container: goog.ui.Container);
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

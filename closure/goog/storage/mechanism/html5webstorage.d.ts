@@ -18,24 +18,6 @@ declare module goog.storage.mechanism {
          */
         isAvailable(): boolean;
         
-        /** @override */
-        set(): void;
-        
-        /** @override */
-        get(): void;
-        
-        /** @override */
-        remove(): void;
-        
-        /** @override */
-        getCount(): void;
-        
-        /** @override */
-        __iterator__(): void;
-        
-        /** @override */
-        clear(): void;
-        
         /**
          * Gets the key for a given key index. If an index outside of
          * [0..this.getCount()) is specified, this function returns null.

@@ -40,44 +40,11 @@ declare module goog.labs.events {
     export class NonDisposableEventTarget {
         constructor();
         
-        /** @override */
-        getParentEventTarget(): void;
-        
         /**
          * Sets the parent of this event target to use for capture/bubble
          * mechanism.
          * @param {goog.events.Listenable} parent Parent listenable (null if none).
          */
         setParentEventTarget(parent: goog.events.Listenable): void;
-        
-        /** @override */
-        dispatchEvent(): void;
-        
-        /** @override */
-        listen(): void;
-        
-        /** @override */
-        listenOnce(): void;
-        
-        /** @override */
-        unlisten(): void;
-        
-        /** @override */
-        unlistenByKey(): void;
-        
-        /** @override */
-        removeAllListeners(): void;
-        
-        /** @override */
-        fireListeners(): void;
-        
-        /** @override */
-        getListeners(): void;
-        
-        /** @override */
-        getListener(): void;
-        
-        /** @override */
-        hasListener(): void;
     }
 }

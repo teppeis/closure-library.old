@@ -23,9 +23,6 @@ declare module goog.ui {
          */
         static defaultConfig: Object;
         
-        /** @override */
-        createDom(): void;
-        
         /**
          * Attaches the bubble to an anchor element. Computes the positioning and
          * orientation of the bubble.
@@ -77,9 +74,6 @@ declare module goog.ui {
          * @return {boolean} Whether the bubble is visible.
          */
         isVisible(): boolean;
-        
-        /** @override */
-        disposeInternal(): void;
         
         /**
          * Returns an AnchoredPosition that will position the bubble optimally

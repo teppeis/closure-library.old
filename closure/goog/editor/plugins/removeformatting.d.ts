@@ -15,18 +15,6 @@ declare module goog.editor.plugins {
          */
         static REMOVE_FORMATTING_COMMAND: string;
         
-        /** @override */
-        getTrogClassId(): void;
-        
-        /** @override */
-        isSupportedCommand(): void;
-        
-        /** @override */
-        execCommandInternal(): void;
-        
-        /** @override */
-        handleKeyboardShortcut(): void;
-        
         /**
          * Handle per node special processing if neccessary. If this function returns
          * null then standard cleanup is applied. Otherwise this node and all children

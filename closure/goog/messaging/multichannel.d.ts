@@ -26,9 +26,6 @@ declare module goog.messaging {
          *     channel.
          */
         createVirtualChannel(name: string): goog.messaging.MultiChannel.VirtualChannel;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

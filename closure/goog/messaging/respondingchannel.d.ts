@@ -13,9 +13,6 @@ declare module goog.messaging {
     export class RespondingChannel extends goog.Disposable {
         constructor(messageChannel: goog.messaging.MessageChannel);
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Sends a message over the channel.
          * @param {string} serviceName The name of the service this message should be

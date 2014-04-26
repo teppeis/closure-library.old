@@ -44,9 +44,6 @@ declare module goog.async {
          * will be executed as normal.
          */
         resume(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }
 

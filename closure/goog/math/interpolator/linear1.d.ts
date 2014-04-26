@@ -8,14 +8,5 @@ declare module goog.math.interpolator {
      */
     export class Linear1 {
         constructor();
-        
-        /** @override */
-        setData(): void;
-        
-        /** @override */
-        interpolate(): void;
-        
-        /** @override */
-        getInverse(): void;
     }
 }

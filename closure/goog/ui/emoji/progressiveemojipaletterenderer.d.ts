@@ -15,11 +15,5 @@ declare module goog.ui.emoji {
      */
     export class ProgressiveEmojiPaletteRenderer extends goog.ui.emoji.EmojiPaletteRenderer {
         constructor(defaultImgUrl: string);
-        
-        /** @override */
-        buildElementFromSpriteMetadata(): void;
-        
-        /** @override */
-        updateAnimatedPaletteItem(): void;
     }
 }

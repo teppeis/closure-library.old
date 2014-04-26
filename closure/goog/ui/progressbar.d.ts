@@ -25,12 +25,6 @@ declare module goog.ui {
          */
         createDom(): void;
         
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
         /**
          * Decorates an existing HTML DIV element as a progress bar input. If the
          * element contains a child with a class name of 'progress-bar-thumb' that will
@@ -84,9 +78,6 @@ declare module goog.ui {
          *     progress bar.
          */
         getOrientation(): goog.ui.ProgressBar.Orientation;
-        
-        /** @override */
-        disposeInternal(): void;
         
         /**
          * @return {?number} The step value used to determine how to round the value.

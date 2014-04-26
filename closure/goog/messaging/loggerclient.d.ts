@@ -14,8 +14,5 @@ declare module goog.messaging {
      */
     export class LoggerClient extends goog.Disposable {
         constructor(channel: goog.messaging.MessageChannel, serviceName: string);
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

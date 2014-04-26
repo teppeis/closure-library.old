@@ -22,15 +22,5 @@ declare module goog.crypt {
      */
     export class Aes {
         constructor(key: Array<number>);
-        
-        /**
-         * @override
-         */
-        encrypt(): void;
-        
-        /**
-         * @override
-         */
-        decrypt(): void;
     }
 }

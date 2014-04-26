@@ -22,8 +22,5 @@ declare module goog.events {
      */
     export class FileDropHandler extends goog.events.EventTarget {
         constructor(element: Element, opt_preventDropOutside?: boolean);
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

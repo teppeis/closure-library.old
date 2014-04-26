@@ -15,9 +15,6 @@ declare module goog.editor.plugins {
          */
         currentLink_: goog.editor.Link;
         
-        /** @override */
-        getTrogClassId: any;
-        
         /**
          * Tells the plugin whether to block URLs with schemes not in the whitelist.
          * If blocking is enabled, this plugin will stop the 'Test Link' popup
@@ -125,9 +122,6 @@ declare module goog.editor.plugins {
          * @protected
          */
         createDialog(dialogDomHelper: goog.dom.DomHelper, opt_link?: any): goog.ui.editor.LinkDialog;
-        
-        /** @override */
-        disposeInternal(): void;
         
         /**
          * Handles the OK event from the dialog by updating the link in the field.

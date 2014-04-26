@@ -266,14 +266,5 @@ declare module goog.ui {
          * Should be called after theme colors have been changed.
          */
         redraw(): void;
-        
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

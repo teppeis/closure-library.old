@@ -86,27 +86,6 @@ declare module goog.editor.plugins {
          */
         getCurrentEventTarget(): goog.editor.Field;
         
-        /** @override */
-        enable(): void;
-        
-        /** @override */
-        disable(): void;
-        
-        /** @override */
-        isEnabled(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
-        /** @override */
-        getTrogClassId(): void;
-        
-        /** @override */
-        execCommand(): void;
-        
-        /** @override */
-        queryCommandValue(): void;
-        
         /**
          * Restores the state of the editable field.
          * @param {goog.editor.plugins.UndoRedo.UndoState_} state The state initiating
@@ -116,11 +95,6 @@ declare module goog.editor.plugins {
          *     The cursor position within the content.
          */
         restoreState(state: goog.editor.plugins.UndoRedo.UndoState_, content: string, cursorPosition: goog.editor.plugins.UndoRedo.CursorPosition_): void;
-        
-        /**
-         * @override
-         */
-        handleKeyboardShortcut(): void;
         
         /**
          * Clear the undo/redo stack.

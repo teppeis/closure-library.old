@@ -19,9 +19,6 @@ declare module goog.ui {
          */
         static CSS_CLASS: string;
         
-        /** @override */
-        getContentElement(): void;
-        
         /**
          * Returns true if this renderer can decorate the element.  Overrides
          * {@link goog.ui.MenuButtonRenderer#canDecorate} by returning true if the

@@ -96,8 +96,5 @@ declare module goog.pubsub {
          * @return {number} Number of subscriptions to the topic.
          */
         getCount(opt_topic?: string): number;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

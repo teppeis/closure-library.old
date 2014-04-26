@@ -9,12 +9,6 @@ declare module goog.proto2 {
     export class LazyDeserializer extends goog.proto2.Serializer {
         constructor();
         
-        /** @override */
-        deserialize(): void;
-        
-        /** @override */
-        deserializeTo(): void;
-        
         /**
          * Deserializes a message field from the expected format and places the
          * data in the given message

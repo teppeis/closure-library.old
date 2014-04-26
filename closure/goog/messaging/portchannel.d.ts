@@ -94,8 +94,5 @@ declare module goog.messaging {
          *     contain MessagePorts or be a MessagePort.
          */
         send(serviceName: string, payload: string): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

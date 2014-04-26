@@ -117,9 +117,6 @@ declare module goog.debug {
          *     to handlerUrl_ before sending XHR.
          */
         setAdditionalArguments(urlArgs: Object): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

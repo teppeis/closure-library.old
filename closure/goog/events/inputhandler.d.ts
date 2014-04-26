@@ -24,8 +24,5 @@ declare module goog.events {
          * @param {goog.events.BrowserEvent} e The underlying browser event.
          */
         handleEvent(e: goog.events.BrowserEvent): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

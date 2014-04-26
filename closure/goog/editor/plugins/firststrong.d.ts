@@ -17,18 +17,6 @@ declare module goog.editor.plugins {
          */
         static INPUT_ATTRIBUTE: string;
         
-        /** @override */
-        getTrogClassId(): void;
-        
-        /** @override */
-        queryCommandValue(): void;
-        
-        /** @override */
-        handleSelectionChange(): void;
-        
-        /** @override */
-        handleKeyPress(): void;
-        
         /**
          * Calls the flip directionality commands.  This is done here so things go into
          * the redo-undo stack at the expected order; fist enter the input, then flip

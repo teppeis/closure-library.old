@@ -12,12 +12,6 @@ declare module goog.ui {
     export class PopupColorPicker extends goog.ui.Component {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_colorPicker?: goog.ui.ColorPicker);
         
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * ColorPickers cannot be used to decorate pre-existing html, since the
          * structure they build is fairly complicated.

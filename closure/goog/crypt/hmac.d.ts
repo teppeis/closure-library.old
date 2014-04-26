@@ -16,15 +16,6 @@ declare module goog.crypt {
     export class Hmac extends goog.crypt.Hash {
         constructor(hasher: goog.crypt.Hash, key: Array<number>, opt_blockSize?: number);
         
-        /** @override */
-        reset(): void;
-        
-        /** @override */
-        update(): void;
-        
-        /** @override */
-        digest(): void;
-        
         /**
          * Calculates an HMAC for a given message.
          *

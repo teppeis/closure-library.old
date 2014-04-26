@@ -9,19 +9,5 @@ declare module goog.editor.plugins {
      */
     export class EquationEditorPlugin extends goog.editor.plugins.AbstractDialogPlugin {
         constructor(opt_helpUrl?: string);
-        
-        /** @override */
-        getTrogClassId: any;
-        
-        /**
-         * @override
-         */
-        createDialog(): void;
-        
-        /** @override */
-        enable(): void;
-        
-        /** @override */
-        disable(): void;
     }
 }

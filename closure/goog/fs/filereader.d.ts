@@ -56,9 +56,6 @@ declare module goog.fs {
          */
         getError(): goog.fs.Error;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Starts reading a blob as a binary string.
          * @param {!Blob} blob The blob to read.

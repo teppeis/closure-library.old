@@ -43,12 +43,6 @@ declare module goog.ui.editor {
          */
         showRelNoFollow(): void;
         
-        /** @override */
-        show(): void;
-        
-        /** @override */
-        hide(): void;
-        
         /**
          * Tells the dialog whether to show the 'text to display' div.
          * When the target element of the dialog is an image, there is no link text
@@ -88,9 +82,6 @@ declare module goog.ui.editor {
          */
         static removeNoFollow(rel: string): string;
         
-        /** @override */
-        createDialogControl(): void;
-        
         /**
          * Creates and returns the event object to be used when dispatching the OK
          * event to listeners based on which tab is currently selected and the contents
@@ -101,9 +92,6 @@ declare module goog.ui.editor {
          * @override
          */
         createOkEvent(): goog.ui.editor.LinkDialog.OkEvent;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

@@ -49,20 +49,5 @@ declare module goog.testing {
          * @return {!goog.testing.LooseMock} This mock object.
          */
         $setIgnoreUnexpectedCalls(ignoreUnexpectedCalls: boolean): goog.testing.LooseMock;
-        
-        /** @override */
-        $recordExpectation(): void;
-        
-        /** @override */
-        $recordCall(): void;
-        
-        /** @override */
-        $reset(): void;
-        
-        /** @override */
-        $replay(): void;
-        
-        /** @override */
-        $verify(): void;
     }
 }

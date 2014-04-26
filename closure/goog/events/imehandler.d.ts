@@ -31,9 +31,6 @@ declare module goog.events {
          * @return {boolean} Whether an IME is active.
          */
         isImeMode(): boolean;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 
     /**

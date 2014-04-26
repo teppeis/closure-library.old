@@ -14,12 +14,6 @@ declare module goog.fs {
     export class FileSystemImpl {
         constructor(fs: FileSystem);
         
-        /** @override */
-        getName(): void;
-        
-        /** @override */
-        getRoot(): void;
-        
         /**
          * @return {!FileSystem} The underlying FileSystem object.
          */

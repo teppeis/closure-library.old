@@ -36,8 +36,5 @@ declare module goog.ui.equation {
      */
     export class MenuPaletteRenderer extends goog.ui.equation.PaletteRenderer {
         constructor();
-        
-        /** @override */
-        getCssClass(): void;
     }
 }

@@ -38,12 +38,6 @@ declare module goog.ui {
          */
         updateAriaState: any;
         
-        /** @override */
-        getAriaRole(): void;
-        
-        /** @override */
-        decorate(): void;
-        
         /**
          * Returns the textarea's contents wrapped in an HTML textarea element.  Sets
          * the textarea's disabled attribute as needed.
@@ -75,11 +69,5 @@ declare module goog.ui {
          * @override
          */
         setState(): void;
-        
-        /** @override **/
-        setContent(): void;
-        
-        /** @override **/
-        getCssClass(): void;
     }
 }

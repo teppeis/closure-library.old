@@ -13,12 +13,6 @@ declare module goog.editor.plugins {
         /** The emoticon command. */
         static COMMAND: any;
         
-        /** @override */
-        getTrogClassId: any;
-        
-        /** @override */
-        isSupportedCommand(): void;
-        
         /**
          * Inserts an emoticon into the editor at the cursor location. Places the
          * cursor to the right of the inserted emoticon.

@@ -69,18 +69,9 @@ declare module goog.ui {
          */
         getValue(): string;
         
-        /** @override */
-        setContent(): void;
-        
-        /** @override **/
-        setEnabled(): void;
-        
         /**
          * Resizes the textarea vertically.
          */
         resize(): void;
-        
-        /** @override **/
-        enterDocument(): void;
     }
 }

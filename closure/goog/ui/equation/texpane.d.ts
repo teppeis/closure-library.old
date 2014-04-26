@@ -47,23 +47,5 @@ declare module goog.ui.equation {
          * @type {string}
          */
         static WARNING_CLASS: string;
-        
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        setVisible(): void;
-        
-        /** @override */
-        getEquation(): void;
-        
-        /** @override */
-        setEquation(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

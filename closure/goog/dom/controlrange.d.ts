@@ -10,9 +10,6 @@ declare module goog.dom {
     export class ControlRange extends goog.dom.AbstractMultiRange {
         constructor();
         
-        /** @override */
-        getPastableHtml: any;
-        
         /**
          * Create a new range wrapper from the given browser range object.  Do not use
          * this method directly - please use goog.dom.Range.createFrom* instead.
@@ -29,39 +26,6 @@ declare module goog.dom {
          */
         static createFromElements(...var_args: Element[]): goog.dom.ControlRange;
         
-        /** @override */
-        clone(): void;
-        
-        /** @override */
-        getType(): void;
-        
-        /** @override */
-        getBrowserRangeObject(): void;
-        
-        /** @override */
-        setBrowserRangeObject(): void;
-        
-        /** @override */
-        getTextRangeCount(): void;
-        
-        /** @override */
-        getTextRange(): void;
-        
-        /** @override */
-        getContainer(): void;
-        
-        /** @override */
-        getStartNode(): void;
-        
-        /** @override */
-        getStartOffset(): void;
-        
-        /** @override */
-        getEndNode(): void;
-        
-        /** @override */
-        getEndOffset(): void;
-        
         /**
          * @return {!Array.<Element>} Array of elements in the control range.
          */
@@ -72,39 +36,6 @@ declare module goog.dom {
          *     sorted by document order.
          */
         getSortedElements(): Array<Element>;
-        
-        /** @override */
-        isRangeInDocument(): void;
-        
-        /** @override */
-        isCollapsed(): void;
-        
-        /** @override */
-        getText(): void;
-        
-        /** @override */
-        getHtmlFragment(): void;
-        
-        /** @override */
-        getValidHtml(): void;
-        
-        /** @override */
-        __iterator__(): void;
-        
-        /** @override */
-        select(): void;
-        
-        /** @override */
-        removeContents(): void;
-        
-        /** @override */
-        replaceContentsWithNode(): void;
-        
-        /** @override */
-        saveUsingDom(): void;
-        
-        /** @override */
-        collapse(): void;
     }
 
     /**
@@ -119,21 +50,6 @@ declare module goog.dom {
     export class ControlRangeIterator extends goog.dom.RangeIterator {
         constructor(range: goog.dom.ControlRange);
         
-        /** @override */
-        getStartTextOffset(): void;
-        
-        /** @override */
-        getEndTextOffset(): void;
-        
-        /** @override */
-        getStartNode(): void;
-        
-        /** @override */
-        getEndNode(): void;
-        
-        /** @override */
-        isLast(): void;
-        
         /**
          * Move to the next position in the selection.
          * Throws {@code goog.iter.StopIteration} when it passes the end of the range.
@@ -141,9 +57,6 @@ declare module goog.dom {
          * @override
          */
         next(): Node;
-        
-        /** @override */
-        copyFrom(): void;
         
         /**
          * @return {!goog.dom.ControlRangeIterator} An identical iterator.

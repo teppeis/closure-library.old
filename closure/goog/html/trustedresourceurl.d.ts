@@ -28,18 +28,6 @@ declare module goog.html {
         constructor();
         
         /**
-         * @override
-         * @const
-         */
-        implementsGoogStringTypedString: any;
-        
-        /**
-         * @override
-         * @const
-         */
-        implementsGoogI18nBidiDirectionalString: any;
-        
-        /**
          * Returns this TrustedResourceUrl's value as a string.
          *
          * IMPORTANT: In code where it is security relevant that an object's type is

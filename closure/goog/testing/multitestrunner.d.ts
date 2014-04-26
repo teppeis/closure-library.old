@@ -166,12 +166,6 @@ declare module goog.testing {
          */
         getTestsThatFailed(): Array<string>;
         
-        /** @override */
-        createDom(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Starts executing the tests.
          */

@@ -10,11 +10,5 @@ declare module goog.json {
      */
     export class HybridJsonProcessor {
         constructor();
-        
-        /** @override */
-        stringify: any;
-        
-        /** @override */
-        parse: any;
     }
 }

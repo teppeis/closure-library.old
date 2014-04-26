@@ -34,9 +34,6 @@ declare module goog.ui {
          */
         setValidationFunction(fn: (arg0: string) => boolean): void;
         
-        /** @override */
-        enterDocument(): void;
-        
         /**
          * @return {HTMLInputElement} The user input element. May be null if the Prompt
          *     has not been rendered.
@@ -105,8 +102,5 @@ declare module goog.ui {
          * @param {string} defaultValue The default value to display.
          */
         setDefaultValue(defaultValue: string): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

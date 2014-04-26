@@ -9,48 +9,6 @@ declare module goog.fs {
      */
     export class EntryImpl {
         constructor(fs: goog.fs.FileSystem, entry: Entry);
-        
-        /** @override */
-        toUri: any;
-        
-        /** @override */
-        isFile(): void;
-        
-        /** @override */
-        isDirectory(): void;
-        
-        /** @override */
-        getName(): void;
-        
-        /** @override */
-        getFullPath(): void;
-        
-        /** @override */
-        getFileSystem(): void;
-        
-        /** @override */
-        getLastModified(): void;
-        
-        /** @override */
-        getMetadata(): void;
-        
-        /** @override */
-        moveTo(): void;
-        
-        /** @override */
-        copyTo(): void;
-        
-        /** @override */
-        wrapEntry(): void;
-        
-        /** @override */
-        toUrl(): void;
-        
-        /** @override */
-        remove(): void;
-        
-        /** @override */
-        getParent(): void;
     }
 
     /**
@@ -69,21 +27,6 @@ declare module goog.fs {
      */
     export class DirectoryEntryImpl extends goog.fs.EntryImpl {
         constructor(fs: goog.fs.FileSystem, dir: DirectoryEntry);
-        
-        /** @override */
-        getFile(): void;
-        
-        /** @override */
-        getDirectory(): void;
-        
-        /** @override */
-        createPath(): void;
-        
-        /** @override */
-        listDirectory(): void;
-        
-        /** @override */
-        removeRecursively(): void;
     }
 
     /**
@@ -101,11 +44,5 @@ declare module goog.fs {
      */
     export class FileEntryImpl extends goog.fs.EntryImpl {
         constructor(fs: goog.fs.FileSystem, file: FileEntry);
-        
-        /** @override */
-        createWriter(): void;
-        
-        /** @override */
-        file(): void;
     }
 }

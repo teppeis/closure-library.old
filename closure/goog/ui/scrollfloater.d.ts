@@ -39,18 +39,12 @@ declare module goog.ui {
          */
         decorateInternal(element: Element): void;
         
-        /** @override */
-        enterDocument(): void;
-        
         /**
          * Forces the component to update the cached element positions and sizes and
          * to re-evaluate whether the the component should be docked, floated or
          * pinned.
          */
         update(): void;
-        
-        /** @override */
-        disposeInternal(): void;
         
         /**
          * Sets whether the element should be floated if it scrolls out of view.

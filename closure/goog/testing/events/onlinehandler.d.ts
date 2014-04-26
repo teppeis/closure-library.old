@@ -11,9 +11,6 @@ declare module goog.testing.events {
     export class OnlineHandler extends goog.events.EventTarget {
         constructor(initialState: boolean);
         
-        /** @override */
-        isOnline(): void;
-        
         /**
          * Sets the online state.
          * @param {boolean} newOnlineState The new online state.

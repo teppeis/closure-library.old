@@ -274,9 +274,6 @@ declare module goog.editor {
          */
         clearListeners(): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Attach an wrapper to this field, to be thrown out when the field
          * is disposed.

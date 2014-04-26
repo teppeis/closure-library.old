@@ -293,8 +293,5 @@ declare module goog.graphics.ext {
          * @return {number} Returns the number of pixels per unit in the y direction.
          */
         getPixelScaleY(): number;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

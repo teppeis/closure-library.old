@@ -39,9 +39,6 @@ declare module goog.events {
          */
         static MANDATORY_MS_BETWEEN_INPUT_EVENTS_TIE_BREAKER: number;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Returns the current state of the paste detection algorithm. Used mostly for
          * testing.

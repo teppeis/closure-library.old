@@ -8,8 +8,5 @@ declare module goog.math.interpolator {
      */
     export class Pchip1 extends goog.math.interpolator.Spline1 {
         constructor();
-        
-        /** @override */
-        computeDerivatives(): void;
     }
 }

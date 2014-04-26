@@ -93,8 +93,5 @@ declare module goog.ui {
          * @protected
          */
         createEdge(dom: goog.dom.DomHelper, isTopEdge: boolean): Element;
-        
-        /** @override */
-        getContentElement(): void;
     }
 }

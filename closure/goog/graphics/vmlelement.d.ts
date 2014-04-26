@@ -18,9 +18,6 @@ declare module goog.graphics {
     export class VmlGroupElement extends goog.graphics.GroupElement {
         constructor(element: Element, graphics: goog.graphics.VmlGraphics);
         
-        /** @override */
-        getElement: any;
-        
         /**
          * Remove all drawing elements from the group.
          * @override
@@ -60,9 +57,6 @@ declare module goog.graphics {
     export class VmlEllipseElement extends goog.graphics.EllipseElement {
         constructor(element: Element, graphics: goog.graphics.VmlGraphics, cx: number, cy: number, rx: number, ry: number, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
-        /** @override */
-        getElement: any;
-        
         /**
          * Update the center point of the ellipse.
          * @param {number} cx Center X coordinate.
@@ -99,9 +93,6 @@ declare module goog.graphics {
      */
     export class VmlRectElement extends goog.graphics.RectElement {
         constructor(element: Element, graphics: goog.graphics.VmlGraphics, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
-        
-        /** @override */
-        getElement: any;
         
         /**
          * Update the position of the rectangle.
@@ -140,9 +131,6 @@ declare module goog.graphics {
     export class VmlPathElement extends goog.graphics.PathElement {
         constructor(element: Element, graphics: goog.graphics.VmlGraphics, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
-        /** @override */
-        getElement: any;
-        
         /**
          * Update the underlying path.
          * @param {!goog.graphics.Path} path The path object to draw.
@@ -171,9 +159,6 @@ declare module goog.graphics {
     export class VmlTextElement extends goog.graphics.TextElement {
         constructor(element: Element, graphics: goog.graphics.VmlGraphics, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
-        /** @override */
-        getElement: any;
-        
         /**
          * Update the displayed text of the element.
          * @param {string} text The text to draw.
@@ -199,9 +184,6 @@ declare module goog.graphics {
      */
     export class VmlImageElement extends goog.graphics.ImageElement {
         constructor(element: Element, graphics: goog.graphics.VmlGraphics);
-        
-        /** @override */
-        getElement: any;
         
         /**
          * Update the position of the image.

@@ -109,8 +109,5 @@ declare module goog.module {
          * @param {goog.module.ModuleManager.FailureType} cause What caused the error.
          */
         onError(cause: goog.module.ModuleManager.FailureType): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

@@ -13,13 +13,5 @@ declare module goog.ui.editor {
      */
     export class EquationEditorDialog extends goog.ui.editor.AbstractDialog {
         constructor(context: Object, domHelper: goog.dom.DomHelper, equation: string, helpUrl: string);
-        
-        /** @override */
-        createDialogControl(): void;
-        
-        /**
-         * @override
-         */
-        createOkEvent(): void;
     }
 }

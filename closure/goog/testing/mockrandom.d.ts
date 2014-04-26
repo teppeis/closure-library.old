@@ -42,9 +42,6 @@ declare module goog.testing {
          */
         uninstall(): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * @param {boolean} strictlyFromSequence Whether to throw an exception when
          *     Math.random() is called when there is nothing left in the sequence.

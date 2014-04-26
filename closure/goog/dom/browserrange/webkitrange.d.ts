@@ -26,11 +26,5 @@ declare module goog.dom.browserrange {
          * @return {!goog.dom.browserrange.WebKitRange} A wrapper object.
          */
         static createFromNodes(startNode: Node, startOffset: number, endNode: Node, endOffset: number): goog.dom.browserrange.WebKitRange;
-        
-        /** @override */
-        compareBrowserRangeEndpoints(): void;
-        
-        /** @override */
-        selectInternal(): void;
     }
 }

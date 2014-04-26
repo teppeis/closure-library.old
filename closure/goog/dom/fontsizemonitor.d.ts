@@ -35,8 +35,5 @@ declare module goog.dom {
          * @deprecated Use {@code goog.dom.FontSizeMonitor.EventType.CHANGE} instead.
          */
         static CHANGE_EVENT: string;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

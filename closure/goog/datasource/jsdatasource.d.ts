@@ -34,9 +34,6 @@ declare module goog.ds {
          */
         setRoot(root: Object): void;
         
-        /** @override */
-        get(): void;
-        
         /**
          * Set the value of the node
          * @param {*} value The new value of the node.
@@ -158,8 +155,5 @@ declare module goog.ds {
          * @override
          */
         getDataName(): string;
-        
-        /** @override */
-        getParent(): void;
     }
 }

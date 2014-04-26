@@ -70,9 +70,6 @@ declare module goog.ui {
          */
         decorateInternal(element: Element): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Returns the DOM element containing the actual content.
          * @return {Element} The element containing the actual content (null if none).
@@ -138,8 +135,5 @@ declare module goog.ui {
          * @override
          */
         decorateInternal(element: Element): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

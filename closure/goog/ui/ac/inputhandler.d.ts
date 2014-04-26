@@ -127,9 +127,6 @@ declare module goog.ui.ac {
          */
         setTokenText(tokenText: string, opt_multi?: boolean): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Sets the entry separator characters.
          *

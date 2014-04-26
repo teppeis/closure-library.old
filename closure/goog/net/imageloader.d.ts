@@ -72,8 +72,5 @@ declare module goog.net {
          * images have finished loading.
          */
         start(): void;
-        
-        /** @override */
-        disposeInternal(): void;
     }
 }

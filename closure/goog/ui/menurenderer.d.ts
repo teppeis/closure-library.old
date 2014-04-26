@@ -51,8 +51,5 @@ declare module goog.ui {
          * @override
          */
         getCssClass(): string;
-        
-        /** @override */
-        initializeDom(): void;
     }
 }

@@ -8,14 +8,5 @@ declare module goog.dom {
      */
     export class AbstractMultiRange extends goog.dom.AbstractRange {
         constructor();
-        
-        /** @override */
-        containsRange(): void;
-        
-        /** @override */
-        insertNode(): void;
-        
-        /** @override */
-        surroundWithNodes(): void;
     }
 }

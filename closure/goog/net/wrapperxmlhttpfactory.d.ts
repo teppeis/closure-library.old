@@ -14,11 +14,5 @@ declare module goog.net {
      */
     export class WrapperXmlHttpFactory extends goog.net.XmlHttpFactory {
         constructor(xhrFactory: () => goog.net.XhrLike.OrNative, optionsFactory: () => Object);
-        
-        /** @override */
-        createInstance(): void;
-        
-        /** @override */
-        getOptions(): void;
     }
 }

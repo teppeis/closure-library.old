@@ -20,10 +20,5 @@ declare module goog.events {
      */
     export class EventId {
         constructor(eventId: string);
-        
-        /**
-         * @override
-         */
-        toString(): void;
     }
 }

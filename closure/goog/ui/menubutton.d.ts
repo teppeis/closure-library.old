@@ -32,9 +32,6 @@ declare module goog.ui {
          */
         exitDocument(): void;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Handles mousedown events.  Invokes the superclass implementation to dispatch
          * an ACTIVATE event and activate the button.  Also toggles the visibility of
@@ -84,9 +81,6 @@ declare module goog.ui {
          * @protected
          */
         containsElement(element: Element): boolean;
-        
-        /** @override */
-        handleKeyEventInternal(): void;
         
         /**
          * Handles {@code ACTION} events dispatched by an activated menu item.

@@ -23,15 +23,6 @@ declare module goog.ui {
          */
         static MENU_DELAY_MS: number;
         
-        /** @override */
-        enterDocument(): void;
-        
-        /** @override */
-        exitDocument(): void;
-        
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * @override
          * Dismisses the submenu on a delay, with the result that the user needs less

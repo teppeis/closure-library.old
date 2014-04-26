@@ -39,9 +39,6 @@ declare module goog.ui {
          */
         static Events: Object;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Adds a page to the tab pane.
          *

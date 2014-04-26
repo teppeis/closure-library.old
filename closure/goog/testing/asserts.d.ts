@@ -64,8 +64,5 @@ declare module goog.testing {
      */
     export class JsUnitException extends Error {
         constructor(comment: string, opt_message?: string);
-        
-        /** @override */
-        toString(): void;
     }
 }

@@ -85,16 +85,6 @@ declare module goog.net {
          * @const
          */
         static MAX_NETMASK_LENGTH: number;
-        
-        /**
-         * @override
-         */
-        toString(): void;
-        
-        /**
-         * @override
-         */
-        toUriString(): void;
     }
 
     /**
@@ -116,16 +106,6 @@ declare module goog.net {
          * @const
          */
         static MAX_NETMASK_LENGTH: number;
-        
-        /**
-         * @override
-         */
-        toString(): void;
-        
-        /**
-         * @override
-         */
-        toUriString(): void;
         
         /**
          * @return {boolean} true if the IPv6 contains a mapped IPv4.

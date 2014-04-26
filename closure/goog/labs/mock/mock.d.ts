@@ -13,9 +13,6 @@ declare module goog.labs.mock {
      */
     export class VerificationError extends goog.debug.Error {
         constructor(recordedCalls: Array<any>, methodName: string, args: Array<any>);
-        
-        /** @override */
-        name: any;
     }
 
     /**

@@ -252,9 +252,6 @@ declare module goog.ui {
          */
         getElementProperties(status: goog.spell.SpellCheck.WordStatus): Object;
         
-        /** @override */
-        disposeInternal(): void;
-        
         /**
          * Precharges local dictionary cache. This is optional, but greatly reduces
          * amount of subsequent churn in the DOM tree because most of the words become
