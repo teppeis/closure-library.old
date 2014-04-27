@@ -134,6 +134,7 @@ goog.events.eventTargetTester.KeyType = {
 
 /**
  * The type of unlisten function's return value.
+ * @enum {number}
  */
 goog.events.eventTargetTester.UnlistenReturnType = {
   /**
