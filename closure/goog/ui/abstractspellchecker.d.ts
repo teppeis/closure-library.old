@@ -51,15 +51,6 @@ declare module goog.ui {
         getSpellCheck(): goog.spell.SpellCheck;
         
         /**
-         * @return {goog.spell.SpellCheck} The handler used for caching and lookups.
-         * @override
-         * @suppress {checkTypes} This method makes no sense. It overrides
-         *     Component's getHandler with something different.
-         * @deprecated Use #getSpellCheck instead.
-         */
-        getHandler(): goog.spell.SpellCheck;
-        
-        /**
          * Sets the spell checker used for caching and lookups.
          * @param {goog.spell.SpellCheck} spellCheck The handler used for caching and
          *     lookups.
