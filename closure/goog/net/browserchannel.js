@@ -585,19 +585,27 @@ goog.net.BrowserChannel.statEventTarget_ = new goog.events.EventTarget();
 
 /**
  * Events fired by BrowserChannel and associated objects
- * @type {Object}
+ * @enum {string}
  */
-goog.net.BrowserChannel.Event = {};
-
-
-/**
- * Stat Event that fires when things of interest happen that may be useful for
- * applications to know about for stats or debugging purposes. This event fires
- * on the EventTarget returned by getStatEventTarget.
- */
-goog.net.BrowserChannel.Event.STAT_EVENT = 'statevent';
-
-
+goog.net.BrowserChannel.Event = {
+    /**
+     * Stat Event that fires when things of interest happen that may be useful for
+     * applications to know about for stats or debugging purposes. This event fires
+     * on the EventTarget returned by getStatEventTarget.
+     */
+    STAT_EVENT: 'statevent',
+    /**
+    * An event that fires when POST requests complete successfully, indicating
+    * the size of the POST and the round trip time.
+    * This event fires on the EventTarget returned by getStatEventTarget.
+    */
+    TIMING_EVENT: 'timingevent',
+    /**
+    * The type of event that occurs every time some information about how reachable
+    * the server is is discovered.
+    */
+    SERVER_REACHABILITY_EVENT: 'serverreachability'
+};
 
 /**
  * Event class for goog.net.BrowserChannel.Event.STAT_EVENT
@@ -621,15 +629,6 @@ goog.net.BrowserChannel.StatEvent = function(eventTarget, stat) {
 
 };
 goog.inherits(goog.net.BrowserChannel.StatEvent, goog.events.Event);
-
-
-/**
- * An event that fires when POST requests complete successfully, indicating
- * the size of the POST and the round trip time.
- * This event fires on the EventTarget returned by getStatEventTarget.
- */
-goog.net.BrowserChannel.Event.TIMING_EVENT = 'timingevent';
-
 
 
 /**
@@ -665,14 +664,6 @@ goog.net.BrowserChannel.TimingEvent = function(target, size, rtt, retries) {
 
 };
 goog.inherits(goog.net.BrowserChannel.TimingEvent, goog.events.Event);
-
-
-/**
- * The type of event that occurs every time some information about how reachable
- * the server is is discovered.
- */
-goog.net.BrowserChannel.Event.SERVER_REACHABILITY_EVENT =
-    'serverreachability';
 
 
 /**

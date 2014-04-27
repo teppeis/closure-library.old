@@ -51,12 +51,6 @@ declare module goog.net {
         static INACTIVE_CHANNEL_RETRY_FACTOR: number;
         
         /**
-         * Events fired by BrowserChannel and associated objects
-         * @type {Object}
-         */
-        static Event: Object;
-        
-        /**
          * The normal response for forward channel requests.
          * Used only before version 8 of the protocol.
          * @type {string}
@@ -72,13 +66,6 @@ declare module goog.net {
          * @type {number}
          */
         static OUTSTANDING_DATA_BACKCHANNEL_RETRY_CUTOFF: number;
-        
-        /**
-         * A LogSaver that can be used to accumulate all the debug logs for
-         * BrowserChannels so they can be sent to the server when a problem is
-         * detected.
-         */
-        static LogSaver: any;
         
         /**
          * Returns the browserchannel logger.
@@ -534,6 +521,16 @@ declare module goog.net.BrowserChannel {
     }
 
     /**
+     * Events fired by BrowserChannel and associated objects
+     * @enum {string}
+     */
+    export interface Event {
+        STAT_EVENT: string;
+        TIMING_EVENT: string;
+        SERVER_REACHABILITY_EVENT: string;
+    }
+
+    /**
      * Types of events which reveal information about the reachability of the
      * server.
      * @enum {number}
@@ -745,29 +742,6 @@ declare module goog.net.BrowserChannel {
          */
         correctHostPrefix(serverHostPrefix: string): string;
     }
-}
-
-declare module goog.net.BrowserChannel.Event {
-
-    /**
-     * Stat Event that fires when things of interest happen that may be useful for
-     * applications to know about for stats or debugging purposes. This event fires
-     * on the EventTarget returned by getStatEventTarget.
-     */
-    export var STAT_EVENT: any;
-
-    /**
-     * An event that fires when POST requests complete successfully, indicating
-     * the size of the POST and the round trip time.
-     * This event fires on the EventTarget returned by getStatEventTarget.
-     */
-    export var TIMING_EVENT: any;
-
-    /**
-     * The type of event that occurs every time some information about how reachable
-     * the server is is discovered.
-     */
-    export var SERVER_REACHABILITY_EVENT: any;
 }
 
 declare module goog.net.BrowserChannel.LogSaver {
