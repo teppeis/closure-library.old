@@ -100,10 +100,10 @@ declare module goog.structs {
         /**
          * Removes a node from the {@code LinkedMap}. It can be overridden to do
          * further cleanup such as disposing of the node value.
-         * @param {!goog.structs.LinkedMap.Node_} node The node to remove.
+         * @param {!goog.structs.LinkedMap.Node_.<string, VALUE>} node The node to remove.
          * @protected
          */
-        removeNode(node: goog.structs.LinkedMap.Node_): void;
+        removeNode(node: goog.structs.LinkedMap.Node_<string, VALUE>): void;
         
         /**
          * @return {number} The number of items currently in the LinkedMap.
@@ -225,15 +225,15 @@ declare module goog.structs.LinkedMap {
         
         /**
          * The next node in the list.
-         * @type {!goog.structs.LinkedMap.Node_}
+         * @type {!goog.structs.LinkedMap.Node_.<KEY, VALUE>}
          */
-        next: goog.structs.LinkedMap.Node_;
+        next: goog.structs.LinkedMap.Node_<KEY, VALUE>;
         
         /**
          * The previous node in the list.
-         * @type {!goog.structs.LinkedMap.Node_}
+         * @type {!goog.structs.LinkedMap.Node_.<KEY, VALUE>}
          */
-        prev: goog.structs.LinkedMap.Node_;
+        prev: goog.structs.LinkedMap.Node_<KEY, VALUE>;
         
         /**
          * Causes this node to remove itself from the list.
