@@ -2519,9 +2519,4 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale zh_Hant_TW.
      */
     export var CompactNumberFormatSymbols_zh_Hant_TW: any;
-
-    /**
-     * Selected compact number formatting symbols by locale.
-     */
-    export var CompactNumberFormatSymbols: any;
 }
