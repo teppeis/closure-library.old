@@ -36,10 +36,11 @@ declare module goog.ui {
         /**
          * Wrap a caption in a div with the color-menu-button-indicator CSS class.
          * @param {goog.ui.ControlContent} content Text caption or DOM structure.
+         * @param {string} cssClass Dummy parameter for compatibility to goog.ui.MenuButtonRenderer.
          * @param {goog.dom.DomHelper} dom DOM helper, used for document interaction.
          * @return {Element} Caption element.
          */
-        static wrapCaption(content: goog.ui.ControlContent, dom: goog.dom.DomHelper): Element;
+        static wrapCaption(content: goog.ui.ControlContent, cssClass: string, dom: goog.dom.DomHelper): Element;
         
         /**
          * Takes a color menu button control's root element and a value object
