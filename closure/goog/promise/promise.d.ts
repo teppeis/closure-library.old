@@ -57,7 +57,7 @@ declare module goog {
          *     with the given value.
          * @template TYPE
          */
-        static resolve<TYPE>(opt_value?: TYPE): goog.Promise<TYPE>;
+        static resolve<TYPE>(opt_value?: TYPE): goog.Promise<TYPE, any>;
         
         /**
          * @param {*=} opt_reason
@@ -72,7 +72,7 @@ declare module goog {
          *     first Promise (or Promise-like) input to complete.
          * @template TYPE
          */
-        static race<TYPE>(promises: Array<goog.Thenable<TYPE>>): goog.Promise<TYPE>;
+        static race<TYPE>(promises: Array<goog.Thenable<TYPE>>): goog.Promise<TYPE, any>;
         
         /**
          * @param {!Array.<!(goog.Thenable.<TYPE>|Thenable)>} promises
@@ -81,7 +81,7 @@ declare module goog {
          *     successfully fulfilled, or is rejected by the first rejection result.
          * @template TYPE
          */
-        static all<TYPE>(promises: Array<goog.Thenable<TYPE>>): goog.Promise<Array<TYPE>>;
+        static all<TYPE>(promises: Array<goog.Thenable<TYPE>>): goog.Promise<Array<TYPE>, any>;
         
         /**
          * @param {!Array.<!(goog.Thenable.<TYPE>|Thenable)>} promises
@@ -90,7 +90,7 @@ declare module goog {
          *     reason if all inputs are rejected.
          * @template TYPE
          */
-        static firstFulfilled<TYPE>(promises: Array<goog.Thenable<TYPE>>): goog.Promise<TYPE>;
+        static firstFulfilled<TYPE>(promises: Array<goog.Thenable<TYPE>>): goog.Promise<TYPE, any>;
         
         /**
          * @return {!goog.promise.Resolver.<TYPE>} Resolver wrapping the promise and its
@@ -138,7 +138,7 @@ declare module goog {
          * @return {!goog.Promise.<TYPE>} This Promise, for chaining additional calls.
          * @template THIS
          */
-        thenAlways<THIS>(onResolved: () => void, opt_context?: THIS): goog.Promise<TYPE>;
+        thenAlways<THIS>(onResolved: () => void, opt_context?: THIS): goog.Promise<TYPE, any>;
         
         /**
          * Adds a callback that will be invoked only if the Promise is rejected. This

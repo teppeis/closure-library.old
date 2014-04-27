@@ -231,7 +231,7 @@ declare module goog.async {
          * @return {!goog.async.Deferred.<T>} The new Deferred.
          * @template T
          */
-        static fromPromise<T>(promise: goog.Promise<T>): goog.async.Deferred<T>;
+        static fromPromise<T>(promise: goog.Promise<T, any>): goog.async.Deferred<T>;
         
         /**
          * Creates a Deferred that has an initial error result.
