@@ -9,7 +9,7 @@ declare module goog.result {
      * @extends {goog.Thenable}
      * @deprecated Use {@link goog.Promise} instead - http://go/promisemigration
      */
-    export interface Result extends goog.Thenable {
+    export interface Result extends goog.Thenable<any> {
         
         /**
          * Attaches handlers to be called when the value of this Result is available.
