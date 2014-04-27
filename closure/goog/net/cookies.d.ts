@@ -160,14 +160,3 @@ declare module goog.net {
      */
     export var cookies: goog.net.Cookies;
 }
-
-declare module goog.net.cookies {
-
-    /**
-     * Define the constant on the instance in order not to break many references to
-     * it.
-     * @type {number}
-     * @deprecated Use goog.net.Cookies.MAX_COOKIE_LENGTH instead.
-     */
-    export var MAX_COOKIE_LENGTH: number;
-}
