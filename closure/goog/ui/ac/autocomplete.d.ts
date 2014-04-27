@@ -1,17 +1,6 @@
 declare module goog.ui.ac {
 
     /**
-     * @typedef {{
-     *   requestMatchingRows:(!Function|undefined),
-     *   isRowDisabled:(!Function|undefined)
-     * }}
-     */
-    export interface Matcher {
-        requestMatchingRows: Function;
-        isRowDisabled: Function;
-    }
-
-    /**
      * This is the central manager class for an AutoComplete instance. The matcher
      * can specify disabled rows that should not be hilited or selected by
      * implementing <code>isRowDisabled(row):boolean</code> for each autocomplete
@@ -342,5 +331,16 @@ declare module goog.ui.ac.AutoComplete {
         CANCEL_DISMISS: string;
         UPDATE: string;
         SUGGESTIONS_UPDATE: string;
+    }
+
+    /**
+     * @typedef {{
+     *   requestMatchingRows:(!Function|undefined),
+     *   isRowDisabled:(!Function|undefined)
+     * }}
+     */
+    export interface Matcher {
+        requestMatchingRows: Function;
+        isRowDisabled: Function;
     }
 }

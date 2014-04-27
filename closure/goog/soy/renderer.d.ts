@@ -1,12 +1,6 @@
 declare module goog.soy {
 
     /**
-     * @typedef {Array.<{template: string, data: Object, ijData: Object}>}
-     */
-    export interface SavedTemplateRender {
-    }
-
-    /**
      * Creates a new soy renderer. Note that the renderer will only be
      * guaranteed to work correctly within the document scope provided in
      * the DOM helper.
@@ -147,5 +141,14 @@ declare module goog.soy {
          * @return {Object} A key-value pair representing the injected data.
          */
         getData(): Object;
+    }
+}
+
+declare module goog.soy.Renderer {
+
+    /**
+     * @typedef {Array.<{template: string, data: Object, ijData: Object}>}
+     */
+    export interface SavedTemplateRender {
     }
 }

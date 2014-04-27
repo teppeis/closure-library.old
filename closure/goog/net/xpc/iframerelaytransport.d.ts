@@ -1,15 +1,6 @@
 declare module goog.net.xpc {
 
     /**
-     * @typedef {{fragments: !Array.<string>, received: number, expected: number}}
-     */
-    export interface FragmentInfo {
-        fragments: Array<string>;
-        received: number;
-        expected: number;
-    }
-
-    /**
      * Iframe relay transport. Creates hidden iframes containing a document
      * from the peer's origin. Data is transferred in the fragment identifier.
      * Therefore the document loaded in the iframes can be served from the
@@ -54,5 +45,17 @@ declare module goog.net.xpc {
          * @override
          */
         send(service: string, payload: string): void;
+    }
+}
+
+declare module goog.net.xpc.IframeRelayTransport {
+
+    /**
+     * @typedef {{fragments: !Array.<string>, received: number, expected: number}}
+     */
+    export interface FragmentInfo {
+        fragments: Array<string>;
+        received: number;
+        expected: number;
     }
 }

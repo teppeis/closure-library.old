@@ -1,20 +1,6 @@
 declare module goog.i18n {
 
     /**
-     * Alias for the compact format 'unit' object.
-     * @typedef {{
-     *     prefix: string,
-     *     suffix: string,
-     *     divisorBase: number
-     * }}
-     */
-    export interface CompactNumberUnit {
-        prefix: string;
-        suffix: string;
-        divisorBase: number;
-    }
-
-    /**
      * Constructor of NumberFormat.
      * @param {number|string} pattern The number that indicates a predefined
      *     number format pattern.
@@ -171,5 +157,19 @@ declare module goog.i18n.NumberFormat {
         NONE: number;
         SHORT: number;
         LONG: number;
+    }
+
+    /**
+     * Alias for the compact format 'unit' object.
+     * @typedef {{
+     *     prefix: string,
+     *     suffix: string,
+     *     divisorBase: number
+     * }}
+     */
+    export interface CompactNumberUnit {
+        prefix: string;
+        suffix: string;
+        divisorBase: number;
     }
 }

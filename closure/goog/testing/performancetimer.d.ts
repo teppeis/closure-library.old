@@ -1,18 +1,6 @@
 declare module goog.testing {
 
     /**
-     * A test function whose performance should be measured or a setUp/tearDown
-     * function. It may optionally return a deferred object. If it does so, the
-     * test harness will assume the function is asynchronous and it must signal
-     * that it's done by setting an (empty) result on the deferred object. If the
-     * function doesn't return anything, the test harness will assume it's
-     * synchronous.
-     * @typedef {function():(goog.async.Deferred|undefined)}
-     */
-    export interface TestFunction {
-    }
-
-    /**
      * Creates a performance timer that runs test functions a number of times to
      * generate timing samples, and provides performance statistics (minimum,
      * maximum, average, and standard deviation).
@@ -118,6 +106,18 @@ declare module goog.testing {
 }
 
 declare module goog.testing.PerformanceTimer {
+
+    /**
+     * A test function whose performance should be measured or a setUp/tearDown
+     * function. It may optionally return a deferred object. If it does so, the
+     * test harness will assume the function is asynchronous and it must signal
+     * that it's done by setting an (empty) result on the deferred object. If the
+     * function doesn't return anything, the test harness will assume it's
+     * synchronous.
+     * @typedef {function():(goog.async.Deferred|undefined)}
+     */
+    export interface TestFunction {
+    }
 
     /**
      * A task for the performance timer to measure. Callers can specify optional
