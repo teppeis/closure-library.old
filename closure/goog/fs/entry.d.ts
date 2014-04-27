@@ -37,7 +37,7 @@ declare module goog.fs {
          * @return {!goog.async.Deferred} The deferred Date for this entry. If an error
          *     occurs, the errback is called with a {@link goog.fs.Error}.
          */
-        getLastModified(): goog.async.Deferred;
+        getLastModified(): goog.async.Deferred<any>;
         
         /**
          * Retrieves the metadata for this entry.
@@ -45,7 +45,7 @@ declare module goog.fs {
          * @return {!goog.async.Deferred} The deferred Metadata for this entry. If an
          *     error occurs, the errback is called with a {@link goog.fs.Error}.
          */
-        getMetadata(): goog.async.Deferred;
+        getMetadata(): goog.async.Deferred<any>;
         
         /**
          * Move this entry to a new location.
@@ -57,7 +57,7 @@ declare module goog.fs {
          *     {@link goog.fs.DirectoryEntry} for the new entry. If an error occurs, the
          *     errback is called with a {@link goog.fs.Error}.
          */
-        moveTo(parent: goog.fs.DirectoryEntry, opt_newName?: string): goog.async.Deferred;
+        moveTo(parent: goog.fs.DirectoryEntry, opt_newName?: string): goog.async.Deferred<any>;
         
         /**
          * Copy this entry to a new location.
@@ -69,7 +69,7 @@ declare module goog.fs {
          *     {@link goog.fs.DirectoryEntry} for the new entry. If an error occurs, the
          *     errback is called with a {@link goog.fs.Error}.
          */
-        copyTo(parent: goog.fs.DirectoryEntry, opt_newName?: string): goog.async.Deferred;
+        copyTo(parent: goog.fs.DirectoryEntry, opt_newName?: string): goog.async.Deferred<any>;
         
         /**
          * Wrap an HTML5 entry object in an appropriate subclass instance.
@@ -104,7 +104,7 @@ declare module goog.fs {
          *     the callback is called with true. If an error occurs, the errback is
          *     called a {@link goog.fs.Error}.
          */
-        remove(): goog.async.Deferred;
+        remove(): goog.async.Deferred<any>;
         
         /**
          * Gets the parent directory.
@@ -112,7 +112,7 @@ declare module goog.fs {
          * @return {!goog.async.Deferred} The deferred {@link goog.fs.DirectoryEntry}.
          *     If an error occurs, the errback is called with a {@link goog.fs.Error}.
          */
-        getParent(): goog.async.Deferred;
+        getParent(): goog.async.Deferred<any>;
     }
 
     /**
@@ -132,7 +132,7 @@ declare module goog.fs {
          * @return {!goog.async.Deferred} The deferred {@link goog.fs.FileEntry}. If an
          *     error occurs, the errback is called with a {@link goog.fs.Error}.
          */
-        getFile(path: string, opt_behavior?: goog.fs.DirectoryEntry.Behavior): goog.async.Deferred;
+        getFile(path: string, opt_behavior?: goog.fs.DirectoryEntry.Behavior): goog.async.Deferred<any>;
         
         /**
          * Get a directory within this directory.
@@ -143,7 +143,7 @@ declare module goog.fs {
          * @return {!goog.async.Deferred} The deferred {@link goog.fs.DirectoryEntry}.
          *     If an error occurs, the errback is called a {@link goog.fs.Error}.
          */
-        getDirectory(path: string, opt_behavior?: goog.fs.DirectoryEntry.Behavior): goog.async.Deferred;
+        getDirectory(path: string, opt_behavior?: goog.fs.DirectoryEntry.Behavior): goog.async.Deferred<any>;
         
         /**
          * Opens the directory for the specified path, creating the directory and any
@@ -156,7 +156,7 @@ declare module goog.fs {
          *     the requested path. If an error occurs, the errback is called with a
          *     {@link goog.fs.Error}.
          */
-        createPath(path: string): goog.async.Deferred;
+        createPath(path: string): goog.async.Deferred<any>;
         
         /**
          * Gets a list of all entries in this directory.
@@ -165,7 +165,7 @@ declare module goog.fs {
          *     results. If an error occurs, the errback is called with a
          *     {@link goog.fs.Error}.
          */
-        listDirectory(): goog.async.Deferred;
+        listDirectory(): goog.async.Deferred<any>;
         
         /**
          * Removes this directory and all its contents.
@@ -174,7 +174,7 @@ declare module goog.fs {
          *     the callback is called with true. If an error occurs, the errback is
          *     called a {@link goog.fs.Error}.
          */
-        removeRecursively(): goog.async.Deferred;
+        removeRecursively(): goog.async.Deferred<any>;
     }
 
     /**

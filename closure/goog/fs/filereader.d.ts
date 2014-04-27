@@ -43,7 +43,7 @@ declare module goog.fs {
          * @return {!goog.async.Deferred} The deferred Blob contents as a binary string.
          *     If an error occurs, the errback is called with a {@link goog.fs.Error}.
          */
-        static readAsBinaryString(blob: Blob): goog.async.Deferred;
+        static readAsBinaryString(blob: Blob): goog.async.Deferred<any>;
         
         /**
          * Starts reading a blob as an array buffer.
@@ -57,7 +57,7 @@ declare module goog.fs {
          * @return {!goog.async.Deferred} The deferred Blob contents as an array buffer.
          *     If an error occurs, the errback is called with a {@link goog.fs.Error}.
          */
-        static readAsArrayBuffer(blob: Blob): goog.async.Deferred;
+        static readAsArrayBuffer(blob: Blob): goog.async.Deferred<any>;
         
         /**
          * Starts reading a blob as text.
@@ -73,7 +73,7 @@ declare module goog.fs {
          * @return {!goog.async.Deferred} The deferred Blob contents as text.
          *     If an error occurs, the errback is called with a {@link goog.fs.Error}.
          */
-        static readAsText(blob: Blob, opt_encoding?: string): goog.async.Deferred;
+        static readAsText(blob: Blob, opt_encoding?: string): goog.async.Deferred<any>;
         
         /**
          * Starts reading a blob as a data URL.
@@ -87,7 +87,7 @@ declare module goog.fs {
          * @return {!goog.async.Deferred} The deferred Blob contents as a data URL.
          *     If an error occurs, the errback is called with a {@link goog.fs.Error}.
          */
-        static readAsDataUrl(blob: Blob): goog.async.Deferred;
+        static readAsDataUrl(blob: Blob): goog.async.Deferred<any>;
     }
 }
 

@@ -8,7 +8,7 @@ declare module goog.testing.fs {
      * @return {!goog.async.Deferred} The deferred
      *     {@link goog.testing.fs.FileSystem}.
      */
-    export function getTemporary(size: number): goog.async.Deferred;
+    export function getTemporary(size: number): goog.async.Deferred<any>;
 
     /**
      * Get a filesystem object. Since these are mocks, there's no difference between
@@ -18,7 +18,7 @@ declare module goog.testing.fs {
      * @return {!goog.async.Deferred} The deferred
      *     {@link goog.testing.fs.FileSystem}.
      */
-    export function getPersistent(size: number): goog.async.Deferred;
+    export function getPersistent(size: number): goog.async.Deferred<any>;
 
     /**
      * Create a fake object URL for a given fake blob. This can be used as a real
@@ -60,7 +60,7 @@ declare module goog.testing.fs {
      * @param {string=} opt_encoding Ignored.
      * @return {!goog.async.Deferred} The deferred string value of the blob.
      */
-    export function blobToString(blob: goog.testing.fs.Blob, opt_encoding?: string): goog.async.Deferred;
+    export function blobToString(blob: goog.testing.fs.Blob, opt_encoding?: string): goog.async.Deferred<any>;
 
     /**
      * Installs goog.testing.fs in place of the standard goog.fs. After calling

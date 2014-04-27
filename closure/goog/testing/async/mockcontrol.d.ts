@@ -43,7 +43,7 @@ declare module goog.testing.async {
          * @param {function() : void} fn A function wrapping the code in which the error
          *     will occur.
          */
-        assertDeferredError(deferred: goog.async.Deferred, fn: () => void): void;
+        assertDeferredError(deferred: goog.async.Deferred<any>, fn: () => void): void;
         
         /**
          * Asserts that a deferred object will call its callback with the given value.
@@ -55,6 +55,6 @@ declare module goog.testing.async {
          *     object, then the actual value is the deferred value. Either this or
          *     'expected' must be deferred.
          */
-        assertDeferredEquals(message: string, expected: goog.async.Deferred, actual: goog.async.Deferred): void;
+        assertDeferredEquals(message: string, expected: goog.async.Deferred<any>, actual: goog.async.Deferred<any>): void;
     }
 }

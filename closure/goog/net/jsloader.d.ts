@@ -86,7 +86,7 @@ declare module goog.net.jsloader {
      *     The error callback will be called with a single goog.net.jsloader.Error
      *     parameter.
      */
-    export function load(uri: string, opt_options?: goog.net.jsloader.Options): goog.async.Deferred;
+    export function load(uri: string, opt_options?: goog.net.jsloader.Options): goog.async.Deferred<any>;
 
     /**
      * Loads a JavaScript file and verifies it was evaluated successfully, using a
@@ -108,7 +108,7 @@ declare module goog.net.jsloader {
      *     The error callback will be called with a single goog.net.jsloader.Error
      *     parameter.
      */
-    export function loadAndVerify(uri: string, verificationObjName: string, options: goog.net.jsloader.Options): goog.async.Deferred;
+    export function loadAndVerify(uri: string, verificationObjName: string, options: goog.net.jsloader.Options): goog.async.Deferred<any>;
 
     /**
      * Cancels a given request.

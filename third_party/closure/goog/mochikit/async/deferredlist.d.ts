@@ -42,8 +42,8 @@ declare module goog.async {
      * @constructor
      * @extends {goog.async.Deferred}
      */
-    export class DeferredList extends goog.async.Deferred {
-        constructor(list: Array<goog.async.Deferred>, opt_fireOnOneCallback?: boolean, opt_fireOnOneErrback?: boolean, opt_consumeErrors?: boolean, opt_canceler?: Function, opt_defaultScope?: Object);
+    export class DeferredList extends goog.async.Deferred<any> {
+        constructor(list: Array<goog.async.Deferred<any>>, opt_fireOnOneCallback?: boolean, opt_fireOnOneErrback?: boolean, opt_consumeErrors?: boolean, opt_canceler?: Function, opt_defaultScope?: Object);
         
         /**
          * Creates a <code>DeferredList</code> that gathers results from multiple
@@ -57,6 +57,6 @@ declare module goog.async {
          * @return {!goog.async.Deferred} The deferred list of results from the inputs
          *     if they all succeed, or the error result of the first input to fail.
          */
-        static gatherResults(list: Array<goog.async.Deferred>): goog.async.Deferred;
+        static gatherResults(list: Array<goog.async.Deferred<any>>): goog.async.Deferred<any>;
     }
 }

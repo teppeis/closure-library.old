@@ -96,7 +96,7 @@ declare module goog.async {
          * @return {!goog.async.Deferred} This Deferred.
          * @template T
          */
-        addCallback<T>(cb: (arg0: VALUE) => any, opt_scope?: T): goog.async.Deferred;
+        addCallback<T>(cb: (arg0: VALUE) => any, opt_scope?: T): goog.async.Deferred<any>;
         
         /**
          * Register a callback function to be called with an error result. If no value
@@ -127,7 +127,7 @@ declare module goog.async {
          * @return {!goog.async.Deferred} This Deferred.
          * @template T
          */
-        addBoth<T>(f: (arg0: any) => any, opt_scope?: T): goog.async.Deferred;
+        addBoth<T>(f: (arg0: any) => any, opt_scope?: T): goog.async.Deferred<any>;
         
         /**
          * Registers a callback function and an errback function at the same position
@@ -145,7 +145,7 @@ declare module goog.async {
          * @return {!goog.async.Deferred} This Deferred.
          * @template T
          */
-        addCallbacks<T>(cb: (arg0: VALUE) => any, eb: (arg0: any) => any, opt_scope?: T): goog.async.Deferred;
+        addCallbacks<T>(cb: (arg0: VALUE) => any, eb: (arg0: any) => any, opt_scope?: T): goog.async.Deferred<any>;
         
         /**
          * Implements {@see goog.Thenable} for seamless integration with
@@ -168,7 +168,7 @@ declare module goog.async {
          * @param {!goog.async.Deferred} otherDeferred The Deferred to chain.
          * @return {!goog.async.Deferred} This Deferred.
          */
-        chainDeferred(otherDeferred: goog.async.Deferred): goog.async.Deferred;
+        chainDeferred(otherDeferred: goog.async.Deferred<any>): goog.async.Deferred<any>;
         
         /**
          * Makes this Deferred wait for another Deferred's execution sequence to
@@ -181,7 +181,7 @@ declare module goog.async {
          * @param {!goog.async.Deferred} otherDeferred The Deferred to wait for.
          * @return {!goog.async.Deferred} This Deferred.
          */
-        awaitDeferred(otherDeferred: goog.async.Deferred): goog.async.Deferred;
+        awaitDeferred(otherDeferred: goog.async.Deferred<any>): goog.async.Deferred<any>;
         
         /**
          * Creates a branch off this Deferred's execution sequence, and returns it as a
@@ -221,7 +221,7 @@ declare module goog.async {
          * @param {*=} opt_result The result.
          * @return {!goog.async.Deferred} The new Deferred.
          */
-        static succeed(opt_result?: any): goog.async.Deferred;
+        static succeed(opt_result?: any): goog.async.Deferred<any>;
         
         /**
          * Creates a Deferred that fires when the given promise resolves.
@@ -239,14 +239,14 @@ declare module goog.async {
          * @param {*} res The error result.
          * @return {!goog.async.Deferred} The new Deferred.
          */
-        static fail(res: any): goog.async.Deferred;
+        static fail(res: any): goog.async.Deferred<any>;
         
         /**
          * Creates a Deferred that has already been canceled.
          *
          * @return {!goog.async.Deferred} The new Deferred.
          */
-        static canceled(): goog.async.Deferred;
+        static canceled(): goog.async.Deferred<any>;
         
         /**
          * Normalizes values that may or may not be Deferreds.
@@ -280,7 +280,7 @@ declare module goog.async {
          *     callback with the input value.
          * @template T
          */
-        static when<T>(value: any, callback: (arg0: any) => any, opt_scope?: T): goog.async.Deferred;
+        static when<T>(value: any, callback: (arg0: any) => any, opt_scope?: T): goog.async.Deferred<any>;
         
         /**
          * Asserts that there are no pending deferred errors. If there are any
@@ -300,7 +300,7 @@ declare module goog.async.Deferred {
      * @extends {goog.debug.Error}
      */
     export class AlreadyCalledError extends goog.debug.Error {
-        constructor(deferred: goog.async.Deferred);
+        constructor(deferred: goog.async.Deferred<any>);
     }
 
     /**
@@ -311,6 +311,6 @@ declare module goog.async.Deferred {
      * @extends {goog.debug.Error}
      */
     export class CanceledError extends goog.debug.Error {
-        constructor(deferred: goog.async.Deferred);
+        constructor(deferred: goog.async.Deferred<any>);
     }
 }

@@ -32,7 +32,7 @@ declare module goog.db {
          * @param {*} value The value to be stored.
          * @return {!goog.async.Deferred} The resulting deferred request.
          */
-        update(value: any): goog.async.Deferred;
+        update(value: any): goog.async.Deferred<any>;
         
         /**
          * Deletes the value at the cursor's position, without changing the cursor's
@@ -40,7 +40,7 @@ declare module goog.db {
          *
          * @return {!goog.async.Deferred} The resulting deferred request.
          */
-        remove(): goog.async.Deferred;
+        remove(): goog.async.Deferred<any>;
         
         /**
          * @return {*} The value for the value at the cursor's position. Undefined

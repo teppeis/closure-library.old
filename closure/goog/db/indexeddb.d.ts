@@ -85,7 +85,7 @@ declare module goog.db {
          * @return {!goog.async.Deferred} The deferred transaction for changing the
          *     version.
          */
-        setVersion(version: string): goog.async.Deferred;
+        setVersion(version: string): goog.async.Deferred<any>;
         
         /**
          * Creates a new transaction.

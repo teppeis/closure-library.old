@@ -37,7 +37,7 @@ declare module goog.db {
          * @param {IDBKeyType} key Key to look up in the index.
          * @return {!goog.async.Deferred} The deferred object for the given record.
          */
-        get(key: IDBKeyType): goog.async.Deferred;
+        get(key: IDBKeyType): goog.async.Deferred<any>;
         
         /**
          * Looks up a single object from the object store and gives back the key that
@@ -48,7 +48,7 @@ declare module goog.db {
          * @return {!goog.async.Deferred} The deferred key for the record that matches
          *     the key.
          */
-        getKey(key: IDBKeyType): goog.async.Deferred;
+        getKey(key: IDBKeyType): goog.async.Deferred<any>;
         
         /**
          * Gets all indexed objects. If the key is provided, gets all indexed objects
@@ -58,7 +58,7 @@ declare module goog.db {
          * @return {!goog.async.Deferred} A deferred array of objects that match the
          *     key.
          */
-        getAll(opt_key?: IDBKeyType): goog.async.Deferred;
+        getAll(opt_key?: IDBKeyType): goog.async.Deferred<any>;
         
         /**
          * Gets the keys to look up all the indexed objects. If the key is provided,
@@ -68,7 +68,7 @@ declare module goog.db {
          * @return {!goog.async.Deferred} A deferred array of keys for objects that
          *     match the key.
          */
-        getAllKeys(opt_key?: IDBKeyType): goog.async.Deferred;
+        getAllKeys(opt_key?: IDBKeyType): goog.async.Deferred<any>;
         
         /**
          * Opens a cursor over the specified key range. Returns a cursor object which is

@@ -15,7 +15,7 @@ declare module goog.fs {
      * @return {!goog.async.Deferred} The deferred {@link goog.fs.FileSystem}. If an
      *     error occurs, the errback is called with a {@link goog.fs.Error}.
      */
-    export function getTemporary(size: number): goog.async.Deferred;
+    export function getTemporary(size: number): goog.async.Deferred<any>;
 
     /**
      * Returns a persistent FileSystem object. A persistent filesystem will never be
@@ -25,7 +25,7 @@ declare module goog.fs {
      * @return {!goog.async.Deferred} The deferred {@link goog.fs.FileSystem}. If an
      *     error occurs, the errback is called with a {@link goog.fs.Error}.
      */
-    export function getPersistent(size: number): goog.async.Deferred;
+    export function getPersistent(size: number): goog.async.Deferred<any>;
 
     /**
      * Creates a blob URL for a blob object.
@@ -61,7 +61,7 @@ declare module goog.fs {
      *     errback is called with a {@link goog.fs.Error}.
      * @deprecated Use {@link goog.fs.FileReader.readAsText} instead.
      */
-    export function blobToString(blob: Blob, opt_encoding?: string): goog.async.Deferred;
+    export function blobToString(blob: Blob, opt_encoding?: string): goog.async.Deferred<any>;
 
     /**
      * Slices the blob. The returned blob contains data from the start byte

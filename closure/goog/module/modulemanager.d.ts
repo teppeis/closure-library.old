@@ -117,7 +117,7 @@ declare module goog.module {
          *     will be loaded asynchronously regardless of the value of this parameter.
          * @return {!goog.async.Deferred} A deferred object.
          */
-        preloadModule(id: string, opt_timeout?: number): goog.async.Deferred;
+        preloadModule(id: string, opt_timeout?: number): goog.async.Deferred<any>;
         
         /**
          * Prefetches a JavaScript module and its dependencies, which means that the
@@ -174,7 +174,7 @@ declare module goog.module {
          * @param {boolean=} opt_userInitiated If the load is a result of a user action.
          * @return {goog.async.Deferred} A deferred object.
          */
-        load(moduleId: string, opt_userInitiated?: boolean): goog.async.Deferred;
+        load(moduleId: string, opt_userInitiated?: boolean): goog.async.Deferred<any>;
         
         /**
          * Loads a list of modules, returning a goog.async.Deferred for keeping track of

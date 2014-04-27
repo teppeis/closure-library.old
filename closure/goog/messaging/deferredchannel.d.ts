@@ -12,7 +12,7 @@ declare module goog.messaging {
      * @final
      */
     export class DeferredChannel extends goog.Disposable {
-        constructor(deferredChannel: goog.async.Deferred);
+        constructor(deferredChannel: goog.async.Deferred<any>);
         
         /**
          * Cancels the wrapped Deferred.

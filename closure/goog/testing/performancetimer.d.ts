@@ -105,7 +105,7 @@ declare module goog.testing {
          * @return {!goog.async.Deferred} The deferred result, eventually an object
          *     containing performance stats.
          */
-        runAsyncTask(task: goog.testing.PerformanceTimer.Task): goog.async.Deferred;
+        runAsyncTask(task: goog.testing.PerformanceTimer.Task): goog.async.Deferred<any>;
         
         /**
          * Creates a performance timer results object by analyzing a given array of

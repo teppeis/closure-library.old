@@ -38,7 +38,7 @@ declare module goog.net {
          * @param {string} url The URL of the file to download.
          * @return {!goog.async.Deferred} The deferred result blob.
          */
-        download(url: string): goog.async.Deferred;
+        download(url: string): goog.async.Deferred<any>;
         
         /**
          * Return a Deferred that will fire once no download is active for a given URL.
@@ -50,7 +50,7 @@ declare module goog.net {
          * @return {!goog.async.Deferred} The Deferred that will fire when the download
          *     is complete.
          */
-        waitForDownload(url: string): goog.async.Deferred;
+        waitForDownload(url: string): goog.async.Deferred<any>;
         
         /**
          * Returns whether or not there is an active download for a given URL.
@@ -69,7 +69,7 @@ declare module goog.net {
          *     passed the blob. If a file API error occurs while loading the blob, that
          *     error will be passed to the errback.
          */
-        getDownloadedBlob(url: string): goog.async.Deferred;
+        getDownloadedBlob(url: string): goog.async.Deferred<any>;
         
         /**
          * Get the local filesystem: URL for a downloaded file. This is different from
@@ -88,7 +88,7 @@ declare module goog.net {
          *     will be passed the URL. If a file API error occurs while loading the
          *     blob, that error will be passed to the errback.
          */
-        getLocalUrl(url: string): goog.async.Deferred;
+        getLocalUrl(url: string): goog.async.Deferred<any>;
         
         /**
          * Return (deferred) whether or not a URL has been downloaded. Will fire a
@@ -100,7 +100,7 @@ declare module goog.net {
          *     existence of the downloaded URL, that error will be passed to the
          *     errback.
          */
-        isDownloaded(url: string): goog.async.Deferred;
+        isDownloaded(url: string): goog.async.Deferred<any>;
         
         /**
          * Remove a URL from the FileDownloader.
@@ -113,7 +113,7 @@ declare module goog.net {
          * @return {!goog.async.Deferred} The deferred used for registering callbacks on
          *     success or on error.
          */
-        remove(url: string): goog.async.Deferred;
+        remove(url: string): goog.async.Deferred<any>;
         
         /**
          * Save a blob for a given URL. This works just as through the blob were
@@ -135,7 +135,7 @@ declare module goog.net {
          *     Deferred. The objects passed to the errback will be
          *     {@link goog.net.FileDownloader.Error}s.
          */
-        setBlob(url: string, blob: Blob, opt_name?: string): goog.async.Deferred;
+        setBlob(url: string, blob: Blob, opt_name?: string): goog.async.Deferred<any>;
     }
 }
 

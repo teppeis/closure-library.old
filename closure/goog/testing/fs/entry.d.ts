@@ -41,7 +41,7 @@ declare module goog.testing.fs {
          *     timeout of 0.
          * @protected
          */
-        checkNotDeleted(action: string): goog.async.Deferred;
+        checkNotDeleted(action: string): goog.async.Deferred<any>;
     }
 
     /**

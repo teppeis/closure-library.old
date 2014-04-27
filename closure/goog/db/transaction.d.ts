@@ -41,7 +41,7 @@ declare module goog.db {
          *     transaction is complete. It fires the errback chain if an error occurs
          *     in the transaction, or if it is aborted.
          */
-        wait(): goog.async.Deferred;
+        wait(): goog.async.Deferred<any>;
         
         /**
          * Aborts this transaction. No pending operations will be applied to the

@@ -39,7 +39,7 @@ declare module goog.testing {
          *     callback to.
          * @see goog.testing.AsyncTestCase#waitForAsync
          */
-        addWaitForAsync(msg: string, d: goog.async.Deferred): void;
+        addWaitForAsync(msg: string, d: goog.async.Deferred<any>): void;
         
         /**
          * Wires up given Deferred object to the test case, then starts the
@@ -48,6 +48,6 @@ declare module goog.testing {
          *     deferred object to wait for.
          * @param {goog.async.Deferred=} opt_b The deferred object to wait for.
          */
-        waitForDeferred(a: string, opt_b?: goog.async.Deferred): void;
+        waitForDeferred(a: string, opt_b?: goog.async.Deferred<any>): void;
     }
 }

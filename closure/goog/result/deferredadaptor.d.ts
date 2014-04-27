@@ -9,7 +9,7 @@ declare module goog.result {
      * @final
      * @deprecated Use {@link goog.Promise} instead - http://go/promisemigration
      */
-    export class DeferredAdaptor extends goog.async.Deferred {
+    export class DeferredAdaptor extends goog.async.Deferred<any> {
         constructor(result: goog.result.Result);
     }
 }
