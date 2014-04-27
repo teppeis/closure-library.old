@@ -150,6 +150,23 @@ declare module goog.ui.media {
 declare module goog.ui.media.FlashObject {
 
     /**
+     * Different states of loaded-ness in which the SWF itself can be
+     *
+     * Talked about at:
+     * http://kb.adobe.com/selfservice/viewContent.do?externalId=tn_12059&sliceId=1
+     *
+     * @enum {number}
+     * @private
+     */
+    export interface SwfReadyStates_ {
+        LOADING: number;
+        UNINITIALIZED: number;
+        LOADED: number;
+        INTERACTIVE: number;
+        COMPLETE: number;
+    }
+
+    /**
      * The different modes for displaying a SWF. Note that different wmodes
      * can result in different bugs in different browsers and also that
      * both OPAQUE and TRANSPARENT will result in a performance hit.

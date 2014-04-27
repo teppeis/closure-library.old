@@ -143,3 +143,17 @@ declare module goog.ui {
         correctAriaRole(item: goog.ui.Control, element: Element): void;
     }
 }
+
+declare module goog.ui.MenuItemRenderer {
+
+    /**
+     * Constants for referencing composite CSS classes.
+     * @enum {number}
+     * @private
+     */
+    export interface CompositeCssClassIndex_ {
+        HOVER: number;
+        CHECKBOX: number;
+        CONTENT: number;
+    }
+}

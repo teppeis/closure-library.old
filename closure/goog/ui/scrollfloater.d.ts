@@ -83,4 +83,14 @@ declare module goog.ui.ScrollFloater {
         DOCK: string;
         PIN: string;
     }
+
+    /**
+     * The element can float at different positions on the page.
+     * @enum {number}
+     * @private
+     */
+    export interface FloatMode_ {
+        TOP: number;
+        BOTTOM: number;
+    }
 }

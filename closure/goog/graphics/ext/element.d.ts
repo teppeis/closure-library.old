@@ -299,6 +299,18 @@ declare module goog.graphics.ext {
 declare module goog.graphics.ext.Element {
 
     /**
+     * Position specification types.  Start corresponds to left/top, middle to
+     * center/middle, and end to right/bottom.
+     * @enum {number}
+     * @private
+     */
+    export interface PositionType_ {
+        START: number;
+        MIDDLE: number;
+        END: number;
+    }
+
+    /**
      * Manages a position and size, either horizontal or vertical.
      * @param {goog.graphics.ext.Element} element The element the position applies
      *     to.

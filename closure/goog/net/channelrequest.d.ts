@@ -173,6 +173,17 @@ declare module goog.net {
 declare module goog.net.ChannelRequest {
 
     /**
+     * Enum for channel requests type
+     * @enum {number}
+     * @private
+     */
+    export interface Type_ {
+        XML_HTTP: number;
+        IMG: number;
+        TRIDENT: number;
+    }
+
+    /**
      * Enum type for identifying a ChannelRequest error.
      * @enum {number}
      */

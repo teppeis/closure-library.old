@@ -666,4 +666,35 @@ declare module goog.editor.Field {
         IFRAME_RESIZED: string;
         SELECTIONCHANGE: string;
     }
+
+    /**
+     * The load state of the field.
+     * @enum {number}
+     * @private
+     */
+    export interface LoadState_ {
+        UNEDITABLE: number;
+        LOADING: number;
+        EDITABLE: number;
+    }
+
+    /**
+     * Keycodes that result in a selectionchange event (e.g. the cursor moving).
+     * @enum {number}
+     * @private
+     */
+    export interface SELECTION_CHANGE_KEYCODES_ {
+        8: number;
+        9: number;
+        13: number;
+        33: number;
+        34: number;
+        35: number;
+        36: number;
+        37: number;
+        38: number;
+        39: number;
+        40: number;
+        46: number;
+    }
 }

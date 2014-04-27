@@ -78,6 +78,18 @@ declare module goog.net.WebSocket {
     }
 
     /**
+     * The various states of the web socket.
+     * @enum {number} The states of the web socket.
+     * @private
+     */
+    export interface ReadyState_ {
+        CONNECTING: number;
+        OPEN: number;
+        CLOSING: number;
+        CLOSED: number;
+    }
+
+    /**
      * Object representing a new incoming message event.
      *
      * @param {string} message The raw message coming from the web socket.

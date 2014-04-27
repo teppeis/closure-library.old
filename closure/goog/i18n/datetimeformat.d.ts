@@ -56,4 +56,15 @@ declare module goog.i18n.DateTimeFormat {
         MEDIUM_DATETIME: number;
         SHORT_DATETIME: number;
     }
+
+    /**
+     * These are token types, corresponding to above token definitions.
+     * @enum {number}
+     * @private
+     */
+    export interface PartTypes_ {
+        QUOTED_STRING: number;
+        FIELD: number;
+        LITERAL: number;
+    }
 }

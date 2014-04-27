@@ -14,3 +14,17 @@ declare module goog.i18n.uChar {
         constructor(dataSourceUri: string);
     }
 }
+
+declare module goog.i18n.uChar.RemoteNameFetcher {
+
+    /**
+     * Enum for the different request types.
+     *
+     * @enum {string}
+     * @private
+     */
+    export interface RequestType_ {
+        BASE_88: string;
+        CODEPOINT: string;
+    }
+}

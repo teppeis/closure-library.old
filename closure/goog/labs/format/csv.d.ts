@@ -1,6 +1,18 @@
 declare module goog.labs.format.csv {
 
     /**
+     * Sentinel tracking objects.
+     * @enum {Object}
+     * @private
+     */
+    export interface Sentinels_ {
+        EMPTY: Object;
+        EOF: Object;
+        EOR: Object;
+        NEWLINE: Object;
+    }
+
+    /**
      * A token -- a single-character string or a sentinel.
      * @typedef {string|!goog.labs.format.csv.Sentinels_}
      */

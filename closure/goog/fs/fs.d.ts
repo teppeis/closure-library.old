@@ -1,6 +1,17 @@
 declare module goog.fs {
 
     /**
+     * The two types of filesystem.
+     *
+     * @enum {number}
+     * @private
+     */
+    export interface FileSystemType_ {
+        TEMPORARY: number;
+        PERSISTENT: number;
+    }
+
+    /**
      * @typedef {!{createObjectURL: (function(!Blob): string),
      *             revokeObjectURL: function(string): void}}
      */

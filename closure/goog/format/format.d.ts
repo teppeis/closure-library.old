@@ -1,6 +1,19 @@
 declare module goog.format {
 
     /**
+     * Tokens used within insertWordBreaks.
+     * @private
+     * @enum {number}
+     */
+    export interface WbrToken_ {
+        LT: number;
+        GT: number;
+        AMP: number;
+        SEMI_COLON: number;
+        SPACE: number;
+    }
+
+    /**
      * Constant for the WBR replacement used by insertWordBreaks.  Safari requires
      * <wbr></wbr>, Opera needs the &shy; entity, though this will give a visible
      * hyphen at breaks.  IE8 uses a zero width space.

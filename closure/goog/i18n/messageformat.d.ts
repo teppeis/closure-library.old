@@ -36,3 +36,30 @@ declare module goog.i18n {
         formatIgnoringPound(namedParameters: Object): string;
     }
 }
+
+declare module goog.i18n.MessageFormat {
+
+    /**
+     * Marks a string and block during parsing.
+     * @enum {number}
+     * @private
+     */
+    export interface Element_ {
+        STRING: number;
+        BLOCK: number;
+    }
+
+    /**
+     * Block type.
+     * @enum {number}
+     * @private
+     */
+    export interface BlockType_ {
+        PLURAL: number;
+        ORDINAL: number;
+        SELECT: number;
+        SIMPLE: number;
+        STRING: number;
+        UNKNOWN: number;
+    }
+}

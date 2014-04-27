@@ -113,6 +113,17 @@ declare module goog.ui.SplitPane {
     }
 
     /**
+     * Z indices for iframe overlay and splitter handle.
+     * @enum {number}
+     * @private
+     */
+    export interface IframeOverlayIndex_ {
+        HIDDEN: number;
+        OVERLAY: number;
+        SPLITTER_HANDLE: number;
+    }
+
+    /**
     * Orientation values for the splitpane.
     * @enum {string}
     */

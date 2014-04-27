@@ -521,6 +521,16 @@ declare module goog.net.BrowserChannel {
     }
 
     /**
+     * Internal enum type for the two browser channel channel types.
+     * @enum {number}
+     * @private
+     */
+    export interface ChannelType_ {
+        FORWARD_CHANNEL: number;
+        BACK_CHANNEL: number;
+    }
+
+    /**
      * Events fired by BrowserChannel and associated objects
      * @enum {string}
      */

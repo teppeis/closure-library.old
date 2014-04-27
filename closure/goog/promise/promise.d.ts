@@ -171,6 +171,19 @@ declare module goog {
 declare module goog.Promise {
 
     /**
+     * The possible internal states for a Promise. These states are not directly
+     * observable to external callers.
+     * @enum {number}
+     * @private
+     */
+    export interface State_ {
+        PENDING: number;
+        BLOCKED: number;
+        FULFILLED: number;
+        REJECTED: number;
+    }
+
+    /**
      * Typedef for entries in the callback chain. Each call to {@code then},
      * {@code thenCatch}, or {@code thenAlways} creates an entry containing the
      * functions that may be invoked once the Promise is resolved.

@@ -18,6 +18,17 @@ declare module goog.ui.RoundedPanel {
     }
 
     /**
+     * CSS class name suffixes for the elements comprising the RoundedPanel.
+     * @enum {string}
+     * @private
+     */
+    export interface Classes_ {
+        BACKGROUND: string;
+        PANEL: string;
+        CONTENT: string;
+    }
+
+    /**
      * Factory method that returns an instance of a BaseRoundedPanel.
      * @param {number} radius The radius of the rounded corner(s), in pixels.
      * @param {number} borderWidth The thickness of the border, in pixels.

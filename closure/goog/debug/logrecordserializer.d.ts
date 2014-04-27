@@ -1,6 +1,22 @@
 declare module goog.debug.logRecordSerializer {
 
     /**
+     * Enumeration of object keys used when serializing a log message.
+     * @enum {string}
+     * @private
+     */
+    export interface Param_ {
+        TIME: string;
+        LEVEL_NAME: string;
+        LEVEL_VALUE: string;
+        MSG: string;
+        LOGGER_NAME: string;
+        SEQUENCE_NUMBER: string;
+        EXCEPTION: string;
+        EXCEPTION_TEXT: string;
+    }
+
+    /**
      * Serializes a LogRecord to a JSON string.  Note that any associated
      * exception is likely to be lost.
      * @param {goog.debug.LogRecord} record The record to serialize.

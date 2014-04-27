@@ -98,6 +98,21 @@ declare module goog.ui.editor.LinkDialog {
     }
 
     /**
+     * IDs for relevant DOM elements.
+     * @enum {string}
+     * @private
+     */
+    export interface Id_ {
+        TEXT_TO_DISPLAY: string;
+        ON_WEB_TAB: string;
+        ON_WEB_INPUT: string;
+        EMAIL_ADDRESS_TAB: string;
+        EMAIL_ADDRESS_INPUT: string;
+        EMAIL_WARNING: string;
+        TAB_INPUT_SUFFIX: string;
+    }
+
+    /**
      * OK event object for the link dialog.
      * @param {string} linkText Text the user chose to display for the link.
      * @param {string} linkUrl Url the user chose for the link to point to.

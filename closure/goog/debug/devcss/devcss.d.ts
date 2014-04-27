@@ -39,4 +39,20 @@ declare module goog.debug.DevCss {
         SAFARI: string;
         MOBILE: string;
     }
+
+    /**
+     * A list of strings that may be used for matching in CSS files/development.
+     * @enum {string}
+     * @private
+     */
+    export interface CssToken_ {
+        USERAGENT: string;
+        SEPARATOR: string;
+        LESS_THAN: string;
+        GREATER_THAN: string;
+        LESS_THAN_OR_EQUAL: string;
+        GREATER_THAN_OR_EQUAL: string;
+        IE6_SELECTOR_TEXT: string;
+        IE6_COMBINED_GLUE: string;
+    }
 }

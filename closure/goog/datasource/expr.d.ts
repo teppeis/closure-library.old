@@ -118,3 +118,27 @@ declare module goog.ds {
         static create(expr: string): goog.ds.Expr;
     }
 }
+
+declare module goog.ds.Expr {
+
+    /**
+     * Commonly used strings in expressions.
+     * @enum {string}
+     * @private
+     */
+    export interface String_ {
+        SEPARATOR: string;
+        CURRENT_NODE_EXPR: string;
+        EMPTY_EXPR: string;
+        ATTRIBUTE_START: string;
+        ALL_CHILD_NODES_EXPR: string;
+        ALL_ATTRIBUTES_EXPR: string;
+        ALL_ELEMENTS_EXPR: string;
+        NAME_EXPR: string;
+        COUNT_EXPR: string;
+        POSITION_EXPR: string;
+        INDEX_START: string;
+        INDEX_END: string;
+        CAN_BE_EMPTY: string;
+    }
+}

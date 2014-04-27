@@ -54,6 +54,21 @@ declare module goog.labs.i18n {
 declare module goog.labs.i18n.GenderInfo {
 
     /**
+     * Enumeration for the possible ways to generate list genders.
+     * Indicates the category for the locale.
+     * This only affects gender for lists more than one. For lists of 1 item,
+     * the gender of the list always equals the gender of that sole item.
+     * This is for internal use, matching ICU.
+     * @enum {number}
+     * @private
+     */
+    export interface ListGenderStyle_ {
+        NEUTRAL: number;
+        MIXED_NEUTRAL: number;
+        MALE_TAINTS: number;
+    }
+
+    /**
      * Enumeration for the possible gender values.
      * Gender: OTHER means either the information is unavailable,
      * or the person has declined to state MALE or FEMALE.

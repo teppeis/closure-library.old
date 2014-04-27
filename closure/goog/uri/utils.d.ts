@@ -1,6 +1,18 @@
 declare module goog.uri.utils {
 
     /**
+     * Character codes inlined to avoid object allocations due to charCode.
+     * @enum {number}
+     * @private
+     */
+    export interface CharCode_ {
+        AMPERSAND: number;
+        EQUAL: number;
+        HASH: number;
+        QUESTION: number;
+    }
+
+    /**
      * The index of each URI component in the return value of goog.uri.utils.split.
      * @enum {number}
      */

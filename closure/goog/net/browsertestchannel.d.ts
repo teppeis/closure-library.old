@@ -100,3 +100,17 @@ declare module goog.net {
         notifyServerReachabilityEvent(reachabilityType: goog.net.BrowserChannel.ServerReachability): void;
     }
 }
+
+declare module goog.net.BrowserTestChannel {
+
+    /**
+     * Enum type for the browser test channel state machine
+     * @enum {number}
+     * @private
+     */
+    export interface State_ {
+        INIT: number;
+        CHECKING_BLOCKED: number;
+        CONNECTION_TESTING: number;
+    }
+}

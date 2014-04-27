@@ -241,6 +241,7 @@ declare module goog.graphics {
          *
          * @param {string} text The text string to measure.
          * @param {goog.graphics.Font} font The font object describing the font style.
+         *
          * @return {number} The width in pixels of the text strings.
          * @override
          */
