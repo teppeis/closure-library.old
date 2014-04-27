@@ -57,15 +57,14 @@ goog.inherits(goog.ui.MenuBase, goog.ui.Popup);
 
 /**
  * Events fired by the Menu
+ * @enum {string}
  */
-goog.ui.MenuBase.Events = {};
-
-
-/**
- * Event fired by the Menu when an item is "clicked".
- */
-goog.ui.MenuBase.Events.ITEM_ACTION = 'itemaction';
-
+goog.ui.MenuBase.Events = {
+    /**
+     * Event fired by the Menu when an item is "clicked".
+     */
+    ITEM_ACTION: 'itemaction'
+};
 
 /** @override */
 goog.ui.MenuBase.prototype.disposeInternal = function() {
