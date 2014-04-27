@@ -24,12 +24,6 @@ declare module goog.ui {
         LABEL_CLASS_NAME: any;
         
         /**
-         * Creates the DOM nodes needed for the label input.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Decorates an existing HTML input element as a label input. If the element
          * has a "label" attribute then that will be used as the label property for the
          * label input object.

@@ -61,12 +61,6 @@ declare module goog.ui {
         getInputValue(): string;
         
         /**
-         * Creates an input element for use with the popup date picker.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Sets the element that the PopupDatePicker should be parented to. If not set,
          * defaults to the body element of the page.
          * @param {Element} el The element that the PopupDatePicker should be parented

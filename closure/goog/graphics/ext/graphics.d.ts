@@ -102,19 +102,5 @@ declare module goog.graphics.ext {
          * @param {Element} parentElement Parent element to render the component into.
          */
         render(parentElement: Element): void;
-        
-        /**
-         * Never transform a surface.
-         * @override
-         */
-        transform(): void;
-        
-        /**
-         * Called from the parent class, this method resets any pre-computed positions
-         * and sizes.
-         * @protected
-         * @override
-         */
-        redraw(): void;
     }
 }

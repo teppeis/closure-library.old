@@ -32,12 +32,5 @@ declare module goog.ds {
          * @param {string} data The data to send in the request body.
          */
         setQueryData(data: string): void;
-        
-        /**
-         * Load or reload the backing data for this node.
-         * Fires the JsonDataSource
-         * @override
-         */
-        load(): void;
     }
 }

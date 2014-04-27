@@ -153,13 +153,6 @@ declare module goog.ui {
         enableClassName(className: string, enable: boolean): void;
         
         /**
-         * Creates the control's DOM.  Overrides {@link goog.ui.Component#createDom} by
-         * delegating DOM manipulation to the control's renderer.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Returns the control's preferred ARIA role. This can be used by a control to
          * override the role that would be assigned by the renderer.  This is useful in
          * cases where a different ARIA role is appropriate for a control because of the
@@ -207,22 +200,6 @@ declare module goog.ui {
          * @override
          */
         decorateInternal(element: Element): void;
-        
-        /**
-         * Configures the component after its DOM has been rendered, and sets up event
-         * handling.  Overrides {@link goog.ui.Component#enterDocument}.
-         * @override
-         */
-        enterDocument(): void;
-        
-        /**
-         * Cleans up the component before its DOM is removed from the document, and
-         * removes event handlers.  Overrides {@link goog.ui.Component#exitDocument}
-         * by making sure that components that are removed from the document aren't
-         * focusable (i.e. have no tab index).
-         * @override
-         */
-        exitDocument(): void;
         
         /**
          * Returns the text caption or DOM structure displayed in the component.

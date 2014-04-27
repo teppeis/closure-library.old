@@ -35,16 +35,5 @@ declare module goog.structs {
          * @override
          */
         addFreeObject(obj: VALUE): void;
-        
-        /**
-         * Adjusts the objects held in the pool to be within the min/max constraints.
-         *
-         * NOTE: It is possible that the number of objects in the pool will still be
-         * greater than the maximum count of objects allowed. This will be the case
-         * if no more free objects can be disposed of to get below the minimum count
-         * (i.e., all objects are in use).
-         * @override
-         */
-        adjustForMinMax(): void;
     }
 }

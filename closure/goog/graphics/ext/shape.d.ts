@@ -26,13 +26,6 @@ declare module goog.graphics.ext {
         setPath(path: goog.graphics.ext.Path): void;
         
         /**
-         * Redraw the ellipse.  Called when the coordinate system is changed.
-         * @protected
-         * @override
-         */
-        redraw(): void;
-        
-        /**
          * @return {boolean} Whether the shape is parent dependent.
          * @protected
          * @override

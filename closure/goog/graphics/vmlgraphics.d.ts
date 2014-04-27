@@ -159,12 +159,6 @@ declare module goog.graphics {
         static setPositionAndSize(element: Element, left: number, top: number, width: number, height: number): void;
         
         /**
-         * Creates the DOM representation of the graphics area.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Changes the coordinate system position.
          * @param {number} left The coordinate system left bound.
          * @param {number} top The coordinate system top bound.
@@ -194,12 +188,6 @@ declare module goog.graphics {
          * @override
          */
         getPixelSize(): goog.math.Size;
-        
-        /**
-         * Remove all drawing elements from the graphics.
-         * @override
-         */
-        clear(): void;
         
         /**
          * Draw an ellipse.
@@ -321,13 +309,5 @@ declare module goog.graphics {
          * @override
          */
         getTextWidth(text: string, font: goog.graphics.Font): number;
-        
-        /**
-         * Disposes of the component by removing event handlers, detacing DOM nodes from
-         * the document body, and removing references to them.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
     }
 }

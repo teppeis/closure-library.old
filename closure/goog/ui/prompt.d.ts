@@ -78,24 +78,12 @@ declare module goog.ui {
         getCols(): number;
         
         /**
-         * Create the initial DOM representation for the prompt.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Causes the prompt to appear, centered on the screen, gives focus
          * to the text box, and selects the text
          * @param {boolean} visible Whether the dialog should be visible.
          * @override
          */
         setVisible(visible: boolean): void;
-        
-        /**
-         * Overrides setFocus to put focus on the input element.
-         * @override
-         */
-        focus(): void;
         
         /**
          * Sets the default value of the prompt when it is displayed.

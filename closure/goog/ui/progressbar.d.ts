@@ -10,12 +10,6 @@ declare module goog.ui {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**
-         * Creates the DOM nodes needed for the progress bar
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Decorates an existing HTML DIV element as a progress bar input. If the
          * element contains a child with a class name of 'progress-bar-thumb' that will
          * be used as the thumb.

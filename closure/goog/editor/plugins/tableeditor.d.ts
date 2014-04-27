@@ -19,13 +19,6 @@ declare module goog.editor.plugins {
         isSupportedCommand(command: string): boolean;
         
         /**
-         * Returns the current value of a given command. Currently this plugin
-         * only returns a value for goog.editor.plugins.TableEditor.COMMAND.TABLE.
-         * @override
-         */
-        queryCommandValue(): void;
-        
-        /**
          * Adds a function to filter out non-user-editable tables.
          * @param {function(Element):boolean} func A function to decide whether the
          *   table element could be editable by the user or not.

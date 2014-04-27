@@ -40,16 +40,5 @@ declare module goog.ui {
          * @override
          */
         getCssClass(orient: goog.ui.SliderBase.Orientation): string;
-        
-        /**
-         * Creates the thumb members for a twothumbslider. If the
-         * element contains a child with a class name 'goog-twothumbslider-value-thumb'
-         * (or 'goog-twothumbslider-extent-thumb', respectively), then that will be used
-         * as the valueThumb (or as the extentThumb, respectively). If the element
-         * contains a child with a class name 'goog-twothumbslider-rangehighlight',
-         * then that will be used as the range highlight.
-         * @override
-         */
-        createThumbs(): void;
     }
 }

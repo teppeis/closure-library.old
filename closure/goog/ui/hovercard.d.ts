@@ -82,14 +82,6 @@ declare module goog.ui {
         getAnchorElement(): Element;
         
         /**
-         * Make sure we detach from temp anchor when we are done displaying hovercard.
-         * @protected
-         * @suppress {underscore|visibility}
-         * @override
-         */
-        onHide_(): void;
-        
-        /**
          * This mouse over event is only received if the anchor is already attached.
          * If it was attached manually, then it may need to be triggered.
          * @param {goog.events.BrowserEvent} event Mouse over event.

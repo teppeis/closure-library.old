@@ -20,19 +20,6 @@ declare module goog.ui {
         constructor(opt_content?: goog.ui.ControlContent, opt_menu?: goog.ui.Menu, opt_renderer?: goog.ui.ButtonRenderer, opt_domHelper?: goog.dom.DomHelper, opt_menuRenderer?: goog.ui.MenuRenderer);
         
         /**
-         * Sets up event handlers specific to menu buttons.
-         * @override
-         */
-        enterDocument(): void;
-        
-        /**
-         * Removes event handlers specific to menu buttons, and ensures that the
-         * attached menu also exits the document.
-         * @override
-         */
-        exitDocument(): void;
-        
-        /**
          * Handles mousedown events.  Invokes the superclass implementation to dispatch
          * an ACTIVATE event and activate the button.  Also toggles the visibility of
          * the attached menu.

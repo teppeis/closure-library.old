@@ -135,20 +135,6 @@ declare module goog.ui.media {
         hasRequiredVersion(): boolean;
         
         /**
-         * Writes the Flash embedding {@code HTMLObjectElement} to this components root
-         * element and adds listeners for all events to handle them consistently.
-         * @override
-         */
-        enterDocument(): void;
-        
-        /**
-         * Creates the DOM structure.
-         *
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * @return {HTMLObjectElement} The flash element or null if the element can't
          *     be found.
          */

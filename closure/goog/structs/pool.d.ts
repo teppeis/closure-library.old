@@ -119,12 +119,5 @@ declare module goog.structs {
          * @return {boolean} Whether the pool contains no objects.
          */
         isEmpty(): boolean;
-        
-        /**
-         * Disposes of the pool and all objects currently held in the pool.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
     }
 }

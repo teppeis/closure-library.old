@@ -9,12 +9,5 @@ declare module goog.graphics.ext {
      */
     export class Rectangle extends goog.graphics.ext.StrokeAndFillElement {
         constructor(group: goog.graphics.ext.Group);
-        
-        /**
-         * Redraw the rectangle.  Called when the coordinate system is changed.
-         * @protected
-         * @override
-         */
-        redraw(): void;
     }
 }

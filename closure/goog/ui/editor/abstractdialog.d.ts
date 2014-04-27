@@ -107,14 +107,6 @@ declare module goog.ui.editor {
          * @protected
          */
         handleCancel(): boolean;
-        
-        /**
-         * Disposes of the dialog. If the dialog is open, it will be hidden and
-         * AFTER_HIDE will be dispatched.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
     }
 }
 

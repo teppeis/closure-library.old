@@ -17,14 +17,5 @@ declare module goog.math.interpolator {
          * @protected
          */
         computeDerivatives(dx: Array<number>, slope: Array<number>): Array<number>;
-        
-        /**
-         * Note that the inverse of a cubic spline is not a cubic spline in general.
-         * As a result the inverse implementation is only approximate. In
-         * particular, it only guarantees the exact inverse at the original input data
-         * points passed to setData.
-         * @override
-         */
-        getInverse(): void;
     }
 }

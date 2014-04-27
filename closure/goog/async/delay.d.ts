@@ -18,14 +18,6 @@ declare module goog.async {
         constructor(listener: Function, opt_interval?: number, opt_handler?: Object);
         
         /**
-         * Disposes of the object, cancelling the timeout if it is still outstanding and
-         * removing all object references.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
-        
-        /**
          * Starts the delay timer. The provided listener function will be called after
          * the specified interval. Calling start on an active timer will reset the
          * delay interval.

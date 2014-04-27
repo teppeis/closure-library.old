@@ -12,13 +12,6 @@ declare module goog.labs.testing {
      */
     export class ContainsStringMatcher {
         constructor(value: string);
-        
-        /**
-         * Determines if input string contains the expected string.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -33,13 +26,6 @@ declare module goog.labs.testing {
      */
     export class EndsWithMatcher {
         constructor(value: string);
-        
-        /**
-         * Determines if input string ends with the expected string.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -54,13 +40,6 @@ declare module goog.labs.testing {
      */
     export class EqualToIgnoringWhitespaceMatcher {
         constructor(value: string);
-        
-        /**
-         * Determines if input string contains the expected string.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -75,13 +54,6 @@ declare module goog.labs.testing {
      */
     export class EqualsMatcher {
         constructor(value: string);
-        
-        /**
-         * Determines if input string is equal to the expected string.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -96,13 +68,6 @@ declare module goog.labs.testing {
      */
     export class RegexMatcher {
         constructor(regex: RegExp);
-        
-        /**
-         * Determines if input string is equal to the expected string.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -117,13 +82,6 @@ declare module goog.labs.testing {
      */
     export class StartsWithMatcher {
         constructor(value: string);
-        
-        /**
-         * Determines if input string starts with the expected string.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -138,12 +96,5 @@ declare module goog.labs.testing {
      */
     export class StringContainsInOrderMatcher {
         constructor(values: Array<string>);
-        
-        /**
-         * Determines if input string contains, in order, the expected array of strings.
-         *
-         * @override
-         */
-        matches(): void;
     }
 }

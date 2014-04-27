@@ -33,25 +33,6 @@ declare module goog.ui {
         correctionPaneClassName: string;
         
         /**
-         * Creates the initial DOM representation for the component.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
-         * Initializes suggestions menu. Populates menu with separator and ignore option
-         * that are always valid. Suggestions are later added above the separator.
-         * @override
-         */
-        initSuggestionsMenu(): void;
-        
-        /**
-         * Checks spelling for all text and displays correction UI.
-         * @override
-         */
-        check(): void;
-        
-        /**
          * Processes word.
          *
          * @param {Node} node Node containing word.
@@ -69,12 +50,6 @@ declare module goog.ui {
          * @override
          */
         processRange(node: Node, text: string): void;
-        
-        /**
-         * Hides correction UI.
-         * @override
-         */
-        resume(): void;
         
         /**
          * Returns desired element properties for the specified status.

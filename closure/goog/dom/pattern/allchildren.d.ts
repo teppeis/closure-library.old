@@ -19,11 +19,5 @@ declare module goog.dom.pattern {
          * @override
          */
         matchToken(token: Node, type: goog.dom.TagWalkType): goog.dom.pattern.MatchType;
-        
-        /**
-         * Reset any internal state this pattern keeps.
-         * @override
-         */
-        reset(): void;
     }
 }

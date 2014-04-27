@@ -132,23 +132,6 @@ declare module goog.ui {
         setValue(value: any): void;
         
         /**
-         * Gets the value associated with the currently selected option (null if none).
-         *
-         * Note that unlike {@link goog.ui.Button#getValue} which this method overrides,
-         * the "value" of a Select instance is the value of its selected menu item, not
-         * its own value. This makes a difference because the "value" of a Button is
-         * reset to the value of the element it decorates when it's added to the DOM
-         * (via ButtonRenderer), whereas the value of the selected item is unaffected.
-         * So while setValue() has no effect on a Button before it is added to the DOM,
-         * it will make a persistent change to a Select instance (which is consistent
-         * with any changes made by {@link goog.ui.Select#setSelectedItem} and
-         * {@link goog.ui.Select#setSelectedIndex}).
-         *
-         * @override
-         */
-        getValue(): void;
-        
-        /**
          * Returns the currently selected option.
          * @return {goog.ui.MenuItem} The currently selected option (null if none).
          */

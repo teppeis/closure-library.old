@@ -18,12 +18,6 @@ declare module goog.graphics {
         constructor(graphics: goog.graphics.CanvasGraphics);
         
         /**
-         * Remove all drawing elements from the group.
-         * @override
-         */
-        clear(): void;
-        
-        /**
          * Set the size of the group element.
          * @param {number|string} width The width of the group element.
          * @param {number|string} height The height of the group element.

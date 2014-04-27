@@ -75,14 +75,6 @@ declare module goog.fx.dom {
      */
     export class Swipe extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
-        
-        /**
-         * Animation event handler that will resize an element by setting its width,
-         * height and clipping.
-         * @protected
-         * @override
-         */
-        updateStyle(): void;
     }
 
     /**
@@ -100,13 +92,6 @@ declare module goog.fx.dom {
      */
     export class Scroll extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
-        
-        /**
-         * Animation event handler that will set the scroll position of an element.
-         * @protected
-         * @override
-         */
-        updateStyle(): void;
     }
 
     /**
@@ -125,14 +110,6 @@ declare module goog.fx.dom {
      */
     export class Resize extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
-        
-        /**
-         * Animation event handler that will resize an element by setting its width and
-         * height.
-         * @protected
-         * @override
-         */
-        updateStyle(): void;
     }
 
     /**
@@ -150,13 +127,6 @@ declare module goog.fx.dom {
      */
     export class ResizeWidth extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: number, end: number, time: number, opt_acc?: Function);
-        
-        /**
-         * Animation event handler that will resize an element by setting its width.
-         * @protected
-         * @override
-         */
-        updateStyle(): void;
     }
 
     /**
@@ -174,13 +144,6 @@ declare module goog.fx.dom {
      */
     export class ResizeHeight extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: number, end: number, time: number, opt_acc?: Function);
-        
-        /**
-         * Animation event handler that will resize an element by setting its height.
-         * @protected
-         * @override
-         */
-        updateStyle(): void;
     }
 
     /**
@@ -199,13 +162,6 @@ declare module goog.fx.dom {
      */
     export class Fade extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
-        
-        /**
-         * Animation event handler that will set the opacity of an element.
-         * @protected
-         * @override
-         */
-        updateStyle(): void;
         
         /**
          * Animation event handler that will show the element.
@@ -307,13 +263,6 @@ declare module goog.fx.dom {
      */
     export class ColorTransform extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
-        
-        /**
-         * Animation event handler that will set the color of an element.
-         * @protected
-         * @override
-         */
-        updateStyle(): void;
     }
 
     /**

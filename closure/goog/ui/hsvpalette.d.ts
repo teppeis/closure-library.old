@@ -100,13 +100,6 @@ declare module goog.ui {
         canDecorate(element: Element): boolean;
         
         /**
-         * Renders the color picker inside the provided element. This will override the
-         * current content of the element.
-         * @override
-         */
-        enterDocument(): void;
-        
-        /**
          * Updates the position, opacity, and styles for the UI representation of the
          * palette.
          * @protected

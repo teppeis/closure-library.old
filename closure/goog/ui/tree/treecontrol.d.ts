@@ -20,12 +20,6 @@ declare module goog.ui.tree {
         static defaultConfig: any;
         
         /**
-         * Expands the parent chain of this node so that it is visible.
-         * @override
-         */
-        reveal(): void;
-        
-        /**
          * @return {boolean} Whether the tree has keyboard focus.
          */
         hasFocus(): boolean;
@@ -92,13 +86,6 @@ declare module goog.ui.tree {
          * @return {boolean} Whether to show the root node.
          */
         getShowRootNode(): boolean;
-        
-        /**
-         * Add roles and states.
-         * @protected
-         * @override
-         */
-        initAccessibility(): void;
         
         /**
          * Handles key down on the tree.

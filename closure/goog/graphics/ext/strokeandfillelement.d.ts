@@ -24,12 +24,5 @@ declare module goog.graphics.ext {
          * @param {goog.graphics.Stroke?} stroke The stroke object.
          */
         setStroke(stroke: goog.graphics.Stroke): void;
-        
-        /**
-         * Redraw the rectangle.  Called when the coordinate system is changed.
-         * @protected
-         * @override
-         */
-        redraw(): void;
     }
 }

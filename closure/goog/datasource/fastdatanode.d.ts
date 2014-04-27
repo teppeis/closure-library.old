@@ -84,17 +84,6 @@ declare module goog.ds {
         getChildNode(name: string, opt_create?: boolean): goog.ds.DataNode;
         
         /**
-         * Sets a child node. Creates the child if it does not exist.
-         *
-         * Calling  this function makes any child nodes previously obtained for name
-         * invalid. You should not use these child nodes but instead obtain a new
-         * instance by calling getChildNode.
-         *
-         * @override
-         */
-        setChildNode(): void;
-        
-        /**
          * Returns the value of a child node. By using this method you can avoid
          * the need to create PrimitiveFastData nodes.
          * @param {string} name Name of child node.
@@ -166,12 +155,6 @@ declare module goog.ds {
          * @override
          */
         setNode(name: string, value: Object): void;
-        
-        /**
-         * Removes a child node.
-         * @override
-         */
-        removeNode(): void;
     }
 
     /**
@@ -294,20 +277,6 @@ declare module goog.ds {
         getChildNodeValue(key: string): any;
         
         /**
-         * Sets a child node. Creates the child if it does not exist. To set
-         * children at a certain index, use a key of the form '[index]'. Note, that
-         * you can only set values at existing numeric indices. To add a new node
-         * to this list, you have to use the add method.
-         *
-         * Calling  this function makes any child nodes previously obtained for name
-         * invalid. You should not use these child nodes but instead obtain a new
-         * instance by calling getChildNode.
-         *
-         * @override
-         */
-        setChildNode(): void;
-        
-        /**
          * Returns whether this data node is a list. Always returns true.
          * @return {boolean} Whether this data node is array-like.
          * @override
@@ -360,12 +329,6 @@ declare module goog.ds {
          * @override
          */
         setNode(name: string, value: Object): void;
-        
-        /**
-         * Removes a child node.
-         * @override
-         */
-        removeNode(): void;
         
         /**
          * Returns the index of a named child nodes. This method only works if

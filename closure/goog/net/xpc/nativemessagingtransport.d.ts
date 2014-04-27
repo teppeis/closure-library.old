@@ -39,12 +39,6 @@ declare module goog.net.xpc {
         transportServiceHandler(payload: string): void;
         
         /**
-         * Connects this transport.
-         * @override
-         */
-        connect(): void;
-        
-        /**
          * Sends a message.
          * @param {string} service The name off the service the message is to be
          * delivered to.

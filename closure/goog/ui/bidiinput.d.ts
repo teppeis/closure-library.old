@@ -21,13 +21,6 @@ declare module goog.ui {
         decorateInternal(element: Element): void;
         
         /**
-         * Creates the element for the text input.
-         * @protected
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Returns the direction of the input element.
          * @return {?string} Return 'rtl' for right-to-left text,
          *     'ltr' for left-to-right text, or null if the value itself is not

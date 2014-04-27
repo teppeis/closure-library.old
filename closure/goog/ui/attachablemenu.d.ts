@@ -59,14 +59,6 @@ declare module goog.ui {
         getSelectedItem(): Element;
         
         /**
-         * Called after the menu is shown.
-         * @protected
-         * @suppress {underscore|visibility}
-         * @override
-         */
-        onShow_(): void;
-        
-        /**
          * Returns the next or previous item. Used for up/down arrows.
          *
          * @param {boolean} prev True to go to the previous element instead of next.

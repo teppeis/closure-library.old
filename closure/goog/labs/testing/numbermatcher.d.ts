@@ -12,13 +12,6 @@ declare module goog.labs.testing {
      */
     export class GreaterThanMatcher {
         constructor(value: number);
-        
-        /**
-         * Determines if input value is greater than the expected value.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -33,13 +26,6 @@ declare module goog.labs.testing {
      */
     export class LessThanMatcher {
         constructor(value: number);
-        
-        /**
-         * Determines if the input value is less than the expected value.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -54,13 +40,6 @@ declare module goog.labs.testing {
      */
     export class GreaterThanEqualToMatcher {
         constructor(value: number);
-        
-        /**
-         * Determines if the input value is greater than equal to the expected value.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -75,13 +54,6 @@ declare module goog.labs.testing {
      */
     export class LessThanEqualToMatcher {
         constructor(value: number);
-        
-        /**
-         * Determines if the input value is less than or equal to the expected value.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -96,13 +68,6 @@ declare module goog.labs.testing {
      */
     export class EqualToMatcher {
         constructor(value: number);
-        
-        /**
-         * Determines if the input value is equal to the expected value.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -118,12 +83,5 @@ declare module goog.labs.testing {
      */
     export class CloseToMatcher {
         constructor(value: number, range: number);
-        
-        /**
-         * Determines if input value is within a certain range of the expected value.
-         *
-         * @override
-         */
-        matches(): void;
     }
 }

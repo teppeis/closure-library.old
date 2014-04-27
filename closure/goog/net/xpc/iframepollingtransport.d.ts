@@ -42,12 +42,6 @@ declare module goog.net.xpc {
         isChannelAvailable(): boolean;
         
         /**
-         * Connects this transport.
-         * @override
-         */
-        connect(): void;
-        
-        /**
          * Processes an incoming message.
          * @param {string} raw The complete received string.
          */

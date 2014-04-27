@@ -16,13 +16,6 @@ declare module goog.ui {
         constructor(opt_parentElement?: Element, opt_domHelper?: goog.dom.DomHelper);
         
         /**
-         * Delegates dom creation to superclass, then constructs and
-         * decorates required DOM elements.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Decorates the floated element with the standard ScrollFloater CSS class.
          * @param {Element} element The element to decorate.
          * @override

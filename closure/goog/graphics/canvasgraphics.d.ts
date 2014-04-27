@@ -63,12 +63,6 @@ declare module goog.graphics {
         popElementTransform(): void;
         
         /**
-         * Creates the DOM representation of the graphics area.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Returns the drawing context.
          * @return {Object} The canvas element rendering context.
          */
@@ -107,12 +101,6 @@ declare module goog.graphics {
          * Reset the canvas.
          */
         reset(): void;
-        
-        /**
-         * Remove all drawing elements from the graphics.
-         * @override
-         */
-        clear(): void;
         
         /**
          * Redraw the entire canvas.
@@ -256,28 +244,5 @@ declare module goog.graphics {
          * @override
          */
         getTextWidth(text: string, font: goog.graphics.Font): void;
-        
-        /**
-         * Disposes of the component by removing event handlers, detacing DOM nodes from
-         * the document body, and removing references to them.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
-        
-        /**
-         * Start preventing redraws - useful for chaining large numbers of changes
-         * together.  Not guaranteed to do anything - i.e. only use this for
-         * optimization of a single code path.
-         * @override
-         */
-        suspend(): void;
-        
-        /**
-         * Stop preventing redraws.  If any redraws had been prevented, a redraw will
-         * be done now.
-         * @override
-         */
-        resume(): void;
     }
 }

@@ -77,12 +77,6 @@ declare module goog.fx {
         stop(opt_gotoEnd?: boolean): void;
         
         /**
-         * Pauses the animation (iff it's playing).
-         * @override
-         */
-        pause(): void;
-        
-        /**
          * @return {number} The current progress of the animation, the number
          *     is between 0 and 1 inclusive.
          */
@@ -93,14 +87,6 @@ declare module goog.fx {
          * @param {number} progress The new progress of the animation.
          */
         setProgress(progress: number): void;
-        
-        /**
-         * Disposes of the animation.  Stops an animation, fires a 'destroy' event and
-         * then removes all the event handlers to clean up memory.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
         
         /**
          * Stops an animation, fires a 'destroy' event and then removes all the event

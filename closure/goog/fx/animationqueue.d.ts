@@ -27,12 +27,6 @@ declare module goog.fx {
          * @protected
          */
         onAnimationFinish(e: goog.events.Event): void;
-        
-        /**
-         * Disposes of the animations.
-         * @override
-         */
-        disposeInternal(): void;
     }
 
     /**

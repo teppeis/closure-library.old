@@ -12,21 +12,6 @@ declare module goog.labs.testing {
      */
     export class AllOfMatcher {
         constructor(matchers: Array<goog.labs.testing.Matcher>);
-        
-        /**
-         * Determines if all of the matchers match the input value.
-         *
-         * @override
-         */
-        matches(): void;
-        
-        /**
-         * Describes why the matcher failed. The returned string is a concatenation of
-         * all the failed matchers' error strings.
-         *
-         * @override
-         */
-        describe(): void;
     }
 
     /**
@@ -41,20 +26,6 @@ declare module goog.labs.testing {
      */
     export class AnyOfMatcher {
         constructor(matchers: Array<goog.labs.testing.Matcher>);
-        
-        /**
-         * Determines if any of the matchers matches the input value.
-         *
-         * @override
-         */
-        matches(): void;
-        
-        /**
-         * Describes why the matcher failed.
-         *
-         * @override
-         */
-        describe(): void;
     }
 
     /**
@@ -69,19 +40,5 @@ declare module goog.labs.testing {
      */
     export class IsNotMatcher {
         constructor(matcher: goog.labs.testing.Matcher);
-        
-        /**
-         * Determines if the input value doesn't satisfy a matcher.
-         *
-         * @override
-         */
-        matches(): void;
-        
-        /**
-         * Describes why the matcher failed.
-         *
-         * @override
-         */
-        describe(): void;
     }
 }

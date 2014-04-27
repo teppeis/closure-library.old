@@ -36,12 +36,6 @@ declare module goog.editor.plugins {
         logger: goog.log.Logger;
         
         /**
-         * Since our exec command is always called from elsewhere, we make it silent.
-         * @override
-         */
-        isSilentCommand(): void;
-        
-        /**
          * Checks if a node is a blockquote node.  If isAlreadySetup is set, it also
          * makes sure the node has the blockquote classname applied.  Otherwise, it
          * ensures that the blockquote does not already have the classname applied.

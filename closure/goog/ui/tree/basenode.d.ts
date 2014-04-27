@@ -35,15 +35,6 @@ declare module goog.ui.tree {
         initAccessibility(): void;
         
         /**
-         * The method assumes that the child doesn't have parent node yet.
-         * The {@code opt_render} argument is not used. If the parent node is expanded,
-         * the child node's state will be the same as the parent's. Otherwise the
-         * child's DOM tree won't be created.
-         * @override
-         */
-        addChildAt(): void;
-        
-        /**
          * Adds a node as a child to the current node.
          * @param {goog.ui.tree.BaseNode} child The child to add.
          * @param {goog.ui.tree.BaseNode=} opt_before If specified, the new child is

@@ -174,15 +174,6 @@ declare module goog.ui {
         onBeforeShow(): boolean;
         
         /**
-         * Called after the popup is hidden.
-         *
-         * @protected
-         * @suppress {underscore|visibility}
-         * @override
-         */
-        onHide_(): void;
-        
-        /**
          * Called by timer from mouse over handler. Shows tooltip if cursor is still
          * over the same element.
          *

@@ -72,12 +72,6 @@ declare module goog.net.xpc {
         static isNixSupported(): boolean;
         
         /**
-         * Connect this transport.
-         * @override
-         */
-        connect(): void;
-        
-        /**
          * Sends a message.
          * @param {string} service The name of the service the message is to be
          *   delivered to.

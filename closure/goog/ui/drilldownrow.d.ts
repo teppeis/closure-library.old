@@ -30,13 +30,6 @@ declare module goog.ui {
         static sampleProperties: any;
         
         /**
-         * The base class method calls its superclass method and this
-         * drilldown's 'decorator' method as defined in the constructor.
-         * @override
-         */
-        enterDocument(): void;
-        
-        /**
          * A top-level DrilldownRow decorates a TR element.
          *
          * @param {Element} node The element to test for decorability.
@@ -54,19 +47,6 @@ declare module goog.ui {
          * @override
          */
         addChildAt(child: goog.ui.Component, index: number, opt_render?: boolean): void;
-        
-        /**
-         * Rendering of DrilldownRow's is on need, do not call this directly
-         * from application code.
-         *
-         * Rendering a DrilldownRow places it according to its position in its
-         * tree of DrilldownRows.  DrilldownRows cannot be placed any other
-         * way so this method does not use any arguments.  This does not call
-         * the base class method and does not modify any of this
-         * DrilldownRow's children.
-         * @override
-         */
-        render(): void;
         
         /**
          * Finds the numeric index of this child within its parent Component.

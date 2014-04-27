@@ -67,12 +67,6 @@ declare module goog.ds {
         getDataPath(): string;
         
         /**
-         * Load or reload the backing data for this node
-         * @override
-         */
-        load(): void;
-        
-        /**
          * Gets the state of the backing data for this node
          * @return {goog.ds.LoadState} The state.
          * @override
@@ -96,13 +90,6 @@ declare module goog.ds {
      */
     export class XmlHttpDataSource extends goog.ds.XmlDataSource {
         constructor(uri: any, name: string);
-        
-        /**
-         * Load or reload the backing data for this node.
-         * Fires the XMLHttpRequest
-         * @override
-         */
-        load(): void;
         
         /**
          * Gets the state of the backing data for this node

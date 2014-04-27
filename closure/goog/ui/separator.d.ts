@@ -13,13 +13,5 @@ declare module goog.ui {
      */
     export class Separator extends goog.ui.Control {
         constructor(opt_renderer?: goog.ui.MenuSeparatorRenderer, opt_domHelper?: goog.dom.DomHelper);
-        
-        /**
-         * Configures the component after its DOM has been rendered.  Overrides
-         * {@link goog.ui.Control#enterDocument} by making sure no event handler
-         * is allocated.
-         * @override
-         */
-        enterDocument(): void;
     }
 }

@@ -120,13 +120,6 @@ declare module goog.ui {
         canDecorate(element: Element): boolean;
         
         /**
-         * Renders the color picker inside the provided element. This will override the
-         * current content of the element.
-         * @override
-         */
-        enterDocument(): void;
-        
-        /**
          * Sets the focus to the color picker's palette.
          */
         focus(): void;

@@ -73,12 +73,6 @@ declare module goog.ui {
         static EXTENDED_UPPER_BOUND: any;
         
         /**
-         * Creates the DOM node (image) needed for the Chart
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Decorate an image already in the DOM.
          * Expects the following structure:
          * <pre>

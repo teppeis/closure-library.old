@@ -19,12 +19,6 @@ declare module goog.ui {
         constructor(firstComponent: goog.ui.Component, secondComponent: goog.ui.Component, orientation: goog.ui.SplitPane.Orientation, opt_domHelper?: goog.dom.DomHelper);
         
         /**
-         * Create the DOM node & text node needed for the splitpane.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Determines if a given element can be decorated by this type of component.
          * @param {Element} element Element to decorate.
          * @return {boolean} True if the element can be decorated, false otherwise.
@@ -40,12 +34,6 @@ declare module goog.ui {
          * @override
          */
         decorateInternal(element: Element): void;
-        
-        /**
-         * Setup all events and do an initial resize.
-         * @override
-         */
-        enterDocument(): void;
         
         /**
          * Sets the initial size of the left or top component.

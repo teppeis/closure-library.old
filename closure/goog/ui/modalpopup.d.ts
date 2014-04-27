@@ -46,12 +46,6 @@ declare module goog.ui {
         getBackgroundElement(): Element;
         
         /**
-         * Creates the initial DOM representation for the modal popup.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Allow a shift-tab from the top of the modal popup to the last tabbable
          * element by moving focus to the tab catcher. This should be called after
          * catching a wrapping shift-tab event and before allowing it to propagate, so

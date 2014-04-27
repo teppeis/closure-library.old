@@ -78,13 +78,6 @@ declare module goog.editor.plugins {
         
         /**
          * Pops up a property bubble for the given selection if appropriate and closes
-         * open property bubbles if no longer needed.  This should not be overridden.
-         * @override
-         */
-        handleSelectionChange(): void;
-        
-        /**
-         * Pops up a property bubble for the given selection if appropriate and closes
          * open property bubbles if no longer needed.
          * @param {Element?} selectedElement The selected element.
          * @return {boolean} Always false, allowing every bubble plugin to handle the
@@ -175,14 +168,6 @@ declare module goog.editor.plugins {
          * @protected
          */
         cleanOnBubbleClose(): void;
-        
-        /**
-         * In case the keyboard navigation is enabled, this will focus to the first link
-         * element in the bubble when TAB is clicked. The user could still go through
-         * the rest of tabbable UI elements using shift + TAB.
-         * @override
-         */
-        handleKeyDown(): void;
         
         /**
          * @return {boolean} Whether the bubble is visible.

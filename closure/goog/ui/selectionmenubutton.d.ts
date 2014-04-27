@@ -63,14 +63,6 @@ declare module goog.ui {
         addCheckboxEvent(): void;
         
         /**
-         * Adds the checkbox to the button, and adds 2 items to the menu corresponding
-         * to 'select all' and 'select none'.
-         * @override
-         * @protected
-         */
-        createDom(): void;
-        
-        /**
          * Creates and adds the checkbox to the button.
          * @protected
          */

@@ -61,12 +61,6 @@ declare module goog.ui {
         setRenderer(renderer: goog.ui.ContainerRenderer): void;
         
         /**
-         * Creates the container's DOM.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Returns the DOM element into which child components are to be rendered,
          * or null if the container itself hasn't been rendered yet.  Overrides
          * {@link goog.ui.Component#getContentElement} by delegating to the renderer.
@@ -91,20 +85,6 @@ declare module goog.ui {
          * @override
          */
         decorateInternal(element: Element): void;
-        
-        /**
-         * Configures the container after its DOM has been rendered, and sets up event
-         * handling.  Overrides {@link goog.ui.Component#enterDocument}.
-         * @override
-         */
-        enterDocument(): void;
-        
-        /**
-         * Cleans up the container before its DOM is removed from the document, and
-         * removes event handlers.  Overrides {@link goog.ui.Component#exitDocument}.
-         * @override
-         */
-        exitDocument(): void;
         
         /**
          * Handles ENTER events raised by child controls when they are navigated to.

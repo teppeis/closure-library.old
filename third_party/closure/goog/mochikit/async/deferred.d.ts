@@ -148,19 +148,6 @@ declare module goog.async {
         addCallbacks<T>(cb: (arg0: VALUE) => any, eb: (arg0: any) => any, opt_scope?: T): goog.async.Deferred<any>;
         
         /**
-         * Implements {@see goog.Thenable} for seamless integration with
-         * {@see goog.Promise}.
-         * Deferred results are mutable and may represent multiple values over
-         * their lifetime. Calling {@code then} on a Deferred returns a Promise
-         * with the result of the Deferred at that point in its callback chain.
-         * Note that if the Deferred result is never mutated, and only
-         * {@code then} calls are made, the Deferred will behave like a Promise.
-         *
-         * @override
-         */
-        then(): void;
-        
-        /**
          * Links another Deferred to the end of this Deferred's execution sequence. The
          * result of this execution sequence will be passed as the starting result for
          * the chained Deferred, invoking either its first callback or errback.

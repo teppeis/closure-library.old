@@ -25,12 +25,5 @@ declare module goog.testing.MockRange {
      * @private
      */
     export interface ConcreteRange_ extends goog.dom.AbstractRange {
-        
-        /**
-         * Undefine the iterator so the mock framework can loop through this class'
-         * properties.
-         * @override
-         */
-        __iterator__: any;
     }
 }

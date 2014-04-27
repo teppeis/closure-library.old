@@ -78,13 +78,6 @@ declare module goog.editor.plugins {
         isInvalidUrl(url: string): boolean;
         
         /**
-         * Sets the proper state for the action links.
-         * @protected
-         * @override
-         */
-        onShow(): void;
-        
-        /**
          * Checks whether the plugin should open the given url in a new window.
          * @param {string} url The url to check.
          * @return {boolean} If the plugin should open the given url in a new window.

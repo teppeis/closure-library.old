@@ -68,13 +68,6 @@ declare module goog.ui {
         createThumbs(): void;
         
         /**
-         * Called when the DOM for the component is for sure in the document.
-         * Subclasses should override this method to set this element's role.
-         * @override
-         */
-        enterDocument(): void;
-        
-        /**
          * Returns the value to use for the current mouse position
          * @param {goog.events.Event} e  The mouse event object.
          * @return {number} The value that this mouse position represents.

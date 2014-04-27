@@ -16,13 +16,5 @@ declare module goog.editor.plugins {
          * @const
          */
         static INPUT_ATTRIBUTE: string;
-        
-        /**
-         * Calls the flip directionality commands.  This is done here so things go into
-         * the redo-undo stack at the expected order; fist enter the input, then flip
-         * directionality.
-         * @override
-         */
-        handleKeyUp(): void;
     }
 }

@@ -82,13 +82,6 @@ declare module goog.ds {
         getDataPath(): string;
         
         /**
-         * Load or reload the backing data for this node
-         * only loads datasources flagged with autoload
-         * @override
-         */
-        load(): void;
-        
-        /**
          * Gets the state of the backing data for this node
          * @return {goog.ds.LoadState} The state.
          * @override

@@ -18,16 +18,6 @@ declare module goog.ui {
         static Events: any;
         
         /**
-         * Called after the menu is shown. Derived classes can override to hook this
-         * event but should make sure to call the parent class method.
-         *
-         * @protected
-         * @suppress {underscore|visibility}
-         * @override
-         */
-        onShow_(): void;
-        
-        /**
          * Called after the menu is hidden. Derived classes can override to hook this
          * event but should make sure to call the parent class method.
          * @param {Object=} opt_target Target of the event causing the hide.

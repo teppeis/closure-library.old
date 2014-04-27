@@ -64,13 +64,6 @@ declare module goog.dom {
         restoreInternal(): goog.dom.AbstractRange;
         
         /**
-         * Dispose the saved range and remove the carets from the DOM.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
-        
-        /**
          * Returns whether two strings of html are equal, ignoring any saved carets.
          * Thus two strings of html whose only difference is the id of their saved
          * carets will be considered equal, since they represent html with the

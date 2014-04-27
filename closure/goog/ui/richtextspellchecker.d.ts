@@ -37,27 +37,12 @@ declare module goog.ui {
         invalidWordCssText: string;
         
         /**
-         * Creates the initial DOM representation for the component.
-         *
-         * @throws {Error} Not supported. Use decorate.
-         * @see #decorate
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Decorates the element for the UI component.
          *
          * @param {Element} element Element to decorate.
          * @override
          */
         decorateInternal(element: Element): void;
-        
-        /**
-         * Checks spelling for all text and displays correction UI.
-         * @override
-         */
-        check(): void;
         
         /**
          * Processes word.
@@ -94,12 +79,6 @@ declare module goog.ui {
          * @override
          */
         updateElement(el: Element, word: string, status: goog.spell.SpellCheck.WordStatus): void;
-        
-        /**
-         * Hides correction UI.
-         * @override
-         */
-        resume(): void;
         
         /**
          * Returns desired element properties for the specified status.

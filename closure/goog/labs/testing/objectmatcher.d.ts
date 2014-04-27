@@ -12,13 +12,6 @@ declare module goog.labs.testing {
      */
     export class ObjectEqualsMatcher {
         constructor(expectedObject: Object);
-        
-        /**
-         * Determines if two objects are the same.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -33,13 +26,6 @@ declare module goog.labs.testing {
      */
     export class HasPropertyMatcher {
         constructor(property: string);
-        
-        /**
-         * Determines if an object has a property.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -54,13 +40,6 @@ declare module goog.labs.testing {
      */
     export class InstanceOfMatcher {
         constructor(object: Object);
-        
-        /**
-         * Determines if an object is an instance of another object.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -73,13 +52,6 @@ declare module goog.labs.testing {
      */
     export class IsNullOrUndefinedMatcher {
         constructor();
-        
-        /**
-         * Determines if input value is null or undefined.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -92,13 +64,6 @@ declare module goog.labs.testing {
      */
     export class IsNullMatcher {
         constructor();
-        
-        /**
-         * Determines if input value is null.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -111,12 +76,5 @@ declare module goog.labs.testing {
      */
     export class IsUndefinedMatcher {
         constructor();
-        
-        /**
-         * Determines if input value is undefined.
-         *
-         * @override
-         */
-        matches(): void;
     }
 }

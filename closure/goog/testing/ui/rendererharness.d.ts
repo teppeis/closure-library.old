@@ -33,12 +33,5 @@ declare module goog.testing.ui {
          * Assert that the rendered element and the decorated element match.
          */
         assertDomMatches(): void;
-        
-        /**
-         * Destroy the harness, verifying that all assertions had been checked.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
     }
 }

@@ -18,22 +18,6 @@ declare module goog.messaging {
         logger: goog.log.Logger;
         
         /**
-         * Immediately calls opt_connectCb if given, and is otherwise a no-op. If
-         * subclasses have configuration that needs to happen before the channel is
-         * connected, they should override this and {@link #isConnected}.
-         * @override
-         */
-        connect(): void;
-        
-        /**
-         * Always returns true. If subclasses have configuration that needs to happen
-         * before the channel is connected, they should override this and
-         * {@link #connect}.
-         * @override
-         */
-        isConnected(): void;
-        
-        /**
          * Delivers a message to the appropriate service. This is meant to be called by
          * subclasses when they receive messages.
          *

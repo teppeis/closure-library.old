@@ -192,13 +192,6 @@ declare module goog.ui.ac {
         getTarget(): Element;
         
         /**
-         * Disposes of the renderer and its associated HTML.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
-        
-        /**
          * Render a row by creating a div and then calling row rendering callback or
          * default row handler
          *

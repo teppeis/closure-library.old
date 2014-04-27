@@ -45,12 +45,6 @@ declare module goog.ui {
         setCheckable(checkable: boolean): void;
         
         /**
-         * Returns the text caption of the component while ignoring accelerators.
-         * @override
-         */
-        getCaption(): void;
-        
-        /**
          * Sets the mnemonic key code. The mnemonic is the key associated with this
          * action.
          * @param {goog.events.KeyCodes} key The key code.

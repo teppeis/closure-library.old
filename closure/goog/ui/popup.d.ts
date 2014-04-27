@@ -63,12 +63,6 @@ declare module goog.ui {
          * @param {number=} opt_arg4 Left value.
          */
         setMargin(arg1: goog.math.Box, opt_arg2?: number, opt_arg3?: number, opt_arg4?: number): void;
-        
-        /**
-         * Repositions the popup according to the current state.
-         * @override
-         */
-        reposition(): void;
     }
 }
 

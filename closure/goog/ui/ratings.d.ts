@@ -37,21 +37,6 @@ declare module goog.ui {
         decorateInternal(el: Element): void;
         
         /**
-         * Render the rating widget inside the provided element. This will override the
-         * current content of the element.
-         * @override
-         */
-        enterDocument(): void;
-        
-        /**
-         * Should be called when the widget is removed from the document but may be
-         * reused.  This removes all the listeners the widget has attached and destroys
-         * the DOM nodes it uses.
-         * @override
-         */
-        exitDocument(): void;
-        
-        /**
          * Returns the base CSS class used by subcomponents of this component.
          * @return {string} Component-specific CSS class.
          */

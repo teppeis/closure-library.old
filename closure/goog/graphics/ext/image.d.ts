@@ -12,13 +12,6 @@ declare module goog.graphics.ext {
         constructor(group: goog.graphics.ext.Group, src: string);
         
         /**
-         * Redraw the image.  Called when the coordinate system is changed.
-         * @protected
-         * @override
-         */
-        redraw(): void;
-        
-        /**
          * Update the source of the image.
          * @param {string} src  Source of the image.
          */

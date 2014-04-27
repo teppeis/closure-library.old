@@ -37,12 +37,6 @@ declare module goog.testing {
         removeItem(key: string): void;
         
         /**
-         * Clears the storage.
-         * @override
-         */
-        clear(): void;
-        
-        /**
          * Returns the key at the given index.
          * @param {number} index The index for the key.
          * @return {?string} Key at the given index, null if not found.

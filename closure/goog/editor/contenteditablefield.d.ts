@@ -15,13 +15,5 @@ declare module goog.editor {
      */
     export class ContentEditableField extends goog.editor.Field {
         constructor(id: string, opt_doc?: Document);
-        
-        /**
-         * @override
-         *
-         * ContentEditableField does not make any changes to the DOM when it is made
-         * editable other than setting contentEditable to true.
-         */
-        restoreDom(): void;
     }
 }

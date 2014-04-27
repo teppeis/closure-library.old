@@ -128,18 +128,6 @@ declare module goog.editor.plugins.UndoRedo {
     export interface UndoState_ extends goog.editor.plugins.UndoRedoState {
         
         /**
-         * Performs the undo operation represented by this state.
-         * @override
-         */
-        undo(): void;
-        
-        /**
-         * Performs the redo operation represented by this state.
-         * @override
-         */
-        redo(): void;
-        
-        /**
          * Updates the undo portion of this state. Should only be used to update the
          * current state of an editable field, which is not yet on the undo stack after
          * an undo or redo operation. You should never be modifying states on the stack!

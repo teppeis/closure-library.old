@@ -59,12 +59,6 @@ declare module goog.graphics {
         setElementTransform(element: goog.graphics.Element, x: number, y: number, angle: number, centerX: number, centerY: number): void;
         
         /**
-         * Creates the DOM representation of the graphics area.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Changes the coordinate system position.
          * @param {number} left The coordinate system left bound.
          * @param {number} top The coordinate system top bound.
@@ -87,12 +81,6 @@ declare module goog.graphics {
          * @override
          */
         setSize(pixelWidth: number, pixelHeight: number): void;
-        
-        /**
-         * Remove all drawing elements from the graphics.
-         * @override
-         */
-        clear(): void;
         
         /**
          * Draw an ellipse.
@@ -241,13 +229,5 @@ declare module goog.graphics {
          *     if two definitions are equal they should have the same key.
          */
         removeDef(defKey: string): void;
-        
-        /**
-         * Disposes of the component by removing event handlers, detacing DOM nodes from
-         * the document body, and removing references to them.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
     }
 }

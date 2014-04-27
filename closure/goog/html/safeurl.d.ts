@@ -63,41 +63,6 @@ declare module goog.html {
         static INNOCUOUS_STRING: any;
         
         /**
-         * Returns this SafeUrl's value a string.
-         *
-         * IMPORTANT: In code where it is security relevant that an object's type is
-         * indeed {@code SafeUrl}, use {@code goog.html.SafeUrl.unwrap} instead of this
-         * method. If in doubt, assume that it's security relevant. In particular, note
-         * that goog.html functions which return a goog.html type do not guarantee that
-         * the returned instance is of the right type. For example:
-         *
-         * <pre>
-         * var fakeSafeHtml = new String('fake');
-         * fakeSafeHtml.__proto__ = goog.html.SafeHtml.prototype;
-         * var newSafeHtml = goog.html.SafeHtml.from(fakeSafeHtml);
-         * // newSafeHtml is just an alias for fakeSafeHtml, it's passed through by
-         * // goog.html.SafeHtml.from() as fakeSafeHtml instanceof goog.html.SafeHtml.
-         * </pre>
-         *
-         * IMPORTANT: The guarantees of the SafeUrl type contract only extend to the
-         * behavior of browsers when interpreting URLs. Values of SafeUrl objects MUST
-         * be appropriately escaped before embedding in a HTML document. Note that the
-         * required escaping is context-sensitive (e.g. a different escaping is
-         * required for embedding a URL in a style property within a style
-         * attribute, as opposed to embedding in a href attribute).
-         *
-         * @see goog.html.SafeUrl#unwrap
-         * @override
-         */
-        getTypedStringValue(): void;
-        
-        /**
-         * Returns this URLs directionality, which is always {@code LTR}.
-         * @override
-         */
-        getDirection(): void;
-        
-        /**
          * Performs a runtime check that the provided object is indeed a SafeUrl
          * object, and returns its value.
          *

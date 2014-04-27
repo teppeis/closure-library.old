@@ -42,12 +42,6 @@ declare module goog.ds {
         set(value: any): void;
         
         /**
-         * TODO(user) revisit lazy creation.
-         * @override
-         */
-        getChildNodes(): void;
-        
-        /**
          * Gets a named child node of the current node
          * @param {string} name The node name.
          * @param {boolean=} opt_canCreate If true, can create child node.
@@ -97,12 +91,6 @@ declare module goog.ds {
          * @override
          */
         getDataPath(): string;
-        
-        /**
-         * Load or reload the backing data for this node
-         * @override
-         */
-        load(): void;
         
         /**
          * Gets the state of the backing data for this node

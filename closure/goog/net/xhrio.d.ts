@@ -157,13 +157,6 @@ declare module goog.net {
         abort(opt_failureCode?: goog.net.ErrorCode): void;
         
         /**
-         * Nullifies all callbacks to reduce risks of leaks.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
-        
-        /**
          * @return {boolean} Whether there is an active request.
          */
         isActive(): boolean;

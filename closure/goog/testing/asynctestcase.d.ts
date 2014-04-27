@@ -85,25 +85,6 @@ declare module goog.testing {
         doAsyncError(opt_e?: any): void;
         
         /**
-         * Sets up the test page and then waits until the test case has been marked
-         * as ready before executing the tests.
-         * @override
-         */
-        runTests(): void;
-        
-        /**
-         * Starts the tests.
-         * @override
-         */
-        cycleTests(): void;
-        
-        /**
-         * Finalizes the test case, called when the tests have finished executing.
-         * @override
-         */
-        finalize(): void;
-        
-        /**
          * Enables verbose logging of what is happening inside of the AsyncTestCase.
          */
         enableDebugLogging(): void;

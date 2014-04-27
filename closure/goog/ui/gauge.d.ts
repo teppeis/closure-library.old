@@ -256,12 +256,6 @@ declare module goog.ui {
         addBackgroundColor(fromValue: number, toValue: number, color: string): void;
         
         /**
-         * Creates the DOM representation of the graphics area.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Redraws the entire gauge.
          * Should be called after theme colors have been changed.
          */

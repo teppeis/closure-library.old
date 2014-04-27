@@ -68,12 +68,5 @@ declare module goog.structs {
          * @param {T} obj The object to dispose.
          */
         disposeObject(obj: T): void;
-        
-        /**
-         * Disposes of the pool and all objects currently held in the pool.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
     }
 }

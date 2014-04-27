@@ -140,13 +140,6 @@ declare module goog.ui {
         getParent(): goog.ui.Component;
         
         /**
-         * Overrides {@link goog.events.EventTarget#setParentEventTarget} to throw an
-         * error if the parent component is set, and the argument is not the parent.
-         * @override
-         */
-        setParentEventTarget(): void;
-        
-        /**
          * Returns the dom helper that is being used on this component.
          * @return {!goog.dom.DomHelper} The dom helper used on this component.
          */
@@ -246,16 +239,6 @@ declare module goog.ui {
          * has been called.
          */
         exitDocument(): void;
-        
-        /**
-         * Disposes of the component.  Calls {@code exitDocument}, which is expected to
-         * remove event handlers and clean up the component.  Propagates the call to
-         * the component's children, if any. Removes the component's DOM from the
-         * document unless it was decorated.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
         
         /**
          * Helper function for subclasses that gets a unique id for a given fragment,

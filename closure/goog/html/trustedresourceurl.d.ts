@@ -28,35 +28,6 @@ declare module goog.html {
         constructor();
         
         /**
-         * Returns this TrustedResourceUrl's value as a string.
-         *
-         * IMPORTANT: In code where it is security relevant that an object's type is
-         * indeed {@code TrustedResourceUrl}, use
-         * {@code goog.html.TrustedResourceUrl.unwrap} instead of this method. If in
-         * doubt, assume that it's security relevant. In particular, note that
-         * goog.html functions which return a goog.html type do not guarantee that
-         * the returned instance is of the right type. For example:
-         *
-         * <pre>
-         * var fakeSafeHtml = new String('fake');
-         * fakeSafeHtml.__proto__ = goog.html.SafeHtml.prototype;
-         * var newSafeHtml = goog.html.SafeHtml.from(fakeSafeHtml);
-         * // newSafeHtml is just an alias for fakeSafeHtml, it's passed through by
-         * // goog.html.SafeHtml.from() as fakeSafeHtml instanceof goog.html.SafeHtml.
-         * </pre>
-         *
-         * @see goog.html.TrustedResourceUrl#unwrap
-         * @override
-         */
-        getTypedStringValue(): void;
-        
-        /**
-         * Returns this URLs directionality, which is always {@code LTR}.
-         * @override
-         */
-        getDirection(): void;
-        
-        /**
          * Performs a runtime check that the provided object is indeed a
          * TrustedResourceUrl object, and returns its value.
          *

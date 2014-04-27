@@ -72,15 +72,6 @@ declare module goog.ui {
          * </ul>
          */
         toggle(): void;
-        
-        /**
-         * Fix for tabindex not being updated so that disabled checkbox is not
-         * focusable. In particular this fails in Chrome.
-         * Note: in general tabIndex=-1 will prevent from keyboard focus but enables
-         * mouse focus, however in this case the control class prevents mouse focus.
-         * @override
-         */
-        setEnabled(): void;
     }
 }
 

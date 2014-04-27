@@ -16,13 +16,6 @@ declare module goog.ui {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_iframePool?: goog.structs.Pool<any>);
         
         /**
-         * Removes the iframe from the DOM.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
-        
-        /**
          * Removes the mask from the screen.
          */
         hideMask(): void;

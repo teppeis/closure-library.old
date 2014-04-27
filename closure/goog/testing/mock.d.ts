@@ -247,19 +247,6 @@ declare module goog.testing {
         $times(times: number): goog.testing.Mock;
         
         /**
-         * Switches from recording to replay mode.
-         * @override
-         */
-        $replay(): void;
-        
-        /**
-         * Resets the state of this mock object. This clears all pending expectations
-         * without verifying, and puts the mock in recording mode.
-         * @override
-         */
-        $reset(): void;
-        
-        /**
          * Throws an exception and records that an exception was thrown.
          * @param {string} comment A short comment about the exception.
          * @param {?string=} opt_message A longer message about the exception.
@@ -275,13 +262,6 @@ declare module goog.testing {
          * @protected
          */
         $recordAndThrow(ex: Object): void;
-        
-        /**
-         * Verify that all of the expectations were met. Should be overridden by
-         * subclasses.
-         * @override
-         */
-        $verify(): void;
         
         /**
          * Verifies that a method call matches an expectation.

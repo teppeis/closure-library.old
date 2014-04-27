@@ -101,23 +101,6 @@ declare module goog {
         static withResolver<TYPE>(): goog.promise.Resolver<TYPE>;
         
         /**
-         * Adds callbacks that will operate on the result of the Promise, returning a
-         * new child Promise.
-         *
-         * If the Promise is fulfilled, the {@code onFulfilled} callback will be invoked
-         * with the fulfillment value as argument, and the child Promise will be
-         * fulfilled with the return value of the callback. If the callback throws an
-         * exception, the child Promise will be rejected with the thrown value instead.
-         *
-         * If the Promise is rejected, the {@code onRejected} callback will be invoked
-         * with the rejection reason as argument, and the child Promise will be rejected
-         * with the return value (or thrown value) of the callback.
-         *
-         * @override
-         */
-        then(): void;
-        
-        /**
          * Adds a callback that will be invoked whether the Promise is fulfilled or
          * rejected. The callback receives no argument, and no new child Promise is
          * created. This is useful for ensuring that cleanup takes place after certain

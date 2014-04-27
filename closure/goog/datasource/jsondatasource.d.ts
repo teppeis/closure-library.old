@@ -31,13 +31,6 @@ declare module goog.ds {
         constructor(uri: string, name: string, opt_callbackParamName?: string);
         
         /**
-         * Load or reload the backing data for this node.
-         * Fires the JsonDataSource
-         * @override
-         */
-        load(): void;
-        
-        /**
          * Gets the state of the backing data for this node
          * @return {goog.ds.LoadState} The state.
          * @override

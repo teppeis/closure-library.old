@@ -20,12 +20,6 @@ declare module goog.ui {
         static BLUR_DISMISS_TIMER_MS: number;
         
         /**
-         * Create the DOM objects needed for the combo box.  A span and text input.
-         * @override
-         */
-        createDom(): void;
-        
-        /**
          * Enables/Disables the combo box.
          * @param {boolean} enabled Whether to enable (true) or disable (false) the
          *     combo box.

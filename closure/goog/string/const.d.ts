@@ -29,29 +29,6 @@ declare module goog.string$ {
         constructor();
         
         /**
-         * Returns this Const's value a string.
-         *
-         * IMPORTANT: In code where it is security-relevant that an object's type is
-         * indeed {@code goog.string.Const}, use {@code goog.string.Const.unwrap}
-         * instead of this method.
-         *
-         * @see goog.string.Const#unwrap
-         * @override
-         */
-        getTypedStringValue(): void;
-        
-        /**
-         * Returns a debug-string representation of this value.
-         *
-         * To obtain the actual string value wrapped inside an object of this type,
-         * use {@code goog.string.Const.unwrap}.
-         *
-         * @see goog.string.Const#unwrap
-         * @override
-         */
-        toString(): void;
-        
-        /**
          * Performs a runtime check that the provided object is indeed an instance
          * of {@code goog.string.Const}, and returns its value.
          * @param {!goog.string.Const} stringConst The object to extract from.

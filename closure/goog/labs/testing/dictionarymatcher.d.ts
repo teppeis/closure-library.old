@@ -12,13 +12,6 @@ declare module goog.labs.testing {
      */
     export class HasEntriesMatcher {
         constructor(entries: Object);
-        
-        /**
-         * Determines if an object has particular entries.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -34,13 +27,6 @@ declare module goog.labs.testing {
      */
     export class HasEntryMatcher {
         constructor(key: string, value: any);
-        
-        /**
-         * Determines if an object has a particular entry.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -55,13 +41,6 @@ declare module goog.labs.testing {
      */
     export class HasKeyMatcher {
         constructor(key: string);
-        
-        /**
-         * Determines if an object has a key.
-         *
-         * @override
-         */
-        matches(): void;
     }
 
     /**
@@ -76,12 +55,5 @@ declare module goog.labs.testing {
      */
     export class HasValueMatcher {
         constructor(value: any);
-        
-        /**
-         * Determines if an object contains a value
-         *
-         * @override
-         */
-        matches(): void;
     }
 }

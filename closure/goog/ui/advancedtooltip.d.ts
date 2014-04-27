@@ -60,22 +60,6 @@ declare module goog.ui {
         getCursorTrackingHideDelayMs(): number;
         
         /**
-         * Called after the popup is shown.
-         * @protected
-         * @suppress {underscore|visibility}
-         * @override
-         */
-        onShow_(): void;
-        
-        /**
-         * Called after the popup is hidden.
-         * @protected
-         * @suppress {underscore|visibility}
-         * @override
-         */
-        onHide_(): void;
-        
-        /**
          * Returns true if the mouse is in the tooltip.
          * @return {boolean} True if the mouse is in the tooltip.
          */

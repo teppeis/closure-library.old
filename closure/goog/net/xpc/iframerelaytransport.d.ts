@@ -25,12 +25,6 @@ declare module goog.net.xpc {
         transportType: number;
         
         /**
-         * Connects this transport.
-         * @override
-         */
-        connect(): void;
-        
-        /**
          * Handles transport service messages (internal signalling).
          * @param {string} payload The message content.
          * @override

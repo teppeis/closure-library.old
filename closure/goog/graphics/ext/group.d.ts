@@ -46,20 +46,6 @@ declare module goog.graphics.ext {
         getWrapper(): goog.graphics.GroupElement;
         
         /**
-         * Reset the element.
-         * @override
-         */
-        reset(): void;
-        
-        /**
-         * Called from the parent class, this method resets any pre-computed positions
-         * and sizes.
-         * @protected
-         * @override
-         */
-        redraw(): void;
-        
-        /**
          * Transform the children that need to be transformed.
          * @protected
          */

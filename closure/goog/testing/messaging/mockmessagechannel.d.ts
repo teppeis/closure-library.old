@@ -21,12 +21,6 @@ declare module goog.testing.messaging {
         send(serviceName: string, payload: string): void;
         
         /**
-         * Sets a flag indicating that this is disposed.
-         * @override
-         */
-        dispose(): void;
-        
-        /**
          * Mocks the receipt of a message. Passes the payload the appropriate service.
          * @param {string} serviceName The service to run.
          * @param {string|!Object} payload The argument to pass to the service.

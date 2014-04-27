@@ -167,13 +167,6 @@ declare module goog.events {
         removeAll(): void;
         
         /**
-         * Disposes of this EventHandler and removes all listeners that it registered.
-         * @override
-         * @protected
-         */
-        disposeInternal(): void;
-        
-        /**
          * Default event handler
          * @param {goog.events.Event} e Event object.
          */
