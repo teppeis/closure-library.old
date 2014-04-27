@@ -75,7 +75,7 @@ declare module goog.functions {
      * @return {function(...[?]):T} A new function.
      * @template T
      */
-    export function withReturnValue(f: Function, retValue: T): void;
+    export function withReturnValue<T>(f: Function, retValue: T): (...arg0: any[]) => T;
 
     /**
      * Creates the composition of the functions passed in.
@@ -85,7 +85,7 @@ declare module goog.functions {
      * @return {function(...[?]):T} The composition of all inputs.
      * @template T
      */
-    export function compose(fn: any, ...var_args: Function[]): void;
+    export function compose<T>(fn: (...arg0: any[]) => T, ...var_args: Function[]): (...arg0: any[]) => T;
 
     /**
      * Creates a function that calls the functions passed in in sequence, and
@@ -105,7 +105,7 @@ declare module goog.functions {
      * @return {function(...[?]):boolean} A function that ANDs its component
      *      functions.
      */
-    export function and(...var_args: Function[]): void;
+    export function and(...var_args: Function[]): (...arg0: any[]) => boolean;
 
     /**
      * Creates a function that returns true if any of its components evaluates
@@ -116,7 +116,7 @@ declare module goog.functions {
      * @return {function(...[?]):boolean} A function that ORs its component
      *    functions.
      */
-    export function or(...var_args: Function[]): void;
+    export function or(...var_args: Function[]): (...arg0: any[]) => boolean;
 
     /**
      * Creates a function that returns the Boolean opposite of a provided function.
@@ -125,7 +125,7 @@ declare module goog.functions {
      * @return {function(...[?]):boolean} A function that delegates to f and returns
      * opposite.
      */
-    export function not(f: Function): void;
+    export function not(f: Function): (...arg0: any[]) => boolean;
 
     /**
      * Generic factory function to construct an object given the constructor
