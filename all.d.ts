@@ -849,6 +849,7 @@
 /// <reference path="closure/goog/vec/vec4f.d.ts" />
 /// <reference path="closure/goog/webgl/webgl.d.ts" />
 /// <reference path="closure/goog/window/window.d.ts" />
+/// <reference path="externs/w3c_indexeddb.d.ts" />
 /// <reference path="third_party/closure/goog/caja/string/html/htmlparser.d.ts" />
 /// <reference path="third_party/closure/goog/caja/string/html/htmlsanitizer.d.ts" />
 /// <reference path="third_party/closure/goog/dojo/dom/query.d.ts" />
