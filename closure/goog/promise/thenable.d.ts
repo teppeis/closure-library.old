@@ -8,7 +8,7 @@ declare module goog {
      * @extends {IThenable.<TYPE>}
      * @template TYPE
      */
-    export interface Thenable extends IThenable<TYPE> {
+    export interface Thenable<TYPE> extends IThenable<TYPE> {
         
         /**
          * Adds callbacks that will operate on the result of the Thenable, returning a

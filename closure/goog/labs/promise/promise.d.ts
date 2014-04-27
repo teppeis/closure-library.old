@@ -31,6 +31,6 @@ declare module goog.labs {
      * @interface
      * @template TYPE
      */
-    export interface Resolver {
+    export interface Resolver<TYPE> {
     }
 }
