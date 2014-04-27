@@ -94,10 +94,10 @@ declare module goog.ui {
          * palettes don't support the decorate flow (for now).
          * @param {goog.ui.Control} palette Ignored.
          * @param {Element} element Ignored.
-         * @return {null} Always null.
+         * @return {Element} Always null.
          * @override
          */
-        decorate(palette: goog.ui.Control, element: Element): void;
+        decorate(palette: goog.ui.Control, element: Element): Element;
         
         /**
          * Overrides {@link goog.ui.ControlRenderer#setContent} for palettes.  Locates

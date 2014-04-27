@@ -224,7 +224,7 @@ goog.ui.PaletteRenderer.prototype.canDecorate = function(element) {
  * palettes don't support the decorate flow (for now).
  * @param {goog.ui.Control} palette Ignored.
  * @param {Element} element Ignored.
- * @return {null} Always null.
+ * @return {Element} Always null.
  * @override
  */
 goog.ui.PaletteRenderer.prototype.decorate = function(palette, element) {
