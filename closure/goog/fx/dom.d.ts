@@ -328,5 +328,5 @@ declare module goog.fx.dom {
      * @param {goog.events.EventHandler=} opt_eventHandler Optional event handler
      *     to use when listening for events.
      */
-    export function bgColorFadeIn(element: Element, start: Array<number>, time: number, opt_eventHandler?: goog.events.EventHandler): void;
+    export function bgColorFadeIn(element: Element, start: Array<number>, time: number, opt_eventHandler?: goog.events.EventHandler<any>): void;
 }

@@ -34,7 +34,7 @@ declare module goog.editor.style {
      *     the event with. Assumes when the node is destroyed, the eventHandler's
      *     listeners are destroyed as well.
      */
-    export function makeUnselectable(element: Element, eventHandler: goog.events.EventHandler): void;
+    export function makeUnselectable(element: Element, eventHandler: goog.events.EventHandler<any>): void;
 
     /**
      * Make the given element selectable.
