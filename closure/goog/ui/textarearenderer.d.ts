@@ -20,25 +20,6 @@ declare module goog.ui {
         static CSS_CLASS: string;
         
         /**
-         * Textareas natively support right-to-left rendering.
-         * @override
-         */
-        setRightToLeft: any;
-        
-        /**
-         * Textareas natively support keyboard focus.
-         * @override
-         */
-        setFocusable: any;
-        
-        /**
-         * Textareas don't need ARIA states to support accessibility, so this is
-         * a no-op.
-         * @override
-         */
-        updateAriaState: any;
-        
-        /**
          * Returns the textarea's contents wrapped in an HTML textarea element.  Sets
          * the textarea's disabled attribute as needed.
          * @param {goog.ui.Control} textarea Textarea to render.
@@ -58,10 +39,22 @@ declare module goog.ui {
         canDecorate(element: Element): boolean;
         
         /**
+         * Textareas natively support right-to-left rendering.
+         * @override
+         */
+        setRightToLeft(): void;
+        
+        /**
          * Textareas are always focusable as long as they are enabled.
          * @override
          */
         isFocusable(): void;
+        
+        /**
+         * Textareas natively support keyboard focus.
+         * @override
+         */
+        setFocusable(): void;
         
         /**
          * Textareas also expose the DISABLED state in the HTML textarea's
@@ -69,5 +62,12 @@ declare module goog.ui {
          * @override
          */
         setState(): void;
+        
+        /**
+         * Textareas don't need ARIA states to support accessibility, so this is
+         * a no-op.
+         * @override
+         */
+        updateAriaState(): void;
     }
 }

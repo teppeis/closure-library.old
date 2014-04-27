@@ -19,7 +19,7 @@ declare module goog.graphics {
         /**
          * Remove all drawing elements from the group.
          */
-        clear: any;
+        clear(): void;
         
         /**
          * Set the size of the group element.

@@ -16,12 +16,12 @@ declare module goog.net {
         /**
          * Open the WebChannel against the URI specified in the constructor.
          */
-        open: any;
+        open(): void;
         
         /**
          * Close the WebChannel.
          */
-        close: any;
+        close(): void;
         
         /**
          * Sends a message to the server that maintains the other end point of

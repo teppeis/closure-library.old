@@ -11,12 +11,6 @@ declare module goog.graphics.ext {
     export class Element extends goog.events.EventTarget {
         constructor(group: goog.graphics.ext.Group, wrapper: goog.graphics.Element);
         
-        /**
-         * Overridable function for subclass specific reset.
-         * @protected
-         */
-        redraw: any;
-        
         /** @return {goog.graphics.Element} The underlying thin wrapper. */
         getWrapper(): goog.graphics.Element;
         
@@ -239,6 +233,12 @@ declare module goog.graphics.ext {
          * rendering
          */
         reset(): void;
+        
+        /**
+         * Overridable function for subclass specific reset.
+         * @protected
+         */
+        redraw(): void;
         
         /**
          * Returns whether this element's bounds depend on its parents.

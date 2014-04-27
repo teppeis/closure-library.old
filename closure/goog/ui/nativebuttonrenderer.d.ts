@@ -12,31 +12,6 @@ declare module goog.ui {
         constructor();
         
         /**
-         * @override
-         * Native buttons don't support text selection.
-         */
-        setAllowTextSelection: any;
-        
-        /**
-         * @override
-         * Native buttons natively support right-to-left rendering.
-         */
-        setRightToLeft: any;
-        
-        /**
-         * @override
-         * Native buttons natively support keyboard focus.
-         */
-        setFocusable: any;
-        
-        /**
-         * @override
-         * Native buttons don't need ARIA states to support accessibility, so this is
-         * a no-op.
-         */
-        updateAriaState: any;
-        
-        /**
          * Returns the button's contents wrapped in a native HTML button element.  Sets
          * the button's disabled attribute as needed.
          * @param {goog.ui.Control} button Button to render.
@@ -63,9 +38,27 @@ declare module goog.ui {
         
         /**
          * @override
+         * Native buttons don't support text selection.
+         */
+        setAllowTextSelection(): void;
+        
+        /**
+         * @override
+         * Native buttons natively support right-to-left rendering.
+         */
+        setRightToLeft(): void;
+        
+        /**
+         * @override
          * Native buttons are always focusable as long as they are enabled.
          */
         isFocusable(): void;
+        
+        /**
+         * @override
+         * Native buttons natively support keyboard focus.
+         */
+        setFocusable(): void;
         
         /**
          * @override
@@ -87,5 +80,12 @@ declare module goog.ui {
          * attribute.
          */
         setValue(): void;
+        
+        /**
+         * @override
+         * Native buttons don't need ARIA states to support accessibility, so this is
+         * a no-op.
+         */
+        updateAriaState(): void;
     }
 }

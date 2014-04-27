@@ -39,11 +39,6 @@ declare module goog.graphics {
         coordTop: number;
         
         /**
-         * Remove all drawing elements from the graphics.
-         */
-        clear: any;
-        
-        /**
          * @return {goog.graphics.GroupElement} The root level canvas element.
          */
         getCanvasElement(): goog.graphics.GroupElement;
@@ -102,6 +97,11 @@ declare module goog.graphics {
          * @return {number} Returns the number of pixels per unit in the y direction.
          */
         getPixelScaleY(): number;
+        
+        /**
+         * Remove all drawing elements from the graphics.
+         */
+        clear(): void;
         
         /**
          * Remove a single drawing element from the surface.  The default implementation

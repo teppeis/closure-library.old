@@ -37,16 +37,6 @@ declare module goog.string$.html {
         constructor();
         
         /**
-         * Handler called when the parser is starting to parse the document.
-         */
-        startDoc: any;
-        
-        /**
-         * Handler called when the parsing is done.
-         */
-        endDoc: any;
-        
-        /**
          * Handler called when the parser found a new tag.
          * @param {string} name The name of the tag that is starting.
          * @param {Array.<string>} attributes The attributes of the tag.
@@ -76,6 +66,16 @@ declare module goog.string$.html {
          * @param {string} text The CDATA text found.
          */
         cdata(text: string): void;
+        
+        /**
+         * Handler called when the parser is starting to parse the document.
+         */
+        startDoc(): void;
+        
+        /**
+         * Handler called when the parsing is done.
+         */
+        endDoc(): void;
     }
 
     /**

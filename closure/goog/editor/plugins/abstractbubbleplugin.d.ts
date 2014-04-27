@@ -26,20 +26,6 @@ declare module goog.editor.plugins {
         static DASH_NBSP_STRING: string;
         
         /**
-         * Called after the bubble is shown. The default implementation does nothing.
-         * Override it to provide your own one.
-         * @protected
-         */
-        onShow: any;
-        
-        /**
-         * Called when the bubble is closed or hidden. The default implementation does
-         * nothing.
-         * @protected
-         */
-        cleanOnBubbleClose: any;
-        
-        /**
          * Sets the global bubble factory function.
          * @param {function(!Element, number): !goog.ui.editor.Bubble}
          *     bubbleFactory Function that creates a bubble for the given bubble parent
@@ -175,6 +161,20 @@ declare module goog.editor.plugins {
          * Closes the bubble.
          */
         closeBubble(): void;
+        
+        /**
+         * Called after the bubble is shown. The default implementation does nothing.
+         * Override it to provide your own one.
+         * @protected
+         */
+        onShow(): void;
+        
+        /**
+         * Called when the bubble is closed or hidden. The default implementation does
+         * nothing.
+         * @protected
+         */
+        cleanOnBubbleClose(): void;
         
         /**
          * In case the keyboard navigation is enabled, this will focus to the first link

@@ -19,7 +19,7 @@ declare module goog.fx.dom {
          * Called to update the style of the element.
          * @protected
          */
-        updateStyle: any;
+        updateStyle(): void;
         
         /**
          * Whether the DOM element being manipulated is rendered right-to-left.

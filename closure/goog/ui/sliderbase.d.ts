@@ -40,15 +40,6 @@ declare module goog.ui {
         rangeHighlight: HTMLDivElement;
         
         /**
-         * Subclasses must implement this method and set the valueThumb and
-         * extentThumb to non-null values. They can also set the rangeHighlight
-         * element if a range highlight is desired.
-         * @type {function() : void}
-         * @protected
-         */
-        createThumbs: () => void;
-        
-        /**
          * Enables/disables true RTL behavior.  This should be called immediately after
          * construction.  This is a temporary flag to allow clients to transition
          * to the new behavior at their convenience.  At some point it will be the
@@ -66,6 +57,15 @@ declare module goog.ui {
          * @protected
          */
         getCssClass(orient: goog.ui.SliderBase.Orientation): string;
+        
+        /**
+         * Subclasses must implement this method and set the valueThumb and
+         * extentThumb to non-null values. They can also set the rangeHighlight
+         * element if a range highlight is desired.
+         * @type {function() : void}
+         * @protected
+         */
+        createThumbs(): void;
         
         /**
          * Called when the DOM for the component is for sure in the document.

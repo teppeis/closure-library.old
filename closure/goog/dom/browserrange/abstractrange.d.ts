@@ -8,14 +8,6 @@ declare module goog.dom.browserrange {
         constructor();
         
         /**
-         * Removes the contents of the range from the document.  As a side effect, the
-         * selection will be collapsed.  The behavior of content removal is normalized
-         * across browsers.  For instance, IE sometimes creates extra text nodes that
-         * a W3C browser does not.  That behavior is corrected for.
-         */
-        removeContents: any;
-        
-        /**
          * @return {goog.dom.browserrange.AbstractRange} A clone of this range.
          */
         clone(): goog.dom.browserrange.AbstractRange;
@@ -145,6 +137,14 @@ declare module goog.dom.browserrange {
          *     if possible.
          */
         select(opt_reverse?: boolean): void;
+        
+        /**
+         * Removes the contents of the range from the document.  As a side effect, the
+         * selection will be collapsed.  The behavior of content removal is normalized
+         * across browsers.  For instance, IE sometimes creates extra text nodes that
+         * a W3C browser does not.  That behavior is corrected for.
+         */
+        removeContents(): void;
         
         /**
          * Surrounds the text range with the specified element (on Mozilla) or with a

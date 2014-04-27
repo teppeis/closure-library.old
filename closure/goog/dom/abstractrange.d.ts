@@ -19,16 +19,6 @@ declare module goog.dom {
         constructor();
         
         /**
-         * Sets this range as the selection in its window.
-         */
-        select: any;
-        
-        /**
-         * Removes the contents of the range from the document.
-         */
-        removeContents: any;
-        
-        /**
          * Gets the browser native selection object from the given window.
          * @param {Window} win The window to get the selection object from.
          * @return {Object} The browser native selection object, or null if it could
@@ -259,6 +249,16 @@ declare module goog.dom {
          * @return {goog.dom.RangeIterator} An iterator over tags in the range.
          */
         __iterator__(opt_keys?: boolean): goog.dom.RangeIterator;
+        
+        /**
+         * Sets this range as the selection in its window.
+         */
+        select(): void;
+        
+        /**
+         * Removes the contents of the range from the document.
+         */
+        removeContents(): void;
         
         /**
          * Inserts a node before (or after) the range.  The range may be disrupted

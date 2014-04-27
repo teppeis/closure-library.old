@@ -19,21 +19,21 @@ declare module goog.editor.plugins {
         static ACTION_COMPLETED: any;
         
         /**
-         * Undoes the action represented by this state.
-         */
-        undo: any;
-        
-        /**
-         * Redoes the action represented by this state.
-         */
-        redo: any;
-        
-        /**
          * @return {boolean} Whether or not the undo and redo actions of this state
          *     complete asynchronously. If true, the state will fire an ACTION_COMPLETED
          *     event when an undo or redo action is complete.
          */
         isAsynchronous(): boolean;
+        
+        /**
+         * Undoes the action represented by this state.
+         */
+        undo(): void;
+        
+        /**
+         * Redoes the action represented by this state.
+         */
+        redo(): void;
         
         /**
          * Checks if two undo-redo states are the same.

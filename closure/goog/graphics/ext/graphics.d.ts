@@ -24,12 +24,6 @@ declare module goog.graphics.ext {
         constructor(width: string, height: string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper, opt_isSimple?: boolean);
         
         /**
-         * Never transform a surface.
-         * @override
-         */
-        transform: any;
-        
-        /**
          * @return {goog.graphics.AbstractGraphics} The graphics implementation layer.
          */
         getImplementation(): goog.graphics.AbstractGraphics;
@@ -108,6 +102,12 @@ declare module goog.graphics.ext {
          * @param {Element} parentElement Parent element to render the component into.
          */
         render(parentElement: Element): void;
+        
+        /**
+         * Never transform a surface.
+         * @override
+         */
+        transform(): void;
         
         /**
          * Called from the parent class, this method resets any pre-computed positions

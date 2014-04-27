@@ -31,12 +31,6 @@ declare module goog.ui {
         static DEBOUNCE_DELAY_MS: number;
         
         /**
-         * Repositions the popup according to the current state.
-         * Should be overriden by subclases.
-         */
-        reposition: any;
-        
-        /**
          * @return {goog.ui.PopupBase.Type} The type of popup this is.
          */
         getType(): goog.ui.PopupBase.Type;
@@ -200,6 +194,12 @@ declare module goog.ui {
          * @param {boolean} visible Desired visibility state.
          */
         setVisible(visible: boolean): void;
+        
+        /**
+         * Repositions the popup according to the current state.
+         * Should be overriden by subclases.
+         */
+        reposition(): void;
         
         /**
          * Shows the popup element.

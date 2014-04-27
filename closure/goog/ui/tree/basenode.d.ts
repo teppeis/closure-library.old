@@ -29,23 +29,6 @@ declare module goog.ui.tree {
         remove: any;
         
         /**
-         * Returns the tree.
-         */
-        getTree: any;
-        
-        /**
-         * Originally it was intended to deselect the node but never worked.
-         * @deprecated Use {@code tree.setSelectedItem(null)}.
-         */
-        deselect: any;
-        
-        /**
-         * Gets the calculated icon class.
-         * @protected
-         */
-        getCalculatedIconClass: any;
-        
-        /**
          * Adds roles and states.
          * @protected
          */
@@ -79,6 +62,11 @@ declare module goog.ui.tree {
          * @override
          */
         removeChild(childNode: goog.ui.Component, opt_unrender?: boolean): goog.ui.tree.BaseNode;
+        
+        /**
+         * Returns the tree.
+         */
+        getTree(): void;
         
         /**
          * Returns the depth of the node in the tree. Should not be overridden.
@@ -140,6 +128,12 @@ declare module goog.ui.tree {
          * Selects the node.
          */
         select(): void;
+        
+        /**
+         * Originally it was intended to deselect the node but never worked.
+         * @deprecated Use {@code tree.setSelectedItem(null)}.
+         */
+        deselect(): void;
         
         /**
          * Called from the tree to instruct the node change its selection state.
@@ -275,6 +269,12 @@ declare module goog.ui.tree {
          * @protected
          */
         getIconSafeHtml(): goog.html.SafeHtml;
+        
+        /**
+         * Gets the calculated icon class.
+         * @protected
+         */
+        getCalculatedIconClass(): void;
         
         /**
          * @return {!goog.html.SafeHtml} The source for the icon.

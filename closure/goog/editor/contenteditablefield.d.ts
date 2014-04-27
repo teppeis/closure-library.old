@@ -22,6 +22,6 @@ declare module goog.editor {
          * ContentEditableField does not make any changes to the DOM when it is made
          * editable other than setting contentEditable to true.
          */
-        restoreDom: any;
+        restoreDom(): void;
     }
 }

@@ -11,11 +11,6 @@ declare module goog.fx {
         constructor();
         
         /**
-         * Pauses the animation.
-         */
-        pause: any;
-        
-        /**
          * Plays the animation.
          *
          * @param {boolean=} opt_restart Optional parameter to restart the animation.
@@ -32,6 +27,11 @@ declare module goog.fx {
          * @override
          */
         stop(opt_gotoEnd?: boolean): void;
+        
+        /**
+         * Pauses the animation.
+         */
+        pause(): void;
         
         /**
          * Returns the current state of the animation.

@@ -16,13 +16,6 @@ declare module goog.ui {
         constructor(opt_el?: Element, opt_str?: string, opt_domHelper?: goog.dom.DomHelper);
         
         /**
-         * Forces the recalculation of the hotspot on the next mouse over event.
-         * @deprecated Not ever necessary to call this function. Hot spot is calculated
-         *     as neccessary.
-         */
-        resetHotSpot: any;
-        
-        /**
          * Sets margin around the tooltip where the cursor is allowed without dismissing
          * the tooltip.
          *
@@ -129,5 +122,12 @@ declare module goog.ui {
          * @override
          */
         getHideDelayMs(): number;
+        
+        /**
+         * Forces the recalculation of the hotspot on the next mouse over event.
+         * @deprecated Not ever necessary to call this function. Hot spot is calculated
+         *     as neccessary.
+         */
+        resetHotSpot(): void;
     }
 }

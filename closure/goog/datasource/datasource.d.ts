@@ -24,11 +24,6 @@ declare module goog.ds {
         constructor();
         
         /**
-         * Load or reload the backing data for this node
-         */
-        load: any;
-        
-        /**
          * Get the value of the node
          * @param {...?} var_args Do not check arity of arguments, because
          *     some subclasses require args.
@@ -97,6 +92,11 @@ declare module goog.ds {
         getDataPath(): string;
         
         /**
+         * Load or reload the backing data for this node
+         */
+        load(): void;
+        
+        /**
          * Gets the state of the backing data for this node
          * @return {goog.ds.LoadState} The state.
          */
@@ -118,11 +118,6 @@ declare module goog.ds {
      */
     export class BaseDataNode {
         constructor();
-        
-        /**
-         * Load or reload the backing data for this node
-         */
-        load: any;
         
         /**
          * Gets the parent node. Subclasses implement this function
@@ -174,6 +169,11 @@ declare module goog.ds {
          * @return {string} The data path.
          */
         getDataPath(): string;
+        
+        /**
+         * Load or reload the backing data for this node
+         */
+        load(): void;
         
         /**
          * Gets the state of the backing data for this node

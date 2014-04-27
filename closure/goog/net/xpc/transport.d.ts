@@ -18,14 +18,6 @@ declare module goog.net.xpc {
         transportType: number;
         
         /**
-         * Connects this transport.
-         * The transport implementation is expected to call
-         * CrossPageChannel.prototype.notifyConnected when the channel is ready
-         * to be used.
-         */
-        connect: any;
-        
-        /**
          * @return {number} The transport type identifier.
          */
         getType(): number;
@@ -47,6 +39,14 @@ declare module goog.net.xpc {
          * @param {string} payload The message content.
          */
         transportServiceHandler(payload: string): void;
+        
+        /**
+         * Connects this transport.
+         * The transport implementation is expected to call
+         * CrossPageChannel.prototype.notifyConnected when the channel is ready
+         * to be used.
+         */
+        connect(): void;
         
         /**
          * Sends a message.
