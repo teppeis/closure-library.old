@@ -234,7 +234,7 @@ declare module goog.ui {
          * Removes a child control.  Overrides {@link goog.ui.Component#removeChild} by
          * updating the highlight index.  Since {@link goog.ui.Component#removeChildAt}
          * uses {@link #removeChild} internally, we only need to override this method.
-         * @param {string|goog.ui.Component} control The ID of the child to remove, or
+         * @param {goog.ui.Component|string} control The ID of the child to remove, or
          *     the control itself.
          * @param {boolean=} opt_unrender Whether to call {@code exitDocument} on the
          *     removed control, and detach its DOM from the document (defaults to
@@ -242,7 +242,7 @@ declare module goog.ui {
          * @return {goog.ui.Control} The removed control, if any.
          * @override
          */
-        removeChild(control: string, opt_unrender?: boolean): goog.ui.Control;
+        removeChild(control: goog.ui.Component, opt_unrender?: boolean): goog.ui.Control;
         
         /**
          * Returns the container's orientation.

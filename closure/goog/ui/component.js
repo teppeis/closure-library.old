@@ -1243,7 +1243,7 @@ goog.ui.Component.prototype.indexOfChild = function(child) {
  * component's DOM.
  *
  * @see goog.ui.Component#removeChildAt
- * @param {string|goog.ui.Component|null} child The ID of the child to remove,
+ * @param {goog.ui.Component|string|null} child The ID of the child to remove,
  *    or the child component itself.
  * @param {boolean=} opt_unrender If true, calls {@code exitDocument} on the
  *    removed child component, and detaches its DOM from the document.
