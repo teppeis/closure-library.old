@@ -39,7 +39,7 @@ declare module goog.editor.plugins {
          * Since our exec command is always called from elsewhere, we make it silent.
          * @override
          */
-        isSilentCommand: any;
+        isSilentCommand(): void;
         
         /**
          * Checks if a node is a blockquote node.  If isAlreadySetup is set, it also
