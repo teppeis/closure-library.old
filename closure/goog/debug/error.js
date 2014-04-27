@@ -29,7 +29,6 @@ goog.provide('goog.debug.Error');
  * Base class for custom error objects.
  * @param {*=} opt_msg The message associated with the error.
  * @constructor
- * @extends {Error}
  */
 goog.debug.Error = function(opt_msg) {
 
