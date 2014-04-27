@@ -361,4 +361,28 @@ declare module goog.fx {
          */
         setParent(parent: goog.fx.AbstractDragDrop): void;
     }
+
+    /**
+     * Class representing an active drop target
+     *
+     * @param {goog.math.Box} box Box describing the position and dimension of the
+     *     target item.
+     * @param {goog.fx.AbstractDragDrop=} opt_target Target that contains the item
+           associated with position.
+     * @param {goog.fx.DragDropItem=} opt_item Item associated with position.
+     * @param {Element=} opt_element Element of item associated with position.
+     * @constructor
+     * @private
+     */
+    export interface ActiveDropTarget_ {
+    }
+
+    /**
+     * Class for representing a scrollable container
+     * @param {Element} element the scrollable element.
+     * @constructor
+     * @private
+     */
+    export interface ScrollableContainer_ {
+    }
 }

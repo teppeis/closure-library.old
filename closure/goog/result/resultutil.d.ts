@@ -1,6 +1,29 @@
 declare module goog.result {
 
     /**
+     * A DependentResult represents a Result whose eventual value depends on the
+     * value of one or more other Results. For example, the Result returned by
+     * @see goog.result.chain or @see goog.result.combine is dependent on the
+     * Results given as arguments.
+     *
+     * @param {!Array.<!goog.result.Result>} parentResults A list of Results that
+     *     will affect the eventual value of this Result.
+     * @constructor
+     * @implements {goog.result.DependentResult}
+     * @extends {goog.result.SimpleResult}
+     * @private
+     */
+    export interface DependentResultImpl_ extends goog.result.SimpleResult {
+        
+        /**
+         * Adds a Result to the list of Results that affect this one.
+         * @param {!goog.result.Result} parentResult A result whose value affects the
+         *     value of this Result.
+         */
+        addParentResult(parentResult: goog.result.Result): void;
+    }
+
+    /**
      * Returns a successful result containing the provided value.
      *
      * Example:

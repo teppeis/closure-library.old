@@ -313,4 +313,28 @@ declare module goog.async.Deferred {
     export class CanceledError extends goog.debug.Error {
         constructor(deferred: goog.async.Deferred<any>);
     }
+
+    /**
+     * Wrapper around errors that are scheduled to be thrown by failing deferreds
+     * after a timeout.
+     *
+     * @param {*} error Error from a failing deferred.
+     * @constructor
+     * @final
+     * @private
+     * @struct
+     */
+    export interface Error_ {
+        
+        /**
+         * Actually throws the error and removes it from the list of pending
+         * deferred errors.
+         */
+        throwError(): void;
+        
+        /**
+         * Resets the error throw timer.
+         */
+        resetTimer(): void;
+    }
 }

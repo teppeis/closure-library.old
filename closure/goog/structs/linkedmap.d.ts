@@ -210,3 +210,34 @@ declare module goog.structs {
         every(f: Function, opt_obj?: Object): boolean;
     }
 }
+
+declare module goog.structs.LinkedMap {
+
+    /**
+     * Internal class for a doubly-linked list node containing a key/value pair.
+     * @param {KEY} key The key.
+     * @param {VALUE} value The value.
+     * @constructor
+     * @template KEY, VALUE
+     * @private
+     */
+    export interface Node_<KEY, VALUE> {
+        
+        /**
+         * The next node in the list.
+         * @type {!goog.structs.LinkedMap.Node_}
+         */
+        next: goog.structs.LinkedMap.Node_;
+        
+        /**
+         * The previous node in the list.
+         * @type {!goog.structs.LinkedMap.Node_}
+         */
+        prev: goog.structs.LinkedMap.Node_;
+        
+        /**
+         * Causes this node to remove itself from the list.
+         */
+        remove(): void;
+    }
+}

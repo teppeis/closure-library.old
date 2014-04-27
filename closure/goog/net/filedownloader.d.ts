@@ -175,4 +175,16 @@ declare module goog.net.FileDownloader {
          */
         fileError: goog.fs.Error;
     }
+
+    /**
+     * A struct containing the data for a single download.
+     *
+     * @param {string} url The URL for the file being downloaded.
+     * @param {!goog.net.FileDownloader} downloader The parent FileDownloader.
+     * @extends {goog.Disposable}
+     * @constructor
+     * @private
+     */
+    export interface Download_ extends goog.Disposable {
+    }
 }

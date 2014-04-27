@@ -38,3 +38,81 @@ declare module goog.i18n {
         strictParse(text: string, date: goog.date.DateLike, opt_start?: number): number;
     }
 }
+
+declare module goog.i18n.DateTimeParse {
+
+    /**
+     * This class hold the intermediate parsing result. After all fields are
+     * consumed, final result will be resolved from this class.
+     * @constructor
+     * @private
+     */
+    export interface MyDate_ {
+        
+        /**
+         * The date's era.
+         * @type {?number}
+         */
+        era: number;
+        
+        /**
+         * The date's year.
+         * @type {?number}
+         */
+        year: number;
+        
+        /**
+         * The date's month.
+         * @type {?number}
+         */
+        month: number;
+        
+        /**
+         * The date's day of month.
+         * @type {?number}
+         */
+        day: number;
+        
+        /**
+         * The date's hour.
+         * @type {?number}
+         */
+        hours: number;
+        
+        /**
+         * The date's before/afternoon denominator.
+         * @type {?number}
+         */
+        ampm: number;
+        
+        /**
+         * The date's minutes.
+         * @type {?number}
+         */
+        minutes: number;
+        
+        /**
+         * The date's seconds.
+         * @type {?number}
+         */
+        seconds: number;
+        
+        /**
+         * The date's milliseconds.
+         * @type {?number}
+         */
+        milliseconds: number;
+        
+        /**
+         * The date's timezone offset.
+         * @type {?number}
+         */
+        tzOffset: number;
+        
+        /**
+         * The date's day of week. Sunday is 0, Saturday is 6.
+         * @type {?number}
+         */
+        dayOfWeek: number;
+    }
+}

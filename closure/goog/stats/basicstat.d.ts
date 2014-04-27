@@ -65,3 +65,33 @@ declare module goog.stats {
         getMin(opt_now?: number): number;
     }
 }
+
+declare module goog.stats.BasicStat {
+
+    /**
+     * A struct containing information for each sub-interval.
+     * @param {number} end The end time for this slot, in milliseconds.
+     * @constructor
+     * @private
+     */
+    export interface Slot_ {
+        
+        /**
+         * Aggregated count within this slot.
+         * @type {number}
+         */
+        count: number;
+        
+        /**
+         * The smallest atomic increment of the count within this slot.
+         * @type {number}
+         */
+        min: number;
+        
+        /**
+         * The largest atomic increment of the count within this slot.
+         * @type {number}
+         */
+        max: number;
+    }
+}

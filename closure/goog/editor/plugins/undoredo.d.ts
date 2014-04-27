@@ -111,4 +111,93 @@ declare module goog.editor.plugins.UndoRedo {
         UNDO: string;
         REDO: string;
     }
+
+    /**
+     * This object encapsulates the state of an editable field.
+     *
+     * @param {string} fieldHashCode String the id of the field we're saving the
+     *     content of.
+     * @param {string} content String the actual text we're saving.
+     * @param {goog.editor.plugins.UndoRedo.CursorPosition_?} cursorPosition
+     *     CursorPosLite object for the cursor position in the field.
+     * @param {Function} restore The function used to restore editable field state.
+     * @private
+     * @constructor
+     * @extends {goog.editor.plugins.UndoRedoState}
+     */
+    export interface UndoState_ extends goog.editor.plugins.UndoRedoState {
+        
+        /**
+         * Performs the undo operation represented by this state.
+         * @override
+         */
+        undo(): void;
+        
+        /**
+         * Performs the redo operation represented by this state.
+         * @override
+         */
+        redo(): void;
+        
+        /**
+         * Updates the undo portion of this state. Should only be used to update the
+         * current state of an editable field, which is not yet on the undo stack after
+         * an undo or redo operation. You should never be modifying states on the stack!
+         * @param {string} content The current content.
+         * @param {goog.editor.plugins.UndoRedo.CursorPosition_?} cursorPosition
+         *     The current cursor position.
+         */
+        setUndoState(content: string, cursorPosition: goog.editor.plugins.UndoRedo.CursorPosition_): void;
+        
+        /**
+         * Adds redo information to this state. This method should be called before the
+         * state is added onto the undo stack.
+         *
+         * @param {string} content The content to restore on a redo.
+         * @param {goog.editor.plugins.UndoRedo.CursorPosition_?} cursorPosition
+         *     The cursor position to restore on a redo.
+         */
+        setRedoState(content: string, cursorPosition: goog.editor.plugins.UndoRedo.CursorPosition_): void;
+        
+        /**
+         * Checks if the *contents* of two
+         * {@code goog.editor.plugins.UndoRedo.UndoState_}s are the same.  We don't
+         * bother checking the cursor position (that's not something we'd want to save
+         * anyway).
+         * @param {goog.editor.plugins.UndoRedoState} rhs The state to compare.
+         * @return {boolean} Whether the contents are the same.
+         * @override
+         */
+        equals(rhs: goog.editor.plugins.UndoRedoState): boolean;
+    }
+
+    /**
+     * Stores the state of the selection in a way the survives DOM modifications
+     * that don't modify the user-interactable content (e.g. making something bold
+     * vs. typing a character).
+     *
+     * TODO(user): Completely get rid of this and use goog.dom.SavedCaretRange.
+     *
+     * @param {goog.editor.Field} field The field the selection is in.
+     * @private
+     * @constructor
+     */
+    export interface CursorPosition_ {
+        
+        /**
+         * @return {boolean} Whether this object is valid.
+         */
+        isValid(): boolean;
+        
+        /**
+         * @return {string} A string representation of this object.
+         * @override
+         */
+        toString(): string;
+        
+        /**
+         * Makes the browser's selection match the cursor position.
+         */
+        select(): void;
+    }
 }

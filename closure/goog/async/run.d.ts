@@ -23,6 +23,18 @@ declare module goog.async {
 declare module goog.async.run {
 
     /**
+     * @constructor
+     * @final
+     * @struct
+     * @private
+     *
+     * @param {function()} fn
+     * @param {Object|null|undefined} scope
+     */
+    export interface WorkItem_ {
+    }
+
+    /**
      * Run any pending goog.async.run work items. This function is not intended
      * for general use, but for use by entry point handlers to run items ahead of
      * goog.async.nextTick.

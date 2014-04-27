@@ -86,4 +86,20 @@ declare module goog.dom {
          */
         surroundContents(element: Element): Element;
     }
+
+    /**
+     * A SavedRange implementation using DOM endpoints.
+     * @param {goog.dom.AbstractRange} range The range to save.
+     * @constructor
+     * @extends {goog.dom.SavedRange}
+     * @private
+     */
+    export interface DomSavedTextRange_ extends goog.dom.SavedRange {
+        
+        /**
+         * @return {goog.dom.AbstractRange} The restored range.
+         * @override
+         */
+        restoreInternal(): goog.dom.AbstractRange;
+    }
 }

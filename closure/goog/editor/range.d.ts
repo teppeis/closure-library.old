@@ -42,6 +42,30 @@ declare module goog.editor.range {
     }
 
     /**
+     * Saves the range using carets, but normalizes text nodes when carets
+     * are removed.
+     * @see goog.editor.range.saveUsingNormalizedCarets
+     * @param {goog.dom.AbstractRange} range The range being saved.
+     * @constructor
+     * @extends {goog.dom.SavedCaretRange}
+     * @private
+     */
+    export interface NormalizedCaretRange_ extends goog.dom.SavedCaretRange {
+        
+        /**
+         * Normalizes text nodes whenever carets are removed from the document.
+         * @param {goog.dom.AbstractRange=} opt_range A range whose offsets have already
+         *     been adjusted for caret removal; it will be adjusted and returned if it
+         *     is also affected by post-removal operations, such as text node
+         *     normalization.
+         * @return {goog.dom.AbstractRange|undefined} The adjusted range, if opt_range
+         *     was provided.
+         * @override
+         */
+        removeCarets(opt_range?: goog.dom.AbstractRange): goog.dom.AbstractRange;
+    }
+
+    /**
      * Given a range and an element, create a narrower range that is limited to the
      * boundaries of the element. If the range starts (or ends) outside the
      * element, the narrowed range's start point (or end point) will be the

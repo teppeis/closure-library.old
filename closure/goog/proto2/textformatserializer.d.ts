@@ -34,6 +34,93 @@ declare module goog.proto2 {
     }
 }
 
+declare module goog.proto2.TextFormatSerializer {
+
+    /**
+     * Helper class used by the text format serializer for pretty-printing text.
+     * @constructor
+     * @private
+     */
+    export interface Printer_ {
+        
+        /**
+         * @return {string} The contents of the printer.
+         * @override
+         */
+        toString(): string;
+        
+        /**
+         * Increases the indentation in the printer.
+         */
+        indent(): void;
+        
+        /**
+         * Decreases the indentation in the printer.
+         */
+        dedent(): void;
+        
+        /**
+         * Appends the given value to the printer.
+         * @param {*} value The value to append.
+         */
+        append(value: any): void;
+        
+        /**
+         * Appends a newline to the printer.
+         */
+        appendLine(): void;
+    }
+
+    /**
+     * Helper class for tokenizing the text format.
+     * @param {string} data The string data to tokenize.
+     * @param {boolean=} opt_ignoreWhitespace If true, whitespace tokens will not
+     *    be reported by the tokenizer.
+     * @constructor
+     * @private
+     */
+    export interface Tokenizer_ {
+        
+        /**
+         * @return {goog.proto2.TextFormatSerializer.Tokenizer_.Token} The current
+         *     token.
+         */
+        getCurrent(): goog.proto2.TextFormatSerializer.Tokenizer_.Token;
+        
+        /**
+         * Advances to the next token.
+         * @return {boolean} True if a valid token was found, false if the end was
+         *    reached or no valid token was found.
+         */
+        next(): boolean;
+    }
+
+    /**
+     * Helper class for parsing the text format.
+     * @constructor
+     * @final
+     */
+    export class Parser {
+        constructor();
+        
+        /**
+         * Parses the given data, filling the message as it goes.
+         * @param {goog.proto2.Message} message The message to fill.
+         * @param {string} data The text format data.
+         * @param {boolean=} opt_ignoreMissingFields If true, fields missing in the
+         *     proto will be ignored.
+         * @return {boolean} True on success, false on failure. On failure, the
+         *     getError method can be called to get the reason for failure.
+         */
+        parse(message: goog.proto2.Message, data: string, opt_ignoreMissingFields?: boolean): boolean;
+        
+        /**
+         * @return {?string} The parse error, if any.
+         */
+        getError(): string;
+    }
+}
+
 declare module goog.proto2.TextFormatSerializer.Tokenizer_ {
 
     /**
@@ -65,33 +152,5 @@ declare module goog.proto2.TextFormatSerializer.Tokenizer_ {
     export interface Token {
         type: goog.proto2.TextFormatSerializer.Tokenizer_.TokenTypes;
         value: string;
-    }
-}
-
-declare module goog.proto2.TextFormatSerializer {
-
-    /**
-     * Helper class for parsing the text format.
-     * @constructor
-     * @final
-     */
-    export class Parser {
-        constructor();
-        
-        /**
-         * Parses the given data, filling the message as it goes.
-         * @param {goog.proto2.Message} message The message to fill.
-         * @param {string} data The text format data.
-         * @param {boolean=} opt_ignoreMissingFields If true, fields missing in the
-         *     proto will be ignored.
-         * @return {boolean} True on success, false on failure. On failure, the
-         *     getError method can be called to get the reason for failure.
-         */
-        parse(message: goog.proto2.Message, data: string, opt_ignoreMissingFields?: boolean): boolean;
-        
-        /**
-         * @return {?string} The parse error, if any.
-         */
-        getError(): string;
     }
 }

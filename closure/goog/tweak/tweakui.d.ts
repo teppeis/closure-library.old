@@ -82,6 +82,19 @@ declare module goog.tweak {
          */
         toggleAllDescriptions(): void;
     }
+
+    /**
+     * Entries used to represent the collapsible namespace links. These entries are
+     * never registered with the TweakRegistry, but are contained within the
+     * collection of entries within TweakPanels.
+     * @param {string} namespace The namespace for the entry.
+     * @param {!Array.<!goog.tweak.BaseEntry>} entries Entries within the namespace.
+     * @constructor
+     * @extends {goog.tweak.BaseEntry}
+     * @private
+     */
+    export interface NamespaceEntry_ extends goog.tweak.BaseEntry {
+    }
 }
 
 declare module goog.tweak.NamespaceEntry_ {

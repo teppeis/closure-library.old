@@ -108,3 +108,26 @@ declare module goog.ui.editor {
         reposition(): void;
     }
 }
+
+declare module goog.ui.editor.Bubble {
+
+    /**
+     * Private class used to describe a bubble panel.
+     * @param {goog.dom.DomHelper} dom DOM helper used to create the panel.
+     * @param {string} id ID of the panel.
+     * @param {string} type Type of the panel.
+     * @param {string} title Title of the panel.
+     * @param {Element} targetElement Element the panel is showing for.
+     * @param {boolean} preferBottomPosition Whether this panel prefers to show
+     *     below the target element.
+     * @constructor
+     * @private
+     */
+    export interface Panel_ {
+        
+        /**
+         * @return {Element} The element in the panel where content should go.
+         */
+        getContentElement(): Element;
+    }
+}

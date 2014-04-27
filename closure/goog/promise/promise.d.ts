@@ -216,4 +216,19 @@ declare module goog.Promise {
     export class CancellationError extends goog.debug.Error {
         constructor(opt_message?: string);
     }
+
+    /**
+     * Internal implementation of the resolver interface.
+     *
+     * @param {!goog.Promise.<TYPE>} promise
+     * @param {function((TYPE|goog.Promise.<TYPE>|Thenable))} resolve
+     * @param {function(*): void} reject
+     * @implements {goog.promise.Resolver.<TYPE>}
+     * @final @struct
+     * @constructor
+     * @private
+     * @template TYPE
+     */
+    export interface Resolver_<TYPE> {
+    }
 }

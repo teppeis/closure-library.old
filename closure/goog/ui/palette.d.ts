@@ -182,4 +182,19 @@ declare module goog.ui.Palette {
     export interface EventType {
         AFTER_HIGHLIGHT: string;
     }
+
+    /**
+     * A component to represent the currently highlighted cell.
+     * @constructor
+     * @extends {goog.ui.Control}
+     * @private
+     */
+    export interface CurrentCell_ extends goog.ui.Control {
+        
+        /**
+         * @param {boolean} highlight Whether to highlight or unhighlight the component.
+         * @return {boolean} Whether it was successful.
+         */
+        tryHighlight(highlight: boolean): boolean;
+    }
 }

@@ -295,3 +295,85 @@ declare module goog.graphics.ext {
         getPixelScaleY(): number;
     }
 }
+
+declare module goog.graphics.ext.Element {
+
+    /**
+     * Manages a position and size, either horizontal or vertical.
+     * @param {goog.graphics.ext.Element} element The element the position applies
+     *     to.
+     * @param {boolean} horizontal Whether the position is horizontal or vertical.
+     * @constructor
+     * @private
+     */
+    export interface Position_ {
+        
+        /**
+         * @return {number} The minimum width/height of the element.
+         */
+        getMinSize(): number;
+        
+        /**
+         * Sets the minimum width/height of the element.
+         * @param {string|number} minSize The minimum width/height of the element.
+         */
+        setMinSize(minSize: string): void;
+        
+        /**
+         * @return {number} The width/height of the element.
+         */
+        getSize(): number;
+        
+        /**
+         * Sets the width/height of the element.
+         * @param {string|number} size The width/height of the element.
+         * @return {boolean} Whether the value was changed.
+         */
+        setSize(size: string): boolean;
+        
+        /**
+         * @return {number} The distance from the left/top edge of this element to the
+         *     left/top edge of its parent, specified in units of the parent's
+         *     coordinate system.
+         */
+        getStart(): number;
+        
+        /**
+         * @return {number} The middle coordinate of the element, in units of the
+         *     parent's coordinate system.
+         */
+        getMiddle(): number;
+        
+        /**
+         * @return {number} The end coordinate of the element, in units of the
+         *     parent's coordinate system.
+         */
+        getEnd(): number;
+        
+        /**
+         * Sets the position, either as a left/top, center/middle, or right/bottom
+         * value.
+         * @param {number|string} value The value of the coordinate.
+         * @param {goog.graphics.ext.Element.PositionType_} type The type of the
+         *     coordinate.
+         */
+        setPosition(value: number, type: goog.graphics.ext.Element.PositionType_): void;
+        
+        /**
+         * @return {number} An estimate of the maximum x/y extent this element would
+         *     have in a parent of no width/height.
+         */
+        getMaxPosition(): number;
+        
+        /**
+         * Resets the caches of position values and coordinate values.
+         */
+        resetCache(): void;
+        
+        /**
+         * @return {boolean} Whether the size or position of this element depends on
+         *     the size of the parent element.
+         */
+        isParentDependent(): boolean;
+    }
+}

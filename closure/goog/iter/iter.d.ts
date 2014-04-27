@@ -39,6 +39,21 @@ declare module goog.iter {
     }
 
     /**
+     * Implements the {@code goog.iter.groupBy} iterator.
+     * @param {!goog.iter.Iterator.<VALUE>|!goog.iter.Iterable} iterable The
+     *     iterable to group.
+     * @param {function(...[VALUE]): KEY=} opt_keyFunc  Optional function for
+     *     determining the key value for each group in the {@code iterable}. Default
+     *     is the identity function.
+     * @constructor
+     * @extends {goog.iter.Iterator.<!Array>}
+     * @template KEY, VALUE
+     * @private
+     */
+    export interface GroupByIterator_<KEY, VALUE> extends goog.iter.Iterator<Array<any>> {
+    }
+
+    /**
      * Returns an iterator that knows how to iterate over the values in the object.
      * @param {goog.iter.Iterator.<VALUE>|goog.iter.Iterable} iterable  If the
      *     object is an iterator it will be returned as is.  If the object has an

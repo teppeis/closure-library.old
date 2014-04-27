@@ -39,6 +39,16 @@ declare module goog.dom {
     }
 
     /**
+     * A SavedRange implementation using DOM endpoints.
+     * @param {goog.dom.ControlRange} range The range to save.
+     * @constructor
+     * @extends {goog.dom.SavedRange}
+     * @private
+     */
+    export interface DomSavedControlRange_ extends goog.dom.SavedRange {
+    }
+
+    /**
      * Subclass of goog.dom.TagIterator that iterates over a DOM range.  It
      * adds functions to determine the portion of each text node that is selected.
      *

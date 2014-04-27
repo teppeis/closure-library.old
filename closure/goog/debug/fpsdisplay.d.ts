@@ -28,3 +28,19 @@ declare module goog.debug {
         getFps(): number;
     }
 }
+
+declare module goog.debug.FpsDisplay {
+
+    /**
+     * @param {Element} elem An element to hold the FPS count.
+     * @constructor
+     * @private
+     */
+    export interface FpsAnimation_ {
+        
+        /**
+         * @param {number} now The current time.
+         */
+        onAnimationFrame(now: number): void;
+    }
+}
