@@ -1,21 +1,6 @@
 declare module goog.net {
 
     /**
-     * Enum type for identifying a ChannelRequest error.
-     * @enum {number}
-     */
-    export interface Error {
-        STATUS: number;
-        NO_DATA: number;
-        TIMEOUT: number;
-        UNKNOWN_SESSION_ID: number;
-        BAD_DATA: number;
-        HANDLER_EXCEPTION: number;
-        BROWSER_OFFLINE: number;
-        ACTIVE_X_BLOCKED: number;
-    }
-
-    /**
      * Creates a ChannelRequest object which encapsulates a request to the server.
      * A new ChannelRequest is created for each request to the server.
      *
@@ -182,5 +167,23 @@ declare module goog.net {
          * @return {?number} The time the request started, as returned by goog.now().
          */
         getRequestStartTime(): number;
+    }
+}
+
+declare module goog.net.ChannelRequest {
+
+    /**
+     * Enum type for identifying a ChannelRequest error.
+     * @enum {number}
+     */
+    export interface Error {
+        STATUS: number;
+        NO_DATA: number;
+        TIMEOUT: number;
+        UNKNOWN_SESSION_ID: number;
+        BAD_DATA: number;
+        HANDLER_EXCEPTION: number;
+        BROWSER_OFFLINE: number;
+        ACTIVE_X_BLOCKED: number;
     }
 }

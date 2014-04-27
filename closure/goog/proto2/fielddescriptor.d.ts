@@ -1,33 +1,6 @@
 declare module goog.proto2 {
 
     /**
-     * An enumeration defining the possible field types.
-     * Should be a mirror of that defined in descriptor.h.
-     *
-     * @enum {number}
-     */
-    export interface FieldType {
-        DOUBLE: number;
-        FLOAT: number;
-        INT64: number;
-        UINT64: number;
-        INT32: number;
-        FIXED64: number;
-        FIXED32: number;
-        BOOL: number;
-        STRING: number;
-        GROUP: number;
-        MESSAGE: number;
-        BYTES: number;
-        UINT32: number;
-        ENUM: number;
-        SFIXED32: number;
-        SFIXED64: number;
-        SINT32: number;
-        SINT64: number;
-    }
-
-    /**
      * A class which describes a field in a Protocol Buffer 2 Message.
      *
      * @param {Function} messageType Constructor for the message
@@ -120,5 +93,35 @@ declare module goog.proto2 {
          * @return {boolean} Whether the field is optional.
          */
         isOptional(): boolean;
+    }
+}
+
+declare module goog.proto2.FieldDescriptor {
+
+    /**
+     * An enumeration defining the possible field types.
+     * Should be a mirror of that defined in descriptor.h.
+     *
+     * @enum {number}
+     */
+    export interface FieldType {
+        DOUBLE: number;
+        FLOAT: number;
+        INT64: number;
+        UINT64: number;
+        INT32: number;
+        FIXED64: number;
+        FIXED32: number;
+        BOOL: number;
+        STRING: number;
+        GROUP: number;
+        MESSAGE: number;
+        BYTES: number;
+        UINT32: number;
+        ENUM: number;
+        SFIXED32: number;
+        SFIXED64: number;
+        SINT32: number;
+        SINT64: number;
     }
 }

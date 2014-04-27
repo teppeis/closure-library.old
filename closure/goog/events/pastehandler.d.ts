@@ -1,25 +1,6 @@
 declare module goog.events {
 
     /**
-     * The types of events fired by this class.
-     * @enum {string}
-     */
-    export interface EventType {
-        PASTE: string;
-        AFTER_PASTE: string;
-    }
-
-    /**
-     * The states that this class can be found, on the paste detection algorithm.
-     * @enum {string}
-     */
-    export interface State {
-        INIT: string;
-        FOCUSED: string;
-        TYPING: string;
-    }
-
-    /**
      * A paste event detector. Gets an {@code element} as parameter and fires
      * {@code goog.events.PasteHandler.EventType.PASTE} events when text is
      * pasted in the {@code element}. Uses heuristics to detect paste events in FF2.
@@ -54,5 +35,27 @@ declare module goog.events {
          * @template T
          */
         getEventHandler<T>(): goog.events.EventHandler<T>;
+    }
+}
+
+declare module goog.events.PasteHandler {
+
+    /**
+     * The types of events fired by this class.
+     * @enum {string}
+     */
+    export interface EventType {
+        PASTE: string;
+        AFTER_PASTE: string;
+    }
+
+    /**
+     * The states that this class can be found, on the paste detection algorithm.
+     * @enum {string}
+     */
+    export interface State {
+        INIT: string;
+        FOCUSED: string;
+        TYPING: string;
     }
 }

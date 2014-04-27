@@ -186,6 +186,9 @@ declare module goog.testing {
          */
         processResult(frame: goog.testing.MultiTestRunner.TestFrame): void;
     }
+}
+
+declare module goog.testing.MultiTestRunner {
 
     /**
      * Class used to manage the interaction with a single iframe.
@@ -199,5 +202,31 @@ declare module goog.testing {
      */
     export class TestFrame extends goog.ui.Component {
         constructor(basePath: string, timeoutMs: number, verbosePasses: boolean, opt_domHelper?: goog.dom.DomHelper);
+        
+        /**
+         * Runs a test file in this test frame.
+         * @param {string} testFile The test to run.
+         */
+        runTest(testFile: string): void;
+        
+        /**
+         * @return {string} The test file the TestFrame is running.
+         */
+        getTestFile(): string;
+        
+        /**
+         * @return {!Object} Stats about the test run.
+         */
+        getStats(): Object;
+        
+        /**
+         * @return {string} The report for the test run.
+         */
+        getReport(): string;
+        
+        /**
+         * @return {?boolean} Whether the test frame had a success.
+         */
+        isSuccess(): boolean;
     }
 }

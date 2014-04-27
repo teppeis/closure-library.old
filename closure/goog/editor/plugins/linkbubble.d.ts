@@ -92,6 +92,9 @@ declare module goog.editor.plugins {
          */
         shouldOpenUrl(url: string): boolean;
     }
+}
+
+declare module goog.editor.plugins.LinkBubble {
 
     /**
      * Constructor for extra actions that can be added to the link bubble.

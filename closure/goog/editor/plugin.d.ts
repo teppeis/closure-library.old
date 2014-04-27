@@ -1,23 +1,6 @@
 declare module goog.editor {
 
     /**
-     * An enum of operations that plugins may support.
-     * @enum {number}
-     */
-    export interface Op {
-        KEYDOWN: number;
-        KEYPRESS: number;
-        KEYUP: number;
-        SELECTION: number;
-        SHORTCUT: number;
-        EXEC_COMMAND: number;
-        QUERY_COMMAND: number;
-        PREPARE_CONTENTS_HTML: number;
-        CLEAN_CONTENTS_HTML: number;
-        CLEAN_CONTENTS_DOM: number;
-    }
-
-    /**
      * Abstract API for trogedit plugins.
      * @constructor
      * @extends {goog.events.EventTarget}
@@ -284,5 +267,25 @@ declare module goog.editor {
          * @return {boolean} Whether the plugin handles this type of command.
          */
         isSupportedCommand(command: string): boolean;
+    }
+}
+
+declare module goog.editor.Plugin {
+
+    /**
+     * An enum of operations that plugins may support.
+     * @enum {number}
+     */
+    export interface Op {
+        KEYDOWN: number;
+        KEYPRESS: number;
+        KEYUP: number;
+        SELECTION: number;
+        SHORTCUT: number;
+        EXEC_COMMAND: number;
+        QUERY_COMMAND: number;
+        PREPARE_CONTENTS_HTML: number;
+        CLEAN_CONTENTS_HTML: number;
+        CLEAN_CONTENTS_DOM: number;
     }
 }

@@ -1,15 +1,6 @@
 declare module svgpan {
 
     /**
-     * @enum {string}
-     */
-    export interface State {
-        NONE: string;
-        PAN: string;
-        DRAG: string;
-    }
-
-    /**
      * Instantiates an SvgPan object.
      * @param {string=} opt_graphElementId The id of the graph element.
      * @param {Element=} opt_root An optional document root.
@@ -61,5 +52,17 @@ declare module svgpan {
          * @return {!svgpan.SvgPan.State}
          */
         getState(): svgpan.SvgPan.State;
+    }
+}
+
+declare module svgpan.SvgPan {
+
+    /**
+     * @enum {string}
+     */
+    export interface State {
+        NONE: string;
+        PAN: string;
+        DRAG: string;
     }
 }

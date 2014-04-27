@@ -1,17 +1,6 @@
 declare module goog.editor.plugins {
 
     /**
-     * Event types for the events dispatched by undo-redo manager.
-     * @enum {string}
-     */
-    export interface EventType {
-        STATE_CHANGE: string;
-        STATE_ADDED: string;
-        BEFORE_UNDO: string;
-        BEFORE_REDO: string;
-    }
-
-    /**
      * Manages undo and redo operations through a series of {@code UndoRedoState}s
      * maintained on undo and redo stacks.
      *
@@ -77,5 +66,19 @@ declare module goog.editor.plugins {
          *     the redo stack without removing it from the stack.
          */
         redoPeek(): goog.editor.plugins.UndoRedoState;
+    }
+}
+
+declare module goog.editor.plugins.UndoRedoManager {
+
+    /**
+     * Event types for the events dispatched by undo-redo manager.
+     * @enum {string}
+     */
+    export interface EventType {
+        STATE_CHANGE: string;
+        STATE_ADDED: string;
+        BEFORE_UNDO: string;
+        BEFORE_REDO: string;
     }
 }

@@ -108,6 +108,9 @@ declare module goog.testing {
          */
         enableDebugLogging(): void;
     }
+}
+
+declare module goog.testing.AsyncTestCase {
 
     /**
      * An exception class used solely for control flow.
@@ -117,14 +120,17 @@ declare module goog.testing {
      */
     export class ControlBreakingException {
         constructor(opt_message?: string);
+        
+        /**
+         * Return value for .toString().
+         * @type {string}
+         */
+        static TO_STRING: string;
+        
+        /**
+         * Marks this object as a ControlBreakingException
+         * @type {boolean}
+         */
+        isControlBreakingException: boolean;
     }
-}
-
-declare module goog.testing.AsyncTestCase.ControlBreakingException {
-
-    /**
-     * Return value for .toString().
-     * @type {string}
-     */
-    export var TO_STRING: string;
 }

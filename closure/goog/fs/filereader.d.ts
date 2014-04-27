@@ -1,31 +1,6 @@
 declare module goog.fs {
 
     /**
-     * Possible states for a FileReader.
-     *
-     * @enum {number}
-     */
-    export interface ReadyState {
-        INIT: number;
-        LOADING: number;
-        DONE: number;
-    }
-
-    /**
-     * Events emitted by a FileReader.
-     *
-     * @enum {string}
-     */
-    export interface EventType {
-        LOAD_START: string;
-        PROGRESS: string;
-        LOAD: string;
-        ABORT: string;
-        ERROR: string;
-        LOAD_END: string;
-    }
-
-    /**
      * An object for monitoring the reading of files. This emits ProgressEvents of
      * the types listed in {@link goog.fs.FileReader.EventType}.
      *
@@ -113,5 +88,33 @@ declare module goog.fs {
          *     If an error occurs, the errback is called with a {@link goog.fs.Error}.
          */
         static readAsDataUrl(blob: Blob): goog.async.Deferred;
+    }
+}
+
+declare module goog.fs.FileReader {
+
+    /**
+     * Possible states for a FileReader.
+     *
+     * @enum {number}
+     */
+    export interface ReadyState {
+        INIT: number;
+        LOADING: number;
+        DONE: number;
+    }
+
+    /**
+     * Events emitted by a FileReader.
+     *
+     * @enum {string}
+     */
+    export interface EventType {
+        LOAD_START: string;
+        PROGRESS: string;
+        LOAD: string;
+        ABORT: string;
+        ERROR: string;
+        LOAD_END: string;
     }
 }

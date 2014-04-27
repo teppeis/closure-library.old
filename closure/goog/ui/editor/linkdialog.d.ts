@@ -1,14 +1,6 @@
 declare module goog.ui.editor {
 
     /**
-     * Events specific to the link dialog.
-     * @enum {string}
-     */
-    export interface EventType {
-        BEFORE_TEST_LINK: string;
-    }
-
-    /**
      * A type of goog.ui.editor.AbstractDialog for editing/creating a link.
      * @param {goog.dom.DomHelper} domHelper DomHelper to be used to create the
      *     dialog's dom structure.
@@ -92,6 +84,17 @@ declare module goog.ui.editor {
          * @override
          */
         createOkEvent(): goog.ui.editor.LinkDialog.OkEvent;
+    }
+}
+
+declare module goog.ui.editor.LinkDialog {
+
+    /**
+     * Events specific to the link dialog.
+     * @enum {string}
+     */
+    export interface EventType {
+        BEFORE_TEST_LINK: string;
     }
 
     /**

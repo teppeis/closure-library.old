@@ -1,24 +1,6 @@
 declare module goog.date {
 
     /**
-     * Standard date range keys. Equivalent to the enum IDs in
-     * DateRange.java http://go/datarange.java
-     *
-     * @enum {string}
-     */
-    export interface StandardDateRangeKeys {
-        YESTERDAY: string;
-        TODAY: string;
-        LAST_7_DAYS: string;
-        THIS_MONTH: string;
-        LAST_MONTH: string;
-        THIS_WEEK: string;
-        LAST_WEEK: string;
-        LAST_BUSINESS_WEEK: string;
-        ALL_TIME: string;
-    }
-
-    /**
      * Constructs a date range.
      * @constructor
      * @param {goog.date.Date} startDate The first date in the range.
@@ -165,6 +147,27 @@ declare module goog.date {
          * @throws {Error} If no standard date range with that key exists.
          */
         static standardDateRange(dateRangeKey: string, opt_today?: goog.date.Date): goog.date.DateRange;
+    }
+}
+
+declare module goog.date.DateRange {
+
+    /**
+     * Standard date range keys. Equivalent to the enum IDs in
+     * DateRange.java http://go/datarange.java
+     *
+     * @enum {string}
+     */
+    export interface StandardDateRangeKeys {
+        YESTERDAY: string;
+        TODAY: string;
+        LAST_7_DAYS: string;
+        THIS_MONTH: string;
+        LAST_MONTH: string;
+        THIS_WEEK: string;
+        LAST_WEEK: string;
+        LAST_BUSINESS_WEEK: string;
+        ALL_TIME: string;
     }
 
     /**

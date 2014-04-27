@@ -33,6 +33,9 @@ declare module goog.storage {
          */
         getWrapper(key: string): Object;
     }
+}
+
+declare module goog.storage.RichStorage {
 
     /**
      * Wraps a value so metadata can be associated with it. You probably want
@@ -45,36 +48,33 @@ declare module goog.storage {
      */
     export class Wrapper {
         constructor(value: any);
+        
+        /**
+         * Convenience method for wrapping a value so metadata can be associated with
+         * it. No-op if the value is already wrapped or is undefined.
+         *
+         * @param {*} value The value to wrap.
+         * @return {(!goog.storage.RichStorage.Wrapper|undefined)} The wrapper.
+         */
+        static wrapIfNecessary(value: any): goog.storage.RichStorage.Wrapper;
+        
+        /**
+         * Unwraps a value, any metadata is discarded (not returned). You might want to
+         * use goog.storage.RichStorage.Wrapper.unwrapIfPossible to handle cases where
+         * the wrapper is missing.
+         *
+         * @param {!Object} wrapper The wrapper.
+         * @return {*} The wrapped value.
+         */
+        static unwrap(wrapper: Object): any;
+        
+        /**
+         * Convenience method for unwrapping a value. Returns undefined if the
+         * wrapper is missing.
+         *
+         * @param {(!Object|undefined)} wrapper The wrapper.
+         * @return {*} The wrapped value or undefined.
+         */
+        static unwrapIfPossible(wrapper: Object): any;
     }
-}
-
-declare module goog.storage.RichStorage.Wrapper {
-
-    /**
-     * Convenience method for wrapping a value so metadata can be associated with
-     * it. No-op if the value is already wrapped or is undefined.
-     *
-     * @param {*} value The value to wrap.
-     * @return {(!goog.storage.RichStorage.Wrapper|undefined)} The wrapper.
-     */
-    export function wrapIfNecessary(value: any): goog.storage.RichStorage.Wrapper;
-
-    /**
-     * Unwraps a value, any metadata is discarded (not returned). You might want to
-     * use goog.storage.RichStorage.Wrapper.unwrapIfPossible to handle cases where
-     * the wrapper is missing.
-     *
-     * @param {!Object} wrapper The wrapper.
-     * @return {*} The wrapped value.
-     */
-    export function unwrap(wrapper: Object): any;
-
-    /**
-     * Convenience method for unwrapping a value. Returns undefined if the
-     * wrapper is missing.
-     *
-     * @param {(!Object|undefined)} wrapper The wrapper.
-     * @return {*} The wrapped value or undefined.
-     */
-    export function unwrapIfPossible(wrapper: Object): any;
 }

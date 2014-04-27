@@ -1,17 +1,6 @@
 declare module goog.net {
 
     /**
-     * The events fired by the web socket.
-     * @enum {string} The event types for the web socket.
-     */
-    export interface EventType {
-        CLOSED: string;
-        ERROR: string;
-        MESSAGE: string;
-        OPENED: string;
-    }
-
-    /**
      * Class encapsulating the logic for using a WebSocket.
      *
      * @param {boolean=} opt_autoReconnect True if the web socket should
@@ -72,6 +61,20 @@ declare module goog.net {
          * @return {boolean} True if the web socket is open, false otherwise.
          */
         isOpen(): boolean;
+    }
+}
+
+declare module goog.net.WebSocket {
+
+    /**
+     * The events fired by the web socket.
+     * @enum {string} The event types for the web socket.
+     */
+    export interface EventType {
+        CLOSED: string;
+        ERROR: string;
+        MESSAGE: string;
+        OPENED: string;
     }
 
     /**

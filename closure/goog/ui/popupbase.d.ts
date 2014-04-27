@@ -1,27 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Constants for type of Popup
-     * @enum {string}
-     */
-    export interface Type {
-        TOGGLE_DISPLAY: string;
-        MOVE_OFFSCREEN: string;
-    }
-
-    /**
-     * Constants for event type fired by Popup
-     *
-     * @enum {string}
-     */
-    export interface EventType {
-        BEFORE_SHOW: string;
-        SHOW: string;
-        BEFORE_HIDE: string;
-        HIDE: string;
-    }
-
-    /**
      * The PopupBase class provides functionality for showing and hiding a generic
      * container element. It also provides the option for hiding the popup element
      * if the user clicks outside the popup or the popup loses focus.
@@ -272,5 +251,29 @@ declare module goog.ui {
          * @suppress {underscore|visibility}
          */
         onHide_(opt_target?: Object): void;
+    }
+}
+
+declare module goog.ui.PopupBase {
+
+    /**
+     * Constants for type of Popup
+     * @enum {string}
+     */
+    export interface Type {
+        TOGGLE_DISPLAY: string;
+        MOVE_OFFSCREEN: string;
+    }
+
+    /**
+     * Constants for event type fired by Popup
+     *
+     * @enum {string}
+     */
+    export interface EventType {
+        BEFORE_SHOW: string;
+        SHOW: string;
+        BEFORE_HIDE: string;
+        HIDE: string;
     }
 }

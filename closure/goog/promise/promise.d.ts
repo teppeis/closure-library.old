@@ -183,6 +183,9 @@ declare module goog {
          */
         static setUnhandledRejectionHandler(handler: (arg0: any) => any): void;
     }
+}
+
+declare module goog.Promise {
 
     /**
      * Error used as a rejection reason for canceled Promises.

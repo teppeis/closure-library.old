@@ -1,31 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Event types used to listen for dragging events. Note that extent drag events
-     * are also sent for single-thumb sliders, since the one thumb controls both
-     * value and extent together; in this case, they can simply be ignored.
-     * @enum {string}
-     */
-    export interface EventType {
-        DRAG_VALUE_START: string;
-        DRAG_VALUE_END: string;
-        DRAG_EXTENT_START: string;
-        DRAG_EXTENT_END: string;
-        DRAG_START: string;
-        DRAG_END: string;
-    }
-
-    /**
-     * Enum for representing the orientation of the slider.
-     *
-     * @enum {string}
-     */
-    export interface Orientation {
-        VERTICAL: string;
-        HORIZONTAL: string;
-    }
-
-    /**
      * This creates a SliderBase object.
      * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
      * @param {(function(number):?string)=} opt_labelFn An optional function mapping
@@ -360,6 +335,34 @@ declare module goog.ui {
          */
         getTextValue(): string;
     }
+}
+
+declare module goog.ui.SliderBase {
+
+    /**
+     * Event types used to listen for dragging events. Note that extent drag events
+     * are also sent for single-thumb sliders, since the one thumb controls both
+     * value and extent together; in this case, they can simply be ignored.
+     * @enum {string}
+     */
+    export interface EventType {
+        DRAG_VALUE_START: string;
+        DRAG_VALUE_END: string;
+        DRAG_EXTENT_START: string;
+        DRAG_EXTENT_END: string;
+        DRAG_START: string;
+        DRAG_END: string;
+    }
+
+    /**
+     * Enum for representing the orientation of the slider.
+     *
+     * @enum {string}
+     */
+    export interface Orientation {
+        VERTICAL: string;
+        HORIZONTAL: string;
+    }
 
     /**
      * The factory for creating additional animations to be played when animating to
@@ -367,5 +370,15 @@ declare module goog.ui {
      * @interface
      */
     export interface AnimationFactory {
+        
+        /**
+         * Creates an additonal animation to play when animating to a new value.
+         *
+         * @param {number} previousValue The previous value (before animation).
+         * @param {number} newValue The new value (after animation).
+         * @param {number} interval The animation interval.
+         * @return {!Array.<!goog.fx.TransitionBase>} The additional animations to play.
+         */
+        createAnimations(previousValue: number, newValue: number, interval: number): Array<goog.fx.TransitionBase>;
     }
 }

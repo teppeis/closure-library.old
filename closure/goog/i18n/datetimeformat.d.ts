@@ -1,25 +1,6 @@
 declare module goog.i18n {
 
     /**
-     * Enum to identify predefined Date/Time format pattern.
-     * @enum {number}
-     */
-    export interface Format {
-        FULL_DATE: number;
-        LONG_DATE: number;
-        MEDIUM_DATE: number;
-        SHORT_DATE: number;
-        FULL_TIME: number;
-        LONG_TIME: number;
-        MEDIUM_TIME: number;
-        SHORT_TIME: number;
-        FULL_DATETIME: number;
-        LONG_DATETIME: number;
-        MEDIUM_DATETIME: number;
-        SHORT_DATETIME: number;
-    }
-
-    /**
      * Construct a DateTimeFormat object based on current locale.
      * @constructor
      * @param {string|number} pattern pattern specification or pattern type.
@@ -52,5 +33,27 @@ declare module goog.i18n {
          * @return {string} localized string, potentially using native digits.
          */
         static localizeNumbers(input: number, opt_dateTimeSymbols?: Object): string;
+    }
+}
+
+declare module goog.i18n.DateTimeFormat {
+
+    /**
+     * Enum to identify predefined Date/Time format pattern.
+     * @enum {number}
+     */
+    export interface Format {
+        FULL_DATE: number;
+        LONG_DATE: number;
+        MEDIUM_DATE: number;
+        SHORT_DATE: number;
+        FULL_TIME: number;
+        LONG_TIME: number;
+        MEDIUM_TIME: number;
+        SHORT_TIME: number;
+        FULL_DATETIME: number;
+        LONG_DATETIME: number;
+        MEDIUM_DATETIME: number;
+        SHORT_DATETIME: number;
     }
 }

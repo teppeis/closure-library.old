@@ -71,6 +71,9 @@ declare module goog.net {
          */
         abort(id: string, opt_force?: boolean): void;
     }
+}
+
+declare module goog.net.XhrManager {
 
     /**
      * An event dispatched by XhrManager.
@@ -112,5 +115,99 @@ declare module goog.net {
      */
     export class Request {
         constructor(url: string, xhrEventCallback: Function, opt_method?: string, opt_content?: ArrayBuffer, opt_headers?: Object, opt_callback?: Function, opt_maxRetries?: number, opt_responseType?: goog.net.XhrIo.ResponseType);
+        
+        /**
+         * Gets the uri.
+         * @return {string} The uri to make the request to.
+         */
+        getUrl(): string;
+        
+        /**
+         * Gets the send method.
+         * @return {string} The send method.
+         */
+        getMethod(): string;
+        
+        /**
+         * Gets the post data.
+         * @return {ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string|undefined}
+         *     The post data.
+         */
+        getContent(): ArrayBuffer;
+        
+        /**
+         * Gets the map of headers.
+         * @return {Object|goog.structs.Map} The map of headers.
+         */
+        getHeaders(): Object;
+        
+        /**
+         * Gets the maximum number of times the request should be retried.
+         * @return {number} The maximum number of times the request should be retried.
+         */
+        getMaxRetries(): number;
+        
+        /**
+         * Gets the number of attempts so far.
+         * @return {number} The number of attempts so far.
+         */
+        getAttemptCount(): number;
+        
+        /**
+         * Increases the number of attempts so far.
+         */
+        increaseAttemptCount(): void;
+        
+        /**
+         * Returns whether the request has reached the maximum number of retries.
+         * @return {boolean} Whether the request has reached the maximum number of
+         *     retries.
+         */
+        hasReachedMaxRetries(): boolean;
+        
+        /**
+         * Sets the completed status.
+         * @param {boolean} complete The completed status.
+         */
+        setCompleted(complete: boolean): void;
+        
+        /**
+         * Gets the completed status.
+         * @return {boolean} The completed status.
+         */
+        getCompleted(): boolean;
+        
+        /**
+         * Sets the aborted status.
+         * @param {boolean} aborted True if the request was aborted, otherwise False.
+         */
+        setAborted(aborted: boolean): void;
+        
+        /**
+         * Gets the aborted status.
+         * @return {boolean} True if request was aborted, otherwise False.
+         */
+        getAborted(): boolean;
+        
+        /**
+         * Gets the callback attached to the events of the XhrIo object.
+         * @return {Function} The callback attached to the events of the
+         *     XhrIo object.
+         */
+        getXhrEventCallback(): Function;
+        
+        /**
+         * Gets the callback for when the request is complete.
+         * @return {Function|undefined} The callback for when the request is complete.
+         */
+        getCompleteCallback(): Function;
+        
+        /**
+         * Gets the response type that will be set on this request's XhrIo when it's
+         * available.
+         * @return {!goog.net.XhrIo.ResponseType} The response type to be set
+         *     when an XhrIo becomes available to this request.
+         */
+        getResponseType(): goog.net.XhrIo.ResponseType;
     }
 }

@@ -1,27 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Enum for representing an element corner for positioning the popup.
-     *
-     * @enum {number}
-     *
-     * @deprecated Use {@link goog.positioning.Corner} instead, this alias will be
-     *     removed at the end of Q1 2009.
-     */
-    export interface Corner extends goog.positioning.Corner {}
-
-    /**
-     * Enum for representing position handling in cases where the element would be
-     * positioned outside the viewport.
-     *
-     * @enum {number}
-     *
-     * @deprecated Use {@link goog.positioning.Overflow} instead, this alias will be
-     *     removed at the end of Q1 2009.
-     */
-    export interface Overflow extends goog.positioning.Overflow {}
-
-    /**
      * The Popup class provides functionality for displaying an absolutely
      * positioned element at a particular location in the window. It's designed to
      * be used as the foundation for building controls like a menu or tooltip. The
@@ -91,6 +70,30 @@ declare module goog.ui {
          */
         reposition(): void;
     }
+}
+
+declare module goog.ui.Popup {
+
+    /**
+     * Enum for representing an element corner for positioning the popup.
+     *
+     * @enum {number}
+     *
+     * @deprecated Use {@link goog.positioning.Corner} instead, this alias will be
+     *     removed at the end of Q1 2009.
+     */
+    export interface Corner extends goog.positioning.Corner {}
+
+    /**
+     * Enum for representing position handling in cases where the element would be
+     * positioned outside the viewport.
+     *
+     * @enum {number}
+     *
+     * @deprecated Use {@link goog.positioning.Overflow} instead, this alias will be
+     *     removed at the end of Q1 2009.
+     */
+    export interface Overflow extends goog.positioning.Overflow {}
 
     /**
      * Encapsulates a popup position where the popup is anchored at a corner of

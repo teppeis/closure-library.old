@@ -1,14 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Constants for event names.
-     * @enum {string}
-     */
-    export interface EventType {
-        CHANGE: string;
-    }
-
-    /**
      * Create a new, empty color picker.
      *
      * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
@@ -146,5 +138,16 @@ declare module goog.ui {
          * @return {!goog.ui.ColorPicker} The unrendered instance.
          */
         static createSimpleColorGrid(opt_domHelper?: goog.dom.DomHelper): goog.ui.ColorPicker;
+    }
+}
+
+declare module goog.ui.ColorPicker {
+
+    /**
+     * Constants for event names.
+     * @enum {string}
+     */
+    export interface EventType {
+        CHANGE: string;
     }
 }

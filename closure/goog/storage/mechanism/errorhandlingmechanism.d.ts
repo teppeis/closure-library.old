@@ -1,16 +1,6 @@
 declare module goog.storage.mechanism {
 
     /**
-     * Valid storage mechanism operations.
-     * @enum {string}
-     */
-    export interface Operation {
-        SET: string;
-        GET: string;
-        REMOVE: string;
-    }
-
-    /**
      * A function that handles errors raised in goog.storage.  Since some places in
      * the goog.storage codebase throw strings instead of Error objects, we accept
      * these as a valid parameter type.  It supports the following arguments:
@@ -44,5 +34,18 @@ declare module goog.storage.mechanism {
      */
     export class ErrorHandlingMechanism extends goog.storage.mechanism.Mechanism {
         constructor(mechanism: goog.storage.mechanism.Mechanism, errorHandler: goog.storage.mechanism.ErrorHandlingMechanism.ErrorHandler);
+    }
+}
+
+declare module goog.storage.mechanism.ErrorHandlingMechanism {
+
+    /**
+     * Valid storage mechanism operations.
+     * @enum {string}
+     */
+    export interface Operation {
+        SET: string;
+        GET: string;
+        REMOVE: string;
     }
 }

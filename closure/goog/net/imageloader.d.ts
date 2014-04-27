@@ -1,19 +1,6 @@
 declare module goog.net {
 
     /**
-     * The type of image request to dispatch, if this is a CORS-enabled image
-     * request. CORS-enabled images can be reused in canvas elements without them
-     * being tainted. The server hosting the image should include the appropriate
-     * CORS header.
-     * @see https://developer.mozilla.org/en-US/docs/HTML/CORS_Enabled_Image
-     * @enum {string}
-     */
-    export interface CorsRequestType {
-        ANONYMOUS: string;
-        USE_CREDENTIALS: string;
-    }
-
-    /**
      * Image loader utility class.  Raises a {@link goog.events.EventType.LOAD}
      * event for each image loaded, with an {@link Image} object as the target of
      * the event, normalized to have {@code naturalHeight} and {@code naturalWidth}
@@ -72,5 +59,21 @@ declare module goog.net {
          * images have finished loading.
          */
         start(): void;
+    }
+}
+
+declare module goog.net.ImageLoader {
+
+    /**
+     * The type of image request to dispatch, if this is a CORS-enabled image
+     * request. CORS-enabled images can be reused in canvas elements without them
+     * being tainted. The server hosting the image should include the appropriate
+     * CORS header.
+     * @see https://developer.mozilla.org/en-US/docs/HTML/CORS_Enabled_Image
+     * @enum {string}
+     */
+    export interface CorsRequestType {
+        ANONYMOUS: string;
+        USE_CREDENTIALS: string;
     }
 }

@@ -1,6 +1,24 @@
 declare module goog.fs {
 
     /**
+     * A filesystem error. Since the filesystem API is asynchronous, stack traces
+     * are less useful for identifying where errors come from, so this includes a
+     * large amount of metadata in the message.
+     *
+     * @param {!DOMError} error
+     * @param {string} action The action being undertaken when the error was raised.
+     * @constructor
+     * @extends {goog.debug.Error}
+     * @final
+     */
+    export class Error extends goog.debug.Error {
+        constructor(error: DOMError, action: string);
+    }
+}
+
+declare module goog.fs.Error {
+
+    /**
      * Names of errors that may be thrown by the File API, the File System API, or
      * the File Writer API.
      *
@@ -44,20 +62,5 @@ declare module goog.fs {
         QUOTA_EXCEEDED: number;
         TYPE_MISMATCH: number;
         PATH_EXISTS: number;
-    }
-
-    /**
-     * A filesystem error. Since the filesystem API is asynchronous, stack traces
-     * are less useful for identifying where errors come from, so this includes a
-     * large amount of metadata in the message.
-     *
-     * @param {!DOMError} error
-     * @param {string} action The action being undertaken when the error was raised.
-     * @constructor
-     * @extends {goog.debug.Error}
-     * @final
-     */
-    export class Error extends goog.debug.Error {
-        constructor(error: DOMError, action: string);
     }
 }

@@ -1,12 +1,6 @@
 declare module goog.testing.net {
 
     /**
-     * Alias this enum here to make mocking of goog.net.XhrIo easier.
-     * @enum {string}
-     */
-    export interface ResponseType extends goog.net.XhrIo.ResponseType {}
-
-    /**
      * Mock implementation of goog.net.XhrIo. This doesn't provide a mock
      * implementation for all cases, but it's not too hard to add them as needed.
      * @param {goog.testing.TestQueue=} opt_testQueue Test queue for inserting test
@@ -296,4 +290,13 @@ declare module goog.testing.net {
          */
         getResponseHeaders(): Object;
     }
+}
+
+declare module goog.testing.net.XhrIo {
+
+    /**
+     * Alias this enum here to make mocking of goog.net.XhrIo easier.
+     * @enum {string}
+     */
+    export interface ResponseType extends goog.net.XhrIo.ResponseType {}
 }

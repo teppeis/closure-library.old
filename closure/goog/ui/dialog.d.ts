@@ -1,42 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Events dispatched by dialogs.
-     * @enum {string}
-     */
-    export interface EventType {
-        SELECT: string;
-        AFTER_HIDE: string;
-        AFTER_SHOW: string;
-    }
-
-    /**
-     * The keys used to identify standard buttons in events.
-     * @enum {string}
-     */
-    export interface DefaultButtonKeys {
-        OK: string;
-        CANCEL: string;
-        YES: string;
-        NO: string;
-        SAVE: string;
-        CONTINUE: string;
-    }
-
-    /**
-     * The default captions for the default buttons.
-     * @enum {string}
-     */
-    export interface DefaultButtonCaptions {
-        OK: string;
-        CANCEL: string;
-        YES: string;
-        NO: string;
-        SAVE: string;
-        CONTINUE: string;
-    }
-
-    /**
      * Class for showing simple dialog boxes.
      * The Html structure of the dialog box is:
      * <pre>
@@ -302,6 +266,45 @@ declare module goog.ui {
          */
         getButtonSet(): goog.ui.Dialog.ButtonSet;
     }
+}
+
+declare module goog.ui.Dialog {
+
+    /**
+     * Events dispatched by dialogs.
+     * @enum {string}
+     */
+    export interface EventType {
+        SELECT: string;
+        AFTER_HIDE: string;
+        AFTER_SHOW: string;
+    }
+
+    /**
+     * The keys used to identify standard buttons in events.
+     * @enum {string}
+     */
+    export interface DefaultButtonKeys {
+        OK: string;
+        CANCEL: string;
+        YES: string;
+        NO: string;
+        SAVE: string;
+        CONTINUE: string;
+    }
+
+    /**
+     * The default captions for the default buttons.
+     * @enum {string}
+     */
+    export interface DefaultButtonCaptions {
+        OK: string;
+        CANCEL: string;
+        YES: string;
+        NO: string;
+        SAVE: string;
+        CONTINUE: string;
+    }
 
     /**
      * Dialog event class.
@@ -324,6 +327,156 @@ declare module goog.ui {
      */
     export class ButtonSet extends goog.structs.Map {
         constructor(opt_domHelper?: goog.dom.DomHelper);
+        
+        /**
+         * Adds a button to the button set.  Buttons will be displayed in the order they
+         * are added.
+         *
+         * @param {*} key Key used to identify the button in events.
+         * @param {*} caption A string caption or a DOM node that can be
+         *     appended to a button element.
+         * @param {boolean=} opt_isDefault Whether this button is the default button,
+         *     Dialog will dispatch for this button if enter is pressed.
+         * @param {boolean=} opt_isCancel Whether this button has the same behaviour as
+         *    cancel.  If escape is pressed this button will fire.
+         * @return {!goog.ui.Dialog.ButtonSet} The button set, to make it easy to chain
+         *    "set" calls and build new ButtonSets.
+         * @override
+         */
+        set(key: any, caption: any, opt_isDefault?: boolean, opt_isCancel?: boolean): goog.ui.Dialog.ButtonSet;
+        
+        /**
+         * Adds a button (an object with a key and caption) to this button set. Buttons
+         * will be displayed in the order they are added.
+         * @see goog.ui.Dialog.DefaultButtons
+         * @param {!{key: string, caption: string}} button The button key and caption.
+         * @param {boolean=} opt_isDefault Whether this button is the default button.
+         *     Dialog will dispatch for this button if enter is pressed.
+         * @param {boolean=} opt_isCancel Whether this button has the same behavior as
+         *     cancel. If escape is pressed this button will fire.
+         * @return {!goog.ui.Dialog.ButtonSet} The button set, to make it easy to chain
+         *     "addButton" calls and build new ButtonSets.
+         */
+        addButton(button: {key: string; caption: string}, opt_isDefault?: boolean, opt_isCancel?: boolean): goog.ui.Dialog.ButtonSet;
+        
+        /**
+         * Attaches the button set to an element, rendering it inside.
+         * @param {Element} el Container.
+         */
+        attachToElement(el: Element): void;
+        
+        /**
+         * Renders the button set inside its container element.
+         */
+        render(): void;
+        
+        /**
+         * Decorates the given element by adding any {@code button} elements found
+         * among its descendants to the button set.  The first button found is assumed
+         * to be the default and will receive focus when the button set is rendered.
+         * If a button with a name of {@link goog.ui.Dialog.DefaultButtonKeys.CANCEL}
+         * is found, it is assumed to have "Cancel" semantics.
+         * TODO(attila):  ButtonSet should be a goog.ui.Component.  Really.
+         * @param {Element} element The element to decorate; should contain buttons.
+         */
+        decorate(element: Element): void;
+        
+        /**
+         * Gets the component's element.
+         * @return {Element} The element for the component.
+         * TODO(user): Remove after refactoring to goog.ui.Component.
+         */
+        getElement(): Element;
+        
+        /**
+         * Returns the dom helper that is being used on this component.
+         * @return {!goog.dom.DomHelper} The dom helper used on this component.
+         * TODO(user): Remove after refactoring to goog.ui.Component.
+         */
+        getDomHelper(): goog.dom.DomHelper;
+        
+        /**
+         * Sets the default button.
+         * @param {?string} key The default button.
+         */
+        setDefault(key: string): void;
+        
+        /**
+         * Returns the default button.
+         * @return {?string} The default button.
+         */
+        getDefault(): string;
+        
+        /**
+         * Sets the cancel button.
+         * @param {?string} key The cancel button.
+         */
+        setCancel(key: string): void;
+        
+        /**
+         * Returns the cancel button.
+         * @return {?string} The cancel button.
+         */
+        getCancel(): string;
+        
+        /**
+         * Returns the HTML Button element.
+         * @param {string} key The button to return.
+         * @return {Element} The button, if found else null.
+         */
+        getButton(key: string): Element;
+        
+        /**
+         * Returns all the HTML Button elements in the button set container.
+         * @return {!NodeList} A live NodeList of the buttons.
+         */
+        getAllButtons(): NodeList;
+        
+        /**
+         * Enables or disables a button in this set by key. If the button is not found,
+         * does nothing.
+         * @param {string} key The button to enable or disable.
+         * @param {boolean} enabled True to enable; false to disable.
+         */
+        setButtonEnabled(key: string, enabled: boolean): void;
+        
+        /**
+         * Enables or disables all of the buttons in this set.
+         * @param {boolean} enabled True to enable; false to disable.
+         */
+        setAllButtonsEnabled(enabled: boolean): void;
+        
+        /**
+         * Creates a new ButtonSet with a single 'OK' button, which is also set with
+         * cancel button semantics so that pressing escape will close the dialog.
+         * @return {!goog.ui.Dialog.ButtonSet} The created ButtonSet.
+         */
+        static createOk(): goog.ui.Dialog.ButtonSet;
+        
+        /**
+         * Creates a new ButtonSet with 'OK' (default) and 'Cancel' buttons.
+         * @return {!goog.ui.Dialog.ButtonSet} The created ButtonSet.
+         */
+        static createOkCancel(): goog.ui.Dialog.ButtonSet;
+        
+        /**
+         * Creates a new ButtonSet with 'Yes' (default) and 'No' buttons.
+         * @return {!goog.ui.Dialog.ButtonSet} The created ButtonSet.
+         */
+        static createYesNo(): goog.ui.Dialog.ButtonSet;
+        
+        /**
+         * Creates a new ButtonSet with 'Yes', 'No' (default), and 'Cancel' buttons.
+         * @return {!goog.ui.Dialog.ButtonSet} The created ButtonSet.
+         */
+        static createYesNoCancel(): goog.ui.Dialog.ButtonSet;
+        
+        /**
+         * Creates a new ButtonSet with 'Continue', 'Save', and 'Cancel' (default)
+         * buttons.
+         * @return {!goog.ui.Dialog.ButtonSet} The created ButtonSet.
+         */
+        static createContinueSaveCancel(): goog.ui.Dialog.ButtonSet;
     }
 }
 
@@ -341,36 +494,4 @@ declare module goog.ui.Dialog.ButtonSet {
         SAVE: {key: string; caption: string};
         CONTINUE: {key: string; caption: string};
     }
-
-    /**
-     * Creates a new ButtonSet with a single 'OK' button, which is also set with
-     * cancel button semantics so that pressing escape will close the dialog.
-     * @return {!goog.ui.Dialog.ButtonSet} The created ButtonSet.
-     */
-    export function createOk(): goog.ui.Dialog.ButtonSet;
-
-    /**
-     * Creates a new ButtonSet with 'OK' (default) and 'Cancel' buttons.
-     * @return {!goog.ui.Dialog.ButtonSet} The created ButtonSet.
-     */
-    export function createOkCancel(): goog.ui.Dialog.ButtonSet;
-
-    /**
-     * Creates a new ButtonSet with 'Yes' (default) and 'No' buttons.
-     * @return {!goog.ui.Dialog.ButtonSet} The created ButtonSet.
-     */
-    export function createYesNo(): goog.ui.Dialog.ButtonSet;
-
-    /**
-     * Creates a new ButtonSet with 'Yes', 'No' (default), and 'Cancel' buttons.
-     * @return {!goog.ui.Dialog.ButtonSet} The created ButtonSet.
-     */
-    export function createYesNoCancel(): goog.ui.Dialog.ButtonSet;
-
-    /**
-     * Creates a new ButtonSet with 'Continue', 'Save', and 'Cancel' (default)
-     * buttons.
-     * @return {!goog.ui.Dialog.ButtonSet} The created ButtonSet.
-     */
-    export function createContinueSaveCancel(): goog.ui.Dialog.ButtonSet;
 }

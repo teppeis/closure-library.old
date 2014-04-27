@@ -1,24 +1,6 @@
 declare module goog.labs.style {
 
     /**
-     * The two different pixel density modes on which the various ratios between
-     * physical and device pixels are mapped.
-     * @enum {number}
-     */
-    export interface Density {
-        NORMAL: number;
-        HIGH: number;
-    }
-
-    /**
-     * The events fired by the PixelDensityMonitor.
-     * @enum {string}
-     */
-    export interface EventType {
-        CHANGE: string;
-    }
-
-    /**
      * Monitors the window for changes to the ratio between device and screen
      * pixels, e.g. when the user moves the window from a high density screen to a
      * screen with normal density. Dispatches
@@ -50,5 +32,26 @@ declare module goog.labs.style {
          *     window.
          */
         getDensity(): goog.labs.style.PixelDensityMonitor.Density;
+    }
+}
+
+declare module goog.labs.style.PixelDensityMonitor {
+
+    /**
+     * The two different pixel density modes on which the various ratios between
+     * physical and device pixels are mapped.
+     * @enum {number}
+     */
+    export interface Density {
+        NORMAL: number;
+        HIGH: number;
+    }
+
+    /**
+     * The events fired by the PixelDensityMonitor.
+     * @enum {string}
+     */
+    export interface EventType {
+        CHANGE: string;
     }
 }

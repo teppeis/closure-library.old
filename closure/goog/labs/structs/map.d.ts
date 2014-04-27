@@ -1,15 +1,6 @@
 declare module goog.labs.structs {
 
     /**
-     * Browser feature enum necessary for map.
-     * @enum {boolean}
-     */
-    export interface BrowserFeature {
-        OBJECT_CREATE_SUPPORTED: boolean;
-        OBJECT_KEYS_SUPPORTED: boolean;
-    }
-
-    /**
      * Creates a new map.
      * @constructor
      * @struct
@@ -102,5 +93,17 @@ declare module goog.labs.structs {
          * @return {!goog.labs.structs.Map} The clone of this map.
          */
         clone(): goog.labs.structs.Map;
+    }
+}
+
+declare module goog.labs.structs.Map {
+
+    /**
+     * Browser feature enum necessary for map.
+     * @enum {boolean}
+     */
+    export interface BrowserFeature {
+        OBJECT_CREATE_SUPPORTED: boolean;
+        OBJECT_KEYS_SUPPORTED: boolean;
     }
 }

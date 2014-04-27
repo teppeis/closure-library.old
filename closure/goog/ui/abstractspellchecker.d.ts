@@ -1,25 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Constants for representing the direction while navigating.
-     *
-     * @enum {number}
-     */
-    export interface Direction {
-        PREVIOUS: number;
-        NEXT: number;
-    }
-
-    /**
-     * Constants for the result of asynchronous processing.
-     * @enum {number}
-     */
-    export interface AsyncResult {
-        PENDING: number;
-        DONE: number;
-    }
-
-    /**
      * Abstract base class for spell checker editor implementations. Provides basic
      * functionality such as word lookup and caching.
      *
@@ -337,5 +318,27 @@ declare module goog.ui {
          * @protected
          */
         continueAsyncProcessing(): goog.ui.AbstractSpellChecker.AsyncResult;
+    }
+}
+
+declare module goog.ui.AbstractSpellChecker {
+
+    /**
+     * Constants for representing the direction while navigating.
+     *
+     * @enum {number}
+     */
+    export interface Direction {
+        PREVIOUS: number;
+        NEXT: number;
+    }
+
+    /**
+     * Constants for the result of asynchronous processing.
+     * @enum {number}
+     */
+    export interface AsyncResult {
+        PENDING: number;
+        DONE: number;
     }
 }

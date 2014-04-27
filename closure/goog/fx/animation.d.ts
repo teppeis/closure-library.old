@@ -1,29 +1,6 @@
 declare module goog.fx {
 
     /**
-     * Events fired by the animation.
-     * @enum {string}
-     */
-    export interface EventType {
-        PLAY: string;
-        BEGIN: string;
-        RESUME: string;
-        END: string;
-        STOP: string;
-        FINISH: string;
-        PAUSE: string;
-        ANIMATE: string;
-        DESTROY: string;
-    }
-
-    /**
-     * Enum for the possible states of an animation.
-     * @deprecated Use goog.fx.Transition.State instead.
-     * @enum {number}
-     */
-    export interface State extends goog.fx.TransitionBase.State {}
-
-    /**
      * Constructor for an animation object.
      * @param {Array.<number>} start Array for start coordinates.
      * @param {Array.<number>} end Array for end coordinates.
@@ -170,4 +147,30 @@ declare module goog.fx {
          */
         coordsAsInts(): Array<number>;
     }
+}
+
+declare module goog.fx.Animation {
+
+    /**
+     * Events fired by the animation.
+     * @enum {string}
+     */
+    export interface EventType {
+        PLAY: string;
+        BEGIN: string;
+        RESUME: string;
+        END: string;
+        STOP: string;
+        FINISH: string;
+        PAUSE: string;
+        ANIMATE: string;
+        DESTROY: string;
+    }
+
+    /**
+     * Enum for the possible states of an animation.
+     * @deprecated Use goog.fx.Transition.State instead.
+     * @enum {number}
+     */
+    export interface State extends goog.fx.TransitionBase.State {}
 }

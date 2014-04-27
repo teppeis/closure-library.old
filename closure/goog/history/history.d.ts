@@ -1,22 +1,6 @@
 declare module goog {
 
     /**
-     * Types of polling. The values are in ms of the polling interval.
-     * @enum {number}
-     */
-    export interface PollingType {
-        NORMAL: number;
-        LONG: number;
-    }
-
-    /**
-     * Constant for the history change event type.
-     * @enum {string}
-     * @deprecated Use goog.history.EventType.
-     */
-    export interface EventType extends goog.history.EventType {}
-
-    /**
      * A history management object. Can be instantiated in user-visible mode (uses
      * the address fragment to manage state) or in hidden mode. This object should
      * be created from a script in the document body before the document has
@@ -139,6 +123,25 @@ declare module goog {
          */
         replaceToken(token: string, opt_title?: string): void;
     }
+}
+
+declare module goog.History {
+
+    /**
+     * Types of polling. The values are in ms of the polling interval.
+     * @enum {number}
+     */
+    export interface PollingType {
+        NORMAL: number;
+        LONG: number;
+    }
+
+    /**
+     * Constant for the history change event type.
+     * @enum {string}
+     * @deprecated Use goog.history.EventType.
+     */
+    export interface EventType extends goog.history.EventType {}
 
     /**
      * Constant for the history change event type.

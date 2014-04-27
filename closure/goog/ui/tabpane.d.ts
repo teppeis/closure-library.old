@@ -1,18 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Enum for representing the location of the tabs in relation to the content.
-     *
-     * @enum {number}
-     */
-    export interface TabLocation {
-        TOP: number;
-        BOTTOM: number;
-        LEFT: number;
-        RIGHT: number;
-    }
-
-    /**
      * TabPane widget. All children already inside the tab pane container element
      * will be be converted to tabs. Each tab is represented by a goog.ui.TabPane.
      * TabPage object. Further pages can be constructed either from an existing
@@ -101,6 +89,35 @@ declare module goog.ui {
     }
 
     /**
+     * Object representing a tab pane page changed event.
+     *
+     * @param {string} type Event type.
+     * @param {goog.ui.TabPane} target Tab widget initiating event.
+     * @param {goog.ui.TabPane.TabPage} page Selected page in tab pane.
+     * @extends {goog.events.Event}
+     * @constructor
+     * @final
+     */
+    export class TabPaneEvent extends goog.events.Event {
+        constructor(type: string, target: goog.ui.TabPane, page: goog.ui.TabPane.TabPage);
+    }
+}
+
+declare module goog.ui.TabPane {
+
+    /**
+     * Enum for representing the location of the tabs in relation to the content.
+     *
+     * @enum {number}
+     */
+    export interface TabLocation {
+        TOP: number;
+        BOTTOM: number;
+        LEFT: number;
+        RIGHT: number;
+    }
+
+    /**
      * Object representing an individual tab pane.
      *
      * @param {Element=} opt_el Container element to create the pane out of.
@@ -113,19 +130,55 @@ declare module goog.ui {
      */
     export class TabPage {
         constructor(opt_el?: Element, opt_title?: Element, opt_domHelper?: goog.dom.DomHelper);
-    }
-
-    /**
-     * Object representing a tab pane page changed event.
-     *
-     * @param {string} type Event type.
-     * @param {goog.ui.TabPane} target Tab widget initiating event.
-     * @param {goog.ui.TabPane.TabPage} page Selected page in tab pane.
-     * @extends {goog.events.Event}
-     * @constructor
-     * @final
-     */
-    export class TabPaneEvent extends goog.events.Event {
-        constructor(type: string, target: goog.ui.TabPane, page: goog.ui.TabPane.TabPage);
+        
+        /**
+         * @return {string} The title for tab page.
+         */
+        getTitle(): string;
+        
+        /**
+         * Sets title for tab page.
+         *
+         * @param {string} title Title for tab page.
+         */
+        setTitle(title: string): void;
+        
+        /**
+         * @return {Element} The title element.
+         */
+        getTitleElement(): Element;
+        
+        /**
+         * @return {Element} The content element.
+         */
+        getContentElement(): Element;
+        
+        /**
+         * @return {?number} The index of page in tab pane.
+         */
+        getIndex(): number;
+        
+        /**
+         * @return {goog.ui.TabPane?} The parent tab pane for page.
+         */
+        getParent(): goog.ui.TabPane;
+        
+        /**
+         * Selects page in the associated tab pane.
+         */
+        select(): void;
+        
+        /**
+         * Sets the enabled state.
+         *
+         * @param {boolean} enabled Enabled state.
+         */
+        setEnabled(enabled: boolean): void;
+        
+        /**
+         * Returns if the page is enabled.
+         * @return {boolean} Whether the page is enabled or not.
+         */
+        isEnabled(): boolean;
     }
 }

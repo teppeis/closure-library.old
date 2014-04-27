@@ -57,6 +57,9 @@ declare module goog.result {
          */
         static fromPromise(promise: any): goog.result.Result;
     }
+}
+
+declare module goog.result.SimpleResult {
 
     /**
      * Error thrown if there is an attempt to set the value or error for this result

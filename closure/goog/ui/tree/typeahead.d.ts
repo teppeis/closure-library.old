@@ -1,17 +1,6 @@
 declare module goog.ui.tree {
 
     /**
-     * Enum for offset values that are used for ctrl-key navigation among the
-     * multiple matches of a given typeahead buffer.
-     *
-     * @enum {number}
-     */
-    export interface Offset {
-        DOWN: number;
-        UP: number;
-    }
-
-    /**
      * Constructs a TypeAhead object.
      * @constructor
      * @final
@@ -53,5 +42,19 @@ declare module goog.ui.tree {
          * Clears the typeahead buffer.
          */
         clear(): void;
+    }
+}
+
+declare module goog.ui.tree.TypeAhead {
+
+    /**
+     * Enum for offset values that are used for ctrl-key navigation among the
+     * multiple matches of a given typeahead buffer.
+     *
+     * @enum {number}
+     */
+    export interface Offset {
+        DOWN: number;
+        UP: number;
     }
 }

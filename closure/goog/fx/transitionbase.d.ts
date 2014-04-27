@@ -1,16 +1,6 @@
 declare module goog.fx {
 
     /**
-     * Enum for the possible states of an animation.
-     * @enum {number}
-     */
-    export interface State {
-        STOPPED: number;
-        PAUSED: number;
-        PLAYING: number;
-    }
-
-    /**
      * Constructor for a transition object.
      *
      * @constructor
@@ -137,5 +127,18 @@ declare module goog.fx {
          * @protected
          */
         dispatchAnimationEvent(type: string): void;
+    }
+}
+
+declare module goog.fx.TransitionBase {
+
+    /**
+     * Enum for the possible states of an animation.
+     * @enum {number}
+     */
+    export interface State {
+        STOPPED: number;
+        PAUSED: number;
+        PLAYING: number;
     }
 }

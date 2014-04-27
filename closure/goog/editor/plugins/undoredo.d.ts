@@ -1,15 +1,6 @@
 declare module goog.editor.plugins {
 
     /**
-     * Commands implemented by this plugin.
-     * @enum {string}
-     */
-    export interface COMMAND {
-        UNDO: string;
-        REDO: string;
-    }
-
-    /**
      * Encapsulates undo/redo logic using a custom undo stack (i.e. not browser
      * built-in). Browser built-in undo stacks are too flaky (e.g. IE's gets
      * clobbered on DOM modifications). Also, this allows interleaving non-editing
@@ -107,5 +98,17 @@ declare module goog.editor.plugins {
          * @param {goog.editor.Field} fieldObject The editable field.
          */
         refreshCurrentState(fieldObject: goog.editor.Field): void;
+    }
+}
+
+declare module goog.editor.plugins.UndoRedo {
+
+    /**
+     * Commands implemented by this plugin.
+     * @enum {string}
+     */
+    export interface COMMAND {
+        UNDO: string;
+        REDO: string;
     }
 }

@@ -384,6 +384,9 @@ declare module goog {
          */
         static haveSameDomain(uri1String: string, uri2String: string): boolean;
     }
+}
+
+declare module goog.Uri {
 
     /**
      * Class used to represent URI query parameters.  It is essentially a hash of
@@ -403,38 +406,164 @@ declare module goog {
      */
     export class QueryData {
         constructor(opt_query?: string, opt_uri?: goog.Uri, opt_ignoreCase?: boolean);
+        
+        /**
+         * Creates a new query data instance from a map of names and values.
+         *
+         * @param {!goog.structs.Map|!Object} map Map of string parameter
+         *     names to parameter value. If parameter value is an array, it is
+         *     treated as if the key maps to each individual value in the
+         *     array.
+         * @param {goog.Uri=} opt_uri URI object that should have its cache
+         *     invalidated when this object updates.
+         * @param {boolean=} opt_ignoreCase If true, ignore the case of the parameter
+         *     name in #get.
+         * @return {!goog.Uri.QueryData} The populated query data instance.
+         */
+        static createFromMap(map: goog.structs.Map, opt_uri?: goog.Uri, opt_ignoreCase?: boolean): goog.Uri.QueryData;
+        
+        /**
+         * Creates a new query data instance from parallel arrays of parameter names
+         * and values. Allows for duplicate parameter names. Throws an error if the
+         * lengths of the arrays differ.
+         *
+         * @param {Array.<string>} keys Parameter names.
+         * @param {Array} values Parameter values.
+         * @param {goog.Uri=} opt_uri URI object that should have its cache
+         *     invalidated when this object updates.
+         * @param {boolean=} opt_ignoreCase If true, ignore the case of the parameter
+         *     name in #get.
+         * @return {!goog.Uri.QueryData} The populated query data instance.
+         */
+        static createFromKeysValues(keys: Array<string>, values: Array<any>, opt_uri?: goog.Uri, opt_ignoreCase?: boolean): goog.Uri.QueryData;
+        
+        /**
+         * @return {?number} The number of parameters.
+         */
+        getCount(): number;
+        
+        /**
+         * Adds a key value pair.
+         * @param {string} key Name.
+         * @param {*} value Value.
+         * @return {!goog.Uri.QueryData} Instance of this object.
+         */
+        add(key: string, value: any): goog.Uri.QueryData;
+        
+        /**
+         * Removes all the params with the given key.
+         * @param {string} key Name.
+         * @return {boolean} Whether any parameter was removed.
+         */
+        remove(key: string): boolean;
+        
+        /**
+         * Clears the parameters.
+         */
+        clear(): void;
+        
+        /**
+         * @return {boolean} Whether we have any parameters.
+         */
+        isEmpty(): boolean;
+        
+        /**
+         * Whether there is a parameter with the given name
+         * @param {string} key The parameter name to check for.
+         * @return {boolean} Whether there is a parameter with the given name.
+         */
+        containsKey(key: string): boolean;
+        
+        /**
+         * Whether there is a parameter with the given value.
+         * @param {*} value The value to check for.
+         * @return {boolean} Whether there is a parameter with the given value.
+         */
+        containsValue(value: any): boolean;
+        
+        /**
+         * Returns all the keys of the parameters. If a key is used multiple times
+         * it will be included multiple times in the returned array
+         * @return {!Array.<string>} All the keys of the parameters.
+         */
+        getKeys(): Array<string>;
+        
+        /**
+         * Returns all the values of the parameters with the given name. If the query
+         * data has no such key this will return an empty array. If no key is given
+         * all values wil be returned.
+         * @param {string=} opt_key The name of the parameter to get the values for.
+         * @return {!Array} All the values of the parameters with the given name.
+         */
+        getValues(opt_key?: string): Array<any>;
+        
+        /**
+         * Sets a key value pair and removes all other keys with the same value.
+         *
+         * @param {string} key Name.
+         * @param {*} value Value.
+         * @return {!goog.Uri.QueryData} Instance of this object.
+         */
+        set(key: string, value: any): goog.Uri.QueryData;
+        
+        /**
+         * Returns the first value associated with the key. If the query data has no
+         * such key this will return undefined or the optional default.
+         * @param {string} key The name of the parameter to get the value for.
+         * @param {*=} opt_default The default value to return if the query data
+         *     has no such key.
+         * @return {*} The first string value associated with the key, or opt_default
+         *     if there's no value.
+         */
+        get(key: string, opt_default?: any): any;
+        
+        /**
+         * Sets the values for a key. If the key already exists, this will
+         * override all of the existing values that correspond to the key.
+         * @param {string} key The key to set values for.
+         * @param {Array} values The values to set.
+         */
+        setValues(key: string, values: Array<any>): void;
+        
+        /**
+         * @return {string} Encoded query string.
+         * @override
+         */
+        toString(): string;
+        
+        /**
+         * @return {string} Decoded query string.
+         */
+        toDecodedString(): string;
+        
+        /**
+         * Removes all keys that are not in the provided list. (Modifies this object.)
+         * @param {Array.<string>} keys The desired keys.
+         * @return {!goog.Uri.QueryData} a reference to this object.
+         */
+        filterKeys(keys: Array<string>): goog.Uri.QueryData;
+        
+        /**
+         * Clone the query data instance.
+         * @return {!goog.Uri.QueryData} New instance of the QueryData object.
+         */
+        clone(): goog.Uri.QueryData;
+        
+        /**
+         * Ignore case in parameter names.
+         * NOTE: If there are already key/value pairs in the QueryData, and
+         * ignoreCase_ is set to false, the keys will all be lower-cased.
+         * @param {boolean} ignoreCase whether this goog.Uri should ignore case.
+         */
+        setIgnoreCase(ignoreCase: boolean): void;
+        
+        /**
+         * Extends a query data object with another query data or map like object. This
+         * operates 'in-place', it does not create a new QueryData object.
+         *
+         * @param {...(goog.Uri.QueryData|goog.structs.Map|Object)} var_args The object
+         *     from which key value pairs will be copied.
+         */
+        extend(...var_args: goog.Uri.QueryData[]): void;
     }
-}
-
-declare module goog.Uri.QueryData {
-
-    /**
-     * Creates a new query data instance from a map of names and values.
-     *
-     * @param {!goog.structs.Map|!Object} map Map of string parameter
-     *     names to parameter value. If parameter value is an array, it is
-     *     treated as if the key maps to each individual value in the
-     *     array.
-     * @param {goog.Uri=} opt_uri URI object that should have its cache
-     *     invalidated when this object updates.
-     * @param {boolean=} opt_ignoreCase If true, ignore the case of the parameter
-     *     name in #get.
-     * @return {!goog.Uri.QueryData} The populated query data instance.
-     */
-    export function createFromMap(map: goog.structs.Map, opt_uri?: goog.Uri, opt_ignoreCase?: boolean): goog.Uri.QueryData;
-
-    /**
-     * Creates a new query data instance from parallel arrays of parameter names
-     * and values. Allows for duplicate parameter names. Throws an error if the
-     * lengths of the arrays differ.
-     *
-     * @param {Array.<string>} keys Parameter names.
-     * @param {Array} values Parameter values.
-     * @param {goog.Uri=} opt_uri URI object that should have its cache
-     *     invalidated when this object updates.
-     * @param {boolean=} opt_ignoreCase If true, ignore the case of the parameter
-     *     name in #get.
-     * @return {!goog.Uri.QueryData} The populated query data instance.
-     */
-    export function createFromKeysValues(keys: Array<string>, values: Array<any>, opt_uri?: goog.Uri, opt_ignoreCase?: boolean): goog.Uri.QueryData;
 }

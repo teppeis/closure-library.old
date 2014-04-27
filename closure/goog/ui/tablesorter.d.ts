@@ -1,15 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Table sorter events.
-     * @enum {string}
-     */
-    export interface EventType {
-        BEFORESORT: string;
-        SORT: string;
-    }
-
-    /**
      * A table sorter allows for sorting of a table by column.  This component can
      * be used to decorate an already existing TABLE element with sorting
      * features.
@@ -111,5 +102,17 @@ declare module goog.ui {
          *     given sort function.
          */
         static createReverseSort(sortFunction: (arg0: any, arg1: any) => number): (arg0: any, arg1: any) => number;
+    }
+}
+
+declare module goog.ui.TableSorter {
+
+    /**
+     * Table sorter events.
+     * @enum {string}
+     */
+    export interface EventType {
+        BEFORESORT: string;
+        SORT: string;
     }
 }

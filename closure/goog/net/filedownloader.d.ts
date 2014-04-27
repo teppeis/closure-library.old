@@ -137,6 +137,9 @@ declare module goog.net {
          */
         setBlob(url: string, blob: Blob, opt_name?: string): goog.async.Deferred;
     }
+}
+
+declare module goog.net.FileDownloader {
 
     /**
      * The error object for FileDownloader download errors.
@@ -152,5 +155,24 @@ declare module goog.net {
      */
     export class Error extends goog.debug.Error {
         constructor(download: goog.net.FileDownloader.Download_, opt_fsErr?: goog.fs.Error);
+        
+        /**
+         * The status of the XHR. Only set if the error was caused by an XHR failure.
+         * @type {number|undefined}
+         */
+        xhrStatus: number;
+        
+        /**
+         * The error code of the XHR. Only set if the error was caused by an XHR
+         * failure.
+         * @type {goog.net.ErrorCode|undefined}
+         */
+        xhrErrorCode: goog.net.ErrorCode;
+        
+        /**
+         * The file API error. Only set if the error was caused by the file API.
+         * @type {goog.fs.Error|undefined}
+         */
+        fileError: goog.fs.Error;
     }
 }

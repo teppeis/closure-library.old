@@ -1,14 +1,6 @@
 declare module goog.ui.equation {
 
     /**
-     * Constants for event names.
-     * @enum {string}
-     */
-    export interface EventType {
-        CHANGE: string;
-    }
-
-    /**
      * User interface for equation editor plugin.
      * @constructor
      * @param {Object} context The context that this equation editor runs in.
@@ -50,5 +42,16 @@ declare module goog.ui.equation {
          * @param {string} equation The equation text to parse.
          */
         setEquation(equation: string): void;
+    }
+}
+
+declare module goog.ui.equation.EquationEditor {
+
+    /**
+     * Constants for event names.
+     * @enum {string}
+     */
+    export interface EventType {
+        CHANGE: string;
     }
 }

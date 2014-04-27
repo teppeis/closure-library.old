@@ -1,14 +1,6 @@
 declare module goog.events {
 
     /**
-     * The types of events fired by this class.
-     * @enum {string}
-     */
-    export interface EventType {
-        DROP: string;
-    }
-
-    /**
      * A files drag and drop event detector. Gets an {@code element} as parameter
      * and fires {@code goog.events.FileDropHandler.EventType.DROP} event when files
      * are dropped in the {@code element}.
@@ -22,5 +14,16 @@ declare module goog.events {
      */
     export class FileDropHandler extends goog.events.EventTarget {
         constructor(element: Element, opt_preventDropOutside?: boolean);
+    }
+}
+
+declare module goog.events.FileDropHandler {
+
+    /**
+     * The types of events fired by this class.
+     * @enum {string}
+     */
+    export interface EventType {
+        DROP: string;
     }
 }

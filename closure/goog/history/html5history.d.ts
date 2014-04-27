@@ -72,6 +72,9 @@ declare module goog.history {
          */
         getPathPrefix(): string;
     }
+}
+
+declare module goog.history.Html5History {
 
     /**
      * A token transformer that can create a URL from a history
@@ -85,5 +88,32 @@ declare module goog.history {
      * @interface
      */
     export interface TokenTransformer {
+        
+        /**
+         * Retrieves a history token given the path prefix and
+         * {@code window.location} object.
+         *
+         * @param {string} pathPrefix The path prefix to use when storing token
+         *     in a path; always begin with a slash.
+         * @param {Location} location The {@code window.location} object.
+         *     Treat this object as read-only.
+         * @return {string} token The history token.
+         */
+        retrieveToken(pathPrefix: string, location: Location): string;
+        
+        /**
+         * Creates a URL to be pushed into HTML5 history stack when storing
+         * token without using hash fragment.
+         *
+         * @param {string} token The history token.
+         * @param {string} pathPrefix The path prefix to use when storing token
+         *     in a path; always begin with a slash.
+         * @param {Location} location The {@code window.location} object.
+         *     Treat this object as read-only.
+         * @return {string} url The complete URL string from path onwards
+         *     (without {@code protocol://host:port} part); must begin with a
+         *     slash.
+         */
+        createUrl(token: string, pathPrefix: string, location: Location): string;
     }
 }

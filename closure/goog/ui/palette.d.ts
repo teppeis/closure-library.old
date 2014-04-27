@@ -1,14 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Events fired by the palette object
-     * @enum {string}
-     */
-    export interface EventType {
-        AFTER_HIGHLIGHT: string;
-    }
-
-    /**
      * A palette is a grid of DOM nodes that the user can highlight or select via
      * the keyboard or the mouse.  The selection state of the palette is controlled
      * an ACTION event.  Event listeners may retrieve the selected item using the
@@ -178,5 +170,16 @@ declare module goog.ui {
          * @param {Node} item Item to select.
          */
         setSelectedItem(item: Node): void;
+    }
+}
+
+declare module goog.ui.Palette {
+
+    /**
+     * Events fired by the palette object
+     * @enum {string}
+     */
+    export interface EventType {
+        AFTER_HIGHLIGHT: string;
     }
 }

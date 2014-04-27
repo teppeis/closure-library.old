@@ -1,15 +1,6 @@
 declare module goog.module {
 
     /**
-     * @enum {string}
-     */
-    export interface EventType {
-        EVALUATE_CODE: string;
-        REQUEST_SUCCESS: string;
-        REQUEST_ERROR: string;
-    }
-
-    /**
      * A class that loads Javascript modules.
      * @constructor
      * @extends {goog.events.EventTarget}
@@ -71,6 +62,18 @@ declare module goog.module {
          * @param {boolean} enabled Whether source url injection is enabled.
          */
         setSourceUrlInjection(enabled: boolean): void;
+    }
+}
+
+declare module goog.module.ModuleLoader {
+
+    /**
+     * @enum {string}
+     */
+    export interface EventType {
+        EVALUATE_CODE: string;
+        REQUEST_SUCCESS: string;
+        REQUEST_ERROR: string;
     }
 
     /**

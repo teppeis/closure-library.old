@@ -1,33 +1,6 @@
 declare module goog.string$.html {
 
     /**
-     * HTML entities that are encoded/decoded.
-     * TODO(user): use {@code goog.string.htmlEncode} instead.
-     * @enum {string}
-     */
-    export interface Entities {
-        lt: string;
-        gt: string;
-        amp: string;
-        nbsp: string;
-        quot: string;
-        apos: string;
-    }
-
-    /**
-     * The html eflags, used internally on the parser.
-     * @enum {number}
-     */
-    export interface EFlags {
-        OPTIONAL_ENDTAG: number;
-        EMPTY: number;
-        CDATA: number;
-        RCDATA: number;
-        UNSAFE: number;
-        FOLDABLE: number;
-    }
-
-    /**
      * An Html parser: {@code parse} takes a string and calls methods on
      * {@code goog.string.html.HtmlSaxHandler} while it is visiting it.
      *
@@ -113,4 +86,34 @@ declare module goog.string$.html {
      * @return {string} The str in lower case format.
      */
     export function toLowerCase(str: string): string;
+}
+
+declare module goog.string$.html.HtmlParser {
+
+    /**
+     * HTML entities that are encoded/decoded.
+     * TODO(user): use {@code goog.string.htmlEncode} instead.
+     * @enum {string}
+     */
+    export interface Entities {
+        lt: string;
+        gt: string;
+        amp: string;
+        nbsp: string;
+        quot: string;
+        apos: string;
+    }
+
+    /**
+     * The html eflags, used internally on the parser.
+     * @enum {number}
+     */
+    export interface EFlags {
+        OPTIONAL_ENDTAG: number;
+        EMPTY: number;
+        CDATA: number;
+        RCDATA: number;
+        UNSAFE: number;
+        FOLDABLE: number;
+    }
 }

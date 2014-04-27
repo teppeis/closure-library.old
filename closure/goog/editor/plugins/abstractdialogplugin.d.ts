@@ -1,15 +1,6 @@
 declare module goog.editor.plugins {
 
     /**
-     * Event type constants for events the dialog plugins fire.
-     * @enum {string}
-     */
-    export interface EventType {
-        OPENED: string;
-        CLOSED: string;
-    }
-
-    /**
      * An abstract superclass for a Trogedit plugin that creates exactly one
      * dialog. By default dialogs are not reused -- each time execCommand is called,
      * a new instance of the dialog object is created (and the old one disposed of).
@@ -105,5 +96,17 @@ declare module goog.editor.plugins {
          * @protected
          */
         disposeOriginalSelection(): void;
+    }
+}
+
+declare module goog.editor.plugins.AbstractDialogPlugin {
+
+    /**
+     * Event type constants for events the dialog plugins fire.
+     * @enum {string}
+     */
+    export interface EventType {
+        OPENED: string;
+        CLOSED: string;
     }
 }

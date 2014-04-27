@@ -1,31 +1,6 @@
 declare module goog.fs {
 
     /**
-     * Possible states for a FileSaver.
-     *
-     * @enum {number}
-     */
-    export interface ReadyState {
-        INIT: number;
-        WRITING: number;
-        DONE: number;
-    }
-
-    /**
-     * Events emitted by a FileSaver.
-     *
-     * @enum {string}
-     */
-    export interface EventType {
-        WRITE_START: string;
-        PROGRESS: string;
-        WRITE: string;
-        ABORT: string;
-        ERROR: string;
-        WRITE_END: string;
-    }
-
-    /**
      * An object for monitoring the saving of files. This emits ProgressEvents of
      * the types listed in {@link goog.fs.FileSaver.EventType}.
      *
@@ -62,5 +37,33 @@ declare module goog.fs {
          * @return {goog.fs.Error} The error encountered while writing, if any.
          */
         getError(): goog.fs.Error;
+    }
+}
+
+declare module goog.fs.FileSaver {
+
+    /**
+     * Possible states for a FileSaver.
+     *
+     * @enum {number}
+     */
+    export interface ReadyState {
+        INIT: number;
+        WRITING: number;
+        DONE: number;
+    }
+
+    /**
+     * Events emitted by a FileSaver.
+     *
+     * @enum {string}
+     */
+    export interface EventType {
+        WRITE_START: string;
+        PROGRESS: string;
+        WRITE: string;
+        ABORT: string;
+        ERROR: string;
+        WRITE_END: string;
     }
 }

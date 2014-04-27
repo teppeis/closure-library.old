@@ -1,16 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Constants for menu action types.
-     * @enum {number}
-     */
-    export interface SelectionState {
-        ALL: number;
-        SOME: number;
-        NONE: number;
-    }
-
-    /**
      * A selection menu button control.  Extends {@link goog.ui.MenuButton}.
      * Menu contains 'select all' and 'select none' MenuItems for selecting all and
      * no items by default. Other MenuItems can be added by user.
@@ -97,5 +87,18 @@ declare module goog.ui {
         * @return {goog.ui.SelectionMenuButton.SelectionState} Selection state.
         */
         getSelectionState(): goog.ui.SelectionMenuButton.SelectionState;
+    }
+}
+
+declare module goog.ui.SelectionMenuButton {
+
+    /**
+     * Constants for menu action types.
+     * @enum {number}
+     */
+    export interface SelectionState {
+        ALL: number;
+        SOME: number;
+        NONE: number;
     }
 }

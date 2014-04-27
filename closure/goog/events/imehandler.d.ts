@@ -1,17 +1,6 @@
 declare module goog.events {
 
     /**
-     * Event types fired by ImeHandler. These events do not make any guarantees
-     * about whether they were fired before or after the event in question.
-     * @enum {string}
-     */
-    export interface EventType {
-        START: string;
-        UPDATE: string;
-        END: string;
-    }
-
-    /**
      * Dispatches high-level events for IMEs.
      * @param {Element} el The element to listen on.
      * @extends {goog.events.EventTarget}
@@ -31,6 +20,20 @@ declare module goog.events {
          * @return {boolean} Whether an IME is active.
          */
         isImeMode(): boolean;
+    }
+}
+
+declare module goog.events.ImeHandler {
+
+    /**
+     * Event types fired by ImeHandler. These events do not make any guarantees
+     * about whether they were fired before or after the event in question.
+     * @enum {string}
+     */
+    export interface EventType {
+        START: string;
+        UPDATE: string;
+        END: string;
     }
 
     /**

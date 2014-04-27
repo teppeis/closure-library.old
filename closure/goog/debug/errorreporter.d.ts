@@ -118,6 +118,9 @@ declare module goog.debug {
          */
         setAdditionalArguments(urlArgs: Object): void;
     }
+}
+
+declare module goog.debug.ErrorReporter {
 
     /**
      * Event broadcast when an exception is logged.
@@ -130,14 +133,11 @@ declare module goog.debug {
      */
     export class ExceptionEvent extends goog.events.Event {
         constructor(error: Error, context: Object);
+        
+        /**
+         * Event type for notifying of a logged exception.
+         * @type {string}
+         */
+        static TYPE: string;
     }
-}
-
-declare module goog.debug.ErrorReporter.ExceptionEvent {
-
-    /**
-     * Event type for notifying of a logged exception.
-     * @type {string}
-     */
-    export var TYPE: string;
 }

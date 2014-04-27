@@ -1,27 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Possible states for the tooltip to be in.
-     * @enum {number}
-     */
-    export interface State {
-        INACTIVE: number;
-        WAITING_TO_SHOW: number;
-        SHOWING: number;
-        WAITING_TO_HIDE: number;
-        UPDATING: number;
-    }
-
-    /**
-     * Popup activation types. Used to select a positioning strategy.
-     * @enum {number}
-     */
-    export interface Activation {
-        CURSOR: number;
-        FOCUS: number;
-    }
-
-    /**
      * Tooltip widget. Can be attached to one or more elements and is shown, with a
      * slight delay, when the the cursor is over the element or the element gains
      * focus.
@@ -354,6 +333,30 @@ declare module goog.ui {
          */
         clearHideTimer(): void;
     }
+}
+
+declare module goog.ui.Tooltip {
+
+    /**
+     * Possible states for the tooltip to be in.
+     * @enum {number}
+     */
+    export interface State {
+        INACTIVE: number;
+        WAITING_TO_SHOW: number;
+        SHOWING: number;
+        WAITING_TO_HIDE: number;
+        UPDATING: number;
+    }
+
+    /**
+     * Popup activation types. Used to select a positioning strategy.
+     * @enum {number}
+     */
+    export interface Activation {
+        CURSOR: number;
+        FOCUS: number;
+    }
 
     /**
      * Popup position implementation that positions the popup (the tooltip in this
@@ -371,6 +374,17 @@ declare module goog.ui {
      */
     export class CursorTooltipPosition extends goog.positioning.ViewportPosition {
         constructor(arg1: number, opt_arg2?: number);
+        
+        /**
+         * Repositions the popup based on cursor position.
+         *
+         * @param {Element} element The DOM element of the popup.
+         * @param {goog.positioning.Corner} popupCorner The corner of the popup element
+         *     that that should be positioned adjacent to the anchorElement.
+         * @param {goog.math.Box=} opt_margin A margin specified in pixels.
+         * @override
+         */
+        reposition(element: Element, popupCorner: goog.positioning.Corner, opt_margin?: goog.math.Box): void;
     }
 
     /**
@@ -387,5 +401,16 @@ declare module goog.ui {
      */
     export class ElementTooltipPosition extends goog.positioning.AnchoredPosition {
         constructor(element: Element);
+        
+        /**
+         * Repositions the popup based on element position.
+         *
+         * @param {Element} element The DOM element of the popup.
+         * @param {goog.positioning.Corner} popupCorner The corner of the popup element
+         *     that should be positioned adjacent to the anchorElement.
+         * @param {goog.math.Box=} opt_margin A margin specified in pixels.
+         * @override
+         */
+        reposition(element: Element, popupCorner: goog.positioning.Corner, opt_margin?: goog.math.Box): void;
     }
 }

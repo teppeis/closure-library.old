@@ -1,14 +1,6 @@
 declare module goog.events {
 
     /**
-     * Enum type for the events fired by the input handler
-     * @enum {string}
-     */
-    export interface EventType {
-        INPUT: string;
-    }
-
-    /**
      * This event handler will dispatch events when the user types into a text
      * input, password input or a textarea
      * @param {Element} element  The element that you want to listen for input
@@ -24,5 +16,16 @@ declare module goog.events {
          * @param {goog.events.BrowserEvent} e The underlying browser event.
          */
         handleEvent(e: goog.events.BrowserEvent): void;
+    }
+}
+
+declare module goog.events.InputHandler {
+
+    /**
+     * Enum type for the events fired by the input handler
+     * @enum {string}
+     */
+    export interface EventType {
+        INPUT: string;
     }
 }

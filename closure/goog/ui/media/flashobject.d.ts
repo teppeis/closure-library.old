@@ -1,33 +1,6 @@
 declare module goog.ui.media {
 
     /**
-     * The different modes for displaying a SWF. Note that different wmodes
-     * can result in different bugs in different browsers and also that
-     * both OPAQUE and TRANSPARENT will result in a performance hit.
-     *
-     * @enum {string}
-     */
-    export interface Wmodes {
-        OPAQUE: string;
-        TRANSPARENT: string;
-        WINDOW: string;
-    }
-
-    /**
-     * The different levels of allowScriptAccess.
-     *
-     * Talked about at:
-     * http://kb2.adobe.com/cps/164/tn_16494.html
-     *
-     * @enum {string}
-     */
-    export interface ScriptAccessLevel {
-        ALWAYS: string;
-        SAME_DOMAIN: string;
-        NEVER: string;
-    }
-
-    /**
      * A very simple flash wrapper, that allows you to create flash object
      * programmatically, instead of embedding your own HTML. It extends
      * {@link goog.ui.Component}, which makes it very easy to be embedded on the
@@ -185,5 +158,35 @@ declare module goog.ui.media {
          * @return {boolean} whether the SWF has finished loading or not.
          */
         isLoaded(): boolean;
+    }
+}
+
+declare module goog.ui.media.FlashObject {
+
+    /**
+     * The different modes for displaying a SWF. Note that different wmodes
+     * can result in different bugs in different browsers and also that
+     * both OPAQUE and TRANSPARENT will result in a performance hit.
+     *
+     * @enum {string}
+     */
+    export interface Wmodes {
+        OPAQUE: string;
+        TRANSPARENT: string;
+        WINDOW: string;
+    }
+
+    /**
+     * The different levels of allowScriptAccess.
+     *
+     * Talked about at:
+     * http://kb2.adobe.com/cps/164/tn_16494.html
+     *
+     * @enum {string}
+     */
+    export interface ScriptAccessLevel {
+        ALWAYS: string;
+        SAME_DOMAIN: string;
+        NEVER: string;
     }
 }

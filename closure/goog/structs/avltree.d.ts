@@ -125,6 +125,9 @@ declare module goog.structs {
          */
         reverseOrderTraverse(func: (arg0: T) => any, opt_startValue?: Object): void;
     }
+}
+
+declare module goog.structs.AvlTree {
 
     /**
      * Constructs an AVL-Tree node with the specified value. If no parent is
@@ -139,5 +142,44 @@ declare module goog.structs {
      */
     export class Node {
         constructor(value: T, opt_parent?: goog.structs.AvlTree.Node<T>);
+        
+        /**
+         * The node's left child. Null if the node does not have a left child.
+         *
+         * @type {?goog.structs.AvlTree.Node.<T>}
+         */
+        left: goog.structs.AvlTree.Node<T>;
+        
+        /**
+         * The node's right child. Null if the node does not have a right child.
+         *
+         * @type {?goog.structs.AvlTree.Node.<T>}
+         */
+        right: goog.structs.AvlTree.Node<T>;
+        
+        /**
+         * The height of the tree rooted at this node.
+         *
+         * @type {number}
+         */
+        height: number;
+        
+        /**
+         * Returns true iff the specified node has a parent and is the right child of
+         * its parent.
+         *
+         * @return {boolean} Whether the specified node has a parent and is the right
+         *    child of its parent.
+         */
+        isRightChild(): boolean;
+        
+        /**
+         * Returns true iff the specified node has a parent and is the left child of
+         * its parent.
+         *
+         * @return {boolean} Whether the specified node has a parent and is the left
+         *    child of its parent.
+         */
+        isLeftChild(): boolean;
     }
 }

@@ -1,18 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Event types dispatched by the menu.
-     * @enum {string}
-     * @deprecated Use goog.ui.Component.EventType.
-     */
-    export interface EventType {
-        BEFORE_SHOW: string;
-        SHOW: string;
-        BEFORE_HIDE: string;
-        HIDE: string;
-    }
-
-    /**
      * A basic menu class.
      * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
      * @param {goog.ui.MenuRenderer=} opt_renderer Renderer used to render or
@@ -179,5 +167,20 @@ declare module goog.ui {
          * @protected
          */
         decorateContent(element: Element): void;
+    }
+}
+
+declare module goog.ui.Menu {
+
+    /**
+     * Event types dispatched by the menu.
+     * @enum {string}
+     * @deprecated Use goog.ui.Component.EventType.
+     */
+    export interface EventType {
+        BEFORE_SHOW: string;
+        SHOW: string;
+        BEFORE_HIDE: string;
+        HIDE: string;
     }
 }

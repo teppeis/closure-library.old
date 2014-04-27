@@ -1,17 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Tab bar location relative to tab contents.
-     * @enum {string}
-     */
-    export interface Location {
-        TOP: string;
-        BOTTOM: string;
-        START: string;
-        END: string;
-    }
-
-    /**
      * Tab bar UI component.  A tab bar contains tabs, rendered above, below,
      * before, or after tab contents.  Tabs in tab bars dispatch the following
      * events:
@@ -176,5 +165,19 @@ declare module goog.ui {
          * @return {goog.ui.Container.Orientation} Corresponding orientation.
          */
         static getOrientationFromLocation(location: goog.ui.TabBar.Location): goog.ui.Container.Orientation;
+    }
+}
+
+declare module goog.ui.TabBar {
+
+    /**
+     * Tab bar location relative to tab contents.
+     * @enum {string}
+     */
+    export interface Location {
+        TOP: string;
+        BOTTOM: string;
+        START: string;
+        END: string;
     }
 }

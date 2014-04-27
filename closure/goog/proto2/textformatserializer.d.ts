@@ -32,15 +32,6 @@ declare module goog.proto2 {
          */
         serialize(message: goog.proto2.Message): string;
     }
-
-    /**
-     * Helper class for parsing the text format.
-     * @constructor
-     * @final
-     */
-    export class Parser {
-        constructor();
-    }
 }
 
 declare module goog.proto2.TextFormatSerializer.Tokenizer_ {
@@ -74,5 +65,33 @@ declare module goog.proto2.TextFormatSerializer.Tokenizer_ {
     export interface Token {
         type: goog.proto2.TextFormatSerializer.Tokenizer_.TokenTypes;
         value: string;
+    }
+}
+
+declare module goog.proto2.TextFormatSerializer {
+
+    /**
+     * Helper class for parsing the text format.
+     * @constructor
+     * @final
+     */
+    export class Parser {
+        constructor();
+        
+        /**
+         * Parses the given data, filling the message as it goes.
+         * @param {goog.proto2.Message} message The message to fill.
+         * @param {string} data The text format data.
+         * @param {boolean=} opt_ignoreMissingFields If true, fields missing in the
+         *     proto will be ignored.
+         * @return {boolean} True on success, false on failure. On failure, the
+         *     getError method can be called to get the reason for failure.
+         */
+        parse(message: goog.proto2.Message, data: string, opt_ignoreMissingFields?: boolean): boolean;
+        
+        /**
+         * @return {?string} The parse error, if any.
+         */
+        getError(): string;
     }
 }

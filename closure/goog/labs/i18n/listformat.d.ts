@@ -1,18 +1,6 @@
 declare module goog.labs.i18n {
 
     /**
-     * Enumeration for the possible gender values.
-     * Gender: OTHER means either the information is unavailable,
-     * or the person has declined to state MALE or FEMALE.
-     * @enum {number}
-     */
-    export interface Gender {
-        MALE: number;
-        FEMALE: number;
-        OTHER: number;
-    }
-
-    /**
      * ListFormat provides a method to format a list/array of objects to a string,
      * in a user friendly way and in a locale sensitive manner.
      * If the objects are not strings, toString is called to convert them.
@@ -60,5 +48,20 @@ declare module goog.labs.i18n {
          * @return {goog.labs.i18n.GenderInfo.Gender} Get the gender of the list.
         */
         getListGender(genders: Array<goog.labs.i18n.GenderInfo.Gender>): goog.labs.i18n.GenderInfo.Gender;
+    }
+}
+
+declare module goog.labs.i18n.GenderInfo {
+
+    /**
+     * Enumeration for the possible gender values.
+     * Gender: OTHER means either the information is unavailable,
+     * or the person has declined to state MALE or FEMALE.
+     * @enum {number}
+     */
+    export interface Gender {
+        MALE: number;
+        FEMALE: number;
+        OTHER: number;
     }
 }

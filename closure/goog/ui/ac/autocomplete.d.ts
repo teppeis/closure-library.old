@@ -1,20 +1,6 @@
 declare module goog.ui.ac {
 
     /**
-     * Events associated with the autocomplete
-     * @enum {string}
-     */
-    export interface EventType {
-        ROW_HILITE: string;
-        HILITE: string;
-        SELECT: string;
-        DISMISS: string;
-        CANCEL_DISMISS: string;
-        UPDATE: string;
-        SUGGESTIONS_UPDATE: string;
-    }
-
-    /**
      * @typedef {{
      *   requestMatchingRows:(!Function|undefined),
      *   isRowDisabled:(!Function|undefined)
@@ -339,5 +325,22 @@ declare module goog.ui.ac {
          * @param {boolean=} opt_force Whether to force an update.
          */
         update(opt_force?: boolean): void;
+    }
+}
+
+declare module goog.ui.ac.AutoComplete {
+
+    /**
+     * Events associated with the autocomplete
+     * @enum {string}
+     */
+    export interface EventType {
+        ROW_HILITE: string;
+        HILITE: string;
+        SELECT: string;
+        DISMISS: string;
+        CANCEL_DISMISS: string;
+        UPDATE: string;
+        SUGGESTIONS_UPDATE: string;
     }
 }

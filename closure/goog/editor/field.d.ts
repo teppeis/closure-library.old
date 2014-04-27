@@ -1,25 +1,6 @@
 declare module goog.editor {
 
     /**
-     * Event types that can be stopped/started.
-     * @enum {string}
-     */
-    export interface EventType {
-        COMMAND_VALUE_CHANGE: string;
-        LOAD: string;
-        UNLOAD: string;
-        BEFORECHANGE: string;
-        CHANGE: string;
-        DELAYEDCHANGE: string;
-        BEFOREFOCUS: string;
-        FOCUS: string;
-        BLUR: string;
-        BEFORETAB: string;
-        IFRAME_RESIZED: string;
-        SELECTIONCHANGE: string;
-    }
-
-    /**
      * This class encapsulates an editable field.
      *
      * event: load Fires when the field is loaded
@@ -662,5 +643,27 @@ declare module goog.editor {
          * @protected
          */
         getIframeAttributes(): Object;
+    }
+}
+
+declare module goog.editor.Field {
+
+    /**
+     * Event types that can be stopped/started.
+     * @enum {string}
+     */
+    export interface EventType {
+        COMMAND_VALUE_CHANGE: string;
+        LOAD: string;
+        UNLOAD: string;
+        BEFORECHANGE: string;
+        CHANGE: string;
+        DELAYEDCHANGE: string;
+        BEFOREFOCUS: string;
+        FOCUS: string;
+        BLUR: string;
+        BEFORETAB: string;
+        IFRAME_RESIZED: string;
+        SELECTIONCHANGE: string;
     }
 }

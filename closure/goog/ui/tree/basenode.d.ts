@@ -1,17 +1,6 @@
 declare module goog.ui.tree {
 
     /**
-     * The event types dispatched by this class.
-     * @enum {string}
-     */
-    export interface EventType {
-        BEFORE_EXPAND: string;
-        EXPAND: string;
-        BEFORE_COLLAPSE: string;
-        COLLAPSE: string;
-    }
-
-    /**
      * An abstract base class for a node in the tree.
      *
      * @param {string|!goog.html.SafeHtml} html The html content of the node label.
@@ -503,5 +492,19 @@ declare module goog.ui.tree {
          * @param {goog.ui.tree.TreeControl} tree The tree control.
          */
         setTreeInternal(tree: goog.ui.tree.TreeControl): void;
+    }
+}
+
+declare module goog.ui.tree.BaseNode {
+
+    /**
+     * The event types dispatched by this class.
+     * @enum {string}
+     */
+    export interface EventType {
+        BEFORE_EXPAND: string;
+        EXPAND: string;
+        BEFORE_COLLAPSE: string;
+        COLLAPSE: string;
     }
 }

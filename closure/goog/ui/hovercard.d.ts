@@ -1,19 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Enum for event type fired by HoverCard.
-     * @enum {string}
-     */
-    export interface EventType {
-        TRIGGER: string;
-        CANCEL_TRIGGER: string;
-        BEFORE_SHOW: string;
-        SHOW: string;
-        BEFORE_HIDE: string;
-        HIDE: string;
-    }
-
-    /**
      * Create a hover card object.  Hover cards extend tooltips in that they don't
      * have to be manually attached to each element that can cause them to display.
      * Instead, you can create a function that gets called when the mouse goes over
@@ -134,6 +121,22 @@ declare module goog.ui {
          *     dom if checking descendants.
          */
         setMaxSearchSteps(maxSearchSteps: number): void;
+    }
+}
+
+declare module goog.ui.HoverCard {
+
+    /**
+     * Enum for event type fired by HoverCard.
+     * @enum {string}
+     */
+    export interface EventType {
+        TRIGGER: string;
+        CANCEL_TRIGGER: string;
+        BEFORE_SHOW: string;
+        SHOW: string;
+        BEFORE_HIDE: string;
+        HIDE: string;
     }
 
     /**

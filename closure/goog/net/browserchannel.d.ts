@@ -1,78 +1,6 @@
 declare module goog.net {
 
     /**
-     * Enum type for the browser channel state machine.
-     * @enum {number}
-     */
-    export interface State {
-        CLOSED: number;
-        INIT: number;
-        OPENING: number;
-        OPENED: number;
-    }
-
-    /**
-     * Enum type for identifying a BrowserChannel error.
-     * @enum {number}
-     */
-    export interface Error {
-        OK: number;
-        REQUEST_FAILED: number;
-        LOGGED_OUT: number;
-        NO_DATA: number;
-        UNKNOWN_SESSION_ID: number;
-        STOP: number;
-        NETWORK: number;
-        BLOCKED: number;
-        BAD_DATA: number;
-        BAD_RESPONSE: number;
-        ACTIVE_X_BLOCKED: number;
-    }
-
-    /**
-     * Types of events which reveal information about the reachability of the
-     * server.
-     * @enum {number}
-     */
-    export interface ServerReachability {
-        REQUEST_MADE: number;
-        REQUEST_SUCCEEDED: number;
-        REQUEST_FAILED: number;
-        BACK_CHANNEL_ACTIVITY: number;
-    }
-
-    /**
-     * Enum that identifies events for statistics that are interesting to track.
-     * TODO(user) - Change name not to use Event or use EventTarget
-     * @enum {number}
-     */
-    export interface Stat {
-        CONNECT_ATTEMPT: number;
-        ERROR_NETWORK: number;
-        ERROR_OTHER: number;
-        TEST_STAGE_ONE_START: number;
-        CHANNEL_BLOCKED: number;
-        TEST_STAGE_TWO_START: number;
-        TEST_STAGE_TWO_DATA_ONE: number;
-        TEST_STAGE_TWO_DATA_TWO: number;
-        TEST_STAGE_TWO_DATA_BOTH: number;
-        TEST_STAGE_ONE_FAILED: number;
-        TEST_STAGE_TWO_FAILED: number;
-        PROXY: number;
-        NOPROXY: number;
-        REQUEST_UNKNOWN_SESSION_ID: number;
-        REQUEST_BAD_STATUS: number;
-        REQUEST_INCOMPLETE_DATA: number;
-        REQUEST_BAD_DATA: number;
-        REQUEST_NO_DATA: number;
-        REQUEST_TIMEOUT: number;
-        BACKCHANNEL_MISSING: number;
-        BACKCHANNEL_DEAD: number;
-        BROWSER_OFFLINE: number;
-        ACTIVE_X_BLOCKED: number;
-    }
-
-    /**
      * Encapsulates the logic for a single BrowserChannel.
      *
      * @param {string=} opt_clientVersion An application-specific version number
@@ -572,6 +500,81 @@ declare module goog.net {
          */
         shouldUseSecondaryDomains(): boolean;
     }
+}
+
+declare module goog.net.BrowserChannel {
+
+    /**
+     * Enum type for the browser channel state machine.
+     * @enum {number}
+     */
+    export interface State {
+        CLOSED: number;
+        INIT: number;
+        OPENING: number;
+        OPENED: number;
+    }
+
+    /**
+     * Enum type for identifying a BrowserChannel error.
+     * @enum {number}
+     */
+    export interface Error {
+        OK: number;
+        REQUEST_FAILED: number;
+        LOGGED_OUT: number;
+        NO_DATA: number;
+        UNKNOWN_SESSION_ID: number;
+        STOP: number;
+        NETWORK: number;
+        BLOCKED: number;
+        BAD_DATA: number;
+        BAD_RESPONSE: number;
+        ACTIVE_X_BLOCKED: number;
+    }
+
+    /**
+     * Types of events which reveal information about the reachability of the
+     * server.
+     * @enum {number}
+     */
+    export interface ServerReachability {
+        REQUEST_MADE: number;
+        REQUEST_SUCCEEDED: number;
+        REQUEST_FAILED: number;
+        BACK_CHANNEL_ACTIVITY: number;
+    }
+
+    /**
+     * Enum that identifies events for statistics that are interesting to track.
+     * TODO(user) - Change name not to use Event or use EventTarget
+     * @enum {number}
+     */
+    export interface Stat {
+        CONNECT_ATTEMPT: number;
+        ERROR_NETWORK: number;
+        ERROR_OTHER: number;
+        TEST_STAGE_ONE_START: number;
+        CHANNEL_BLOCKED: number;
+        TEST_STAGE_TWO_START: number;
+        TEST_STAGE_TWO_DATA_ONE: number;
+        TEST_STAGE_TWO_DATA_TWO: number;
+        TEST_STAGE_TWO_DATA_BOTH: number;
+        TEST_STAGE_ONE_FAILED: number;
+        TEST_STAGE_TWO_FAILED: number;
+        PROXY: number;
+        NOPROXY: number;
+        REQUEST_UNKNOWN_SESSION_ID: number;
+        REQUEST_BAD_STATUS: number;
+        REQUEST_INCOMPLETE_DATA: number;
+        REQUEST_BAD_DATA: number;
+        REQUEST_NO_DATA: number;
+        REQUEST_TIMEOUT: number;
+        BACKCHANNEL_MISSING: number;
+        BACKCHANNEL_DEAD: number;
+        BROWSER_OFFLINE: number;
+        ACTIVE_X_BLOCKED: number;
+    }
 
     /**
      * Simple container class for a (mapId, map) pair.
@@ -636,6 +639,111 @@ declare module goog.net {
      */
     export class Handler {
         constructor();
+        
+        /**
+         * Callback handler for when a batch of response arrays is received from the
+         * server.
+         * @type {?function(!goog.net.BrowserChannel, !Array.<!Array>)}
+         */
+        channelHandleMultipleArrays: (arg0: goog.net.BrowserChannel, arg1: Array<Array<any>>) => any;
+        
+        /**
+         * Whether it's okay to make a request to the server. A handler can return
+         * false if the channel should fail. For example, if the user has logged out,
+         * the handler may want all requests to fail immediately.
+         * @param {goog.net.BrowserChannel} browserChannel The browser channel.
+         * @return {goog.net.BrowserChannel.Error} An error code. The code should
+         * return goog.net.BrowserChannel.Error.OK to indicate it's okay. Any other
+         * error code will cause a failure.
+         */
+        okToMakeRequest(browserChannel: goog.net.BrowserChannel): goog.net.BrowserChannel.Error;
+        
+        /**
+         * Indicates the BrowserChannel has successfully negotiated with the server
+         * and can now send and receive data.
+         * @param {goog.net.BrowserChannel} browserChannel The browser channel.
+         */
+        channelOpened(browserChannel: goog.net.BrowserChannel): void;
+        
+        /**
+         * New input is available for the application to process.
+         *
+         * @param {goog.net.BrowserChannel} browserChannel The browser channel.
+         * @param {Array} array The data array.
+         */
+        channelHandleArray(browserChannel: goog.net.BrowserChannel, array: Array<any>): void;
+        
+        /**
+         * Indicates maps were successfully sent on the BrowserChannel.
+         *
+         * @param {goog.net.BrowserChannel} browserChannel The browser channel.
+         * @param {Array.<goog.net.BrowserChannel.QueuedMap>} deliveredMaps The
+         *     array of maps that have been delivered to the server. This is a direct
+         *     reference to the internal BrowserChannel array, so a copy should be made
+         *     if the caller desires a reference to the data.
+         */
+        channelSuccess(browserChannel: goog.net.BrowserChannel, deliveredMaps: Array<goog.net.BrowserChannel.QueuedMap>): void;
+        
+        /**
+         * Indicates an error occurred on the BrowserChannel.
+         *
+         * @param {goog.net.BrowserChannel} browserChannel The browser channel.
+         * @param {goog.net.BrowserChannel.Error} error The error code.
+         */
+        channelError(browserChannel: goog.net.BrowserChannel, error: goog.net.BrowserChannel.Error): void;
+        
+        /**
+         * Indicates the BrowserChannel is closed. Also notifies about which maps,
+         * if any, that may not have been delivered to the server.
+         * @param {goog.net.BrowserChannel} browserChannel The browser channel.
+         * @param {Array.<goog.net.BrowserChannel.QueuedMap>=} opt_pendingMaps The
+         *     array of pending maps, which may or may not have been delivered to the
+         *     server.
+         * @param {Array.<goog.net.BrowserChannel.QueuedMap>=} opt_undeliveredMaps
+         *     The array of undelivered maps, which have definitely not been delivered
+         *     to the server.
+         */
+        channelClosed(browserChannel: goog.net.BrowserChannel, opt_pendingMaps?: Array<goog.net.BrowserChannel.QueuedMap>, opt_undeliveredMaps?: Array<goog.net.BrowserChannel.QueuedMap>): void;
+        
+        /**
+         * Gets any parameters that should be added at the time another connection is
+         * made to the server.
+         * @param {goog.net.BrowserChannel} browserChannel The browser channel.
+         * @return {Object} Extra parameter keys and values to add to the
+         *                  requests.
+         */
+        getAdditionalParams(browserChannel: goog.net.BrowserChannel): Object;
+        
+        /**
+         * Gets the URI of an image that can be used to test network connectivity.
+         * @param {goog.net.BrowserChannel} browserChannel The browser channel.
+         * @return {goog.Uri?} A custom URI to load for the network test.
+         */
+        getNetworkTestImageUri(browserChannel: goog.net.BrowserChannel): goog.Uri;
+        
+        /**
+         * Gets whether this channel is currently active. This is used to determine the
+         * length of time to wait before retrying.
+         * @param {goog.net.BrowserChannel} browserChannel The browser channel.
+         * @return {boolean} Whether the channel is currently active.
+         */
+        isActive(browserChannel: goog.net.BrowserChannel): boolean;
+        
+        /**
+         * Called by the channel if enumeration of the map throws an exception.
+         * @param {goog.net.BrowserChannel} browserChannel The browser channel.
+         * @param {Object} map The map that can't be enumerated.
+         */
+        badMapError(browserChannel: goog.net.BrowserChannel, map: Object): void;
+        
+        /**
+         * Allows the handler to override a host prefix provided by the server.  Will
+         * be called whenever the channel has received such a prefix and is considering
+         * its use.
+         * @param {?string} serverHostPrefix The host prefix provided by the server.
+         * @return {?string} The host prefix the client should use.
+         */
+        correctHostPrefix(serverHostPrefix: string): string;
     }
 }
 

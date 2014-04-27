@@ -1,18 +1,6 @@
 declare module goog.db {
 
     /**
-     * Event types fired by a database.
-     *
-     * @enum {string} The event types for the web socket.
-     */
-    export interface EventType {
-        ABORT: string;
-        CLOSE: string;
-        ERROR: string;
-        VERSION_CHANGE: string;
-    }
-
-    /**
      * Creates an IDBDatabase wrapper object. The database object has methods for
      * setting the version to change the structure of the database and for creating
      * transactions to get or modify the stored records. Should not be created
@@ -112,6 +100,21 @@ declare module goog.db {
          * @throws {goog.db.Error} If there's a problem creating the transaction.
          */
         createTransaction(storeNames: Array<string>, opt_mode?: goog.db.Transaction.TransactionMode): goog.db.Transaction;
+    }
+}
+
+declare module goog.db.IndexedDb {
+
+    /**
+     * Event types fired by a database.
+     *
+     * @enum {string} The event types for the web socket.
+     */
+    export interface EventType {
+        ABORT: string;
+        CLOSE: string;
+        ERROR: string;
+        VERSION_CHANGE: string;
     }
 
     /**

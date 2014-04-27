@@ -1,20 +1,6 @@
 declare module goog.debug {
 
     /**
-     * A list of possible user agent strings.
-     * @enum {string}
-     */
-    export interface UserAgent {
-        OPERA: string;
-        IE: string;
-        GECKO: string;
-        FIREFOX: string;
-        WEBKIT: string;
-        SAFARI: string;
-        MOBILE: string;
-    }
-
-    /**
      * A class for solving development CSS issues/emulating the CSS Compiler.
      * @param {goog.debug.DevCss.UserAgent=} opt_userAgent The user agent, if not
      *     passed in, will be determined using goog.userAgent.
@@ -35,5 +21,22 @@ declare module goog.debug {
          *     aids unit testing.
          */
         activateBrowserSpecificCssRules(opt_enableIe6ReadyHandler?: boolean): void;
+    }
+}
+
+declare module goog.debug.DevCss {
+
+    /**
+     * A list of possible user agent strings.
+     * @enum {string}
+     */
+    export interface UserAgent {
+        OPERA: string;
+        IE: string;
+        GECKO: string;
+        FIREFOX: string;
+        WEBKIT: string;
+        SAFARI: string;
+        MOBILE: string;
     }
 }

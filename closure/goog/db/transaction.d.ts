@@ -1,32 +1,6 @@
 declare module goog.db {
 
     /**
-     * Event types the Transaction can dispatch. COMPLETE events are dispatched
-     * when the transaction is committed. If a transaction is aborted it dispatches
-     * both an ABORT event and an ERROR event with the ABORT_ERR code. Error events
-     * are dispatched on any error.
-     *
-     * @enum {string}
-     */
-    export interface EventTypes {
-        COMPLETE: string;
-        ABORT: string;
-        ERROR: string;
-    }
-
-    /**
-     * The three possible transaction modes.
-     * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBTransaction
-     *
-     * @enum {string}
-     */
-    export interface TransactionMode {
-        READ_ONLY: string;
-        READ_WRITE: string;
-        VERSION_CHANGE: string;
-    }
-
-    /**
      * Creates a new transaction. Transactions contain methods for accessing object
      * stores and are created from the database object. Should not be created
      * directly, open a database and call createTransaction on it.
@@ -74,5 +48,34 @@ declare module goog.db {
          * database. Dispatches an ABORT event.
          */
         abort(): void;
+    }
+}
+
+declare module goog.db.Transaction {
+
+    /**
+     * Event types the Transaction can dispatch. COMPLETE events are dispatched
+     * when the transaction is committed. If a transaction is aborted it dispatches
+     * both an ABORT event and an ERROR event with the ABORT_ERR code. Error events
+     * are dispatched on any error.
+     *
+     * @enum {string}
+     */
+    export interface EventTypes {
+        COMPLETE: string;
+        ABORT: string;
+        ERROR: string;
+    }
+
+    /**
+     * The three possible transaction modes.
+     * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBTransaction
+     *
+     * @enum {string}
+     */
+    export interface TransactionMode {
+        READ_ONLY: string;
+        READ_WRITE: string;
+        VERSION_CHANGE: string;
     }
 }

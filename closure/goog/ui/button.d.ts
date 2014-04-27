@@ -1,15 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Constants for button sides, see {@link goog.ui.Button.prototype.setCollapsed}
-     * for details. Aliased from goog.ui.ButtonSide to support legacy users without
-     * creating a circular dependency in {@link goog.ui.ButtonRenderer}.
-     * @enum {number}
-     * @deprecated use {@link goog.ui.ButtonSide} instead.
-     */
-    export interface Side extends goog.ui.ButtonSide {}
-
-    /**
      * A button control, rendered as a native browser button by default.
      *
      * @param {goog.ui.ControlContent=} opt_content Text caption or existing DOM
@@ -87,4 +78,16 @@ declare module goog.ui {
          */
         handleKeyEventInternal(e: goog.events.KeyEvent): boolean;
     }
+}
+
+declare module goog.ui.Button {
+
+    /**
+     * Constants for button sides, see {@link goog.ui.Button.prototype.setCollapsed}
+     * for details. Aliased from goog.ui.ButtonSide to support legacy users without
+     * creating a circular dependency in {@link goog.ui.ButtonRenderer}.
+     * @enum {number}
+     * @deprecated use {@link goog.ui.ButtonSide} instead.
+     */
+    export interface Side extends goog.ui.ButtonSide {}
 }

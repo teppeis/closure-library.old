@@ -1,16 +1,6 @@
 declare module goog.testing {
 
     /**
-     * The order to run the auto-discovered tests.
-     * @enum {string}
-     */
-    export interface Order {
-        NATURAL: string;
-        RANDOM: string;
-        SORTED: string;
-    }
-
-    /**
      * A class representing a JsUnit test case.  A TestCase is made up of a number
      * of test functions which can be run.  Individual test cases can override the
      * following functions to set up their test environment:
@@ -377,6 +367,19 @@ declare module goog.testing {
          */
         static initializeTestRunner(testCase: goog.testing.TestCase): void;
     }
+}
+
+declare module goog.testing.TestCase {
+
+    /**
+     * The order to run the auto-discovered tests.
+     * @enum {string}
+     */
+    export interface Order {
+        NATURAL: string;
+        RANDOM: string;
+        SORTED: string;
+    }
 
     /**
      * A class representing a single test function.
@@ -388,6 +391,11 @@ declare module goog.testing {
      */
     export class Test {
         constructor(name: string, ref: Function, opt_scope?: Object);
+        
+        /**
+         * Executes the test function.
+         */
+        execute(): void;
     }
 
     /**
@@ -398,6 +406,17 @@ declare module goog.testing {
      */
     export class Result {
         constructor(testCase: goog.testing.TestCase);
+        
+        /**
+         * @return {boolean} Whether the test was successful.
+         */
+        isSuccess(): boolean;
+        
+        /**
+         * @return {string} A summary of the tests, including total number of tests that
+         *     passed, failed, and the time taken.
+         */
+        getSummary(): string;
     }
 
     /**
@@ -410,5 +429,12 @@ declare module goog.testing {
      */
     export class Error {
         constructor(source: string, message: string, opt_stack?: string);
+        
+        /**
+         * Returns a string representing the error object.
+         * @return {string} A string representation of the error.
+         * @override
+         */
+        toString(): string;
     }
 }

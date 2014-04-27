@@ -1,14 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Event constants for the activity monitor.
-     * @enum {string}
-     */
-    export interface Event {
-        ACTIVITY: string;
-    }
-
-    /**
      * Once initialized with a document, the activity monitor can be queried for
      * the current idle time.
      *
@@ -82,5 +74,16 @@ declare module goog.ui {
          * @return {number} last event time.
          */
         getLastEventTime(): number;
+    }
+}
+
+declare module goog.ui.ActivityMonitor {
+
+    /**
+     * Event constants for the activity monitor.
+     * @enum {string}
+     */
+    export interface Event {
+        ACTIVITY: string;
     }
 }

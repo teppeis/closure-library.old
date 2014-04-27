@@ -1,14 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Events fired by component.
-     * @enum {string}
-     */
-    export interface EventType {
-        FILTER_CHANGED: string;
-    }
-
-    /**
      * Filtered menu class.
      * @param {goog.ui.MenuRenderer=} opt_renderer Renderer used to render filtered
      *     menu; defaults to {@link goog.ui.MenuRenderer}.
@@ -117,5 +109,16 @@ declare module goog.ui {
          * @return {Element} Input element.
          */
         getFilterInputElement(): Element;
+    }
+}
+
+declare module goog.ui.FilteredMenu {
+
+    /**
+     * Events fired by component.
+     * @enum {string}
+     */
+    export interface EventType {
+        FILTER_CHANGED: string;
     }
 }

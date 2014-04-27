@@ -240,6 +240,9 @@ declare module goog.net {
          */
         getRequestIframe(): HTMLIFrameElement;
     }
+}
+
+declare module goog.net.IframeIo {
 
     /**
      * Class for representing incremental data events.

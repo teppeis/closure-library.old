@@ -1,25 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Events.
-     * @enum {string}
-     */
-    export interface EventType {
-        HANDLE_DRAG: string;
-        HANDLE_DRAG_END: string;
-        HANDLE_SNAP: string;
-    }
-
-    /**
-    * Orientation values for the splitpane.
-    * @enum {string}
-    */
-    export interface Orientation {
-        HORIZONTAL: string;
-        VERTICAL: string;
-    }
-
-    /**
      * A left/right up/down Container SplitPane.
      * Create SplitPane with two goog.ui.Component opjects to split.
      * TODO(user): Support minimum splitpane size.
@@ -128,5 +109,27 @@ declare module goog.ui {
           * @param {goog.math.Size} size The size to set the splitpane.
           */
         setSize(size: goog.math.Size): void;
+    }
+}
+
+declare module goog.ui.SplitPane {
+
+    /**
+     * Events.
+     * @enum {string}
+     */
+    export interface EventType {
+        HANDLE_DRAG: string;
+        HANDLE_DRAG_END: string;
+        HANDLE_SNAP: string;
+    }
+
+    /**
+    * Orientation values for the splitpane.
+    * @enum {string}
+    */
+    export interface Orientation {
+        HORIZONTAL: string;
+        VERTICAL: string;
     }
 }

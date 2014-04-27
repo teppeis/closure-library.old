@@ -208,6 +208,9 @@ declare module goog.ui.ac {
          */
         renderRowHtml(row: Object, token: string): Element;
     }
+}
+
+declare module goog.ui.ac.Renderer {
 
     /**
      * Class allowing different implementations to custom render the autocomplete.
@@ -216,5 +219,30 @@ declare module goog.ui.ac {
      */
     export class CustomRenderer {
         constructor();
+        
+        /**
+         * Renders the autocomplete box. May be set to null.
+         *
+         * Because of the type, this function cannot be documented with param JSDoc.
+         *
+         * The function expects the following parameters:
+         *
+         * renderer, goog.ui.ac.Renderer: The autocomplete renderer.
+         * element, Element: The main element that controls the rendered autocomplete.
+         * rows, Array: The current set of rows being displayed.
+         * token, string: The current token that has been entered. *
+         *
+         * @type {function(goog.ui.ac.Renderer, Element, Array, string)|
+         *        null|undefined}
+         */
+        render(): void;
+        
+        /**
+         * Generic function that takes a row and renders a DOM structure for that row.
+         * @param {Object} row Object representing row.
+         * @param {string} token Token to highlight.
+         * @param {Node} node The node to render into.
+         */
+        renderRow(row: Object, token: string, node: Node): void;
     }
 }

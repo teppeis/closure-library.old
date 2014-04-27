@@ -1,16 +1,6 @@
 declare module goog.ui.editor {
 
     /**
-     * Event type constants for events the dialog fires.
-     * @enum {string}
-     */
-    export interface EventType {
-        AFTER_HIDE: string;
-        CANCEL: string;
-        OK: string;
-    }
-
-    /**
      * Creates an object that represents a dialog box.
      * @param {goog.dom.DomHelper} domHelper DomHelper to be used to create the
      * dialog's dom structure.
@@ -126,6 +116,19 @@ declare module goog.ui.editor {
          */
         disposeInternal(): void;
     }
+}
+
+declare module goog.ui.editor.AbstractDialog {
+
+    /**
+     * Event type constants for events the dialog fires.
+     * @enum {string}
+     */
+    export interface EventType {
+        AFTER_HIDE: string;
+        CANCEL: string;
+        OK: string;
+    }
 
     /**
      * A builder class for the dialog control. All methods except build return this.
@@ -135,5 +138,62 @@ declare module goog.ui.editor {
      */
     export class Builder {
         constructor(editorDialog: goog.ui.editor.AbstractDialog);
+        
+        /**
+         * Sets the title of the dialog.
+         * @param {string} title Title HTML (escaped).
+         * @return {!goog.ui.editor.AbstractDialog.Builder} This.
+         */
+        setTitle(title: string): goog.ui.editor.AbstractDialog.Builder;
+        
+        /**
+         * Adds an OK button to the dialog. Clicking this button will cause {@link
+         * handleOk} to run, subsequently dispatching an OK event.
+         * @param {string=} opt_label The caption for the button, if not "OK".
+         * @return {!goog.ui.editor.AbstractDialog.Builder} This.
+         */
+        addOkButton(opt_label?: string): goog.ui.editor.AbstractDialog.Builder;
+        
+        /**
+         * Adds a Cancel button to the dialog. Clicking this button will cause {@link
+         * handleCancel} to run, subsequently dispatching a CANCEL event.
+         * @param {string=} opt_label The caption for the button, if not "Cancel".
+         * @return {!goog.ui.editor.AbstractDialog.Builder} This.
+         */
+        addCancelButton(opt_label?: string): goog.ui.editor.AbstractDialog.Builder;
+        
+        /**
+         * Adds a custom button to the dialog.
+         * @param {string} label The caption for the button.
+         * @param {function(goog.ui.Dialog.EventType):*} handler Function called when
+         *     the button is clicked. It is recommended that this function be a method
+         *     in the concrete subclass of AbstractDialog using this Builder, and that
+         *     it dispatch an event (see {@link handleOk}).
+         * @param {string=} opt_buttonId Identifier to be used to access the button when
+         *     calling AbstractDialog.getButtonElement().
+         * @return {!goog.ui.editor.AbstractDialog.Builder} This.
+         */
+        addButton(label: string, handler: (arg0: goog.ui.Dialog.EventType) => any, opt_buttonId?: string): goog.ui.editor.AbstractDialog.Builder;
+        
+        /**
+         * Puts a CSS class on the dialog's main element.
+         * @param {string} className The class to add.
+         * @return {!goog.ui.editor.AbstractDialog.Builder} This.
+         */
+        addClassName(className: string): goog.ui.editor.AbstractDialog.Builder;
+        
+        /**
+         * Sets the content element of the dialog.
+         * @param {Element} contentElem An element for the main body.
+         * @return {!goog.ui.editor.AbstractDialog.Builder} This.
+         */
+        setContent(contentElem: Element): goog.ui.editor.AbstractDialog.Builder;
+        
+        /**
+         * Builds the wrapped dialog control. May only be called once, after which
+         * no more methods may be called on this builder.
+         * @return {!goog.ui.Dialog} The wrapped dialog control.
+         */
+        build(): goog.ui.Dialog;
     }
 }

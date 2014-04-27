@@ -1,16 +1,6 @@
 declare module goog.ui {
 
     /**
-     * An emum of split behavior handlers.
-     * @enum {function(goog.ui.Control,Event)}
-     */
-    export interface DefaultHandlers {
-        NONE: (arg0: goog.ui.Control, arg1: Event) => any;
-        CAPTION: (arg0: goog.ui.Control, arg1: Event) => any;
-        VALUE: (arg0: goog.ui.Control, arg1: Event) => any;
-    }
-
-    /**
      * Creates a behavior for combining two controls. The behavior is triggered
      * by a given event type which applies the behavior handler.
      * Can be used to also render or decorate  the controls.
@@ -96,5 +86,18 @@ declare module goog.ui {
          * @param {boolean} activate Whether to activate or deactivate the behavior.
          */
         setActive(activate: boolean): void;
+    }
+}
+
+declare module goog.ui.SplitBehavior {
+
+    /**
+     * An emum of split behavior handlers.
+     * @enum {function(goog.ui.Control,Event)}
+     */
+    export interface DefaultHandlers {
+        NONE: (arg0: goog.ui.Control, arg1: Event) => any;
+        CAPTION: (arg0: goog.ui.Control, arg1: Event) => any;
+        VALUE: (arg0: goog.ui.Control, arg1: Event) => any;
     }
 }

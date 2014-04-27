@@ -1,17 +1,6 @@
 declare module goog.proto2 {
 
     /**
-     * An enumeration of the options for how to emit the keys in
-     * the generated simplified object.
-     *
-     * @enum {number}
-     */
-    export interface KeyOption {
-        TAG: number;
-        NAME: number;
-    }
-
-    /**
      * ObjectSerializer, a serializer which turns Messages into simplified
      * ECMAScript objects.
      *
@@ -42,5 +31,19 @@ declare module goog.proto2 {
          * @override
          */
         deserializeTo(message: goog.proto2.Message, data: any): void;
+    }
+}
+
+declare module goog.proto2.ObjectSerializer {
+
+    /**
+     * An enumeration of the options for how to emit the keys in
+     * the generated simplified object.
+     *
+     * @enum {number}
+     */
+    export interface KeyOption {
+        TAG: number;
+        NAME: number;
     }
 }

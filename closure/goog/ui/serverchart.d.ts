@@ -1,154 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Enum of chart data encoding types
-     *
-     * @enum {string}
-     */
-    export interface EncodingType {
-        AUTOMATIC: string;
-        EXTENDED: string;
-        SIMPLE: string;
-        TEXT: string;
-    }
-
-    /**
-     * Enum of chart types with their short names used by the chartserver.
-     *
-     * @enum {string}
-     */
-    export interface ChartType {
-        BAR: string;
-        CLOCK: string;
-        CONCENTRIC_PIE: string;
-        FILLEDLINE: string;
-        FINANCE: string;
-        GOOGLEOMETER: string;
-        HORIZONTAL_GROUPED_BAR: string;
-        HORIZONTAL_STACKED_BAR: string;
-        LINE: string;
-        MAP: string;
-        MAPUSA: string;
-        MAPWORLD: string;
-        PIE: string;
-        PIE3D: string;
-        RADAR: string;
-        SCATTER: string;
-        SPARKLINE: string;
-        VENN: string;
-        VERTICAL_GROUPED_BAR: string;
-        VERTICAL_STACKED_BAR: string;
-        XYLINE: string;
-    }
-
-    /**
-     * Enum of multi-axis types.
-     *
-     * @enum {string}
-     */
-    export interface MultiAxisType {
-        X_AXIS: string;
-        LEFT_Y_AXIS: string;
-        RIGHT_Y_AXIS: string;
-        TOP_AXIS: string;
-    }
-
-    /**
-     * Enum of multi-axis alignments.
-     *
-     * @enum {number}
-     */
-    export interface MultiAxisAlignment {
-        ALIGN_LEFT: number;
-        ALIGN_CENTER: number;
-        ALIGN_RIGHT: number;
-    }
-
-    /**
-     * Enum of legend positions.
-     *
-     * @enum {string}
-     */
-    export interface LegendPosition {
-        TOP: string;
-        BOTTOM: string;
-        LEFT: string;
-        RIGHT: string;
-    }
-
-    /**
-     * Enum of line and tick options for an axis.
-     *
-     * @enum {string}
-     */
-    export interface AxisDisplayType {
-        LINE_AND_TICKS: string;
-        LINE: string;
-        TICKS: string;
-    }
-
-    /**
-     * Enum of chart maximum values in pixels, as listed at:
-     * http://code.google.com/apis/chart/basics.html
-     *
-     * @enum {number}
-     */
-    export interface MaximumValue {
-        WIDTH: number;
-        HEIGHT: number;
-        MAP_WIDTH: number;
-        MAP_HEIGHT: number;
-        TOTAL_AREA: number;
-    }
-
-    /**
-     * Enum of ChartServer URI parameters.
-     *
-     * @enum {string}
-     */
-    export interface UriParam {
-        BACKGROUND_FILL: string;
-        BAR_HEIGHT: string;
-        DATA: string;
-        DATA_COLORS: string;
-        DATA_LABELS: string;
-        DATA_SCALING: string;
-        DIGITAL_SIGNATURE: string;
-        GEOGRAPHICAL_REGION: string;
-        GRID: string;
-        LABEL_COLORS: string;
-        LEFT_Y_LABELS: string;
-        LEGEND: string;
-        LEGEND_POSITION: string;
-        LEGEND_TEXTS: string;
-        LINE_STYLES: string;
-        MARGINS: string;
-        MARKERS: string;
-        MISC_PARAMS: string;
-        MULTI_AXIS_LABEL_POSITION: string;
-        MULTI_AXIS_LABEL_TEXT: string;
-        MULTI_AXIS_RANGE: string;
-        MULTI_AXIS_STYLE: string;
-        MULTI_AXIS_TYPES: string;
-        RIGHT_LABELS: string;
-        RIGHT_LABEL_POSITIONS: string;
-        SIZE: string;
-        TITLE: string;
-        TITLE_FORMAT: string;
-        TYPE: string;
-        X_AXIS_STYLE: string;
-        X_LABELS: string;
-    }
-
-    /**
-     * Event types dispatched by the ServerChart object
-     * @enum {string}
-     */
-    export interface Event {
-        URI_TOO_LONG: string;
-    }
-
-    /**
      * Will construct a chart using Google's chartserver.
      *
      * @param {goog.ui.ServerChart.ChartType} type The chart type.
@@ -829,6 +681,157 @@ declare module goog.ui {
          *     if the set number is not given.
          */
         getData(opt_setNumber?: number): Array<any>;
+    }
+}
+
+declare module goog.ui.ServerChart {
+
+    /**
+     * Enum of chart data encoding types
+     *
+     * @enum {string}
+     */
+    export interface EncodingType {
+        AUTOMATIC: string;
+        EXTENDED: string;
+        SIMPLE: string;
+        TEXT: string;
+    }
+
+    /**
+     * Enum of chart types with their short names used by the chartserver.
+     *
+     * @enum {string}
+     */
+    export interface ChartType {
+        BAR: string;
+        CLOCK: string;
+        CONCENTRIC_PIE: string;
+        FILLEDLINE: string;
+        FINANCE: string;
+        GOOGLEOMETER: string;
+        HORIZONTAL_GROUPED_BAR: string;
+        HORIZONTAL_STACKED_BAR: string;
+        LINE: string;
+        MAP: string;
+        MAPUSA: string;
+        MAPWORLD: string;
+        PIE: string;
+        PIE3D: string;
+        RADAR: string;
+        SCATTER: string;
+        SPARKLINE: string;
+        VENN: string;
+        VERTICAL_GROUPED_BAR: string;
+        VERTICAL_STACKED_BAR: string;
+        XYLINE: string;
+    }
+
+    /**
+     * Enum of multi-axis types.
+     *
+     * @enum {string}
+     */
+    export interface MultiAxisType {
+        X_AXIS: string;
+        LEFT_Y_AXIS: string;
+        RIGHT_Y_AXIS: string;
+        TOP_AXIS: string;
+    }
+
+    /**
+     * Enum of multi-axis alignments.
+     *
+     * @enum {number}
+     */
+    export interface MultiAxisAlignment {
+        ALIGN_LEFT: number;
+        ALIGN_CENTER: number;
+        ALIGN_RIGHT: number;
+    }
+
+    /**
+     * Enum of legend positions.
+     *
+     * @enum {string}
+     */
+    export interface LegendPosition {
+        TOP: string;
+        BOTTOM: string;
+        LEFT: string;
+        RIGHT: string;
+    }
+
+    /**
+     * Enum of line and tick options for an axis.
+     *
+     * @enum {string}
+     */
+    export interface AxisDisplayType {
+        LINE_AND_TICKS: string;
+        LINE: string;
+        TICKS: string;
+    }
+
+    /**
+     * Enum of chart maximum values in pixels, as listed at:
+     * http://code.google.com/apis/chart/basics.html
+     *
+     * @enum {number}
+     */
+    export interface MaximumValue {
+        WIDTH: number;
+        HEIGHT: number;
+        MAP_WIDTH: number;
+        MAP_HEIGHT: number;
+        TOTAL_AREA: number;
+    }
+
+    /**
+     * Enum of ChartServer URI parameters.
+     *
+     * @enum {string}
+     */
+    export interface UriParam {
+        BACKGROUND_FILL: string;
+        BAR_HEIGHT: string;
+        DATA: string;
+        DATA_COLORS: string;
+        DATA_LABELS: string;
+        DATA_SCALING: string;
+        DIGITAL_SIGNATURE: string;
+        GEOGRAPHICAL_REGION: string;
+        GRID: string;
+        LABEL_COLORS: string;
+        LEFT_Y_LABELS: string;
+        LEGEND: string;
+        LEGEND_POSITION: string;
+        LEGEND_TEXTS: string;
+        LINE_STYLES: string;
+        MARGINS: string;
+        MARKERS: string;
+        MISC_PARAMS: string;
+        MULTI_AXIS_LABEL_POSITION: string;
+        MULTI_AXIS_LABEL_TEXT: string;
+        MULTI_AXIS_RANGE: string;
+        MULTI_AXIS_STYLE: string;
+        MULTI_AXIS_TYPES: string;
+        RIGHT_LABELS: string;
+        RIGHT_LABEL_POSITIONS: string;
+        SIZE: string;
+        TITLE: string;
+        TITLE_FORMAT: string;
+        TYPE: string;
+        X_AXIS_STYLE: string;
+        X_LABELS: string;
+    }
+
+    /**
+     * Event types dispatched by the ServerChart object
+     * @enum {string}
+     */
+    export interface Event {
+        URI_TOO_LONG: string;
     }
 
     /**

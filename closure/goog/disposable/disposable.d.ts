@@ -1,15 +1,6 @@
 declare module goog {
 
     /**
-     * @enum {number} Different monitoring modes for Disposable.
-     */
-    export interface MonitoringMode {
-        OFF: number;
-        PERMANENT: number;
-        INTERACTIVE: number;
-    }
-
-    /**
      * Class that provides the basic implementation for disposable objects. If your
      * class holds one or more references to COM objects, DOM nodes, or other
      * disposable objects, it should extend this class or implement the disposable
@@ -131,4 +122,16 @@ declare module goog {
      * @param {...*} var_args The list.
      */
     export function disposeAll(...var_args: any[]): void;
+}
+
+declare module goog.Disposable {
+
+    /**
+     * @enum {number} Different monitoring modes for Disposable.
+     */
+    export interface MonitoringMode {
+        OFF: number;
+        PERMANENT: number;
+        INTERACTIVE: number;
+    }
 }

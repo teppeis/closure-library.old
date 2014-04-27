@@ -1,40 +1,6 @@
 declare module goog.spell {
 
     /**
-     * Constants for event names
-     *
-     * @enum {string}
-     */
-    export interface EventType {
-        READY: string;
-        ERROR: string;
-        WORD_CHANGED: string;
-    }
-
-    /**
-     * Codes representing the status of an individual word.
-     *
-     * @enum {number}
-     */
-    export interface WordStatus {
-        UNKNOWN: number;
-        VALID: number;
-        INVALID: number;
-        IGNORED: number;
-        CORRECTED: number;
-    }
-
-    /**
-     * Fields for word array in cache.
-     *
-     * @enum {number}
-     */
-    export interface CacheIndex {
-        STATUS: number;
-        SUGGESTIONS: number;
-    }
-
-    /**
      * Support class for spell checker components. Provides basic functionality
      * such as word lookup and caching.
      *
@@ -144,6 +110,43 @@ declare module goog.spell {
          * @return {Array.<string>} An array of suggestions for the given word.
          */
         getSuggestions(word: string): Array<string>;
+    }
+}
+
+declare module goog.spell.SpellCheck {
+
+    /**
+     * Constants for event names
+     *
+     * @enum {string}
+     */
+    export interface EventType {
+        READY: string;
+        ERROR: string;
+        WORD_CHANGED: string;
+    }
+
+    /**
+     * Codes representing the status of an individual word.
+     *
+     * @enum {number}
+     */
+    export interface WordStatus {
+        UNKNOWN: number;
+        VALID: number;
+        INVALID: number;
+        IGNORED: number;
+        CORRECTED: number;
+    }
+
+    /**
+     * Fields for word array in cache.
+     *
+     * @enum {number}
+     */
+    export interface CacheIndex {
+        STATUS: number;
+        SUGGESTIONS: number;
     }
 
     /**

@@ -1,69 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Common events fired by components so that event propagation is useful.  Not
-     * all components are expected to dispatch or listen for all event types.
-     * Events dispatched before a state transition should be cancelable to prevent
-     * the corresponding state change.
-     * @enum {string}
-     */
-    export interface EventType {
-        BEFORE_SHOW: string;
-        SHOW: string;
-        HIDE: string;
-        DISABLE: string;
-        ENABLE: string;
-        HIGHLIGHT: string;
-        UNHIGHLIGHT: string;
-        ACTIVATE: string;
-        DEACTIVATE: string;
-        SELECT: string;
-        UNSELECT: string;
-        CHECK: string;
-        UNCHECK: string;
-        FOCUS: string;
-        BLUR: string;
-        OPEN: string;
-        CLOSE: string;
-        ENTER: string;
-        LEAVE: string;
-        ACTION: string;
-        CHANGE: string;
-    }
-
-    /**
-     * Errors thrown by the component.
-     * @enum {string}
-     */
-    export interface Error {
-        NOT_SUPPORTED: string;
-        DECORATE_INVALID: string;
-        ALREADY_RENDERED: string;
-        PARENT_UNABLE_TO_BE_SET: string;
-        CHILD_INDEX_OUT_OF_BOUNDS: string;
-        NOT_OUR_CHILD: string;
-        NOT_IN_DOCUMENT: string;
-        STATE_INVALID: string;
-    }
-
-    /**
-     * Common component states.  Components may have distinct appearance depending
-     * on what state(s) apply to them.  Not all components are expected to support
-     * all states.
-     * @enum {number}
-     */
-    export interface State {
-        ALL: number;
-        DISABLED: number;
-        HOVER: number;
-        ACTIVE: number;
-        SELECTED: number;
-        CHECKED: number;
-        FOCUSED: number;
-        OPENED: number;
-    }
-
-    /**
      * Default implementation of UI component.
      *
      * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
@@ -546,5 +483,71 @@ declare module goog.ui {
          * @return {!Array.<goog.ui.Component>} The removed components if any.
          */
         removeChildren(opt_unrender?: boolean): Array<goog.ui.Component>;
+    }
+}
+
+declare module goog.ui.Component {
+
+    /**
+     * Common events fired by components so that event propagation is useful.  Not
+     * all components are expected to dispatch or listen for all event types.
+     * Events dispatched before a state transition should be cancelable to prevent
+     * the corresponding state change.
+     * @enum {string}
+     */
+    export interface EventType {
+        BEFORE_SHOW: string;
+        SHOW: string;
+        HIDE: string;
+        DISABLE: string;
+        ENABLE: string;
+        HIGHLIGHT: string;
+        UNHIGHLIGHT: string;
+        ACTIVATE: string;
+        DEACTIVATE: string;
+        SELECT: string;
+        UNSELECT: string;
+        CHECK: string;
+        UNCHECK: string;
+        FOCUS: string;
+        BLUR: string;
+        OPEN: string;
+        CLOSE: string;
+        ENTER: string;
+        LEAVE: string;
+        ACTION: string;
+        CHANGE: string;
+    }
+
+    /**
+     * Errors thrown by the component.
+     * @enum {string}
+     */
+    export interface Error {
+        NOT_SUPPORTED: string;
+        DECORATE_INVALID: string;
+        ALREADY_RENDERED: string;
+        PARENT_UNABLE_TO_BE_SET: string;
+        CHILD_INDEX_OUT_OF_BOUNDS: string;
+        NOT_OUR_CHILD: string;
+        NOT_IN_DOCUMENT: string;
+        STATE_INVALID: string;
+    }
+
+    /**
+     * Common component states.  Components may have distinct appearance depending
+     * on what state(s) apply to them.  Not all components are expected to support
+     * all states.
+     * @enum {number}
+     */
+    export interface State {
+        ALL: number;
+        DISABLED: number;
+        HOVER: number;
+        ACTIVE: number;
+        SELECTED: number;
+        CHECKED: number;
+        FOCUSED: number;
+        OPENED: number;
     }
 }

@@ -70,6 +70,9 @@ declare module goog.net.xpc {
          */
         send(service: string, payload: string): void;
     }
+}
+
+declare module goog.net.xpc.IframePollingTransport {
 
     /**
      * goog.net.xpc.IframePollingTransport.Sender
@@ -83,6 +86,14 @@ declare module goog.net.xpc {
      */
     export class Sender {
         constructor(url: string, windowObj: Object);
+        
+        /**
+         * Sends a message-part (frame) to the peer.
+         * The message-part is encoded and put in the fragment identifier
+         * of the URL used for sending (and belongs to the origin/domain of the peer).
+         * @param {string} payload The message to send.
+         */
+        send(payload: string): void;
     }
 
     /**
@@ -98,5 +109,11 @@ declare module goog.net.xpc {
      */
     export class Receiver {
         constructor(transport: goog.net.xpc.IframePollingTransport, windowObj: Object, callback: Function);
+        
+        /**
+         * Polls the location of the receiver-frame for changes.
+         * @return {boolean} Whether a change has been detected.
+         */
+        receive(): boolean;
     }
 }

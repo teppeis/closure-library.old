@@ -1,18 +1,6 @@
 declare module goog.fx {
 
     /**
-     * Constants for event names.
-     * @enum {string}
-     */
-    export interface EventType {
-        EARLY_CANCEL: string;
-        START: string;
-        BEFOREDRAG: string;
-        DRAG: string;
-        END: string;
-    }
-
-    /**
      * A class that allows mouse or touch-based dragging (moving) of an element
      *
      * @param {Element} target The element that will be dragged.
@@ -274,5 +262,20 @@ declare module goog.fx {
      */
     export class DragEvent extends goog.events.Event {
         constructor(type: string, dragobj: goog.fx.Dragger, clientX: number, clientY: number, browserEvent: goog.events.BrowserEvent, opt_actX?: number, opt_actY?: number, opt_dragCanceled?: boolean);
+    }
+}
+
+declare module goog.fx.Dragger {
+
+    /**
+     * Constants for event names.
+     * @enum {string}
+     */
+    export interface EventType {
+        EARLY_CANCEL: string;
+        START: string;
+        BEFOREDRAG: string;
+        DRAG: string;
+        END: string;
     }
 }

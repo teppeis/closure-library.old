@@ -1,27 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Bit values for modifier keys.
-     * @enum {number}
-     */
-    export interface Modifiers {
-        NONE: number;
-        SHIFT: number;
-        CTRL: number;
-        ALT: number;
-        META: number;
-    }
-
-    /**
-     * Events.
-     * @enum {string}
-     */
-    export interface EventType {
-        SHORTCUT_TRIGGERED: string;
-        SHORTCUT_PREFIX: string;
-    }
-
-    /**
      * Component for handling keyboard shortcuts. A shortcut is registered and bound
      * to a specific identifier. Once the shortcut is triggered an event is fired
      * with the identifier for the shortcut. This allows keyboard shortcuts to be
@@ -274,5 +253,29 @@ declare module goog.ui {
      */
     export class KeyboardShortcutEvent extends goog.events.Event {
         constructor(type: string, identifier: string, target: Node);
+    }
+}
+
+declare module goog.ui.KeyboardShortcutHandler {
+
+    /**
+     * Bit values for modifier keys.
+     * @enum {number}
+     */
+    export interface Modifiers {
+        NONE: number;
+        SHIFT: number;
+        CTRL: number;
+        ALT: number;
+        META: number;
+    }
+
+    /**
+     * Events.
+     * @enum {string}
+     */
+    export interface EventType {
+        SHORTCUT_TRIGGERED: string;
+        SHORTCUT_PREFIX: string;
     }
 }

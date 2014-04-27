@@ -79,6 +79,9 @@ declare module goog.debug {
          */
         setPrefixErrorMessages(prefixErrorMessages: boolean): void;
     }
+}
+
+declare module goog.debug.ErrorHandler {
 
     /**
      * Error thrown to the caller of a protected entry point if the entry point
@@ -90,14 +93,11 @@ declare module goog.debug {
      */
     export class ProtectedFunctionError extends goog.debug.Error {
         constructor(cause: any);
+        
+        /**
+         * Text to prefix the message with.
+         * @type {string}
+         */
+        static MESSAGE_PREFIX: string;
     }
-}
-
-declare module goog.debug.ErrorHandler.ProtectedFunctionError {
-
-    /**
-     * Text to prefix the message with.
-     * @type {string}
-     */
-    export var MESSAGE_PREFIX: string;
 }

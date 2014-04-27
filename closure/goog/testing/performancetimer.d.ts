@@ -115,6 +115,9 @@ declare module goog.testing {
          */
         static createResults(samples: Array<number>): Object;
     }
+}
+
+declare module goog.testing.PerformanceTimer {
 
     /**
      * A task for the performance timer to measure. Callers can specify optional
@@ -127,5 +130,41 @@ declare module goog.testing {
      */
     export class Task {
         constructor(test: goog.testing.PerformanceTimer.TestFunction);
+        
+        /**
+         * @return {goog.testing.PerformanceTimer.TestFunction} The test function to
+         *     time.
+         */
+        getTest(): goog.testing.PerformanceTimer.TestFunction;
+        
+        /**
+         * Specifies a set up function to be invoked before each invocation of the test
+         * function.
+         * @param {goog.testing.PerformanceTimer.TestFunction} setUp The set up
+         *     function.
+         * @return {!goog.testing.PerformanceTimer.Task} This task.
+         */
+        withSetUp(setUp: goog.testing.PerformanceTimer.TestFunction): goog.testing.PerformanceTimer.Task;
+        
+        /**
+         * @return {goog.testing.PerformanceTimer.TestFunction} The set up function or
+         *     the default no-op function if none was specified.
+         */
+        getSetUp(): goog.testing.PerformanceTimer.TestFunction;
+        
+        /**
+         * Specifies a tear down function to be invoked after each invocation of the
+         * test function.
+         * @param {goog.testing.PerformanceTimer.TestFunction} tearDown The tear down
+         *     function.
+         * @return {!goog.testing.PerformanceTimer.Task} This task.
+         */
+        withTearDown(tearDown: goog.testing.PerformanceTimer.TestFunction): goog.testing.PerformanceTimer.Task;
+        
+        /**
+         * @return {goog.testing.PerformanceTimer.TestFunction} The tear down function
+         *     or the default no-op function if none was specified.
+         */
+        getTearDown(): goog.testing.PerformanceTimer.TestFunction;
     }
 }

@@ -1,15 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Event constants for the idle timer event target
-     * @enum {string}
-     */
-    export interface Event {
-        BECOME_ACTIVE: string;
-        BECOME_IDLE: string;
-    }
-
-    /**
      * Event target that will give notification of state changes between active and
      * idle. This class is designed to require few resources while the user is
      * active.
@@ -45,5 +36,17 @@ declare module goog.ui {
          * @return {boolean} true if the user is idle, false otherwise.
          */
         isIdle(): boolean;
+    }
+}
+
+declare module goog.ui.IdleTimer {
+
+    /**
+     * Event constants for the idle timer event target
+     * @enum {string}
+     */
+    export interface Event {
+        BECOME_ACTIVE: string;
+        BECOME_IDLE: string;
     }
 }

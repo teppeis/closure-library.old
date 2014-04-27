@@ -1,39 +1,6 @@
 declare module goog.i18n {
 
     /**
-     * Standard number formatting patterns.
-     * @enum {number}
-     */
-    export interface Format {
-        DECIMAL: number;
-        SCIENTIFIC: number;
-        PERCENT: number;
-        CURRENCY: number;
-        COMPACT_SHORT: number;
-        COMPACT_LONG: number;
-    }
-
-    /**
-     * Currency styles.
-     * @enum {number}
-     */
-    export interface CurrencyStyle {
-        LOCAL: number;
-        PORTABLE: number;
-        GLOBAL: number;
-    }
-
-    /**
-     * Compacting styles.
-     * @enum {number}
-     */
-    export interface CompactStyle {
-        NONE: number;
-        SHORT: number;
-        LONG: number;
-    }
-
-    /**
      * Alias for the compact format 'unit' object.
      * @typedef {{
      *     prefix: string,
@@ -168,5 +135,41 @@ declare module goog.i18n {
          * @return {boolean} true if currency is before value.
          */
         isCurrencyCodeBeforeValue(): boolean;
+    }
+}
+
+declare module goog.i18n.NumberFormat {
+
+    /**
+     * Standard number formatting patterns.
+     * @enum {number}
+     */
+    export interface Format {
+        DECIMAL: number;
+        SCIENTIFIC: number;
+        PERCENT: number;
+        CURRENCY: number;
+        COMPACT_SHORT: number;
+        COMPACT_LONG: number;
+    }
+
+    /**
+     * Currency styles.
+     * @enum {number}
+     */
+    export interface CurrencyStyle {
+        LOCAL: number;
+        PORTABLE: number;
+        GLOBAL: number;
+    }
+
+    /**
+     * Compacting styles.
+     * @enum {number}
+     */
+    export interface CompactStyle {
+        NONE: number;
+        SHORT: number;
+        LONG: number;
     }
 }

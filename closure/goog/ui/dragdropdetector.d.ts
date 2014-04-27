@@ -1,15 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Drag and drop event types.
-     * @enum {string}
-     */
-    export interface EventType {
-        IMAGE_DROPPED: string;
-        LINK_DROPPED: string;
-    }
-
-    /**
      * Creates a new drag and drop detector.
      * @param {string=} opt_filePath The URL of the page to use for the detector.
      *     It should contain the same contents as dragdropdetector_target.html in
@@ -27,6 +18,18 @@ declare module goog.ui {
          */
         static INIT_POSITION: any;
     }
+}
+
+declare module goog.ui.DragDropDetector {
+
+    /**
+     * Drag and drop event types.
+     * @enum {string}
+     */
+    export interface EventType {
+        IMAGE_DROPPED: string;
+        LINK_DROPPED: string;
+    }
 
     /**
      * Creates a new image drop event object.
@@ -39,6 +42,18 @@ declare module goog.ui {
      */
     export class ImageDropEvent extends goog.events.Event {
         constructor(url: string, position: goog.math.Coordinate);
+        
+        /**
+         * @return {string} The url of the image that was dropped.
+         */
+        getUrl(): string;
+        
+        /**
+         * @return {goog.math.Coordinate} The screen position where the drop occurred.
+         *     This may be have x and y of goog.ui.DragDropDetector.INIT_POSITION,
+         *     indicating the drop position is unknown.
+         */
+        getPosition(): goog.math.Coordinate;
     }
 
     /**
@@ -50,5 +65,10 @@ declare module goog.ui {
      */
     export class LinkDropEvent extends goog.events.Event {
         constructor(url: string);
+        
+        /**
+         * @return {string} The url of the link that was dropped.
+         */
+        getUrl(): string;
     }
 }

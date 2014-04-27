@@ -1,23 +1,6 @@
 declare module goog.editor.plugins {
 
     /**
-     * Commands supported by goog.editor.plugins.TableEditor.
-     * @enum {string}
-     */
-    export interface COMMAND {
-        TABLE: string;
-        INSERT_ROW_AFTER: string;
-        INSERT_ROW_BEFORE: string;
-        INSERT_COLUMN_AFTER: string;
-        INSERT_COLUMN_BEFORE: string;
-        REMOVE_ROWS: string;
-        REMOVE_COLUMNS: string;
-        SPLIT_CELL: string;
-        MERGE_CELLS: string;
-        REMOVE_TABLE: string;
-    }
-
-    /**
      * Plugin that adds support for table creation and editing commands.
      * @constructor
      * @extends {goog.editor.Plugin}
@@ -48,5 +31,25 @@ declare module goog.editor.plugins {
          *   table element could be editable by the user or not.
          */
         addIsTableEditableFunction(func: (arg0: Element) => boolean): void;
+    }
+}
+
+declare module goog.editor.plugins.TableEditor {
+
+    /**
+     * Commands supported by goog.editor.plugins.TableEditor.
+     * @enum {string}
+     */
+    export interface COMMAND {
+        TABLE: string;
+        INSERT_ROW_AFTER: string;
+        INSERT_ROW_BEFORE: string;
+        INSERT_COLUMN_AFTER: string;
+        INSERT_COLUMN_BEFORE: string;
+        REMOVE_ROWS: string;
+        REMOVE_COLUMNS: string;
+        SPLIT_CELL: string;
+        MERGE_CELLS: string;
+        REMOVE_TABLE: string;
     }
 }

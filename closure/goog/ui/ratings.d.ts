@@ -1,17 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Enums for Ratings event type.
-     * @enum {string}
-     */
-    export interface EventType {
-        CHANGE: string;
-        HIGHLIGHT_CHANGE: string;
-        HIGHLIGHT: string;
-        UNHIGHLIGHT: string;
-    }
-
-    /**
      * A UI Control used for rating things, i.e. videos on Google Video.
      * @param {Array.<string>=} opt_ratings Ratings. Default: [1,2,3,4,5].
      * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
@@ -135,5 +124,19 @@ declare module goog.ui {
          * @return {boolean} Whether the ratings control is enabled.
          */
         isEnabled(): boolean;
+    }
+}
+
+declare module goog.ui.Ratings {
+
+    /**
+     * Enums for Ratings event type.
+     * @enum {string}
+     */
+    export interface EventType {
+        CHANGE: string;
+        HIGHLIGHT_CHANGE: string;
+        HIGHLIGHT: string;
+        UNHIGHLIGHT: string;
     }
 }

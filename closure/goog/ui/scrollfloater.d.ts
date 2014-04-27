@@ -1,16 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Events dispatched by this component.
-     * @enum {string}
-     */
-    export interface EventType {
-        FLOAT: string;
-        DOCK: string;
-        PIN: string;
-    }
-
-    /**
      * Creates a ScrollFloater; see file overview for details.
      *
      * @param {Element=} opt_parentElement Where to attach the element when it's
@@ -86,5 +76,18 @@ declare module goog.ui {
          *     the container.
          */
         setContainerElement(container: Element): void;
+    }
+}
+
+declare module goog.ui.ScrollFloater {
+
+    /**
+     * Events dispatched by this component.
+     * @enum {string}
+     */
+    export interface EventType {
+        FLOAT: string;
+        DOCK: string;
+        PIN: string;
     }
 }

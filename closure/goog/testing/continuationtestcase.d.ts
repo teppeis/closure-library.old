@@ -56,6 +56,9 @@ declare module goog.testing {
          */
         waitForCondition(condition: Function, continuation: Function, opt_interval?: number, opt_maxTimeout?: number): void;
     }
+}
+
+declare module goog.testing.ContinuationTestCase {
 
     /**
      * Creates a continuation test case, which consists of multiple test steps that
@@ -81,6 +84,45 @@ declare module goog.testing {
      */
     export class Test extends goog.testing.TestCase.Test {
         constructor(setUp: goog.testing.TestCase.Test, test: goog.testing.TestCase.Test, tearDown: goog.testing.TestCase.Test);
+        
+        /**
+         * @return {Error} The first error to be raised during the test run or null if
+         *     no errors occurred.
+         */
+        getError(): Error;
+        
+        /**
+         * Sets an error for the test so it can be reported. Only the first error set
+         * during a test will be reported. Additional errors that occur in later test
+         * phases will be discarded.
+         * @param {Error} e An error.
+         */
+        setError(e: Error): void;
+        
+        /**
+         * @return {Array.<goog.testing.TestCase.Test>} The current phase of steps
+         *    being processed. Returns null if all steps have been completed.
+         */
+        getCurrentPhase(): Array<goog.testing.TestCase.Test>;
+        
+        /**
+         * Adds a new test step to the end of the current phase. The new step will wait
+         * for a condition to be met before running, or will fail after a timeout.
+         * @param {goog.testing.ContinuationTestCase.Step} step The test step to add.
+         */
+        addStep(step: goog.testing.ContinuationTestCase.Step): void;
+        
+        /**
+         * Cancels all remaining steps in the current phase. Called after an error in
+         * any phase occurs.
+         */
+        cancelCurrentPhase(): void;
+        
+        /**
+         * Skips the rest of the setUp and test phases, but leaves the tearDown phase to
+         * clean up.
+         */
+        cancelTestPhase(): void;
     }
 
     /**
@@ -97,5 +139,26 @@ declare module goog.testing {
      */
     export class Step extends goog.testing.TestCase.Test {
         constructor(name: string, ref: Function, opt_scope?: Object);
+        
+        /**
+         * Whether the step is currently waiting for a condition to continue. All new
+         * steps begin in wait state.
+         * @type {boolean}
+         */
+        waiting: boolean;
+        
+        /**
+         * Starts a timeout for this step. Each step may have only one timeout active at
+         * a time.
+         * @param {Function} func The function to call after the timeout.
+         * @param {number} duration The number of milliseconds to wait before invoking
+         *     the function.
+         */
+        setTimeout(func: Function, duration: number): void;
+        
+        /**
+         * Clears the current timeout if it is active.
+         */
+        clearTimeout(): void;
     }
 }

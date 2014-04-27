@@ -1,19 +1,6 @@
 declare module goog.crypt {
 
     /**
-     * Event names for hash computation events
-     * @enum {string}
-     */
-    export interface EventType {
-        STARTED: string;
-        PROGRESS: string;
-        THROTTLED: string;
-        COMPLETE: string;
-        ABORT: string;
-        ERROR: string;
-    }
-
-    /**
      * Construct the hash computer.
      *
      * @param {!goog.crypt.Hash} hashFn The hash function to use.
@@ -58,5 +45,21 @@ declare module goog.crypt {
          * @return {Array.<number>} The computed hash value or null if not ready.
          */
         getHash(): Array<number>;
+    }
+}
+
+declare module goog.crypt.BlobHasher {
+
+    /**
+     * Event names for hash computation events
+     * @enum {string}
+     */
+    export interface EventType {
+        STARTED: string;
+        PROGRESS: string;
+        THROTTLED: string;
+        COMPLETE: string;
+        ABORT: string;
+        ERROR: string;
     }
 }

@@ -1,32 +1,6 @@
 declare module goog.db {
 
     /**
-     * Possible cursor directions.
-     * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBCursor
-     *
-     * @enum {string}
-     */
-    export interface Direction {
-        NEXT: string;
-        NEXT_NO_DUPLICATE: string;
-        PREV: string;
-        PREV_NO_DUPLICATE: string;
-    }
-
-    /**
-     * Event types that the cursor can dispatch. COMPLETE events are dispatched when
-     * a cursor is depleted of values, a NEW_DATA event if there is new data
-     * available, and ERROR if an error occurred.
-     *
-     * @enum {string}
-     */
-    export interface EventType {
-        COMPLETE: string;
-        ERROR: string;
-        NEW_DATA: string;
-    }
-
-    /**
      * Creates a new IDBCursor wrapper object. Should not be created directly,
      * access cursor through object store.
      * @see goog.db.ObjectStore#openCursor
@@ -92,5 +66,34 @@ declare module goog.db {
          * @throws {goog.db.Error} If there was a problem opening the cursor.
          */
         static openCursor(source: IDBObjectStore, opt_range?: goog.db.KeyRange, opt_direction?: goog.db.Cursor.Direction): goog.db.Cursor;
+    }
+}
+
+declare module goog.db.Cursor {
+
+    /**
+     * Possible cursor directions.
+     * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBCursor
+     *
+     * @enum {string}
+     */
+    export interface Direction {
+        NEXT: string;
+        NEXT_NO_DUPLICATE: string;
+        PREV: string;
+        PREV_NO_DUPLICATE: string;
+    }
+
+    /**
+     * Event types that the cursor can dispatch. COMPLETE events are dispatched when
+     * a cursor is depleted of values, a NEW_DATA event if there is new data
+     * available, and ERROR if an error occurred.
+     *
+     * @enum {string}
+     */
+    export interface EventType {
+        COMPLETE: string;
+        ERROR: string;
+        NEW_DATA: string;
     }
 }

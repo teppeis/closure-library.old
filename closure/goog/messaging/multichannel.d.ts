@@ -27,6 +27,9 @@ declare module goog.messaging {
          */
         createVirtualChannel(name: string): goog.messaging.MultiChannel.VirtualChannel;
     }
+}
+
+declare module goog.messaging.MultiChannel {
 
     /**
      * A message channel that proxies its messages over another underlying channel.
@@ -43,5 +46,21 @@ declare module goog.messaging {
      */
     export class VirtualChannel extends goog.Disposable {
         constructor(parent: goog.messaging.MultiChannel, name: string);
+        
+        /**
+         * This is a no-op, since the underlying channel is expected to already be
+         * initialized when it's passed in.
+         *
+         * @override
+         */
+        connect(): void;
+        
+        /**
+         * This always returns true, since the underlying channel is expected to already
+         * be initialized when it's passed in.
+         *
+         * @override
+         */
+        isConnected(): void;
     }
 }

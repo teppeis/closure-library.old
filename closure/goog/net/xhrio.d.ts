@@ -1,19 +1,6 @@
 declare module goog.net {
 
     /**
-     * Response types that may be requested for XMLHttpRequests.
-     * @enum {string}
-     * @see http://www.w3.org/TR/XMLHttpRequest/#the-responsetype-attribute
-     */
-    export interface ResponseType {
-        DEFAULT: string;
-        TEXT: string;
-        DOCUMENT: string;
-        BLOB: string;
-        ARRAY_BUFFER: string;
-    }
-
-    /**
      * Basic class for handling XMLHttpRequests.
      * @param {goog.net.XmlHttpFactory=} opt_xmlHttpFactory Factory to use when
      *     creating XMLHttpRequest objects.
@@ -329,5 +316,21 @@ declare module goog.net {
          * @return {string} Last error message.
          */
         getLastError(): string;
+    }
+}
+
+declare module goog.net.XhrIo {
+
+    /**
+     * Response types that may be requested for XMLHttpRequests.
+     * @enum {string}
+     * @see http://www.w3.org/TR/XMLHttpRequest/#the-responsetype-attribute
+     */
+    export interface ResponseType {
+        DEFAULT: string;
+        TEXT: string;
+        DOCUMENT: string;
+        BLOB: string;
+        ARRAY_BUFFER: string;
     }
 }

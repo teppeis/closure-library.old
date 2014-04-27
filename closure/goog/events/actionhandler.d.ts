@@ -1,15 +1,6 @@
 declare module goog.events {
 
     /**
-     * Enum type for the events fired by the action handler
-     * @enum {string}
-     */
-    export interface EventType {
-        ACTION: string;
-        BEFOREACTION: string;
-    }
-
-    /**
      * A wrapper around an element that you want to listen to ACTION events on.
      * @param {Element|Document} element The element or document to listen on.
      * @constructor
@@ -42,5 +33,17 @@ declare module goog.events {
      */
     export class BeforeActionEvent extends goog.events.BrowserEvent {
         constructor(browserEvent: goog.events.BrowserEvent);
+    }
+}
+
+declare module goog.events.ActionHandler {
+
+    /**
+     * Enum type for the events fired by the action handler
+     * @enum {string}
+     */
+    export interface EventType {
+        ACTION: string;
+        BEFOREACTION: string;
     }
 }

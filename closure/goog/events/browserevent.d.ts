@@ -1,16 +1,6 @@
 declare module goog.events {
 
     /**
-     * Normalized button constants for the mouse.
-     * @enum {number}
-     */
-    export interface MouseButton {
-        LEFT: number;
-        MIDDLE: number;
-        RIGHT: number;
-    }
-
-    /**
      * Accepts a browser event object and creates a patched, cross browser event
      * object.
      * The content of this object will not be initialized if no event object is
@@ -69,5 +59,18 @@ declare module goog.events {
          * @return {Event} The underlying browser event object.
          */
         getBrowserEvent(): Event;
+    }
+}
+
+declare module goog.events.BrowserEvent {
+
+    /**
+     * Normalized button constants for the mouse.
+     * @enum {number}
+     */
+    export interface MouseButton {
+        LEFT: number;
+        MIDDLE: number;
+        RIGHT: number;
     }
 }

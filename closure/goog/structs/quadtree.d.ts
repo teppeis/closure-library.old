@@ -1,16 +1,6 @@
 declare module goog.structs {
 
     /**
-     * Enumeration of node types.
-     * @enum {number}
-     */
-    export interface NodeType {
-        EMPTY: number;
-        LEAF: number;
-        POINTER: number;
-    }
-
-    /**
      * Constructs a new quad tree.
      * @param {number} minX Minimum x-value that can be held in tree.
      * @param {number} minY Minimum y-value that can be held in tree.
@@ -110,6 +100,19 @@ declare module goog.structs {
          */
         forEach(fn: (arg0: any, arg1: goog.math.Coordinate, arg2: goog.structs.QuadTree) => any, opt_obj?: Object): void;
     }
+}
+
+declare module goog.structs.QuadTree {
+
+    /**
+     * Enumeration of node types.
+     * @enum {number}
+     */
+    export interface NodeType {
+        EMPTY: number;
+        LEAF: number;
+        POINTER: number;
+    }
 
     /**
      * Constructs a new quad tree node.
@@ -123,6 +126,42 @@ declare module goog.structs {
      */
     export class Node {
         constructor(x: number, y: number, w: number, h: number, opt_parent?: goog.structs.QuadTree.Node);
+        
+        /**
+         * The node's type.
+         * @type {goog.structs.QuadTree.NodeType}
+         */
+        nodeType: goog.structs.QuadTree.NodeType;
+        
+        /**
+         * The child node in the North-West quadrant.
+         * @type {goog.structs.QuadTree.Node?}
+         */
+        nw: goog.structs.QuadTree.Node;
+        
+        /**
+         * The child node in the North-East quadrant.
+         * @type {goog.structs.QuadTree.Node?}
+         */
+        ne: goog.structs.QuadTree.Node;
+        
+        /**
+         * The child node in the South-West quadrant.
+         * @type {goog.structs.QuadTree.Node?}
+         */
+        sw: goog.structs.QuadTree.Node;
+        
+        /**
+         * The child node in the South-East quadrant.
+         * @type {goog.structs.QuadTree.Node?}
+         */
+        se: goog.structs.QuadTree.Node;
+        
+        /**
+         * The point for the node, if it is a leaf node.
+         * @type {goog.structs.QuadTree.Point?}
+         */
+        point: goog.structs.QuadTree.Point;
     }
 
     /**

@@ -1,24 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Container-specific events.
-     * @enum {string}
-     */
-    export interface EventType {
-        AFTER_SHOW: string;
-        AFTER_HIDE: string;
-    }
-
-    /**
-     * Container orientation constants.
-     * @enum {string}
-     */
-    export interface Orientation {
-        HORIZONTAL: string;
-        VERTICAL: string;
-    }
-
-    /**
      * Base class for containers.  Extends {@link goog.ui.Component} by adding
      * the following:
      *  <ul>
@@ -467,5 +449,26 @@ declare module goog.ui {
          * @param {boolean} pressed Whether the mouse button is presed.
          */
         setMouseButtonPressed(pressed: boolean): void;
+    }
+}
+
+declare module goog.ui.Container {
+
+    /**
+     * Container-specific events.
+     * @enum {string}
+     */
+    export interface EventType {
+        AFTER_SHOW: string;
+        AFTER_HIDE: string;
+    }
+
+    /**
+     * Container orientation constants.
+     * @enum {string}
+     */
+    export interface Orientation {
+        HORIZONTAL: string;
+        VERTICAL: string;
     }
 }

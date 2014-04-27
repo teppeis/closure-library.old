@@ -1,14 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Constants for event names.
-     * @enum {string}
-     */
-    export interface EventType {
-        RESIZE: string;
-    }
-
-    /**
      * A textarea control to handle growing/shrinking with textarea.value.
      *
      * @param {string} content Text to set as the textarea's value.
@@ -73,5 +65,16 @@ declare module goog.ui {
          * Resizes the textarea vertically.
          */
         resize(): void;
+    }
+}
+
+declare module goog.ui.Textarea {
+
+    /**
+     * Constants for event names.
+     * @enum {string}
+     */
+    export interface EventType {
+        RESIZE: string;
     }
 }

@@ -1,34 +1,6 @@
 declare module goog.editor.plugins {
 
     /**
-     * Commands implemented by this plugin.
-     * @enum {string}
-     */
-    export interface COMMAND {
-        LINK: string;
-        FORMAT_BLOCK: string;
-        INDENT: string;
-        OUTDENT: string;
-        STRIKE_THROUGH: string;
-        HORIZONTAL_RULE: string;
-        SUBSCRIPT: string;
-        SUPERSCRIPT: string;
-        UNDERLINE: string;
-        BOLD: string;
-        ITALIC: string;
-        FONT_SIZE: string;
-        FONT_FACE: string;
-        FONT_COLOR: string;
-        BACKGROUND_COLOR: string;
-        ORDERED_LIST: string;
-        UNORDERED_LIST: string;
-        JUSTIFY_CENTER: string;
-        JUSTIFY_FULL: string;
-        JUSTIFY_RIGHT: string;
-        JUSTIFY_LEFT: string;
-    }
-
-    /**
      * Functions to style text (e.g. underline, make bold, etc.)
      * @constructor
      * @extends {goog.editor.Plugin}
@@ -75,5 +47,36 @@ declare module goog.editor.plugins {
          * @override
          */
         queryCommandValue(command: string): string;
+    }
+}
+
+declare module goog.editor.plugins.BasicTextFormatter {
+
+    /**
+     * Commands implemented by this plugin.
+     * @enum {string}
+     */
+    export interface COMMAND {
+        LINK: string;
+        FORMAT_BLOCK: string;
+        INDENT: string;
+        OUTDENT: string;
+        STRIKE_THROUGH: string;
+        HORIZONTAL_RULE: string;
+        SUBSCRIPT: string;
+        SUPERSCRIPT: string;
+        UNDERLINE: string;
+        BOLD: string;
+        ITALIC: string;
+        FONT_SIZE: string;
+        FONT_FACE: string;
+        FONT_COLOR: string;
+        BACKGROUND_COLOR: string;
+        ORDERED_LIST: string;
+        UNORDERED_LIST: string;
+        JUSTIFY_CENTER: string;
+        JUSTIFY_FULL: string;
+        JUSTIFY_RIGHT: string;
+        JUSTIFY_LEFT: string;
     }
 }

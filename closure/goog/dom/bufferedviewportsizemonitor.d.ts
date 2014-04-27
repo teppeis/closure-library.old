@@ -1,15 +1,6 @@
 declare module goog.dom {
 
     /**
-     * Additional events to dispatch.
-     * @enum {string}
-     */
-    export interface EventType {
-        RESIZE_HEIGHT: string;
-        RESIZE_WIDTH: string;
-    }
-
-    /**
      * Creates a new BufferedViewportSizeMonitor.
      * @param {!goog.dom.ViewportSizeMonitor} viewportSizeMonitor The
      *     underlying viewport size monitor.
@@ -27,5 +18,17 @@ declare module goog.dom {
          * @return {goog.math.Size?} The current viewport size.
          */
         getSize(): goog.math.Size;
+    }
+}
+
+declare module goog.dom.BufferedViewportSizeMonitor {
+
+    /**
+     * Additional events to dispatch.
+     * @enum {string}
+     */
+    export interface EventType {
+        RESIZE_HEIGHT: string;
+        RESIZE_WIDTH: string;
     }
 }

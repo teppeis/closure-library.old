@@ -1,14 +1,6 @@
 declare module goog.dom {
 
     /**
-     * The event types that the FontSizeMonitor fires.
-     * @enum {string}
-     */
-    export interface EventType {
-        CHANGE: string;
-    }
-
-    /**
      * This class can be used to monitor changes in font size.  Instances will
      * dispatch a {@code goog.dom.FontSizeMonitor.EventType.CHANGE} event.
      * Example usage:
@@ -35,5 +27,16 @@ declare module goog.dom {
          * @deprecated Use {@code goog.dom.FontSizeMonitor.EventType.CHANGE} instead.
          */
         static CHANGE_EVENT: string;
+    }
+}
+
+declare module goog.dom.FontSizeMonitor {
+
+    /**
+     * The event types that the FontSizeMonitor fires.
+     * @enum {string}
+     */
+    export interface EventType {
+        CHANGE: string;
     }
 }

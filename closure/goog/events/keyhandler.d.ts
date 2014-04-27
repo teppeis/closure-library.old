@@ -1,14 +1,6 @@
 declare module goog.events {
 
     /**
-     * Enum type for the events fired by the key handler
-     * @enum {string}
-     */
-    export interface EventType {
-        KEY: string;
-    }
-
-    /**
      * A wrapper around an element that you want to listen to keyboard events on.
      * @param {Element|Document=} opt_element The element or document to listen on.
      * @param {boolean=} opt_capture Whether to listen for browser events in
@@ -68,5 +60,16 @@ declare module goog.events {
      */
     export class KeyEvent extends goog.events.BrowserEvent {
         constructor(keyCode: number, charCode: number, repeat: boolean, browserEvent: Event);
+    }
+}
+
+declare module goog.events.KeyHandler {
+
+    /**
+     * Enum type for the events fired by the key handler
+     * @enum {string}
+     */
+    export interface EventType {
+        KEY: string;
     }
 }

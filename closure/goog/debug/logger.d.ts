@@ -233,6 +233,16 @@ declare module goog.debug {
     }
 
     /**
+     * There is a single global LogManager object that is used to maintain a set of
+     * shared state about Loggers and log services. This is loosely based on the
+     * java class java.util.logging.LogManager.
+     */
+    export var LogManager: any;
+}
+
+declare module goog.debug.Logger {
+
+    /**
      * The Level class defines a set of standard logging levels that
      * can be used to control logging output.  The logging Level objects
      * are ordered and are specified by ordered integers.  Enabling logging
@@ -262,108 +272,104 @@ declare module goog.debug {
      */
     export class Level {
         constructor(name: string, value: number);
+        
+        /**
+         * OFF is a special level that can be used to turn off logging.
+         * This level is initialized to <CODE>Infinity</CODE>.
+         * @type {!goog.debug.Logger.Level}
+         */
+        static OFF: goog.debug.Logger.Level;
+        
+        /**
+         * SHOUT is a message level for extra debugging loudness.
+         * This level is initialized to <CODE>1200</CODE>.
+         * @type {!goog.debug.Logger.Level}
+         */
+        static SHOUT: goog.debug.Logger.Level;
+        
+        /**
+         * SEVERE is a message level indicating a serious failure.
+         * This level is initialized to <CODE>1000</CODE>.
+         * @type {!goog.debug.Logger.Level}
+         */
+        static SEVERE: goog.debug.Logger.Level;
+        
+        /**
+         * WARNING is a message level indicating a potential problem.
+         * This level is initialized to <CODE>900</CODE>.
+         * @type {!goog.debug.Logger.Level}
+         */
+        static WARNING: goog.debug.Logger.Level;
+        
+        /**
+         * INFO is a message level for informational messages.
+         * This level is initialized to <CODE>800</CODE>.
+         * @type {!goog.debug.Logger.Level}
+         */
+        static INFO: goog.debug.Logger.Level;
+        
+        /**
+         * CONFIG is a message level for static configuration messages.
+         * This level is initialized to <CODE>700</CODE>.
+         * @type {!goog.debug.Logger.Level}
+         */
+        static CONFIG: goog.debug.Logger.Level;
+        
+        /**
+         * FINE is a message level providing tracing information.
+         * This level is initialized to <CODE>500</CODE>.
+         * @type {!goog.debug.Logger.Level}
+         */
+        static FINE: goog.debug.Logger.Level;
+        
+        /**
+         * FINER indicates a fairly detailed tracing message.
+         * This level is initialized to <CODE>400</CODE>.
+         * @type {!goog.debug.Logger.Level}
+         */
+        static FINER: goog.debug.Logger.Level;
+        
+        /**
+         * FINEST indicates a highly detailed tracing message.
+         * This level is initialized to <CODE>300</CODE>.
+         * @type {!goog.debug.Logger.Level}
+         */
+        static FINEST: goog.debug.Logger.Level;
+        
+        /**
+         * ALL indicates that all messages should be logged.
+         * This level is initialized to <CODE>0</CODE>.
+         * @type {!goog.debug.Logger.Level}
+         */
+        static ALL: goog.debug.Logger.Level;
+        
+        /**
+         * The predefined levels.
+         * @type {!Array.<!goog.debug.Logger.Level>}
+         * @final
+         */
+        static PREDEFINED_LEVELS: Array<goog.debug.Logger.Level>;
+        
+        /**
+         * @return {string} String representation of the logger level.
+         * @override
+         */
+        toString(): string;
+        
+        /**
+         * Gets the predefined level with the given name.
+         * @param {string} name The name of the level.
+         * @return {goog.debug.Logger.Level} The level, or null if none found.
+         */
+        static getPredefinedLevel(name: string): goog.debug.Logger.Level;
+        
+        /**
+         * Gets the highest predefined level <= #value.
+         * @param {number} value Level value.
+         * @return {goog.debug.Logger.Level} The level, or null if none found.
+         */
+        static getPredefinedLevelByValue(value: number): goog.debug.Logger.Level;
     }
-
-    /**
-     * There is a single global LogManager object that is used to maintain a set of
-     * shared state about Loggers and log services. This is loosely based on the
-     * java class java.util.logging.LogManager.
-     */
-    export var LogManager: any;
-}
-
-declare module goog.debug.Logger.Level {
-
-    /**
-     * OFF is a special level that can be used to turn off logging.
-     * This level is initialized to <CODE>Infinity</CODE>.
-     * @type {!goog.debug.Logger.Level}
-     */
-    export var OFF: goog.debug.Logger.Level;
-
-    /**
-     * SHOUT is a message level for extra debugging loudness.
-     * This level is initialized to <CODE>1200</CODE>.
-     * @type {!goog.debug.Logger.Level}
-     */
-    export var SHOUT: goog.debug.Logger.Level;
-
-    /**
-     * SEVERE is a message level indicating a serious failure.
-     * This level is initialized to <CODE>1000</CODE>.
-     * @type {!goog.debug.Logger.Level}
-     */
-    export var SEVERE: goog.debug.Logger.Level;
-
-    /**
-     * WARNING is a message level indicating a potential problem.
-     * This level is initialized to <CODE>900</CODE>.
-     * @type {!goog.debug.Logger.Level}
-     */
-    export var WARNING: goog.debug.Logger.Level;
-
-    /**
-     * INFO is a message level for informational messages.
-     * This level is initialized to <CODE>800</CODE>.
-     * @type {!goog.debug.Logger.Level}
-     */
-    export var INFO: goog.debug.Logger.Level;
-
-    /**
-     * CONFIG is a message level for static configuration messages.
-     * This level is initialized to <CODE>700</CODE>.
-     * @type {!goog.debug.Logger.Level}
-     */
-    export var CONFIG: goog.debug.Logger.Level;
-
-    /**
-     * FINE is a message level providing tracing information.
-     * This level is initialized to <CODE>500</CODE>.
-     * @type {!goog.debug.Logger.Level}
-     */
-    export var FINE: goog.debug.Logger.Level;
-
-    /**
-     * FINER indicates a fairly detailed tracing message.
-     * This level is initialized to <CODE>400</CODE>.
-     * @type {!goog.debug.Logger.Level}
-     */
-    export var FINER: goog.debug.Logger.Level;
-
-    /**
-     * FINEST indicates a highly detailed tracing message.
-     * This level is initialized to <CODE>300</CODE>.
-     * @type {!goog.debug.Logger.Level}
-     */
-    export var FINEST: goog.debug.Logger.Level;
-
-    /**
-     * ALL indicates that all messages should be logged.
-     * This level is initialized to <CODE>0</CODE>.
-     * @type {!goog.debug.Logger.Level}
-     */
-    export var ALL: goog.debug.Logger.Level;
-
-    /**
-     * The predefined levels.
-     * @type {!Array.<!goog.debug.Logger.Level>}
-     * @final
-     */
-    export var PREDEFINED_LEVELS: Array<goog.debug.Logger.Level>;
-
-    /**
-     * Gets the predefined level with the given name.
-     * @param {string} name The name of the level.
-     * @return {goog.debug.Logger.Level} The level, or null if none found.
-     */
-    export function getPredefinedLevel(name: string): goog.debug.Logger.Level;
-
-    /**
-     * Gets the highest predefined level <= #value.
-     * @param {number} value Level value.
-     * @return {goog.debug.Logger.Level} The level, or null if none found.
-     */
-    export function getPredefinedLevelByValue(value: number): goog.debug.Logger.Level;
 }
 
 declare module goog.debug.LogManager {

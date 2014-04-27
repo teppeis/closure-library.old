@@ -1,18 +1,6 @@
 declare module goog.graphics {
 
     /**
-     * Path segment types.
-     * @enum {number}
-     */
-    export interface Segment {
-        MOVETO: number;
-        LINETO: number;
-        CURVETO: number;
-        ARCTO: number;
-        CLOSE: number;
-    }
-
-    /**
      * Creates a path object. A path is a sequence of segments and may be open or
      * closed. Path uses the EVEN-ODD fill rule for determining the interior of the
      * path. A path must start with a moveTo command.
@@ -209,5 +197,20 @@ declare module goog.graphics {
          * @return {boolean} Whether the path is empty.
          */
         isEmpty(): boolean;
+    }
+}
+
+declare module goog.graphics.Path {
+
+    /**
+     * Path segment types.
+     * @enum {number}
+     */
+    export interface Segment {
+        MOVETO: number;
+        LINETO: number;
+        CURVETO: number;
+        ARCTO: number;
+        CLOSE: number;
     }
 }

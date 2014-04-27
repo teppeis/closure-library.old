@@ -1,14 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Expose Enum of superclass (representing the orientation of the slider) within
-     * Slider namespace.
-     *
-     * @enum {string}
-     */
-    export interface Orientation extends goog.ui.SliderBase.Orientation {}
-
-    /**
      * This creates a slider object.
      * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
      * @param {(function(number):?string)=} opt_labelFn An optional function mapping
@@ -40,4 +32,15 @@ declare module goog.ui {
          */
         getCssClass(orient: goog.ui.SliderBase.Orientation): string;
     }
+}
+
+declare module goog.ui.Slider {
+
+    /**
+     * Expose Enum of superclass (representing the orientation of the slider) within
+     * Slider namespace.
+     *
+     * @enum {string}
+     */
+    export interface Orientation extends goog.ui.SliderBase.Orientation {}
 }

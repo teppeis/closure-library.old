@@ -1,17 +1,6 @@
 declare module goog.testing.fs {
 
     /**
-     * The possible return types.
-     * @enum {number}
-     */
-    export interface ReturnType {
-        TEXT: number;
-        BINARY_STRING: number;
-        ARRAY_BUFFER: number;
-        DATA_URL: number;
-    }
-
-    /**
      * A mock FileReader object. This emits the same events as
      * {@link goog.fs.FileReader}.
      *
@@ -68,5 +57,19 @@ declare module goog.testing.fs {
          * @param {!goog.testing.fs.Blob} blob The blob to read.
          */
         readAsDataUrl(blob: goog.testing.fs.Blob): void;
+    }
+}
+
+declare module goog.testing.fs.FileReader {
+
+    /**
+     * The possible return types.
+     * @enum {number}
+     */
+    export interface ReturnType {
+        TEXT: number;
+        BINARY_STRING: number;
+        ARRAY_BUFFER: number;
+        DATA_URL: number;
     }
 }

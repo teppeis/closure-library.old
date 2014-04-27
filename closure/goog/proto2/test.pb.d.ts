@@ -1,16 +1,6 @@
 declare module proto2 {
 
     /**
-     * Enumeration NestedEnum.
-     * @enum {number}
-     */
-    export interface NestedEnum {
-        FOO: number;
-        BAR: number;
-        BAZ: number;
-    }
-
-    /**
      * Message TestAllTypes.
      * @constructor
      * @extends {goog.proto2.Message}
@@ -1508,36 +1498,6 @@ declare module proto2 {
     }
 
     /**
-     * Message NestedMessage.
-     * @constructor
-     * @extends {goog.proto2.Message}
-     * @final
-     */
-    export class NestedMessage extends goog.proto2.Message {
-        constructor();
-    }
-
-    /**
-     * Message OptionalGroup.
-     * @constructor
-     * @extends {goog.proto2.Message}
-     * @final
-     */
-    export class OptionalGroup extends goog.proto2.Message {
-        constructor();
-    }
-
-    /**
-     * Message RepeatedGroup.
-     * @constructor
-     * @extends {goog.proto2.Message}
-     * @final
-     */
-    export class RepeatedGroup extends goog.proto2.Message {
-        constructor();
-    }
-
-    /**
      * Message TestDefaultParent.
      * @constructor
      * @extends {goog.proto2.Message}
@@ -1635,5 +1595,209 @@ declare module proto2 {
          * Clears the values in the foo field.
          */
         clearFoo(): void;
+    }
+}
+
+declare module proto2.TestAllTypes {
+
+    /**
+     * Enumeration NestedEnum.
+     * @enum {number}
+     */
+    export interface NestedEnum {
+        FOO: number;
+        BAR: number;
+        BAZ: number;
+    }
+
+    /**
+     * Message NestedMessage.
+     * @constructor
+     * @extends {goog.proto2.Message}
+     * @final
+     */
+    export class NestedMessage extends goog.proto2.Message {
+        constructor();
+        
+        /**
+         * Overrides {@link goog.proto2.Message#clone} to specify its exact return type.
+         * @return {!proto2.TestAllTypes.NestedMessage} The cloned message.
+         * @override
+         */
+        clone(): proto2.TestAllTypes.NestedMessage;
+        
+        /**
+         * Gets the value of the b field.
+         * @return {?number} The value.
+         */
+        getB(): number;
+        
+        /**
+         * Gets the value of the b field or the default value if not set.
+         * @return {number} The value.
+         */
+        getBOrDefault(): number;
+        
+        /**
+         * Sets the value of the b field.
+         * @param {number} value The value.
+         */
+        setB(value: number): void;
+        
+        /**
+         * @return {boolean} Whether the b field has a value.
+         */
+        hasB(): boolean;
+        
+        /**
+         * @return {number} The number of values in the b field.
+         */
+        bCount(): number;
+        
+        /**
+         * Clears the values in the b field.
+         */
+        clearB(): void;
+        
+        /**
+         * Gets the value of the c field.
+         * @return {?number} The value.
+         */
+        getC(): number;
+        
+        /**
+         * Gets the value of the c field or the default value if not set.
+         * @return {number} The value.
+         */
+        getCOrDefault(): number;
+        
+        /**
+         * Sets the value of the c field.
+         * @param {number} value The value.
+         */
+        setC(value: number): void;
+        
+        /**
+         * @return {boolean} Whether the c field has a value.
+         */
+        hasC(): boolean;
+        
+        /**
+         * @return {number} The number of values in the c field.
+         */
+        cCount(): number;
+        
+        /**
+         * Clears the values in the c field.
+         */
+        clearC(): void;
+    }
+
+    /**
+     * Message OptionalGroup.
+     * @constructor
+     * @extends {goog.proto2.Message}
+     * @final
+     */
+    export class OptionalGroup extends goog.proto2.Message {
+        constructor();
+        
+        /**
+         * Overrides {@link goog.proto2.Message#clone} to specify its exact return type.
+         * @return {!proto2.TestAllTypes.OptionalGroup} The cloned message.
+         * @override
+         */
+        clone(): proto2.TestAllTypes.OptionalGroup;
+        
+        /**
+         * Gets the value of the a field.
+         * @return {?number} The value.
+         */
+        getA(): number;
+        
+        /**
+         * Gets the value of the a field or the default value if not set.
+         * @return {number} The value.
+         */
+        getAOrDefault(): number;
+        
+        /**
+         * Sets the value of the a field.
+         * @param {number} value The value.
+         */
+        setA(value: number): void;
+        
+        /**
+         * @return {boolean} Whether the a field has a value.
+         */
+        hasA(): boolean;
+        
+        /**
+         * @return {number} The number of values in the a field.
+         */
+        aCount(): number;
+        
+        /**
+         * Clears the values in the a field.
+         */
+        clearA(): void;
+    }
+
+    /**
+     * Message RepeatedGroup.
+     * @constructor
+     * @extends {goog.proto2.Message}
+     * @final
+     */
+    export class RepeatedGroup extends goog.proto2.Message {
+        constructor();
+        
+        /**
+         * Overrides {@link goog.proto2.Message#clone} to specify its exact return type.
+         * @return {!proto2.TestAllTypes.RepeatedGroup} The cloned message.
+         * @override
+         */
+        clone(): proto2.TestAllTypes.RepeatedGroup;
+        
+        /**
+         * Gets the value of the a field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getA(index: number): number;
+        
+        /**
+         * Gets the value of the a field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getAOrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the a field.
+         * @param {number} value The value to add.
+         */
+        addA(value: number): void;
+        
+        /**
+         * Returns the array of values in the a field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        aArray(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the a field has a value.
+         */
+        hasA(): boolean;
+        
+        /**
+         * @return {number} The number of values in the a field.
+         */
+        aCount(): number;
+        
+        /**
+         * Clears the values in the a field.
+         */
+        clearA(): void;
     }
 }

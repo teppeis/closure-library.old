@@ -1,30 +1,6 @@
 declare module goog.module {
 
     /**
-    * The type of callbacks that can be registered with the module manager,.
-    * @enum {string}
-    */
-    export interface CallbackType {
-        ERROR: string;
-        IDLE: string;
-        ACTIVE: string;
-        USER_IDLE: string;
-        USER_ACTIVE: string;
-    }
-
-    /**
-     * The possible reasons for a module load failure callback being fired.
-     * @enum {number}
-     */
-    export interface FailureType {
-        UNAUTHORIZED: number;
-        CONSECUTIVE_FAILURES: number;
-        TIMEOUT: number;
-        OLD_CODE_GONE: number;
-        INIT_ERROR: number;
-    }
-
-    /**
      * The ModuleManager keeps track of all modules in the environment.
      * Since modules may not have their code loaded, we must keep track of them.
      * @constructor
@@ -271,5 +247,32 @@ declare module goog.module {
          * @param {Function} fn The function to register as a callback.
          */
         registerCallback(types: goog.module.ModuleManager.CallbackType, fn: Function): void;
+    }
+}
+
+declare module goog.module.ModuleManager {
+
+    /**
+    * The type of callbacks that can be registered with the module manager,.
+    * @enum {string}
+    */
+    export interface CallbackType {
+        ERROR: string;
+        IDLE: string;
+        ACTIVE: string;
+        USER_IDLE: string;
+        USER_ACTIVE: string;
+    }
+
+    /**
+     * The possible reasons for a module load failure callback being fired.
+     * @enum {number}
+     */
+    export interface FailureType {
+        UNAUTHORIZED: number;
+        CONSECUTIVE_FAILURES: number;
+        TIMEOUT: number;
+        OLD_CODE_GONE: number;
+        INIT_ERROR: number;
     }
 }

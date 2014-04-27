@@ -1,27 +1,6 @@
 declare module goog.ui.equation {
 
     /**
-     * The type of possible palettes. They are made short to minimize JS size.
-     * @enum {string}
-     */
-    export interface Type {
-        MENU: string;
-        GREEK: string;
-        SYMBOL: string;
-        COMPARISON: string;
-        MATH: string;
-        ARROW: string;
-    }
-
-    /**
-     * The type of events that can be fired on palettes.
-     * @enum {string}
-     */
-    export interface Type {
-        ACTION: string;
-    }
-
-    /**
      * Constructs a new palette.
      * @param {goog.ui.equation.PaletteManager} paletteManager The
      *     manager of the palette.
@@ -136,5 +115,32 @@ declare module goog.ui.equation {
          * @return {string} The CSS class name of the palette item.
          */
         getItemCssClass(): string;
+    }
+}
+
+declare module goog.ui.equation.Palette {
+
+    /**
+     * The type of possible palettes. They are made short to minimize JS size.
+     * @enum {string}
+     */
+    export interface Type {
+        MENU: string;
+        GREEK: string;
+        SYMBOL: string;
+        COMPARISON: string;
+        MATH: string;
+        ARROW: string;
+    }
+}
+
+declare module goog.ui.equation.PaletteEvent {
+
+    /**
+     * The type of events that can be fired on palettes.
+     * @enum {string}
+     */
+    export interface Type {
+        ACTION: string;
     }
 }

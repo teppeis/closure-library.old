@@ -288,6 +288,9 @@ declare module goog.async {
          */
         static assertNoErrors(): void;
     }
+}
+
+declare module goog.async.Deferred {
 
     /**
      * An error sub class that is used when a Deferred has already been called.

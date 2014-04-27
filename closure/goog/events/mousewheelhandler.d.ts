@@ -1,14 +1,6 @@
 declare module goog.events {
 
     /**
-     * Enum type for the events fired by the mouse wheel handler.
-     * @enum {string}
-     */
-    export interface EventType {
-        MOUSEWHEEL: string;
-    }
-
-    /**
      * This event handler allows you to catch mouse wheel events in a consistent
      * manner.
      * @param {Element|Document} element The element to listen to the mouse wheel
@@ -56,5 +48,16 @@ declare module goog.events {
      */
     export class MouseWheelEvent extends goog.events.BrowserEvent {
         constructor(detail: number, browserEvent: Event, deltaX: number, deltaY: number);
+    }
+}
+
+declare module goog.events.MouseWheelHandler {
+
+    /**
+     * Enum type for the events fired by the mouse wheel handler.
+     * @enum {string}
+     */
+    export interface EventType {
+        MOUSEWHEEL: string;
     }
 }

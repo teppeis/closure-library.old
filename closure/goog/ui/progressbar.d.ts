@@ -1,16 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Enum for representing the orientation of the progress bar.
-     *
-     * @enum {string}
-     */
-    export interface Orientation {
-        VERTICAL: string;
-        HORIZONTAL: string;
-    }
-
-    /**
      * This creates a progress bar object.
      * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
      * @constructor
@@ -90,5 +80,18 @@ declare module goog.ui {
          * @param {?number} step  The step size.
          */
         setStep(step: number): void;
+    }
+}
+
+declare module goog.ui.ProgressBar {
+
+    /**
+     * Enum for representing the orientation of the progress bar.
+     *
+     * @enum {string}
+     */
+    export interface Orientation {
+        VERTICAL: string;
+        HORIZONTAL: string;
     }
 }

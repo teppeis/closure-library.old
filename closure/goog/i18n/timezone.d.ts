@@ -1,17 +1,6 @@
 declare module goog.i18n {
 
     /**
-     * Indices into the array of time zone names.
-     * @enum {number}
-     */
-    export interface NameType {
-        STD_SHORT_NAME: number;
-        STD_LONG_NAME: number;
-        DLT_SHORT_NAME: number;
-        DLT_LONG_NAME: number;
-    }
-
-    /**
      * TimeZone class implemented a time zone resolution and name information
      * source for client applications. The time zone object is initiated from
      * a time zone information object. Application can initiate a time zone
@@ -125,5 +114,19 @@ declare module goog.i18n {
          * @return {boolean} True if Daylight Saving Time is in effect.
          */
         isDaylightTime(date: goog.date.DateLike): boolean;
+    }
+}
+
+declare module goog.i18n.TimeZone {
+
+    /**
+     * Indices into the array of time zone names.
+     * @enum {number}
+     */
+    export interface NameType {
+        STD_SHORT_NAME: number;
+        STD_LONG_NAME: number;
+        DLT_SHORT_NAME: number;
+        DLT_LONG_NAME: number;
     }
 }

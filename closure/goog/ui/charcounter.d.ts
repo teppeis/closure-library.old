@@ -1,15 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Display mode for the char counter.
-     * @enum {number}
-     */
-    export interface Display {
-        REMAINING: number;
-        INCREMENTAL: number;
-    }
-
-    /**
      * CharCounter widget. Counts the number of characters in a input field or a
      * text box and displays the number of additional characters that may be
      * entered before the maximum length is reached.
@@ -62,5 +53,17 @@ declare module goog.ui {
          * if the maximum lengths is exceeded.
          */
         checkLength(): void;
+    }
+}
+
+declare module goog.ui.CharCounter {
+
+    /**
+     * Display mode for the char counter.
+     * @enum {number}
+     */
+    export interface Display {
+        REMAINING: number;
+        INCREMENTAL: number;
     }
 }

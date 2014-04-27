@@ -1,16 +1,6 @@
 declare module goog.ui {
 
     /**
-     * Possible checkbox states.
-     * @enum {?boolean}
-     */
-    export interface State {
-        CHECKED: boolean;
-        UNCHECKED: boolean;
-        UNDETERMINED: boolean;
-    }
-
-    /**
      * 3-state checkbox widget. Fires CHECK or UNCHECK events before toggled and
      * CHANGE event after toggled by user.
      * The checkbox can also be enabled/disabled and get focused and highlighted.
@@ -91,5 +81,18 @@ declare module goog.ui {
          * @override
          */
         setEnabled(): void;
+    }
+}
+
+declare module goog.ui.Checkbox {
+
+    /**
+     * Possible checkbox states.
+     * @enum {?boolean}
+     */
+    export interface State {
+        CHECKED: boolean;
+        UNCHECKED: boolean;
+        UNDETERMINED: boolean;
     }
 }
