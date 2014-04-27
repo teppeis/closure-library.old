@@ -24,6 +24,32 @@ declare module goog.i18n.bidi {
     }
 
     /**
+     * Strings that have an (optional) known direction.
+     *
+     * Implementations of this interface are string-like objects that carry an
+     * attached direction, if known.
+     * @interface
+     */
+    export interface DirectionalString {
+        
+        /**
+         * Interface marker of the DirectionalString interface.
+         *
+         * This property can be used to determine at runtime whether or not an object
+         * implements this interface.  All implementations of this interface set this
+         * property to {@code true}.
+         * @type {boolean}
+         */
+        implementsGoogI18nBidiDirectionalString: boolean;
+        
+        /**
+         * Retrieves this object's known direction (if any).
+         * @return {?goog.i18n.bidi.Dir} The known direction. Null if unknown.
+         */
+        getDirection(): goog.i18n.bidi.Dir;
+    }
+
+    /**
      * Constant that defines whether or not the current locale is a RTL locale.
      * If {@link goog.i18n.bidi.FORCE_RTL} is not true, this constant will default
      * to check that {@link goog.LOCALE} is one of a few major RTL locales.
@@ -372,13 +398,4 @@ declare module goog.i18n.bidi {
      *     4. A null for unknown directionality.
      */
     export function setElementDirAndAlign(element: Element, dir: goog.i18n.bidi.Dir): void;
-
-    /**
-     * Strings that have an (optional) known direction.
-     *
-     * Implementations of this interface are string-like objects that carry an
-     * attached direction, if known.
-     * @interface
-     */
-    export function DirectionalString(): void;
 }

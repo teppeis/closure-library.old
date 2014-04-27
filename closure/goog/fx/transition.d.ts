@@ -1,16 +1,6 @@
 declare module goog.fx {
 
     /**
-     * An interface for programmatic transition. Must extend
-     * {@code goog.events.EventTarget}.
-     * @interface
-     */
-    export function Transition(): void;
-}
-
-declare module goog.fx.Transition {
-
-    /**
      * Transition event types.
      * @enum {string}
      */
@@ -22,5 +12,23 @@ declare module goog.fx.Transition {
         STOP: string;
         FINISH: string;
         PAUSE: string;
+    }
+
+    /**
+     * An interface for programmatic transition. Must extend
+     * {@code goog.events.EventTarget}.
+     * @interface
+     */
+    export interface Transition {
+        
+        /**
+         * Plays the transition.
+         */
+        play(): void;
+        
+        /**
+         * Stops the transition.
+         */
+        stop(): void;
     }
 }

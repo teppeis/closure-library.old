@@ -359,12 +359,13 @@ declare module goog.ui {
          *     unavailable.
          */
         getTextValue(): string;
-        
-        /**
-         * The factory for creating additional animations to be played when animating to
-         * a new value.
-         * @interface
-         */
-        static AnimationFactory(): void;
+    }
+
+    /**
+     * The factory for creating additional animations to be played when animating to
+     * a new value.
+     * @interface
+     */
+    export interface AnimationFactory {
     }
 }

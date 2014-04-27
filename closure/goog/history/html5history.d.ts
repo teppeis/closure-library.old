@@ -71,18 +71,19 @@ declare module goog.history {
          * @return {string} The path prefix.
          */
         getPathPrefix(): string;
-        
-        /**
-         * A token transformer that can create a URL from a history
-         * token. This is used by {@code goog.history.Html5History} to create
-         * URL when storing token without the hash fragment.
-         *
-         * Given a {@code window.location} object containing the location
-         * created by {@code createUrl}, the token transformer allows
-         * retrieval of the token back via {@code retrieveToken}.
-         *
-         * @interface
-         */
-        static TokenTransformer(): void;
+    }
+
+    /**
+     * A token transformer that can create a URL from a history
+     * token. This is used by {@code goog.history.Html5History} to create
+     * URL when storing token without the hash fragment.
+     *
+     * Given a {@code window.location} object containing the location
+     * created by {@code createUrl}, the token transformer allows
+     * retrieval of the token back via {@code retrieveToken}.
+     *
+     * @interface
+     */
+    export interface TokenTransformer {
     }
 }

@@ -1,22 +1,6 @@
 declare module goog.net {
 
     /**
-     * A WebChannel represents a logical bi-directional channel over which the
-     * client communicates with a remote server that holds the other endpoint
-     * of the channel. A WebChannel is always created in the context of a shared
-     * {@link WebChannelTransport} instance. It is up to the underlying client-side
-     * and server-side implementations to decide how or when multiplexing is
-     * to be enabled.
-     *
-     * @interface
-     * @extends {EventTarget}
-     */
-    export function WebChannel(): void;
-}
-
-declare module goog.net.WebChannel {
-
-    /**
      * Common events fired by WebChannels.
      * @enum {string}
      */
@@ -88,6 +72,44 @@ declare module goog.net.WebChannel {
     }
 
     /**
+     * A WebChannel represents a logical bi-directional channel over which the
+     * client communicates with a remote server that holds the other endpoint
+     * of the channel. A WebChannel is always created in the context of a shared
+     * {@link WebChannelTransport} instance. It is up to the underlying client-side
+     * and server-side implementations to decide how or when multiplexing is
+     * to be enabled.
+     *
+     * @interface
+     * @extends {EventTarget}
+     */
+    export interface WebChannel extends EventTarget {
+        
+        /**
+         * Open the WebChannel against the URI specified in the constructor.
+         */
+        open: any;
+        
+        /**
+         * Close the WebChannel.
+         */
+        close: any;
+        
+        /**
+         * Sends a message to the server that maintains the other end point of
+         * the WebChannel.
+         *
+         * @param {!goog.net.WebChannel.MessageData} message The message to send.
+         */
+        send(message: goog.net.WebChannel.MessageData): void;
+        
+        /**
+         * @return {!goog.net.WebChannel.RuntimeProperties} The runtime properties
+         * of the WebChannel instance.
+         */
+        getRuntimeProperties(): goog.net.WebChannel.RuntimeProperties;
+    }
+
+    /**
      * The event interface for the MESSAGE event.
      *
      * @constructor
@@ -95,13 +117,6 @@ declare module goog.net.WebChannel {
      */
     export class MessageEvent extends goog.events.Event {
         constructor();
-        
-        /**
-         * The content of the message received from the server.
-         *
-         * @type {!goog.net.WebChannel.MessageData}
-         */
-        data: goog.net.WebChannel.MessageData;
     }
 
     /**
@@ -112,13 +127,6 @@ declare module goog.net.WebChannel {
      */
     export class ErrorEvent extends goog.events.Event {
         constructor();
-        
-        /**
-         * The error status.
-         *
-         * @type {!goog.net.WebChannel.ErrorStatus}
-         */
-        status: goog.net.WebChannel.ErrorStatus;
     }
 
     /**
@@ -129,5 +137,6 @@ declare module goog.net.WebChannel {
      *
      * @interface
      */
-    export function RuntimeProperties(): void;
+    export interface RuntimeProperties {
+    }
 }

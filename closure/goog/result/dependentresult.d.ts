@@ -9,5 +9,15 @@ declare module goog.result {
      * @extends {goog.result.Result}
      * @deprecated Use {@link goog.Promise} instead - http://go/promisemigration
      */
-    export function DependentResult(): void;
+    export interface DependentResult extends goog.result.Result {
+        
+        /**
+         *
+         * @return {!Array.<!goog.result.Result>} A list of Results which will affect
+         *     the eventual value of this Result. The returned Results may themselves
+         *     have parent results, which would be grandparents of this Result;
+         *     grandparents (and any other ancestors) are not included in this list.
+         */
+        getParentResults(): Array<goog.result.Result>;
+    }
 }

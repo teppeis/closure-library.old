@@ -7,5 +7,6 @@ declare module goog.labs.net.webChannel {
      *
      * @interface
      */
-    export function Channel(): void;
+    export interface Channel {
+    }
 }

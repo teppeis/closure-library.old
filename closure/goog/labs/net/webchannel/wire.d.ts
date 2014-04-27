@@ -5,5 +5,6 @@ declare module goog.labs.net.webChannel {
      *
      * @interface
      */
-    export function Wire(): void;
+    export interface Wire {
+    }
 }

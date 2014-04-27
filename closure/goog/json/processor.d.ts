@@ -6,5 +6,6 @@ declare module goog.json {
      * @extends {goog.string.Parser}
      * @extends {goog.string.Stringifier}
      */
-    export function Processor(): void;
+    export interface Processor extends goog.string$.Parser {
+    }
 }

@@ -1,6 +1,22 @@
 declare module goog.fx.anim {
 
     /**
+     * An interface for programatically animated objects. I.e. rendered in
+     * javascript frame by frame.
+     *
+     * @interface
+     */
+    export interface Animated {
+        
+        /**
+         * Function called when a frame is requested for the animation.
+         *
+         * @param {number} now Current time in milliseconds.
+         */
+        onAnimationFrame(now: number): void;
+    }
+
+    /**
      * Default wait timeout for animations (in milliseconds).  Only used for timed
      * animation, which uses a timer (setTimeout) to schedule animation.
      *
@@ -8,14 +24,6 @@ declare module goog.fx.anim {
      * @const
      */
     export var TIMEOUT: number;
-
-    /**
-     * An interface for programatically animated objects. I.e. rendered in
-     * javascript frame by frame.
-     *
-     * @interface
-     */
-    export function Animated(): void;
 
     /**
      * Registers an animation to be cycled on the global timer.
