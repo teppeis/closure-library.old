@@ -100,7 +100,7 @@ declare module goog.structs {
          *     (primitives or objects) present in this set but not in the given
          *     collection.
          */
-        difference(col: Array<T>): goog.structs.Set;
+        difference(col: Array<T>): goog.structs.Set<any>;
         
         /**
          * Returns an array containing all the elements in this set.
@@ -141,6 +141,6 @@ declare module goog.structs {
          * @param {boolean=} opt_keys This argument is ignored.
          * @return {!goog.iter.Iterator} An iterator over the elements in this set.
          */
-        __iterator__(opt_keys?: boolean): goog.iter.Iterator;
+        __iterator__(opt_keys?: boolean): goog.iter.Iterator<any>;
     }
 }

@@ -13,7 +13,7 @@ declare module goog.ui {
      * @extends {goog.Disposable}
      */
     export class IframeMask extends goog.Disposable {
-        constructor(opt_domHelper?: goog.dom.DomHelper, opt_iframePool?: goog.structs.Pool);
+        constructor(opt_domHelper?: goog.dom.DomHelper, opt_iframePool?: goog.structs.Pool<any>);
         
         /**
          * Removes the iframe from the DOM.

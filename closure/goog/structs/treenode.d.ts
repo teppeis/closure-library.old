@@ -20,12 +20,12 @@ declare module goog.structs {
          *     and child nodes. The key and the value are copied by reference.
          * @override
          */
-        clone(): goog.structs.TreeNode;
+        clone(): goog.structs.TreeNode<any, any>;
         
         /**
          * @return {!goog.structs.TreeNode} Clone of the subtree with this node as root.
          */
-        deepClone(): goog.structs.TreeNode;
+        deepClone(): goog.structs.TreeNode<any, any>;
         
         /**
          * @return {goog.structs.TreeNode.<KEY, VALUE>} Parent node or null if it has no

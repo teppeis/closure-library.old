@@ -10,7 +10,7 @@ declare module goog.dom.iter {
      * @constructor
      * @extends {goog.iter.Iterator}
      */
-    export class SiblingIterator extends goog.iter.Iterator {
+    export class SiblingIterator extends goog.iter.Iterator<any> {
         constructor(node: Node, opt_includeNode?: boolean, opt_reverse?: boolean);
     }
 
@@ -37,7 +37,7 @@ declare module goog.dom.iter {
      * @extends {goog.iter.Iterator}
      * @final
      */
-    export class AncestorIterator extends goog.iter.Iterator {
+    export class AncestorIterator extends goog.iter.Iterator<any> {
         constructor(node: Node, opt_includeNode?: boolean);
     }
 }

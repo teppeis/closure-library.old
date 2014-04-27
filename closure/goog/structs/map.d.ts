@@ -139,14 +139,14 @@ declare module goog.structs {
          * while iterating might have undesired side effects.
          * @return {!goog.iter.Iterator} An iterator over the keys in the map.
          */
-        getKeyIterator(): goog.iter.Iterator;
+        getKeyIterator(): goog.iter.Iterator<any>;
         
         /**
          * Returns an iterator that iterates over the values in the map.  Removal of
          * keys while iterating might have undesired side effects.
          * @return {!goog.iter.Iterator} An iterator over the values in the map.
          */
-        getValueIterator(): goog.iter.Iterator;
+        getValueIterator(): goog.iter.Iterator<any>;
         
         /**
          * Returns an iterator that iterates over the values or the keys in the map.
@@ -156,6 +156,6 @@ declare module goog.structs {
          *     over the values.  The default value is false.
          * @return {!goog.iter.Iterator} An iterator over the values or keys in the map.
          */
-        __iterator__(opt_keys?: boolean): goog.iter.Iterator;
+        __iterator__(opt_keys?: boolean): goog.iter.Iterator<any>;
     }
 }

@@ -135,6 +135,6 @@ declare module goog.math {
          * @param {boolean=} opt_keys Ignored for RangeSets.
          * @return {!goog.iter.Iterator} An iterator over the values in the set.
          */
-        __iterator__(opt_keys?: boolean): goog.iter.Iterator;
+        __iterator__(opt_keys?: boolean): goog.iter.Iterator<any>;
     }
 }

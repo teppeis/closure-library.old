@@ -64,7 +64,7 @@ declare module goog {
          * @return {!goog.Promise} A new Promise that is immediately rejected with the
          *     given reason.
          */
-        static reject(opt_reason?: any): goog.Promise;
+        static reject(opt_reason?: any): goog.Promise<any, any>;
         
         /**
          * @param {!Array.<!(goog.Thenable.<TYPE>|Thenable)>} promises
@@ -153,7 +153,7 @@ declare module goog {
          *     callback.
          * @template THIS
          */
-        thenCatch<THIS>(onRejected: (arg0: any) => any, opt_context?: THIS): goog.Promise;
+        thenCatch<THIS>(onRejected: (arg0: any) => any, opt_context?: THIS): goog.Promise<any, any>;
         
         /**
          * Cancels the Promise if it is still pending by rejecting it with a cancel

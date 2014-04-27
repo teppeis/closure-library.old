@@ -196,7 +196,7 @@ declare module goog.ui {
          * @return {goog.structs.Set} Elements this widget is attached to.
          * @protected
          */
-        getElements(): goog.structs.Set;
+        getElements(): goog.structs.Set<any>;
         
         /**
          * @return {Element} Active element reference.
