@@ -18,7 +18,7 @@ declare module goog.events {
      * @struct
      * @final
      */
-    export class EventId {
+    export class EventId<T> {
         constructor(eventId: string);
     }
 }

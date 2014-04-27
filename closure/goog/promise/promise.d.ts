@@ -48,7 +48,7 @@ declare module goog {
      * @implements {goog.Thenable.<TYPE>}
      * @template TYPE,RESOLVER_CONTEXT
      */
-    export class Promise {
+    export class Promise<TYPE, RESOLVER_CONTEXT> {
         constructor(resolver: (arg0: (arg0: TYPE) => any, arg1: (arg0: any) => any) => void, opt_context?: RESOLVER_CONTEXT);
         
         /**

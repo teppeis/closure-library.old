@@ -42,7 +42,7 @@ declare module goog.async {
      * @implements {goog.Thenable.<VALUE>}
      * @template VALUE
      */
-    export class Deferred {
+    export class Deferred<VALUE> {
         constructor(opt_onCancelFunction?: Function, opt_defaultScope?: Object);
         
         /**

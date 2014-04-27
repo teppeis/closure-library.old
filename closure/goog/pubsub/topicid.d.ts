@@ -30,7 +30,7 @@ declare module goog.pubsub {
      * @final
      * @struct
      */
-    export class TopicId {
+    export class TopicId<PAYLOAD> {
         constructor(topicId: string);
     }
 }

@@ -6,7 +6,7 @@ declare module goog.structs {
      * @constructor
      * @template T
      */
-    export class CircularBuffer {
+    export class CircularBuffer<T> {
         constructor(opt_maxSize?: number);
         
         /**

@@ -15,7 +15,7 @@ declare module goog.async {
      * @final
      * @template T
      */
-    export class Throttle extends goog.Disposable {
+    export class Throttle<T> extends goog.Disposable {
         constructor(listener: () => any, interval: number, opt_handler?: T);
         
         /**

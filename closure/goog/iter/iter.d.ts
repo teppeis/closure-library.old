@@ -15,7 +15,7 @@ declare module goog.iter {
      * @constructor
      * @template VALUE
      */
-    export class Iterator {
+    export class Iterator<VALUE> {
         constructor();
         
         /**

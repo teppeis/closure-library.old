@@ -8,7 +8,7 @@ declare module goog.structs {
      * @constructor
      * @template K, V
      */
-    export class Heap {
+    export class Heap<K, V> {
         constructor(opt_heap?: goog.structs.Heap);
         
         /**

@@ -21,7 +21,7 @@ declare module goog.structs {
      * @extends {goog.Disposable}
      * @template T
      */
-    export class SimplePool extends goog.Disposable {
+    export class SimplePool<T> extends goog.Disposable {
         constructor(initialCount: number, maxCount: number);
         
         /**

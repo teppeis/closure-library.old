@@ -31,7 +31,7 @@ declare module goog.structs {
      * @constructor
      * @template KEY, VALUE
      */
-    export class LinkedMap {
+    export class LinkedMap<KEY, VALUE> {
         constructor(opt_maxCount?: number, opt_cache?: boolean);
         
         /**

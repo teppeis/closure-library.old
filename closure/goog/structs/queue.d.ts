@@ -6,7 +6,7 @@ declare module goog.structs {
      * @constructor
      * @template T
      */
-    export class Queue {
+    export class Queue<T> {
         constructor();
         
         /**
