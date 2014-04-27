@@ -231,13 +231,6 @@ declare module goog.debug {
          */
         logRecord(logRecord: goog.debug.LogRecord): void;
     }
-
-    /**
-     * There is a single global LogManager object that is used to maintain a set of
-     * shared state about Loggers and log services. This is loosely based on the
-     * java class java.util.logging.LogManager.
-     */
-    export var LogManager: any;
 }
 
 declare module goog.debug.Logger {
