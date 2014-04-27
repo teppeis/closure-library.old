@@ -146,11 +146,15 @@ declare module goog.ui {
         getAllowHighlightDisabled(): boolean;
         
         /**
-         * @override
+         * @param {boolean} visible Whether to show or hide the container.
+         * @param {boolean=} opt_force If true, doesn't check whether the container
+         *     already has the requested visibility, and doesn't dispatch any events.
          * @param {goog.events.Event=} opt_e Mousedown event that caused this menu to
          *     be made visible (ignored if show is false).
+         * @return {boolean} Whether the visibility was changed.
+         * @override
          */
-        setVisible(opt_e?: goog.events.Event): void;
+        setVisible(visible: boolean, opt_force?: boolean, opt_e?: goog.events.Event): boolean;
         
         /**
          * Highlights the next item that begins with the specified string.  If no

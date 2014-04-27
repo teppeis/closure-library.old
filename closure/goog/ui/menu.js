@@ -342,9 +342,13 @@ goog.ui.Menu.prototype.getAllowHighlightDisabled = function() {
 
 
 /**
- * @override
+ * @param {boolean} visible Whether to show or hide the container.
+ * @param {boolean=} opt_force If true, doesn't check whether the container
+ *     already has the requested visibility, and doesn't dispatch any events.
  * @param {goog.events.Event=} opt_e Mousedown event that caused this menu to
  *     be made visible (ignored if show is false).
+ * @return {boolean} Whether the visibility was changed.
+ * @override
  */
 goog.ui.Menu.prototype.setVisible = function(show, opt_force, opt_e) {
   var visibilityChanged = goog.ui.Menu.superClass_.setVisible.call(this, show,
