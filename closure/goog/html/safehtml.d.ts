@@ -138,3 +138,30 @@ declare module goog.html {
         static concat(...var_args: goog.html.SafeHtml.TextOrHtml_[]): goog.html.SafeHtml;
     }
 }
+
+declare module goog.html.SafeHtml {
+
+    /**
+     * Shorthand for union of types that can be sensibly converted to strings.
+     * @private
+     * @typedef {string|number|boolean|!goog.string.TypedString|
+     *           !goog.i18n.bidi.DirectionalString}
+     */
+    export interface StringLike_ {
+    }
+
+    /**
+     * Shorthand for union of types that can be sensibly converted to SafeHtml.
+     * @private
+     * @typedef {!goog.html.SafeHtml.StringLike_|!goog.html.SafeHtml}
+     */
+    export interface TextOrHtml_ {
+    }
+
+    /**
+     * @private
+     * @typedef {string|goog.string.Const|goog.html.SafeUrl|goog.html.SafeStyle}
+     */
+    export interface AttributeValue_ {
+    }
+}

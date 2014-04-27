@@ -188,6 +188,24 @@ declare module goog {
 declare module goog.Promise {
 
     /**
+     * Typedef for entries in the callback chain. Each call to {@code then},
+     * {@code thenCatch}, or {@code thenAlways} creates an entry containing the
+     * functions that may be invoked once the Promise is resolved.
+     *
+     * @typedef {{
+     *   child: goog.Promise,
+     *   onFulfilled: function(*),
+     *   onRejected: function(*)
+     * }}
+     * @private
+     */
+    export interface CallbackEntry_ {
+        child: goog.Promise<any, any>;
+        onFulfilled: (arg0: any) => any;
+        onRejected: (arg0: any) => any;
+    }
+
+    /**
      * Error used as a rejection reason for canceled Promises.
      *
      * @param {string=} opt_message

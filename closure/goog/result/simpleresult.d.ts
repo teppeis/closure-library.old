@@ -62,6 +62,19 @@ declare module goog.result {
 declare module goog.result.SimpleResult {
 
     /**
+     * A waiting handler entry.
+     * @typedef {{
+     *   callback: !function(goog.result.SimpleResult),
+     *   scope: Object
+     * }}
+     * @private
+     */
+    export interface HandlerEntry_ {
+        callback: (arg0: goog.result.SimpleResult) => any;
+        scope: Object;
+    }
+
+    /**
      * Error thrown if there is an attempt to set the value or error for this result
      * more than once.
      *

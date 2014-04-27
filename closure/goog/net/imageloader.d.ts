@@ -76,4 +76,18 @@ declare module goog.net.ImageLoader {
         ANONYMOUS: string;
         USE_CREDENTIALS: string;
     }
+
+    /**
+     * Describes a request for an image. This includes its URL and its CORS-request
+     * type, if any.
+     * @typedef {{
+     *   src: string,
+     *   corsRequestType: ?goog.net.ImageLoader.CorsRequestType
+     * }}
+     * @private
+     */
+    export interface ImageRequest_ {
+        src: string;
+        corsRequestType: goog.net.ImageLoader.CorsRequestType;
+    }
 }

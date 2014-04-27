@@ -113,6 +113,16 @@ declare module goog.testing {
 declare module goog.testing.AsyncTestCase {
 
     /**
+     * Represents result of top stack function call.
+     * @typedef {{controlBreakingExceptionThrown: boolean, message: string}}
+     * @private
+     */
+    export interface TopStackFuncResult_ {
+        controlBreakingExceptionThrown: boolean;
+        message: string;
+    }
+
+    /**
      * An exception class used solely for control flow.
      * @param {string=} opt_message Error message.
      * @constructor
