@@ -211,9 +211,10 @@ declare module goog.ds {
          * Not supported by primitive data nodes.
          * @param {string} name Name of child node.
          * @param {Object} value Value of child node.
+         * @return {Object} The child node, if the node was set.
          * @override
          */
-        setChildNode(name: string, value: Object): void;
+        setChildNode(name: string, value: Object): Object;
         
         /**
          * Returns whether this data node is a list. Always returns false for

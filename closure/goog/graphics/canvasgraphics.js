@@ -610,6 +610,7 @@ goog.graphics.CanvasGraphics.prototype.createGroup = function(opt_group) {
  *
  * @param {string} text The text string to measure.
  * @param {goog.graphics.Font} font The font object describing the font style.
+ * @return {number} The width in pixels of the text strings.
  * @override
  */
 goog.graphics.CanvasGraphics.prototype.getTextWidth = goog.abstractMethod;
