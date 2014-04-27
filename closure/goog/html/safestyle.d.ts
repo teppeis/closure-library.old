@@ -111,7 +111,7 @@ declare module goog.html {
          * @return {!goog.html.SafeStyle} A SafeStyle object initialized to
          *     {@code style}.
          */
-        static fromConstant(style: goog.string.Const): goog.html.SafeStyle;
+        static fromConstant(style: goog.string$.Const): goog.html.SafeStyle;
         
         /**
          * Returns this SafeStyle's value as a string.

@@ -1,4 +1,4 @@
-declare module goog.string {
+declare module goog.string$ {
 
     /**
      * Wrapper for compile-time-constant strings.
@@ -60,7 +60,7 @@ declare module goog.string {
          *     string, or, if assertions are enabled, throws
          *     {@code goog.asserts.AssertionError}.
          */
-        static unwrap(stringConst: goog.string.Const): string;
+        static unwrap(stringConst: goog.string$.Const): string;
         
         /**
          * Creates a Const object from a compile-time constant string.
@@ -86,6 +86,6 @@ declare module goog.string {
          * @param {string} s A constant string from which to create a Const.
          * @return {!goog.string.Const} A Const object initialized to stringConst.
          */
-        static from(s: string): goog.string.Const;
+        static from(s: string): goog.string$.Const;
     }
 }

@@ -1,4 +1,4 @@
-declare module goog.string.newlines {
+declare module goog.string$.newlines {
 
     /**
      * Line metadata class that records the start/end indicies of lines
@@ -53,5 +53,5 @@ declare module goog.string.newlines {
      * @param {string} str String to split.
      * @return {!Array.<!goog.string.newlines.Line>} Array of line metadata.
      */
-    export function getLines(str: string): Array<goog.string.newlines.Line>;
+    export function getLines(str: string): Array<goog.string$.newlines.Line>;
 }

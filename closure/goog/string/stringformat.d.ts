@@ -1,4 +1,4 @@
-declare module goog.string {
+declare module goog.string$ {
 
     /**
      * Performs sprintf-like conversion, ie. puts the values in a template.

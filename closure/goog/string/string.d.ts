@@ -1,4 +1,4 @@
-declare module goog.string {
+declare module goog.string$ {
 
     /**
      * Common Unicode string characters.

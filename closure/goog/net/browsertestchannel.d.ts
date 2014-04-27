@@ -26,7 +26,7 @@ declare module goog.net {
          * By default, the parser uses {@code goog.json.unsafeParse}.
          * @param {!goog.string.Parser} parser Parser.
          */
-        setParser(parser: goog.string.Parser): void;
+        setParser(parser: goog.string$.Parser): void;
         
         /**
          * Starts the test channel. This initiates connections to the server.

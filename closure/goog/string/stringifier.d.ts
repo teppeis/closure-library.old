@@ -1,4 +1,4 @@
-declare module goog.string {
+declare module goog.string$ {
 
     /**
      * An interface for serializing objects into strings.

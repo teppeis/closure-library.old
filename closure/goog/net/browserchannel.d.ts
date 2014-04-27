@@ -390,7 +390,7 @@ declare module goog.net {
          * {@code goog.json.unsafeParse}.
          * @param {!goog.string.Parser} parser Parser.
          */
-        setParser(parser: goog.string.Parser): void;
+        setParser(parser: goog.string$.Parser): void;
         
         /**
          * Callback from BrowserTestChannel for when the channel is finished.

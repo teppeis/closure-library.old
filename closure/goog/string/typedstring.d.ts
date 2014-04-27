@@ -1,4 +1,4 @@
-declare module goog.string {
+declare module goog.string$ {
 
     /**
      * Wrapper for strings that conform to a data type or language.

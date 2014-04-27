@@ -1,4 +1,4 @@
-declare module goog.string.path {
+declare module goog.string$.path {
 
     /**
      * Returns the final component of a pathname.

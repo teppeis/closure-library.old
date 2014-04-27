@@ -80,6 +80,6 @@ declare module goog.html {
          * @return {!goog.html.TrustedResourceUrl} A TrustedResourceUrl object
          *     initialized to {@code url}.
          */
-        static fromConstant(url: goog.string.Const): goog.html.TrustedResourceUrl;
+        static fromConstant(url: goog.string$.Const): goog.html.TrustedResourceUrl;
     }
 }

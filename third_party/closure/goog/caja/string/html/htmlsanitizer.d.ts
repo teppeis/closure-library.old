@@ -1,4 +1,4 @@
-declare module goog.string.html {
+declare module goog.string$.html {
 
     /**
      * The HTML types the parser supports.
@@ -262,8 +262,8 @@ declare module goog.string.html {
      * @constructor
      * @extends {goog.string.html.HtmlSaxHandler}
      */
-    export class HtmlSanitizer extends goog.string.html.HtmlSaxHandler {
-        constructor(stringBuffer: goog.string.StringBuffer, opt_urlPolicy: (arg0: string) => string, opt_nmTokenPolicy: (arg0: string) => string);
+    export class HtmlSanitizer extends goog.string$.html.HtmlSaxHandler {
+        constructor(stringBuffer: goog.string$.StringBuffer, opt_urlPolicy: (arg0: string) => string, opt_nmTokenPolicy: (arg0: string) => string);
     }
 
     /**

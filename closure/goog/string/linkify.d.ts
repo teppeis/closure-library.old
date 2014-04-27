@@ -1,4 +1,4 @@
-declare module goog.string.linkify {
+declare module goog.string$.linkify {
 
     /**
      * Takes a string of plain text and linkifies URLs and email addresses. For a

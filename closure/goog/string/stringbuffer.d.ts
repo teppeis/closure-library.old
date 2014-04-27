@@ -1,4 +1,4 @@
-declare module goog.string {
+declare module goog.string$ {
 
     /**
      * Utility class to facilitate string concatenation.
@@ -31,7 +31,7 @@ declare module goog.string {
          * @return {!goog.string.StringBuffer} This same StringBuffer object.
          * @suppress {duplicate}
          */
-        append(a1: any, opt_a2?: any, ...var_args: any[]): goog.string.StringBuffer;
+        append(a1: any, opt_a2?: any, ...var_args: any[]): goog.string$.StringBuffer;
         
         /**
          * Clears the internal buffer.

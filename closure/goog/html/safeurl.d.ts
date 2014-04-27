@@ -130,7 +130,7 @@ declare module goog.html {
          *         create a SafeUrl.
          * @return {!goog.html.SafeUrl} A SafeUrl object initialized to {@code url}.
          */
-        static fromConstant(url: goog.string.Const): goog.html.SafeUrl;
+        static fromConstant(url: goog.string$.Const): goog.html.SafeUrl;
         
         /**
          * Creates a SafeUrl object from {@code url}. If {@code url} is a

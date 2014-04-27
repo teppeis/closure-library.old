@@ -1,4 +1,4 @@
-declare module goog.string.html {
+declare module goog.string$.html {
 
     /**
      * HTML entities that are encoded/decoded.
@@ -51,7 +51,7 @@ declare module goog.string.html {
          *     receive the events.
          * @param {string} htmlText The html text.
          */
-        parse(handler: goog.string.html.HtmlSaxHandler, htmlText: string): void;
+        parse(handler: goog.string$.html.HtmlSaxHandler, htmlText: string): void;
     }
 
     /**
