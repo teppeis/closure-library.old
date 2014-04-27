@@ -1,16 +1,6 @@
 declare module goog.fs {
 
     /**
-     * Behaviors for getting files and directories.
-     * @enum {number}
-     */
-    export interface Behavior {
-        DEFAULT: number;
-        CREATE: number;
-        CREATE_EXCLUSIVE: number;
-    }
-
-    /**
      * The interface for entries in the filesystem.
      * @interface
      */
@@ -210,5 +200,18 @@ declare module goog.fs {
          *     called with a {@link goog.fs.Error}.
          */
         file(): goog.async.Deferred<File>;
+    }
+}
+
+declare module goog.fs.DirectoryEntry {
+
+    /**
+     * Behaviors for getting files and directories.
+     * @enum {number}
+     */
+    export interface Behavior {
+        DEFAULT: number;
+        CREATE: number;
+        CREATE_EXCLUSIVE: number;
     }
 }

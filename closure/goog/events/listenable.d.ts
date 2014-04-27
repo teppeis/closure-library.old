@@ -30,34 +30,6 @@ declare module goog.events {
     export interface Listenable {
         
         /**
-         * An expando property to indicate that an object implements
-         * goog.events.Listenable.
-         *
-         * See addImplementation/isImplementedBy.
-         *
-         * @type {string}
-         * @const
-         */
-        static IMPLEMENTED_BY_PROP: string;
-        
-        /**
-         * Marks a given class (constructor) as an implementation of
-         * Listenable, do that we can query that fact at runtime. The class
-         * must have already implemented the interface.
-         * @param {!Function} cls The class constructor. The corresponding
-         *     class must have already implemented the interface.
-         */
-        static addImplementation(cls: Function): void;
-        
-        /**
-         * @param {Object} obj The object to check.
-         * @return {boolean} Whether a given instance implements
-         *     Listenable. The class/superclass of the instance must call
-         *     addImplementation.
-         */
-        static isImplementedBy(obj: Object): boolean;
-        
-        /**
          * Adds an event listener. A listener can only be added once to an
          * object and if it is added again the key for the listener is
          * returned. Note that if the existing listener is a one-off listener
@@ -265,12 +237,46 @@ declare module goog.events {
          * @type {number}
          */
         key: number;
-        
-        /**
-         * Reserves a key to be used for ListenableKey#key field.
-         * @return {number} A number to be used to fill ListenableKey#key
-         *     field.
-         */
-        static reserveKey(): number;
     }
+}
+
+declare module goog.events.Listenable {
+
+    /**
+     * An expando property to indicate that an object implements
+     * goog.events.Listenable.
+     *
+     * See addImplementation/isImplementedBy.
+     *
+     * @type {string}
+     * @const
+     */
+    export var IMPLEMENTED_BY_PROP: string;
+
+    /**
+     * Marks a given class (constructor) as an implementation of
+     * Listenable, do that we can query that fact at runtime. The class
+     * must have already implemented the interface.
+     * @param {!Function} cls The class constructor. The corresponding
+     *     class must have already implemented the interface.
+     */
+    export function addImplementation(cls: Function): void;
+
+    /**
+     * @param {Object} obj The object to check.
+     * @return {boolean} Whether a given instance implements
+     *     Listenable. The class/superclass of the instance must call
+     *     addImplementation.
+     */
+    export function isImplementedBy(obj: Object): boolean;
+}
+
+declare module goog.events.ListenableKey {
+
+    /**
+     * Reserves a key to be used for ListenableKey#key field.
+     * @return {number} A number to be used to fill ListenableKey#key
+     *     field.
+     */
+    export function reserveKey(): number;
 }

@@ -1,13 +1,6 @@
 declare module goog.net {
 
     /**
-     * Typedef that refers to either native or custom-implemented XHR objects.
-     * @typedef {!goog.net.XhrLike|!XMLHttpRequest}
-     */
-    export interface OrNative {
-    }
-
-    /**
      * Interface for the common parts of XMLHttpRequest.
      *
      * Mostly copied from externs/w3c_xml.js.
@@ -93,5 +86,15 @@ declare module goog.net {
          * @see http://www.w3.org/TR/XMLHttpRequest/#the-getallresponseheaders()-method
          */
         getAllResponseHeaders(): string;
+    }
+}
+
+declare module goog.net.XhrLike {
+
+    /**
+     * Typedef that refers to either native or custom-implemented XHR objects.
+     * @typedef {!goog.net.XhrLike|!XMLHttpRequest}
+     */
+    export interface OrNative {
     }
 }

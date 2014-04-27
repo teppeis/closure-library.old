@@ -6,24 +6,6 @@ declare module goog.messaging {
     export interface PortNetwork {
         
         /**
-         * The name of the service exported by the operator for creating a connection
-         * between two callers.
-         *
-         * @type {string}
-         * @const
-         */
-        static REQUEST_CONNECTION_SERVICE: string;
-        
-        /**
-         * The name of the service exported by the callers for adding a connection to
-         * another context.
-         *
-         * @type {string}
-         * @const
-         */
-        static GRANT_CONNECTION_SERVICE: string;
-        
-        /**
          * Returns a message channel that communicates with the named context. If no
          * such port exists, an error will either be thrown immediately or after a round
          * trip with the operator, depending on whether this pool is the operator or a
@@ -40,4 +22,25 @@ declare module goog.messaging {
          */
         dial(name: string): goog.messaging.MessageChannel;
     }
+}
+
+declare module goog.messaging.PortNetwork {
+
+    /**
+     * The name of the service exported by the operator for creating a connection
+     * between two callers.
+     *
+     * @type {string}
+     * @const
+     */
+    export var REQUEST_CONNECTION_SERVICE: string;
+
+    /**
+     * The name of the service exported by the callers for adding a connection to
+     * another context.
+     *
+     * @type {string}
+     * @const
+     */
+    export var GRANT_CONNECTION_SERVICE: string;
 }

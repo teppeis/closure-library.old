@@ -1,18 +1,6 @@
 declare module goog.result {
 
     /**
-     * The States this object can be in.
-     *
-     * @enum {string}
-     * @deprecated Use {@link goog.Promise} instead - http://go/promisemigration
-     */
-    export interface State {
-        SUCCESS: string;
-        ERROR: string;
-        PENDING: string;
-    }
-
-    /**
      * A Result object represents a value returned by an asynchronous
      * operation at some point in the future (e.g. a network fetch). This is akin
      * to a 'Promise' or a 'Future' in other languages and frameworks.
@@ -64,6 +52,21 @@ declare module goog.result {
          * @return {boolean} Whether this Result was canceled.
          */
         isCanceled(): boolean;
+    }
+}
+
+declare module goog.result.Result {
+
+    /**
+     * The States this object can be in.
+     *
+     * @enum {string}
+     * @deprecated Use {@link goog.Promise} instead - http://go/promisemigration
+     */
+    export interface State {
+        SUCCESS: string;
+        ERROR: string;
+        PENDING: string;
     }
 
     /**

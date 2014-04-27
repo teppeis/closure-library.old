@@ -11,16 +11,6 @@ declare module goog {
     export interface Thenable extends IThenable<TYPE> {
         
         /**
-         * An expando property to indicate that an object implements
-         * {@code goog.Thenable}.
-         *
-         * {@see addImplementation}.
-         *
-         * @const
-         */
-        static IMPLEMENTED_BY_PROP: any;
-        
-        /**
          * Adds callbacks that will operate on the result of the Thenable, returning a
          * new child Promise.
          *
@@ -48,24 +38,37 @@ declare module goog {
          * @template RESULT,THIS
          */
         then<RESULT, THIS>(opt_onFulfilled?: (arg0: TYPE) => RESULT, opt_onRejected?: (arg0: any) => any, opt_context?: THIS): goog.Promise<RESULT>;
-        
-        /**
-         * Marks a given class (constructor) as an implementation of Thenable, so
-         * that we can query that fact at runtime. The class must have already
-         * implemented the interface.
-         * Exports a 'then' method on the constructor prototype, so that the objects
-         * also implement the extern {@see goog.Thenable} interface for interop with
-         * other Promise implementations.
-         * @param {function(new:goog.Thenable,...[?])} ctor The class constructor. The
-         *     corresponding class must have already implemented the interface.
-         */
-        static addImplementation(ctor: any): void;
-        
-        /**
-         * @param {*} object
-         * @return {boolean} Whether a given instance implements {@code goog.Thenable}.
-         *     The class/superclass of the instance must call {@code addImplementation}.
-         */
-        static isImplementedBy(object: any): boolean;
     }
+}
+
+declare module goog.Thenable {
+
+    /**
+     * An expando property to indicate that an object implements
+     * {@code goog.Thenable}.
+     *
+     * {@see addImplementation}.
+     *
+     * @const
+     */
+    export var IMPLEMENTED_BY_PROP: any;
+
+    /**
+     * Marks a given class (constructor) as an implementation of Thenable, so
+     * that we can query that fact at runtime. The class must have already
+     * implemented the interface.
+     * Exports a 'then' method on the constructor prototype, so that the objects
+     * also implement the extern {@see goog.Thenable} interface for interop with
+     * other Promise implementations.
+     * @param {function(new:goog.Thenable,...[?])} ctor The class constructor. The
+     *     corresponding class must have already implemented the interface.
+     */
+    export function addImplementation(ctor: any): void;
+
+    /**
+     * @param {*} object
+     * @return {boolean} Whether a given instance implements {@code goog.Thenable}.
+     *     The class/superclass of the instance must call {@code addImplementation}.
+     */
+    export function isImplementedBy(object: any): boolean;
 }
