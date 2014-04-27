@@ -40,7 +40,7 @@ declare module goog.dom.classlist {
      * This method may throw a DOM exception if classesToAdd contains invalid
      * or empty class names.
      */
-    export function addAll(element: Element, classesToAdd: goog.array.ArrayLike<string>): void;
+    export function addAll(element: Element, classesToAdd: goog.array.ArrayLike): void;
 
     /**
      * Removes a class from an element.  This method may throw a DOM exception
@@ -60,7 +60,7 @@ declare module goog.dom.classlist {
      * This method may throw a DOM exception if classesToRemove contains invalid
      * or empty class names.
      */
-    export function removeAll(element: Element, classesToRemove: goog.array.ArrayLike<string>): void;
+    export function removeAll(element: Element, classesToRemove: goog.array.ArrayLike): void;
 
     /**
      * Adds or removes a class depending on the enabled argument.  This method
@@ -83,7 +83,7 @@ declare module goog.dom.classlist {
      * @param {boolean} enabled Whether to add or remove the classes (true adds,
      *     false removes).
      */
-    export function enableAll(element: Element, classesToEnable: goog.array.ArrayLike<string>, enabled: boolean): void;
+    export function enableAll(element: Element, classesToEnable: goog.array.ArrayLike, enabled: boolean): void;
 
     /**
      * Switches a class on an element from one to another without disturbing other

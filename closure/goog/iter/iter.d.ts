@@ -317,7 +317,7 @@ declare module goog.iter {
      *     n-tuple (as an array).
      * @template VALUE
      */
-    export function product<VALUE>(...var_args: goog.array.ArrayLike<VALUE>[]): goog.iter.Iterator<Array<VALUE>>;
+    export function product<VALUE>(...var_args: goog.array.ArrayLike[]): goog.iter.Iterator<Array<VALUE>>;
 
     /**
      * Create an iterator to cycle over the iterable's elements indefinitely.
@@ -361,7 +361,7 @@ declare module goog.iter {
      * @return {!goog.iter.Iterator.<number>} A new iterator that returns the
      *     numbers in the series.
      */
-    export function accumulate(iterable: goog.iter.Iterable<number>): goog.iter.Iterator<number>;
+    export function accumulate(iterable: goog.iter.Iterable): goog.iter.Iterator<number>;
 
     /**
      * Creates an iterator that returns arrays containing the ith elements from the
@@ -456,7 +456,7 @@ declare module goog.iter {
      *     iterator.
      * @template THIS, RESULT
      */
-    export function starMap<THIS, RESULT>(iterable: goog.iter.Iterable<goog.iter.Iterable>, f: (...arg0: any[]) => RESULT, opt_obj?: THIS): goog.iter.Iterator<RESULT>;
+    export function starMap<THIS, RESULT>(iterable: goog.iter.Iterable, f: (...arg0: any[]) => RESULT, opt_obj?: THIS): goog.iter.Iterator<RESULT>;
 
     /**
      * Returns an array of iterators each of which can iterate over the values in

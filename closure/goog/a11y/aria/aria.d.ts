@@ -91,7 +91,7 @@ declare module goog.a11y.aria {
      * @param {!goog.array.ArrayLike.<string>} allowedRoles The child roles of
      * the roles.
      */
-    export function assertRoleIsSetInternalUtil(element: Element, allowedRoles: goog.array.ArrayLike<string>): void;
+    export function assertRoleIsSetInternalUtil(element: Element, allowedRoles: goog.array.ArrayLike): void;
 
     /**
      * Gets the boolean value of an ARIA state/property.
@@ -129,5 +129,5 @@ declare module goog.a11y.aria {
      * @return {!goog.array.ArrayLike.<string>} string Array
      *     value of the state attribute.
      */
-    export function getStringArrayStateInternalUtil(element: Element, stateName: goog.a11y.aria.State): goog.array.ArrayLike<string>;
+    export function getStringArrayStateInternalUtil(element: Element, stateName: goog.a11y.aria.State): goog.array.ArrayLike;
 }
