@@ -41,9 +41,9 @@ declare module goog.date {
         contains(date: goog.date.Date): boolean;
         
         /**
-         * @return {!goog.iter.Iterator} An iterator over the date range.
+         * @return {!goog.date.DateRange.Iterator} An iterator over the date range.
          */
-        iterator(): goog.iter.Iterator;
+        iterator(): goog.date.DateRange.Iterator;
         
         /**
          * Tests two {@link goog.date.DateRange} objects for equality.
@@ -173,11 +173,11 @@ declare module goog.date.DateRange {
     /**
      * Creates an iterator over the dates in a {@link goog.date.DateRange}.
      * @constructor
-     * @extends {goog.iter.Iterator}
+     * @extends {goog.iter.Iterator.<goog.date.Date>}
      * @param {goog.date.DateRange} dateRange The date range to iterate.
      * @final
      */
-    export class Iterator extends goog.iter.Iterator {
+    export class Iterator extends goog.iter.Iterator<goog.date.Date> {
         constructor(dateRange: goog.date.DateRange);
     }
 }
