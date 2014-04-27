@@ -420,7 +420,7 @@ declare module goog.Uri {
          *     name in #get.
          * @return {!goog.Uri.QueryData} The populated query data instance.
          */
-        static createFromMap(map: goog.structs.Map, opt_uri?: goog.Uri, opt_ignoreCase?: boolean): goog.Uri.QueryData;
+        static createFromMap(map: goog.structs.Map<any, any>, opt_uri?: goog.Uri, opt_ignoreCase?: boolean): goog.Uri.QueryData;
         
         /**
          * Creates a new query data instance from parallel arrays of parameter names

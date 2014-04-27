@@ -47,7 +47,7 @@ declare module goog.ui.media {
          * @param {goog.structs.Map|Object} map A key-value map of variables.
          * @return {goog.ui.media.FlashObject} The flash object instance for chaining.
          */
-        addFlashVars(map: goog.structs.Map): goog.ui.media.FlashObject;
+        addFlashVars(map: goog.structs.Map<any, any>): goog.ui.media.FlashObject;
         
         /**
          * Sets a flash variable.
@@ -71,12 +71,12 @@ declare module goog.ui.media {
          * @param {string=} opt_value The optional value for the flashVar key.
          * @return {goog.ui.media.FlashObject} The flash object instance for chaining.
          */
-        setFlashVars(flashVar: goog.structs.Map, opt_value?: string): goog.ui.media.FlashObject;
+        setFlashVars(flashVar: goog.structs.Map<any, any>, opt_value?: string): goog.ui.media.FlashObject;
         
         /**
          * @return {goog.structs.Map} The current flash variables.
          */
-        getFlashVars(): goog.structs.Map;
+        getFlashVars(): goog.structs.Map<any, any>;
         
         /**
          * Sets the background color of the movie.

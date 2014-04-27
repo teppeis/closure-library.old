@@ -7,7 +7,7 @@ declare module goog.dom.forms {
      * @return {!goog.structs.Map} A map of the form data as form name to arrays of
      *     values.
      */
-    export function getFormDataMap(form: HTMLFormElement): goog.structs.Map;
+    export function getFormDataMap(form: HTMLFormElement): goog.structs.Map<any, any>;
 
     /**
      * Returns the form data as an application/x-www-url-encoded string. This

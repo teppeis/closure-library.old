@@ -13,7 +13,7 @@ declare module goog.net {
      * @extends {goog.events.EventTarget}
      */
     export class XhrManager extends goog.events.EventTarget {
-        constructor(opt_maxRetries?: number, opt_headers?: goog.structs.Map, opt_minCount?: number, opt_maxCount?: number, opt_timeoutInterval?: number);
+        constructor(opt_maxRetries?: number, opt_headers?: goog.structs.Map<any, any>, opt_minCount?: number, opt_maxCount?: number, opt_timeoutInterval?: number);
         
         /**
          * Sets the number of milliseconds after which an incomplete request will be

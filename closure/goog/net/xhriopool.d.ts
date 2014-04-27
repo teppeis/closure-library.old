@@ -10,7 +10,7 @@ declare module goog.net {
      * @extends {goog.structs.PriorityPool}
      */
     export class XhrIoPool extends goog.structs.PriorityPool {
-        constructor(opt_headers?: goog.structs.Map, opt_minCount?: number, opt_maxCount?: number);
+        constructor(opt_headers?: goog.structs.Map<any, any>, opt_minCount?: number, opt_maxCount?: number);
         
         /**
          * Creates an instance of an XhrIo object to use in the pool.

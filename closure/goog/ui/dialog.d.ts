@@ -325,7 +325,7 @@ declare module goog.ui.Dialog {
      * @constructor
      * @extends {goog.structs.Map}
      */
-    export class ButtonSet extends goog.structs.Map {
+    export class ButtonSet extends goog.structs.Map<any, any> {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**

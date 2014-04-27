@@ -50,7 +50,7 @@ declare module goog.structs {
          *     the values contained in each map are identical objects.
          * @return {boolean} Whether the maps are equal.
          */
-        equals(otherMap: goog.structs.Map, opt_equalityFn?: (arg0: V, arg1: V) => boolean): boolean;
+        equals(otherMap: goog.structs.Map<any, any>, opt_equalityFn?: (arg0: V, arg1: V) => boolean): boolean;
         
         /**
          * Default equality test for values.
@@ -116,7 +116,7 @@ declare module goog.structs {
          * Clones a map and returns a new map.
          * @return {!goog.structs.Map} A new map with the same key-value pairs.
          */
-        clone(): goog.structs.Map;
+        clone(): goog.structs.Map<any, any>;
         
         /**
          * Returns a new map in which all the keys and values are interchanged
@@ -127,7 +127,7 @@ declare module goog.structs {
          *
          * @return {!goog.structs.Map} The transposed map.
          */
-        transpose(): goog.structs.Map;
+        transpose(): goog.structs.Map<any, any>;
         
         /**
          * @return {!Object} Object representation of the map.
